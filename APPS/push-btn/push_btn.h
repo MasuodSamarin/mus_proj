@@ -46,7 +46,10 @@ typedef struct {
 	btn_hold_t hold;
 }btn_node_t;
 
-
+/*public interface:
+ * 1. init button
+ * 2. create and delete btn_node
+ * */
 
 #ifdef __cplusplus
 }

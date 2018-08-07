@@ -39,7 +39,11 @@ typedef struct {
 	uint32_t value;
 }enc_node_t;
 
-
+/*public interface:
+ * 1. init encoder
+ * 2. create and delete enc node
+ *
+ * */
 
 #ifdef __cplusplus
 }

@@ -39,6 +39,11 @@ typedef struct {
 	uint32_t val;
 }vol_node_t;
 
+/*public interface:
+ * 1. init volumes
+ * 2. create and delete vol node
+ *
+ * */
 
 #ifdef __cplusplus
 }

@@ -59,7 +59,13 @@ typedef struct {
 	};
 }event_node_t;
 
-
+/*public interface:
+ * 1. init event list
+ * 2. create and delete event node
+ * 3. get first event
+ * 4. get size of event list
+ * 5. is list is empty
+ * */
 #ifdef __cplusplus
 }
 #endif
