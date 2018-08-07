@@ -38,6 +38,11 @@
 									<listOptionValue builtIn="false" value="../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy"/>
 									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Device/ST/STM32F1xx/Include"/>
 									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Include"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/encoder}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/event}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/link-list}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/push-btn}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/volume}&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.2122180815" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="__weak=&quot;__attribute__((weak))&quot;"/>
