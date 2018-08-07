@@ -30,7 +30,7 @@ Src/main.o: ../Src/main.c /home/sam/w/musavi/mus_proj/Inc/main.h \
  /home/sam/w/musavi/mus_proj/Inc/spi.h \
  /home/sam/w/musavi/mus_proj/Inc/tim.h \
  /home/sam/w/musavi/mus_proj/Inc/gpio.h \
- /home/sam/w/musavi/mus_proj/APPS/link-list/linked-list.h
+ ../Src/../APPS/link_list/link_list.h
 
 /home/sam/w/musavi/mus_proj/Inc/main.h:
 
@@ -96,4 +96,4 @@ Src/main.o: ../Src/main.c /home/sam/w/musavi/mus_proj/Inc/main.h \
 
 /home/sam/w/musavi/mus_proj/Inc/gpio.h:
 
-/home/sam/w/musavi/mus_proj/APPS/link-list/linked-list.h:
+../Src/../APPS/link_list/link_list.h:

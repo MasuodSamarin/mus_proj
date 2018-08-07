@@ -44,9 +44,9 @@
 #include "spi.h"
 #include "tim.h"
 #include "gpio.h"
+#include "../APPS/link_list/link_list.h"
 
 /* USER CODE BEGIN Includes */
-#include "linked-list.h"
 
 /* USER CODE END Includes */
 

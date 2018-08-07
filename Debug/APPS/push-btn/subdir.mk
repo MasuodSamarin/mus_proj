@@ -4,41 +4,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Src/adc.c \
-../Src/dma.c \
-../Src/gpio.c \
-../Src/main.c \
-../Src/spi.c \
-../Src/stm32f1xx_hal_msp.c \
-../Src/stm32f1xx_it.c \
-../Src/system_stm32f1xx.c \
-../Src/tim.c 
+../APPS/push-btn/push_btn.c 
 
 OBJS += \
-./Src/adc.o \
-./Src/dma.o \
-./Src/gpio.o \
-./Src/main.o \
-./Src/spi.o \
-./Src/stm32f1xx_hal_msp.o \
-./Src/stm32f1xx_it.o \
-./Src/system_stm32f1xx.o \
-./Src/tim.o 
+./APPS/push-btn/push_btn.o 
 
 C_DEPS += \
-./Src/adc.d \
-./Src/dma.d \
-./Src/gpio.d \
-./Src/main.d \
-./Src/spi.d \
-./Src/stm32f1xx_hal_msp.d \
-./Src/stm32f1xx_it.d \
-./Src/system_stm32f1xx.d \
-./Src/tim.d 
+./APPS/push-btn/push_btn.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-Src/%.o: ../Src/%.c
+APPS/push-btn/%.o: ../APPS/push-btn/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU GCC Compiler'
 	@echo $(PWD)

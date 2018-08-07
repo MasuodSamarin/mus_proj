@@ -40,9 +40,9 @@
 									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/encoder}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/event}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/link-list}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/push-btn}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/volume}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/link_list}&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.2122180815" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="__weak=&quot;__attribute__((weak))&quot;"/>
@@ -103,8 +103,12 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="event|encoder|volume|link-list|push-btn" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/link-list"/>
+						<entry excluding="event|encoder|push-btn|link_list|volume" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/encoder"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/event"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/link_list"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/push-btn"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/volume"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Inc"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Src"/>
@@ -215,8 +219,12 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="event|encoder|volume|link-list|push-btn" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/link-list"/>
+						<entry excluding="event|encoder|push-btn|link_list|volume" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/encoder"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/event"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/link_list"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/push-btn"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/volume"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Inc"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Src"/>
