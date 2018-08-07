@@ -13,8 +13,33 @@
 extern "C" {
 #endif
 
+/*
+ * system includes
+ * */
+#include "main.h"
+#include "stm32f1xx_hal.h"
+#include "gpio.h"
+#include "adc.h"
+#include "dma.h"
+#include "spi.h"
+#include "tim.h"
 
+/*
+ * there's 3 of volumes
+ * */
+typedef enum {
+	VOL_A,
+	VOL_B,
+	VOL_C
+}vol_name_t;
 
+/*
+ * volume event element node to insert in event list
+ * */
+typedef struct {
+	vol_name_t name;
+	uint32_t val;
+}vol_node_t;
 
 
 #ifdef __cplusplus
