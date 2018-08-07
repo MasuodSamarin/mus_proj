@@ -21,8 +21,6 @@ extern "C" {
 #include "gpio.h"
 #include "adc.h"
 #include "dma.h"
-#include "spi.h"
-#include "tim.h"
 
 /*
  * there's 3 of volumes

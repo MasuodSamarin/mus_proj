@@ -19,9 +19,6 @@ extern "C" {
 #include "main.h"
 #include "stm32f1xx_hal.h"
 #include "gpio.h"
-#include "adc.h"
-#include "dma.h"
-#include "spi.h"
 #include "tim.h"
 
 
