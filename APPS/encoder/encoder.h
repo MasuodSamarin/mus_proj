@@ -50,7 +50,8 @@ typedef struct {
 void enc_init(void);
 void enc_set_span(uint32_t span);
 uint32_t enc_get_span(void);
-uint32_t enc_get_val(void);
+void enc_set_cnt(uint32_t val);
+uint32_t enc_get_cnt(void);
 void enc_process(void);
 
 #ifdef __cplusplus

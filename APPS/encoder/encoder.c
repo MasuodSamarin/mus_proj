@@ -64,6 +64,9 @@ uint32_t enc_get_span(void){
 	return(__HAL_TIM_GET_AUTORELOAD(&htim4));
 }
 
+void enc_set_val(uint32_t val){
+	__HAL_TIM_SET_COUNTER(&htim4, val);
+}
 uint32_t enc_get_val(void){
 	return(__HAL_TIM_GET_COUNTER(&htim4));
 }
