@@ -44,7 +44,9 @@ typedef struct {
 
 /*public interface:
  * 1. init encoder
- * 2. create and delete enc node
+ * 2. encoder get and set timer counter register
+ * 3. encoder get and set timer auto-reload (span) register
+ * 4. encoder process
  *
  * */
 void enc_init(void);
