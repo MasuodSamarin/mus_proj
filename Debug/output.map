@@ -118,11 +118,23 @@ Discarded input sections
  .group         0x0000000000000000        0xc APPS/encoder/encoder.o
  .text          0x0000000000000000        0x0 APPS/encoder/encoder.o
  .data          0x0000000000000000        0x0 APPS/encoder/encoder.o
- .bss           0x0000000000000000        0x0 APPS/encoder/encoder.o
- .debug_info    0x0000000000000000     0x1228 APPS/encoder/encoder.o
- .debug_abbrev  0x0000000000000000      0x1cf APPS/encoder/encoder.o
+ .bss           0x0000000000000000        0x4 APPS/encoder/encoder.o
+ .text.enc_set_span
+                0x0000000000000000       0x10 APPS/encoder/encoder.o
+ .text.enc_init
+                0x0000000000000000       0x1c APPS/encoder/encoder.o
+ .text.enc_get_span
+                0x0000000000000000        0xc APPS/encoder/encoder.o
+ .text.enc_get_val
+                0x0000000000000000        0xc APPS/encoder/encoder.o
+ .text.enc_process
+                0x0000000000000000       0x38 APPS/encoder/encoder.o
+ .debug_info    0x0000000000000000     0x13a2 APPS/encoder/encoder.o
+ .debug_abbrev  0x0000000000000000      0x294 APPS/encoder/encoder.o
+ .debug_loc     0x0000000000000000       0xad APPS/encoder/encoder.o
  .debug_aranges
-                0x0000000000000000       0x18 APPS/encoder/encoder.o
+                0x0000000000000000       0x40 APPS/encoder/encoder.o
+ .debug_ranges  0x0000000000000000       0x30 APPS/encoder/encoder.o
  .debug_macro   0x0000000000000000      0x3a3 APPS/encoder/encoder.o
  .debug_macro   0x0000000000000000      0xa60 APPS/encoder/encoder.o
  .debug_macro   0x0000000000000000      0x179 APPS/encoder/encoder.o
@@ -189,9 +201,10 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x35 APPS/encoder/encoder.o
  .debug_macro   0x0000000000000000       0x16 APPS/encoder/encoder.o
  .debug_macro   0x0000000000000000       0x29 APPS/encoder/encoder.o
- .debug_line    0x0000000000000000      0x872 APPS/encoder/encoder.o
- .debug_str     0x0000000000000000    0x73a02 APPS/encoder/encoder.o
+ .debug_line    0x0000000000000000      0x8da APPS/encoder/encoder.o
+ .debug_str     0x0000000000000000    0x73ac5 APPS/encoder/encoder.o
  .comment       0x0000000000000000       0x7f APPS/encoder/encoder.o
+ .debug_frame   0x0000000000000000       0x74 APPS/encoder/encoder.o
  .ARM.attributes
                 0x0000000000000000       0x33 APPS/encoder/encoder.o
  .group         0x0000000000000000        0xc APPS/event/event.o
