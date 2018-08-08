@@ -27,7 +27,7 @@ extern "C" {
 /*
  * user includes
  * */
-//#include "link_list.h"
+#include "link_list.h"
 #include "push_btn.h"
 #include "encoder.h"
 #include "volume.h"
@@ -60,13 +60,25 @@ typedef struct {
 	};
 }event_node_t;
 
+
 /*public interface:
- * 1. init event list
- * 2. create and delete event node
- * 3. get first event
- * 4. get size of event list
- * 5. is list is empty
+ * 1. init  event-list
+ * 2. create and delete event-nodes (vol, btn, enc)
+ * 3. push the event node to back of the list
+ * 4. pop the event node from front of the list
+ * 5. get size of the event-list
+ *
  * */
+void event_init(void);
+void event_push_node(event_node_t *node);
+event_node_t event_pop_node(void);
+size_t event_get_size(void);
+
+event_node_t* event_create_vol_node(vol_name_t name, uint32_t val);
+event_node_t* event_create_btn_node(btn_name_t name, btn_hold_t hold);
+event_node_t* event_create_enc_node(enc_dir_t dir, uint32_t val);
+
+
 #ifdef __cplusplus
 }
 #endif

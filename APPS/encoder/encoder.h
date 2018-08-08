@@ -23,7 +23,7 @@ extern "C" {
 /*
  * user includes
  * */
-#include "event.h"
+//#include "event.h"
 
 /*
  * the encoder can turn ccw or cw
@@ -48,7 +48,6 @@ typedef struct {
  *
  * */
 void enc_init(void);
-event_node_t* enc_create_node(enc_dir_t dir, uint32_t val);
 
 #ifdef __cplusplus
 }

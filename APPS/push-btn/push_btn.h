@@ -21,7 +21,7 @@ extern "C" {
 /*
  * user includes
  * */
-#include "event.h"
+//#include "event.h"
 
 /*
  * we use 4 button's in the app
@@ -32,7 +32,8 @@ typedef enum {
 	BTN_1,
 	BTN_2,
 	BTN_3,
-	BTN_4
+	BTN_4,
+	BTN_MAX
 }btn_name_t;
 
 /*
@@ -40,8 +41,8 @@ typedef enum {
  * we react to the proper condition
  * */
 typedef enum {
-	BTN_HOLD_LONG,
-	BTN_HOLD_SHORT
+	BTN_HOLD_LONG = 1000,
+	BTN_HOLD_SHORT = 500
 }btn_hold_t;
 
 typedef struct {
@@ -49,13 +50,20 @@ typedef struct {
 	btn_hold_t hold;
 }btn_node_t;
 
+
+typedef struct {
+	btn_name_t name;
+	GPIO_TypeDef *port;
+	uint16_t pin;
+}btn_handle_t;
+
 /*public interface:
  * 1. init button
  * 2. create and delete btn_node
+ * 3. button process
  * */
 void btn_init(void);
-event_node_t* btn_create_node(btn_name_t name, btn_hold_t hold);
-
+void btn_process(void);
 
 #ifdef __cplusplus
 }

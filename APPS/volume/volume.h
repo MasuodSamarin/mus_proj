@@ -24,7 +24,7 @@ extern "C" {
 /*
  * user includes
  * */
-#include "event.h"
+//#include "event.h"
 
 /*
  * there's 3 of volumes
@@ -49,7 +49,6 @@ typedef struct {
  *
  * */
 void vol_init(void);
-event_node_t* vol_create_node(vol_name_t name, uint32_t val);
 
 #ifdef __cplusplus
 }
