@@ -43,6 +43,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/push-btn}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/volume}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/link_list}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/glcd}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/glcd/fonts}&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.2122180815" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="__weak=&quot;__attribute__((weak))&quot;"/>
@@ -109,6 +111,9 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/link_list"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/push-btn"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/volume"/>
+						<entry excluding="fonts" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/glcd"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/glcd/fonts"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/link-list"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Inc"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Src"/>
@@ -225,6 +230,9 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/link_list"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/push-btn"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/volume"/>
+						<entry excluding="fonts" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/glcd"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/glcd/fonts"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/link-list"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Inc"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Src"/>
