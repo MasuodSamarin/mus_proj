@@ -43,7 +43,7 @@ typedef struct {
 }enc_node_t;
 
 /*public interface:
- * 1. init encoder
+ * 1. encoder init
  * 2. encoder get and set timer counter register
  * 3. encoder get and set timer auto-reload (span) register
  * 4. encoder process
