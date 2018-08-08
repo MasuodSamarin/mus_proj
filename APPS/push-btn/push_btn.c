@@ -66,17 +66,17 @@ void btn_process(void){
 
 			break;
 		case BTN_STATE_B:
-			if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(btn_handle.port, btn_handle.pin)	&& (btn_cnt <= BTN_HOLD_LONG))
+			if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(btn_handle.port, btn_handle.pin)	&& (btn_cnt <= BTN_HOLD_LONG_TIME))
 				btn_cnt++;
 			else
 				btn_state = BTN_STATE_C;
 
 			break;
 		case BTN_STATE_C:
-			if(btn_cnt >= BTN_HOLD_LONG)
+			if(btn_cnt >= BTN_HOLD_LONG_TIME)
 				event_push_node(event_create_btn_node(btn_handle.name, BTN_HOLD_LONG));
 
-			else if (btn_cnt >= BTN_HOLD_SHORT)
+			else if (btn_cnt >= BTN_HOLD_SHORT_TIME)
 				event_push_node(event_create_btn_node(btn_handle.name, BTN_HOLD_SHORT));
 
 			btn_state = BTN_STATE_A;

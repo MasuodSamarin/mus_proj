@@ -41,10 +41,11 @@ typedef enum {
  * we react to the proper condition
  * */
 typedef enum {
-	BTN_HOLD_LONG = 1000,
-	BTN_HOLD_SHORT = 500
+	BTN_HOLD_LONG,
+	BTN_HOLD_SHORT
 }btn_hold_t;
-
+#define BTN_HOLD_LONG_TIME (800)
+#define BTN_HOLD_SHORT_TIME (100)
 typedef struct {
 	btn_name_t name;
 	btn_hold_t hold;

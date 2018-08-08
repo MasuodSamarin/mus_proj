@@ -48,6 +48,8 @@
 
 /* USER CODE BEGIN Includes */
 #include "glcd.h"
+#include "unit_tests.h"
+#include "event.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -98,14 +100,22 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_DMA_Init();
+  //MX_DMA_Init();
   MX_TIM2_Init();
-  MX_ADC1_Init();
-  MX_SPI1_Init();
-  MX_TIM1_Init();
-  MX_TIM4_Init();
+  //MX_ADC1_Init();
+  //MX_SPI1_Init();
+  //MX_TIM1_Init();
+  //MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
+
   glcd_init();
+  event_init();
+  enc_init();
+  vol_init();
+  btn_init();
+  unit_init();
+
+  HAL_TIM_Base_Start_IT(&htim2);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -114,7 +124,10 @@ int main(void)
   {
 
   /* USER CODE END WHILE */
-	  glcd_test_hello_world();
+	  unit_test();
+	  HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
+	  HAL_Delay(500);
+	  //glcd_test_hello_world();
   /* USER CODE BEGIN 3 */
 
   }

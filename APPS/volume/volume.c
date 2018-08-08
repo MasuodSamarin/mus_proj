@@ -8,8 +8,8 @@
 //#include "volume.h"
 #include "event.h"
 
-#define VOL_MAX_TOLERANCE	120
-#define VOL_MIN_TOLERANCE	40
+#define VOL_MAX_TOLERANCE	200
+#define VOL_MIN_TOLERANCE	100
 //#define VOL_RATIO	4
 
 static  uint32_t vol_raw_data[VOL_MAX];
@@ -35,6 +35,7 @@ void vol_process(void){
 		case VOL_STATE_A:
 			delta = vol_raw_data[vol_name] - vol_data[vol_name];
 			++vol_name;
+			vol_name = vol_name % VOL_MAX;
 			if (abs(delta) >= VOL_MAX_TOLERANCE){
 				//vol_old_data[vol_name] = vol_raw_data[vol_name];
 				state = VOL_STATE_B;
@@ -43,12 +44,13 @@ void vol_process(void){
 			break;
 
 		case VOL_STATE_B:
-			delta = vol_data[vol_name] = vol_raw_data[vol_name];
+			delta = vol_raw_data[vol_name] - vol_data[vol_name];
 			if (abs(delta) >= VOL_MIN_TOLERANCE){
+				vol_data[vol_name] = vol_raw_data[vol_name];
 				event_push_node(event_create_vol_node(vol_name, vol_raw_data[vol_name]));
 			}
 
-			if (--vol_state_timer)
+			if ((--vol_state_timer) < 1)
 				state = VOL_STATE_A;
 			break;
 	}

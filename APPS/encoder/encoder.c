@@ -39,7 +39,7 @@ uint32_t enc_get_val(void){
 }
 
 void enc_process(void){
-	uint32_t cnt, h_span, delta;
+	int32_t cnt, h_span, delta;
 	enc_dir_t dir;
 
 	cnt = enc_get_val();

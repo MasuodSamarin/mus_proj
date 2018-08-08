@@ -430,3 +430,94 @@ void glcd_test_bitmap_128x64(void)
 	}
 }
 #endif
+///////////////////////////////////////////////////////////////////////////////////////////////////
+#include "stdlib.h"
+/*
+ * user includes
+ * */
+#include "event.h"
+
+char str[10];
+
+char *unit_btn_name[] = {
+		"BTN_1", "BTN_2", "BTN_3", "BTN_4"
+};
+
+char *unit_btn_hold[] = {
+		"BTN_HOLD_LONG", "BTN_HOLD_SHORT"
+};
+
+char *unit_enc_dir[] = {
+		"ENC_DIR_CCW", "ENC_DIR_CW"
+};
+char *unit_vol_name[] = {
+		"VOL_A", "VOL_B", "VOL_C"
+};
+
+void unit_init(void){
+	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
+	glcd_clear_buffer();
+	glcd_write();
+	//glcd_draw_string_xy(0,0,string);
+	//glcd_bar_graph_horizontal_no_border(10,38,70,6,v1);
+	//glcd_draw_string_xy(90,38,(char *)utoa(v1,string,10));
+}
+void unit_print_btn(btn_node_t *btn){
+	glcd_clear_buffer();
+	glcd_draw_string(5,5, "BUTTON");
+	glcd_draw_string(5,15, unit_btn_name[btn->name]);
+	glcd_draw_string(5,25, unit_btn_hold[btn->hold]);
+	sprintf(str, "%p", btn);
+	glcd_draw_string(5,35, str);
+	glcd_write();
+}
+void unit_print_enc(enc_node_t *enc){
+	glcd_clear_buffer();
+	glcd_draw_string(5,5, "ENCODER");
+	glcd_draw_string(5,15, unit_enc_dir[enc->dir]);
+	glcd_draw_string(5,25, (char*)utoa(enc->val, str, 10));
+	sprintf(str, "%p", enc);
+	glcd_draw_string(5,35, str);
+	glcd_write();
+}
+void unit_print_vol(vol_node_t *vol){
+	glcd_clear_buffer();
+	glcd_draw_string(5,5, "VOLUME");
+	glcd_draw_string(5,15, unit_vol_name[vol->name]);
+	glcd_draw_string(5,25, (char*)utoa(vol->val, str, 10));
+	sprintf(str, "%p", vol);
+	glcd_draw_string(5,35, str);
+	glcd_write();
+}
+void uint_print_not(void){
+	glcd_clear_buffer();
+	glcd_draw_string(5,5, "EVENT-DRIVEN TEST");
+	glcd_draw_string(5,15, "BUTTONS");
+	glcd_draw_string(5,25, "ENCODER");
+	glcd_draw_string(5,35, "VOLUMES");
+	glcd_write();
+}
+void unit_test(void){
+	event_node_t node;
+
+	//if(!event_get_size())
+		//return;
+	node = event_pop_node();
+
+	switch (node.type) {
+		case EVENT_NOT:
+			uint_print_not();
+			break;
+		case EVENT_BTN:
+			unit_print_btn(node.btn);
+			break;
+		case EVENT_ENC:
+			unit_print_enc(node.enc);
+			break;
+		case EVENT_VOL:
+			unit_print_vol(node.vol);
+			break;
+
+
+	}
+}

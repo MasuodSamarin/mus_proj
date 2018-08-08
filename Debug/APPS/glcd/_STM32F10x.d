@@ -39,7 +39,17 @@ APPS/glcd/_STM32F10x.o: ../APPS/glcd/_STM32F10x.c \
  /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Tekton_Pro_Ext27x28.h \
  ../APPS/glcd/ST7565R.h ../APPS/glcd/glcd_controllers.h \
  ../APPS/glcd/glcd_graphics.h ../APPS/glcd/glcd_graphs.h \
- ../APPS/glcd/glcd_text.h ../APPS/glcd/unit_tests.h
+ ../APPS/glcd/glcd_text.h ../APPS/glcd/unit_tests.h \
+ /home/sam/w/musavi/mus_proj/APPS/event/event.h \
+ /home/sam/w/musavi/mus_proj/Inc/gpio.h \
+ /home/sam/w/musavi/mus_proj/Inc/adc.h \
+ /home/sam/w/musavi/mus_proj/Inc/dma.h \
+ /home/sam/w/musavi/mus_proj/Inc/spi.h \
+ /home/sam/w/musavi/mus_proj/Inc/tim.h \
+ /home/sam/w/musavi/mus_proj/APPS/link_list/link_list.h \
+ /home/sam/w/musavi/mus_proj/APPS/push-btn/push_btn.h \
+ /home/sam/w/musavi/mus_proj/APPS/encoder/encoder.h \
+ /home/sam/w/musavi/mus_proj/APPS/volume/volume.h
 
 /home/sam/w/musavi/mus_proj/Inc/main.h:
 
@@ -132,3 +142,23 @@ APPS/glcd/_STM32F10x.o: ../APPS/glcd/_STM32F10x.c \
 ../APPS/glcd/glcd_text.h:
 
 ../APPS/glcd/unit_tests.h:
+
+/home/sam/w/musavi/mus_proj/APPS/event/event.h:
+
+/home/sam/w/musavi/mus_proj/Inc/gpio.h:
+
+/home/sam/w/musavi/mus_proj/Inc/adc.h:
+
+/home/sam/w/musavi/mus_proj/Inc/dma.h:
+
+/home/sam/w/musavi/mus_proj/Inc/spi.h:
+
+/home/sam/w/musavi/mus_proj/Inc/tim.h:
+
+/home/sam/w/musavi/mus_proj/APPS/link_list/link_list.h:
+
+/home/sam/w/musavi/mus_proj/APPS/push-btn/push_btn.h:
+
+/home/sam/w/musavi/mus_proj/APPS/encoder/encoder.h:
+
+/home/sam/w/musavi/mus_proj/APPS/volume/volume.h:

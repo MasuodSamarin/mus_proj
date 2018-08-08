@@ -46,7 +46,17 @@ APPS/glcd/fonts/fonts.o: ../APPS/glcd/fonts/fonts.c \
  /home/sam/w/musavi/mus_proj/APPS/glcd/glcd_graphics.h \
  /home/sam/w/musavi/mus_proj/APPS/glcd/glcd_graphs.h \
  /home/sam/w/musavi/mus_proj/APPS/glcd/glcd_text.h \
- /home/sam/w/musavi/mus_proj/APPS/glcd/unit_tests.h
+ /home/sam/w/musavi/mus_proj/APPS/glcd/unit_tests.h \
+ /home/sam/w/musavi/mus_proj/APPS/event/event.h \
+ /home/sam/w/musavi/mus_proj/Inc/gpio.h \
+ /home/sam/w/musavi/mus_proj/Inc/adc.h \
+ /home/sam/w/musavi/mus_proj/Inc/dma.h \
+ /home/sam/w/musavi/mus_proj/Inc/spi.h \
+ /home/sam/w/musavi/mus_proj/Inc/tim.h \
+ /home/sam/w/musavi/mus_proj/APPS/link_list/link_list.h \
+ /home/sam/w/musavi/mus_proj/APPS/push-btn/push_btn.h \
+ /home/sam/w/musavi/mus_proj/APPS/encoder/encoder.h \
+ /home/sam/w/musavi/mus_proj/APPS/volume/volume.h
 
 /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/fonts.h:
 
@@ -143,3 +153,23 @@ APPS/glcd/fonts/fonts.o: ../APPS/glcd/fonts/fonts.c \
 /home/sam/w/musavi/mus_proj/APPS/glcd/glcd_text.h:
 
 /home/sam/w/musavi/mus_proj/APPS/glcd/unit_tests.h:
+
+/home/sam/w/musavi/mus_proj/APPS/event/event.h:
+
+/home/sam/w/musavi/mus_proj/Inc/gpio.h:
+
+/home/sam/w/musavi/mus_proj/Inc/adc.h:
+
+/home/sam/w/musavi/mus_proj/Inc/dma.h:
+
+/home/sam/w/musavi/mus_proj/Inc/spi.h:
+
+/home/sam/w/musavi/mus_proj/Inc/tim.h:
+
+/home/sam/w/musavi/mus_proj/APPS/link_list/link_list.h:
+
+/home/sam/w/musavi/mus_proj/APPS/push-btn/push_btn.h:
+
+/home/sam/w/musavi/mus_proj/APPS/encoder/encoder.h:
+
+/home/sam/w/musavi/mus_proj/APPS/volume/volume.h:

@@ -52,7 +52,7 @@ typedef struct {
  *
  * */
 void vol_init(void);
-
+void vol_process(void);
 #ifdef __cplusplus
 }
 #endif

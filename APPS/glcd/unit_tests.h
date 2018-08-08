@@ -78,4 +78,14 @@ void glcd_test_scrolling_graph(void);
 /** Demonstrate bitmap display */
 void glcd_test_bitmap_128x64(void);
 
+
+/////////////////////////////////////////////////////////////////////////////////////////
+#include "event.h"
+
+void unit_init(void);
+void unit_print_btn(btn_node_t *btn);
+void unit_print_enc(enc_node_t *enc);
+void unit_print_vol(vol_node_t *vol);
+void unit_test(void);
+
 #endif
