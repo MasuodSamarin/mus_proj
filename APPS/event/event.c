@@ -36,26 +36,6 @@ void event_push_node(event_node_t *node){
 	list_push_back(event_list, (void*)node);
 }
 
-/*
- * get the first node from event list
- * */
-event_node_t event_pop_node(void){
-	event_node_t *np = NULL;
-	event_node_t n = {0};
-	size_t size;
-
-	size = event_get_size();
-	if(size == 0)
-		return (n);
-
-	np = (event_node_t*)list_pop_front(event_list);
-	if (np != NULL){
-		n = *np;
-		event_free_event_node(np);
-	}
-	//return (event_node_t*)(NULL);
-	return (n);
-}
 
 /*
  * free the memory of recently deleted node
@@ -76,6 +56,28 @@ void event_free_event_node(event_node_t *node){
 			break;
 	}
 	free(node);
+}
+
+
+/*
+ * get the first node from event list
+ * */
+event_node_t event_pop_node(void){
+	event_node_t *np = NULL;
+	event_node_t n = {0};
+	size_t size;
+
+	size = event_get_size();
+	if(size == 0)
+		return (n);
+
+	np = (event_node_t*)list_pop_front(event_list);
+	if (np != NULL){
+		n = *np;
+		event_free_event_node(np);
+	}
+	//return (event_node_t*)(NULL);
+	return (n);
 }
 
 
