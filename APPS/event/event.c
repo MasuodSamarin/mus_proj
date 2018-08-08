@@ -51,7 +51,7 @@ event_node_t event_pop_node(void){
 	np = (event_node_t*)list_pop_front(event_list);
 	if (np != NULL){
 		n = *np;
-		event_free_node(np);
+		event_free_event_node(np);
 	}
 	//return (event_node_t*)(NULL);
 	return (n);
@@ -60,7 +60,7 @@ event_node_t event_pop_node(void){
 /*
  * free the memory of recently deleted node
  * */
-void event_free_node(event_node_t *node){
+void event_free_event_node(event_node_t *node){
 	switch (node->type) {
 		case EVENT_BTN:
 			free(node->btn);

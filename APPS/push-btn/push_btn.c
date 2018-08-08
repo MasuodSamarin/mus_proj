@@ -6,7 +6,7 @@
  */
 
 
-#include "push_btn.h"
+//#include "push_btn.h"
 #include "event.h"
 
 /*
@@ -36,7 +36,9 @@ btn_handle_t btn_buttons[BTN_MAX] = {
 };
 static btn_handle_t btn_handle = {0};
 
+void btn_init(void){
 
+}
 /*
  * button process function
  * it must call in timer interrupt
