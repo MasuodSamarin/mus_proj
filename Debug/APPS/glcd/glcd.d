@@ -39,7 +39,7 @@ APPS/glcd/glcd.o: ../APPS/glcd/glcd.c ../APPS/glcd/glcd.h \
  /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Tekton_Pro_Ext27x28.h \
  ../APPS/glcd/ST7565R.h ../APPS/glcd/glcd_controllers.h \
  ../APPS/glcd/glcd_graphics.h ../APPS/glcd/glcd_graphs.h \
- ../APPS/glcd/glcd_text.h
+ ../APPS/glcd/glcd_text.h ../APPS/glcd/unit_tests.h
 
 ../APPS/glcd/glcd.h:
 
@@ -130,3 +130,5 @@ APPS/glcd/glcd.o: ../APPS/glcd/glcd.c ../APPS/glcd/glcd.h \
 ../APPS/glcd/glcd_graphs.h:
 
 ../APPS/glcd/glcd_text.h:
+
+../APPS/glcd/unit_tests.h:

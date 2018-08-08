@@ -47,7 +47,7 @@
 //#include "../APPS/link_list/link_list.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "glcd.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -105,7 +105,7 @@ int main(void)
   MX_TIM1_Init();
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
-
+  glcd_init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -114,7 +114,7 @@ int main(void)
   {
 
   /* USER CODE END WHILE */
-
+	  glcd_test_hello_world();
   /* USER CODE BEGIN 3 */
 
   }

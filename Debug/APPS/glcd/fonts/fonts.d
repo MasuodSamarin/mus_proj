@@ -45,7 +45,8 @@ APPS/glcd/fonts/fonts.o: ../APPS/glcd/fonts/fonts.c \
  /home/sam/w/musavi/mus_proj/APPS/glcd/glcd_controllers.h \
  /home/sam/w/musavi/mus_proj/APPS/glcd/glcd_graphics.h \
  /home/sam/w/musavi/mus_proj/APPS/glcd/glcd_graphs.h \
- /home/sam/w/musavi/mus_proj/APPS/glcd/glcd_text.h
+ /home/sam/w/musavi/mus_proj/APPS/glcd/glcd_text.h \
+ /home/sam/w/musavi/mus_proj/APPS/glcd/unit_tests.h
 
 /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/fonts.h:
 
@@ -140,3 +141,5 @@ APPS/glcd/fonts/fonts.o: ../APPS/glcd/fonts/fonts.c \
 /home/sam/w/musavi/mus_proj/APPS/glcd/glcd_graphs.h:
 
 /home/sam/w/musavi/mus_proj/APPS/glcd/glcd_text.h:
+
+/home/sam/w/musavi/mus_proj/APPS/glcd/unit_tests.h:
