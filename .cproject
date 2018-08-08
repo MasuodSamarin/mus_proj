@@ -105,6 +105,8 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
+						<entry excluding="fonts" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/glcd"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/glcd/fonts"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/link-list"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Inc"/>
@@ -216,6 +218,8 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
+						<entry excluding="fonts" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/glcd"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/glcd/fonts"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/link-list"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Inc"/>

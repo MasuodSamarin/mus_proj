@@ -11,6 +11,8 @@ RM := rm -rf
 -include startup/subdir.mk
 -include Src/subdir.mk
 -include Drivers/STM32F1xx_HAL_Driver/Src/subdir.mk
+-include APPS/glcd/fonts/subdir.mk
+-include APPS/glcd/subdir.mk
 -include subdir.mk
 -include objects.mk
 

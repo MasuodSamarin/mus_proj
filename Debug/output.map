@@ -6,20 +6,55 @@ Archive member included to satisfy reference by file (symbol)
                               /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-exit.o) (_global_impure_ptr)
 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-init.o)
                               /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o (__libc_init_array)
+/home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memcpy-stub.o)
+                              APPS/glcd/glcd.o (memcpy)
 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memset.o)
                               /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o (memset)
+/home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sprintf.o)
+                              APPS/glcd/unit_tests.o (sprintf)
+/home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
+                              /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sprintf.o) (_svfprintf_r)
+/home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                              /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o) (_printf_i)
+/home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memchr-stub.o)
+                              /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o) (memchr)
+/home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memmove.o)
+                              /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o) (memmove)
+/home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-freer.o)
+                              /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o) (_free_r)
+/home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-mallocr.o)
+                              /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o) (_malloc_r)
+/home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-reallocr.o)
+                              /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o) (_realloc_r)
+/home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sbrkr.o)
+                              /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-mallocr.o) (_sbrk_r)
+/home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-mlock.o)
+                              /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-freer.o) (__malloc_lock)
+/home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-msizer.o)
+                              /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-reallocr.o) (_malloc_usable_size_r)
+/home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-reent.o)
+                              /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sbrkr.o) (errno)
+/home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(sbrk.o)
+                              /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sbrkr.o) (_sbrk)
 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(_exit.o)
                               /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-exit.o) (_exit)
 
 Allocating common symbols
 Common symbol       size              file
 
+glcd_bbox           0x4               APPS/glcd/glcd.o
 htim4               0x40              Src/tim.o
+errno               0x4               /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-reent.o)
+glcd_buffer         0x400             APPS/glcd/glcd.o
+glcd_buffer_selected
+                    0x4               APPS/glcd/glcd.o
 uwTick              0x4               Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
 pFlash              0x20              Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
+font_current        0x8               APPS/glcd/glcd_text.o
 hadc1               0x30              Src/adc.o
 hdma_adc1           0x44              Src/adc.o
 htim1               0x40              Src/tim.o
+glcd_bbox_selected  0x4               APPS/glcd/glcd.o
 hspi1               0x58              Src/spi.o
 htim2               0x40              Src/tim.o
 
@@ -36,6 +71,1315 @@ Discarded input sections
  .ARM.exidx     0x0000000000000000        0x8 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
  .ARM.attributes
                 0x0000000000000000       0x1b /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .text          0x0000000000000000        0x0 APPS/glcd/ST7565R.o
+ .data          0x0000000000000000        0x0 APPS/glcd/ST7565R.o
+ .bss           0x0000000000000000        0x0 APPS/glcd/ST7565R.o
+ .text.glcd_command
+                0x0000000000000000       0x1c APPS/glcd/ST7565R.o
+ .text.glcd_data
+                0x0000000000000000       0x1c APPS/glcd/ST7565R.o
+ .text.glcd_set_contrast
+                0x0000000000000000       0x1e APPS/glcd/ST7565R.o
+ .text.glcd_power_down
+                0x0000000000000000       0x1c APPS/glcd/ST7565R.o
+ .text.glcd_power_up
+                0x0000000000000000       0x1c APPS/glcd/ST7565R.o
+ .text.glcd_set_y_address
+                0x0000000000000000       0x10 APPS/glcd/ST7565R.o
+ .text.glcd_set_x_address
+                0x0000000000000000       0x18 APPS/glcd/ST7565R.o
+ .text.glcd_all_on
+                0x0000000000000000        0xa APPS/glcd/ST7565R.o
+ .text.glcd_normal
+                0x0000000000000000        0xa APPS/glcd/ST7565R.o
+ .text.glcd_set_column_upper
+                0x0000000000000000        0xe APPS/glcd/ST7565R.o
+ .text.glcd_set_column_lower
+                0x0000000000000000        0xc APPS/glcd/ST7565R.o
+ .text.glcd_set_start_line
+                0x0000000000000000       0x10 APPS/glcd/ST7565R.o
+ .text.glcd_clear_now
+                0x0000000000000000       0x30 APPS/glcd/ST7565R.o
+ .text.glcd_pattern
+                0x0000000000000000       0x44 APPS/glcd/ST7565R.o
+ .text.glcd_write
+                0x0000000000000000       0x68 APPS/glcd/ST7565R.o
+ .text.glcd_ST7565R_init
+                0x0000000000000000       0x3a APPS/glcd/ST7565R.o
+ .debug_info    0x0000000000000000     0x614f APPS/glcd/ST7565R.o
+ .debug_abbrev  0x0000000000000000      0x280 APPS/glcd/ST7565R.o
+ .debug_loc     0x0000000000000000      0x203 APPS/glcd/ST7565R.o
+ .debug_aranges
+                0x0000000000000000       0x98 APPS/glcd/ST7565R.o
+ .debug_ranges  0x0000000000000000       0xd0 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000      0x3cd APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000      0xa60 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000      0x179 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000      0x175 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x2e APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x22 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x22 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x87 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x51 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0xef APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x6a APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000      0x1df APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000      0xb8e APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000     0xe90a APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x43 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x58 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x17 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x35 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x9c APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x16 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x97 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000      0x330 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0xfd APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x58 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x1f APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x43 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x20 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000      0x18e APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x1c APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x52 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x40 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x40 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0xd7 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x1c APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x3d APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x16 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000      0x16f APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x50 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000      0x5c2 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000      0x28a APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000      0x1cb APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000      0x11e APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000      0x1b3 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x27 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000      0x1bc APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x3c APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x57 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000      0x46a APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000      0x1b5 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x8c APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000      0x242 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000      0x143 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000      0x1f4 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000      0x84c APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x1f APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x83 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x3a APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0xd6 APPS/glcd/ST7565R.o
+ .debug_line    0x0000000000000000      0xa84 APPS/glcd/ST7565R.o
+ .debug_str     0x0000000000000000    0x73f75 APPS/glcd/ST7565R.o
+ .comment       0x0000000000000000       0x7f APPS/glcd/ST7565R.o
+ .debug_frame   0x0000000000000000      0x19c APPS/glcd/ST7565R.o
+ .ARM.attributes
+                0x0000000000000000       0x33 APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
+ .text          0x0000000000000000        0x0 APPS/glcd/_STM32F10x.o
+ .data          0x0000000000000000        0x0 APPS/glcd/_STM32F10x.o
+ .bss           0x0000000000000000        0x0 APPS/glcd/_STM32F10x.o
+ .text.glcd_spi_write
+                0x0000000000000000       0x54 APPS/glcd/_STM32F10x.o
+ .text.glcd_reset
+                0x0000000000000000       0x48 APPS/glcd/_STM32F10x.o
+ .text.glcd_init
+                0x0000000000000000       0x40 APPS/glcd/_STM32F10x.o
+ .debug_info    0x0000000000000000     0x5e72 APPS/glcd/_STM32F10x.o
+ .debug_abbrev  0x0000000000000000      0x263 APPS/glcd/_STM32F10x.o
+ .debug_loc     0x0000000000000000       0x4b APPS/glcd/_STM32F10x.o
+ .debug_aranges
+                0x0000000000000000       0x30 APPS/glcd/_STM32F10x.o
+ .debug_ranges  0x0000000000000000       0x20 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000      0x3c6 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000      0xa60 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000      0x179 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000      0x175 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x2e APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x22 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x22 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x87 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x51 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0xef APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x6a APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000      0x1df APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000      0xb8e APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000     0xe90a APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x43 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x58 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x17 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x35 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x9c APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x16 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x97 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000      0x330 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0xfd APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x58 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x1f APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x43 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x20 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000      0x18e APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x1c APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x52 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x40 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x40 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0xd7 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x1c APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x3d APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x16 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000      0x16f APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x50 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000      0x5c2 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000      0x28a APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000      0x1cb APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000      0x11e APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000      0x1b3 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x27 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000      0x1bc APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x3c APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x57 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000      0x46a APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000      0x1b5 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x8c APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000      0x242 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000      0x143 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000      0x1f4 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000      0x84c APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x1f APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x83 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x3a APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0xd6 APPS/glcd/_STM32F10x.o
+ .debug_line    0x0000000000000000      0x947 APPS/glcd/_STM32F10x.o
+ .debug_str     0x0000000000000000    0x73edc APPS/glcd/_STM32F10x.o
+ .comment       0x0000000000000000       0x7f APPS/glcd/_STM32F10x.o
+ .debug_frame   0x0000000000000000       0x60 APPS/glcd/_STM32F10x.o
+ .ARM.attributes
+                0x0000000000000000       0x33 APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
+ .text          0x0000000000000000        0x0 APPS/glcd/glcd.o
+ .data          0x0000000000000000        0x0 APPS/glcd/glcd.o
+ .bss           0x0000000000000000        0x0 APPS/glcd/glcd.o
+ .text.glcd_update_bbox
+                0x0000000000000000       0x5c APPS/glcd/glcd.o
+ .text.glcd_reset_bbox
+                0x0000000000000000       0x20 APPS/glcd/glcd.o
+ .text.glcd_bbox_reset
+                0x0000000000000000        0x8 APPS/glcd/glcd.o
+ .text.glcd_bbox_refresh
+                0x0000000000000000       0x20 APPS/glcd/glcd.o
+ .text.glcd_clear_buffer
+                0x0000000000000000       0x24 APPS/glcd/glcd.o
+ .text.glcd_clear
+                0x0000000000000000        0xc APPS/glcd/glcd.o
+ .text.glcd_select_screen
+                0x0000000000000000       0x14 APPS/glcd/glcd.o
+ .text.glcd_scroll
+                0x0000000000000000       0x1c APPS/glcd/glcd.o
+ .text.glcd_scroll_line
+                0x0000000000000000       0x4c APPS/glcd/glcd.o
+ .debug_info    0x0000000000000000     0x5ddd APPS/glcd/glcd.o
+ .debug_abbrev  0x0000000000000000      0x295 APPS/glcd/glcd.o
+ .debug_loc     0x0000000000000000      0x132 APPS/glcd/glcd.o
+ .debug_aranges
+                0x0000000000000000       0x60 APPS/glcd/glcd.o
+ .debug_ranges  0x0000000000000000       0x68 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000      0x3e5 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000      0xa60 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x22 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x52 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x17 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x8d APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x35 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x9c APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000      0x174 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x57 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x58 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x1f APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x43 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x20 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000      0x18e APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000      0x330 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x35 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x1c APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x6a APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x1c APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x52 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x40 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x40 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0xd7 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x1c APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x3d APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x16 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000      0x16f APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0xef APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000      0x1df APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000      0x179 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000      0x175 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x2e APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x22 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x3a APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000      0xb8e APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000     0xe90a APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x43 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x50 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000      0x5c2 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000      0x28a APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000      0x1cb APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000      0x11e APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000      0x1b3 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x27 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000      0x1bc APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x3c APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x57 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000      0x46a APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000      0x1b5 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x8c APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000      0x242 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000      0x143 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000      0x1f4 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000      0x84c APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x1f APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x83 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x3a APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0xd6 APPS/glcd/glcd.o
+ .debug_line    0x0000000000000000      0xa0b APPS/glcd/glcd.o
+ .debug_str     0x0000000000000000    0x73f03 APPS/glcd/glcd.o
+ .comment       0x0000000000000000       0x7f APPS/glcd/glcd.o
+ .debug_frame   0x0000000000000000       0xd0 APPS/glcd/glcd.o
+ .ARM.attributes
+                0x0000000000000000       0x33 APPS/glcd/glcd.o
+ COMMON         0x0000000000000000      0x40c APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
+ .text          0x0000000000000000        0x0 APPS/glcd/glcd_graphics.o
+ .data          0x0000000000000000        0x0 APPS/glcd/glcd_graphics.o
+ .bss           0x0000000000000000        0x0 APPS/glcd/glcd_graphics.o
+ .text.glcd_set_pixel
+                0x0000000000000000       0x54 APPS/glcd/glcd_graphics.o
+ .text.glcd_get_pixel
+                0x0000000000000000       0x38 APPS/glcd/glcd_graphics.o
+ .text.glcd_invert_pixel
+                0x0000000000000000       0x38 APPS/glcd/glcd_graphics.o
+ .text.glcd_draw_line
+                0x0000000000000000       0xc4 APPS/glcd/glcd_graphics.o
+ .text.glcd_draw_rect_fill
+                0x0000000000000000       0x52 APPS/glcd/glcd_graphics.o
+ .text.glcd_draw_rect
+                0x0000000000000000       0x8c APPS/glcd/glcd_graphics.o
+ .text.glcd_draw_rect_thick
+                0x0000000000000000       0xec APPS/glcd/glcd_graphics.o
+ .text.glcd_draw_rect_shadow
+                0x0000000000000000       0x4c APPS/glcd/glcd_graphics.o
+ .text.glcd_draw_circle
+                0x0000000000000000      0x144 APPS/glcd/glcd_graphics.o
+ .text.glcd_draw_circle_fill
+                0x0000000000000000      0x104 APPS/glcd/glcd_graphics.o
+ .text.glcd_invert_area
+                0x0000000000000000       0x36 APPS/glcd/glcd_graphics.o
+ .text.glcd_draw_bitmap
+                0x0000000000000000       0x1c APPS/glcd/glcd_graphics.o
+ .debug_info    0x0000000000000000     0x6691 APPS/glcd/glcd_graphics.o
+ .debug_abbrev  0x0000000000000000      0x307 APPS/glcd/glcd_graphics.o
+ .debug_loc     0x0000000000000000      0x939 APPS/glcd/glcd_graphics.o
+ .debug_aranges
+                0x0000000000000000       0x78 APPS/glcd/glcd_graphics.o
+ .debug_ranges  0x0000000000000000       0x80 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000      0x419 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000      0xa60 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x22 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x52 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x17 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x8d APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x35 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x9c APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x16 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x57 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x97 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000      0x330 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0xfd APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x58 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x1f APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x43 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x20 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000      0x18e APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x6a APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x1c APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x52 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x40 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x40 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0xd7 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x1c APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x3d APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x16 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000      0x16f APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x16 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x35 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x16 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x29 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x16 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0xef APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000      0x1df APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000      0x179 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000      0x175 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x2e APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x22 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x3a APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000      0xb8e APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000     0xe90a APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x43 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x50 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000      0x5c2 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000      0x28a APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000      0x1cb APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000      0x11e APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000      0x1b3 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x27 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000      0x1bc APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x3c APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x57 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000      0x46a APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000      0x1b5 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x8c APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000      0x242 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000      0x143 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000      0x1f4 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000      0x84c APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x1f APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x83 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x3a APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0xd6 APPS/glcd/glcd_graphics.o
+ .debug_line    0x0000000000000000      0xb9a APPS/glcd/glcd_graphics.o
+ .debug_str     0x0000000000000000    0x74044 APPS/glcd/glcd_graphics.o
+ .comment       0x0000000000000000       0x7f APPS/glcd/glcd_graphics.o
+ .debug_frame   0x0000000000000000      0x1bc APPS/glcd/glcd_graphics.o
+ .ARM.attributes
+                0x0000000000000000       0x33 APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
+ .text          0x0000000000000000        0x0 APPS/glcd/glcd_graphs.o
+ .data          0x0000000000000000        0x0 APPS/glcd/glcd_graphs.o
+ .bss           0x0000000000000000        0x0 APPS/glcd/glcd_graphs.o
+ .text.glcd_map
+                0x0000000000000000       0x20 APPS/glcd/glcd_graphs.o
+ .text.glcd_bar_graph_horizontal
+                0x0000000000000000       0x4c APPS/glcd/glcd_graphs.o
+ .text.glcd_bar_graph_horizontal_no_border
+                0x0000000000000000       0x32 APPS/glcd/glcd_graphs.o
+ .text.glcd_bar_graph_vertical
+                0x0000000000000000       0x4e APPS/glcd/glcd_graphs.o
+ .text.glcd_bar_graph_vertical_no_border
+                0x0000000000000000       0x3a APPS/glcd/glcd_graphs.o
+ .text.glcd_scrolling_bar_graph
+                0x0000000000000000       0xc4 APPS/glcd/glcd_graphs.o
+ .text.glcd_scrolling_bar_graph_timing
+                0x0000000000000000       0x4c APPS/glcd/glcd_graphs.o
+ .debug_info    0x0000000000000000     0x60f7 APPS/glcd/glcd_graphs.o
+ .debug_abbrev  0x0000000000000000      0x281 APPS/glcd/glcd_graphs.o
+ .debug_loc     0x0000000000000000      0x47e APPS/glcd/glcd_graphs.o
+ .debug_aranges
+                0x0000000000000000       0x50 APPS/glcd/glcd_graphs.o
+ .debug_ranges  0x0000000000000000       0x40 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000      0x3c0 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000      0xa60 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x22 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x87 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x51 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0xef APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x6a APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000      0x1df APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000      0x179 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000      0x175 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x2e APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x22 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x3a APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000      0xb8e APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000     0xe90a APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x43 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x58 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x17 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x35 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x9c APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x16 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x97 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000      0x330 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0xfd APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x58 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x1f APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x43 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x20 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000      0x18e APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x1c APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x52 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x40 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x40 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0xd7 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x1c APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x3d APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x16 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000      0x16f APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x50 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000      0x5c2 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000      0x28a APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000      0x1cb APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000      0x11e APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000      0x1b3 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x27 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000      0x1bc APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x3c APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x57 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000      0x46a APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000      0x1b5 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x8c APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000      0x242 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000      0x143 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000      0x1f4 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000      0x84c APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x1f APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x83 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x3a APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0xd6 APPS/glcd/glcd_graphs.o
+ .debug_line    0x0000000000000000      0x9af APPS/glcd/glcd_graphs.o
+ .debug_str     0x0000000000000000    0x73f25 APPS/glcd/glcd_graphs.o
+ .comment       0x0000000000000000       0x7f APPS/glcd/glcd_graphs.o
+ .debug_frame   0x0000000000000000      0x114 APPS/glcd/glcd_graphs.o
+ .ARM.attributes
+                0x0000000000000000       0x33 APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
+ .text          0x0000000000000000        0x0 APPS/glcd/glcd_text.o
+ .data          0x0000000000000000        0x0 APPS/glcd/glcd_text.o
+ .bss           0x0000000000000000        0x0 APPS/glcd/glcd_text.o
+ .text.glcd_set_font_c
+                0x0000000000000000       0x1c APPS/glcd/glcd_text.o
+ .text.glcd_draw_char_xy
+                0x0000000000000000       0xfc APPS/glcd/glcd_text.o
+ .text.glcd_draw_string
+                0x0000000000000000       0x34 APPS/glcd/glcd_text.o
+ .text.glcd_draw_string_P
+                0x0000000000000000       0x34 APPS/glcd/glcd_text.o
+ .text.glcd_draw_string_ammend
+                0x0000000000000000       0x18 APPS/glcd/glcd_text.o
+ .text.glcd_draw_string_ammend_P
+                0x0000000000000000       0x18 APPS/glcd/glcd_text.o
+ .text.glcd_draw_invert_line
+                0x0000000000000000       0x1c APPS/glcd/glcd_text.o
+ .debug_info    0x0000000000000000     0x5e98 APPS/glcd/glcd_text.o
+ .debug_abbrev  0x0000000000000000      0x28f APPS/glcd/glcd_text.o
+ .debug_loc     0x0000000000000000      0x384 APPS/glcd/glcd_text.o
+ .debug_aranges
+                0x0000000000000000       0x50 APPS/glcd/glcd_text.o
+ .debug_ranges  0x0000000000000000       0x90 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000      0x3c6 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000      0xa60 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000      0x179 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000      0x175 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x2e APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x22 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x22 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x87 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x51 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0xef APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x6a APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000      0x1df APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000      0xb8e APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000     0xe90a APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x43 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x58 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x17 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x35 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x9c APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x16 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x97 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000      0x330 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0xfd APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x58 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x1f APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x43 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x20 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000      0x18e APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x1c APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x52 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x40 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x40 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0xd7 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x1c APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x3d APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x16 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000      0x16f APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x50 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000      0x5c2 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000      0x28a APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000      0x1cb APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000      0x11e APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000      0x1b3 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x27 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000      0x1bc APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x3c APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x57 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000      0x46a APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000      0x1b5 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x8c APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000      0x242 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000      0x143 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000      0x1f4 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000      0x84c APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x1f APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x83 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x3a APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0xd6 APPS/glcd/glcd_text.o
+ .debug_line    0x0000000000000000      0x9c9 APPS/glcd/glcd_text.o
+ .debug_str     0x0000000000000000    0x73ed1 APPS/glcd/glcd_text.o
+ .comment       0x0000000000000000       0x7f APPS/glcd/glcd_text.o
+ .debug_frame   0x0000000000000000       0xd8 APPS/glcd/glcd_text.o
+ .ARM.attributes
+                0x0000000000000000       0x33 APPS/glcd/glcd_text.o
+ COMMON         0x0000000000000000        0x8 APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .text          0x0000000000000000        0x0 APPS/glcd/unit_tests.o
+ .data          0x0000000000000000        0x0 APPS/glcd/unit_tests.o
+ .bss           0x0000000000000000        0x1 APPS/glcd/unit_tests.o
+ .text.glcd_test_my_test
+                0x0000000000000000        0xc APPS/glcd/unit_tests.o
+ .text.glcd_test_circles
+                0x0000000000000000       0x30 APPS/glcd/unit_tests.o
+ .text.glcd_test_ADC
+                0x0000000000000000       0xb4 APPS/glcd/unit_tests.o
+ .text.glcd_test_ENC
+                0x0000000000000000       0x78 APPS/glcd/unit_tests.o
+ .text.glcd_test_counter_and_graph
+                0x0000000000000000       0x60 APPS/glcd/unit_tests.o
+ .text.glcd_test_glcdutils
+                0x0000000000000000       0x3c APPS/glcd/unit_tests.o
+ .text.glcd_test_text_up_down
+                0x0000000000000000       0x64 APPS/glcd/unit_tests.o
+ .text.glcd_test_tiny_text
+                0x0000000000000000       0x38 APPS/glcd/unit_tests.o
+ .text.glcd_test_hello_world
+                0x0000000000000000       0x20 APPS/glcd/unit_tests.o
+ .text.glcd_test_rectangles
+                0x0000000000000000      0x1a8 APPS/glcd/unit_tests.o
+ .text.glcd_test_scrolling_graph
+                0x0000000000000000       0x78 APPS/glcd/unit_tests.o
+ .text.glcd_test_bitmap_128x64
+                0x0000000000000000       0x24 APPS/glcd/unit_tests.o
+ .rodata        0x0000000000000000      0x400 APPS/glcd/unit_tests.o
+ .rodata.str1.4
+                0x0000000000000000        0x3 APPS/glcd/unit_tests.o
+ .debug_info    0x0000000000000000     0x6ccc APPS/glcd/unit_tests.o
+ .debug_abbrev  0x0000000000000000      0x2eb APPS/glcd/unit_tests.o
+ .debug_loc     0x0000000000000000      0x188 APPS/glcd/unit_tests.o
+ .debug_aranges
+                0x0000000000000000       0x78 APPS/glcd/unit_tests.o
+ .debug_ranges  0x0000000000000000       0x80 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000      0x3fd APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000      0xa60 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x22 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x52 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x17 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x8d APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x35 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x9c APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x16 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x57 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x97 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000      0x330 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0xfd APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x58 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x1f APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x43 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x20 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000      0x18e APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x6a APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x1c APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x52 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x40 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x40 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0xd7 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x1c APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x3d APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x16 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000      0x16f APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x16 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x35 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x16 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x29 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0xef APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000      0x1df APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000      0x179 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000      0x175 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x2e APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x22 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x3a APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000      0xb8e APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000     0xe90a APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x43 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x50 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000      0x5c2 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000      0x28a APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000      0x1cb APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000      0x11e APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000      0x1b3 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x27 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000      0x1bc APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x3c APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x57 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000      0x46a APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000      0x1b5 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x8c APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000      0x242 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000      0x143 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000      0x1f4 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000      0x84c APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x1f APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x83 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x3a APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0xd6 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/unit_tests.o
+ .debug_line    0x0000000000000000      0xb60 APPS/glcd/unit_tests.o
+ .debug_str     0x0000000000000000    0x746b4 APPS/glcd/unit_tests.o
+ .comment       0x0000000000000000       0x7f APPS/glcd/unit_tests.o
+ .debug_frame   0x0000000000000000      0x168 APPS/glcd/unit_tests.o
+ .ARM.attributes
+                0x0000000000000000       0x33 APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
+ .text          0x0000000000000000        0x0 APPS/glcd/fonts/fonts.o
+ .data          0x0000000000000000        0x0 APPS/glcd/fonts/fonts.o
+ .bss           0x0000000000000000        0x0 APPS/glcd/fonts/fonts.o
+ .rodata        0x0000000000000000     0x4a78 APPS/glcd/fonts/fonts.o
+ .debug_info    0x0000000000000000     0x11db APPS/glcd/fonts/fonts.o
+ .debug_abbrev  0x0000000000000000      0x1c9 APPS/glcd/fonts/fonts.o
+ .debug_aranges
+                0x0000000000000000       0x18 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000      0x3ca APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000      0xa60 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000      0x179 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000      0x175 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x2e APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x22 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x22 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x87 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x51 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0xef APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x6a APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000      0x1df APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000      0xb8e APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000     0xe90a APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x43 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x58 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x17 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x35 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x9c APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x16 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x97 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000      0x330 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0xfd APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x58 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x1f APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x43 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x20 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000      0x18e APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x1c APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x52 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x40 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x40 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0xd7 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x1c APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x3d APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x16 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000      0x16f APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x50 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000      0x5c2 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000      0x28a APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000      0x1cb APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000      0x11e APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000      0x1b3 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x27 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000      0x1bc APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x3c APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x57 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000      0x46a APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000      0x1b5 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x8c APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000      0x242 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000      0x143 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000      0x1f4 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000      0x84c APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x1f APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x83 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x34 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x3a APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0xd6 APPS/glcd/fonts/fonts.o
+ .debug_line    0x0000000000000000      0x8fe APPS/glcd/fonts/fonts.o
+ .debug_str     0x0000000000000000    0x73ddb APPS/glcd/fonts/fonts.o
+ .comment       0x0000000000000000       0x7f APPS/glcd/fonts/fonts.o
+ .ARM.attributes
+                0x0000000000000000       0x33 APPS/glcd/fonts/fonts.o
  .group         0x0000000000000000        0xc Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
  .group         0x0000000000000000        0xc Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
  .group         0x0000000000000000        0xc Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
@@ -137,6 +1481,67 @@ Discarded input sections
                 0x0000000000000000       0x10 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
  .text.HAL_GetUID
                 0x0000000000000000       0x20 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000      0xa60 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000      0x179 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000      0x175 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x2e Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x22 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x22 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x87 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x51 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0xef Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x6a Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000      0x1df Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x34 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x34 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000      0xb8e Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000     0xe90a Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x43 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x58 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x17 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x35 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x9c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x16 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x97 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000      0x330 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0xfd Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x10 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x58 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x1f Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x43 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x20 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000      0x18e Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x10 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x1c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x52 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x40 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x10 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x40 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0xd7 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x1c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x3d Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x16 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000      0x16f Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x50 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000      0x5c2 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000      0x28a Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000      0x1cb Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000      0x11e Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000      0x1b3 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x27 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000      0x1bc Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x34 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x3c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x57 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000      0x46a Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000      0x1b5 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x8c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000      0x242 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000      0x143 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000      0x1f4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000      0x84c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x1f Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x0000000000000000       0x83 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
  .group         0x0000000000000000        0xc Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
  .group         0x0000000000000000        0xc Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
  .group         0x0000000000000000        0xc Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
@@ -3848,6 +5253,13 @@ Discarded input sections
  .text          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-init.o)
  .data          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-init.o)
  .bss           0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-init.o)
+ .text          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memcpy-stub.o)
+ .data          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memcpy-stub.o)
+ .bss           0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memcpy-stub.o)
+ .text.memcpy   0x0000000000000000       0x16 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x0000000000000000       0x28 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memcpy-stub.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memcpy-stub.o)
  .text          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memset.o)
  .data          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memset.o)
  .bss           0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memset.o)
@@ -3855,6 +5267,127 @@ Discarded input sections
  .debug_frame   0x0000000000000000       0x20 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memset.o)
  .ARM.attributes
                 0x0000000000000000       0x2d /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memset.o)
+ .text          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sprintf.o)
+ .data          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sprintf.o)
+ .bss           0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sprintf.o)
+ .text._sprintf_r
+                0x0000000000000000       0x38 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sprintf.o)
+ .text.sprintf  0x0000000000000000       0x40 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sprintf.o)
+ .debug_frame   0x0000000000000000       0x6c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sprintf.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sprintf.o)
+ .text          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .data          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .bss           0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .text.__ssputs_r
+                0x0000000000000000       0xb4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .text.__ssprint_r
+                0x0000000000000000       0xf0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .text._svfprintf_r
+                0x0000000000000000      0x1ec /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .rodata._svfprintf_r.str1.1
+                0x0000000000000000       0x11 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .debug_frame   0x0000000000000000       0x90 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .text          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .data          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .bss           0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .text._printf_common
+                0x0000000000000000       0xec /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .text._printf_i
+                0x0000000000000000      0x224 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .rodata._printf_i.str1.1
+                0x0000000000000000       0x22 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x0000000000000000       0x60 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .text          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memchr-stub.o)
+ .data          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memchr-stub.o)
+ .bss           0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memchr-stub.o)
+ .text.memchr   0x0000000000000000       0x1c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memchr-stub.o)
+ .debug_frame   0x0000000000000000       0x28 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memchr-stub.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memchr-stub.o)
+ .text          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memmove.o)
+ .data          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memmove.o)
+ .bss           0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memmove.o)
+ .text.memmove  0x0000000000000000       0x32 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memmove.o)
+ .debug_frame   0x0000000000000000       0x28 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memmove.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memmove.o)
+ .text          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-freer.o)
+ .data          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-freer.o)
+ .bss           0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-freer.o)
+ .text._free_r  0x0000000000000000       0x98 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x0000000000000000       0x38 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-freer.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-freer.o)
+ .text          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .data          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .bss           0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .text._malloc_r
+                0x0000000000000000       0xb4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .bss.__malloc_free_list
+                0x0000000000000000        0x4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .bss.__malloc_sbrk_start
+                0x0000000000000000        0x4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x0000000000000000       0x2c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .text          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .data          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .bss           0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .text._realloc_r
+                0x0000000000000000       0x4c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x0000000000000000       0x3c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .text          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sbrkr.o)
+ .data          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sbrkr.o)
+ .bss           0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sbrkr.o)
+ .text._sbrk_r  0x0000000000000000       0x20 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x0000000000000000       0x2c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sbrkr.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sbrkr.o)
+ .text          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-mlock.o)
+ .data          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-mlock.o)
+ .bss           0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-mlock.o)
+ .text.__malloc_lock
+                0x0000000000000000        0x2 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-mlock.o)
+ .text.__malloc_unlock
+                0x0000000000000000        0x2 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-mlock.o)
+ .debug_frame   0x0000000000000000       0x30 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-mlock.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-mlock.o)
+ .text          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-msizer.o)
+ .data          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-msizer.o)
+ .bss           0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-msizer.o)
+ .text._malloc_usable_size_r
+                0x0000000000000000       0x10 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-msizer.o)
+ .debug_frame   0x0000000000000000       0x20 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-msizer.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-msizer.o)
+ .text          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-reent.o)
+ .data          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-reent.o)
+ .bss           0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-reent.o)
+ .text.cleanup_glue
+                0x0000000000000000       0x1a /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-reent.o)
+ .text._reclaim_reent
+                0x0000000000000000       0xb8 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-reent.o)
+ .debug_frame   0x0000000000000000       0x5c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-reent.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-reent.o)
+ COMMON         0x0000000000000000        0x4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-reent.o)
+ .text          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(sbrk.o)
+ .data          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(sbrk.o)
+ .bss           0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(sbrk.o)
+ .text._sbrk    0x0000000000000000       0x1c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(sbrk.o)
+ .bss.heap_end.4102
+                0x0000000000000000        0x4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(sbrk.o)
+ .debug_frame   0x0000000000000000       0x20 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(sbrk.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(sbrk.o)
  .text          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(_exit.o)
  .data          0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(_exit.o)
  .bss           0x0000000000000000        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(_exit.o)
@@ -3884,6 +5417,14 @@ Linker script and memory map
 LOAD /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
 LOAD /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
 LOAD /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+LOAD APPS/glcd/ST7565R.o
+LOAD APPS/glcd/_STM32F10x.o
+LOAD APPS/glcd/glcd.o
+LOAD APPS/glcd/glcd_graphics.o
+LOAD APPS/glcd/glcd_graphs.o
+LOAD APPS/glcd/glcd_text.o
+LOAD APPS/glcd/unit_tests.o
+LOAD APPS/glcd/fonts/fonts.o
 LOAD Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
 LOAD Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
 LOAD Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.o
@@ -4346,7 +5887,7 @@ LOAD /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.lin
 ._user_heap_stack
                 0x00000000200001b8      0x600 load address 0x0000000008002074
                 0x00000000200001b8                . = ALIGN (0x8)
-                [!provide]                        PROVIDE (end, .)
+                0x00000000200001b8                PROVIDE (end, .)
                 [!provide]                        PROVIDE (_end, .)
                 0x00000000200003b8                . = (. + _Min_Heap_Size)
  *fill*         0x00000000200001b8      0x200 
@@ -4536,87 +6077,26 @@ OUTPUT(mus_proj.elf elf32-littlearm)
  .debug_ranges  0x00000000000009a8       0x58 Src/tim.o
  .debug_ranges  0x0000000000000a00       0x20 startup/startup_stm32f103xb.o
 
-.debug_macro    0x0000000000000000    0x17344
+.debug_macro    0x0000000000000000     0x3ae8
  .debug_macro   0x0000000000000000      0x32b Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x000000000000032b      0xa60 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000000d8b      0x179 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000000f04      0x175 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000001079       0x2e Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x00000000000010a7       0x22 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x00000000000010c9       0x22 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x00000000000010eb       0x87 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000001172       0x51 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x00000000000011c3       0xef Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x00000000000012b2       0x6a Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x000000000000131c      0x1df Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x00000000000014fb       0x34 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x000000000000152f       0x34 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000001563      0xb8e Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x00000000000020f1     0xe90a Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x00000000000109fb       0x43 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000010a3e       0x58 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000010a96       0x17 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000010aad       0x35 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000010ae2       0x9c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000010b7e       0x16 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000010b94       0x97 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000010c2b      0x330 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000010f5b       0xfd Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000011058       0x10 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000011068       0x58 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x00000000000110c0       0x1f Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x00000000000110df       0x43 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000011122       0x20 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000011142      0x18e Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x00000000000112d0       0x10 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x00000000000112e0       0x1c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x00000000000112fc       0x52 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x000000000001134e       0x40 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x000000000001138e       0x10 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x000000000001139e       0x40 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x00000000000113de       0xd7 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x00000000000114b5       0x1c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x00000000000114d1       0x3d Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x000000000001150e       0x16 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000011524      0x16f Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000011693       0x50 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x00000000000116e3      0x5c2 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000011ca5      0x28a Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000011f2f      0x1cb Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x00000000000120fa      0x11e Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000012218      0x1b3 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x00000000000123cb       0x27 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x00000000000123f2      0x1bc Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x00000000000125ae       0x34 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x00000000000125e2       0x3c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x000000000001261e       0x57 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000012675      0x46a Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000012adf      0x1b5 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000012c94       0x8c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000012d20      0x242 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000012f62      0x143 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x00000000000130a5      0x1f4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000013299      0x84c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000013ae5       0x1f Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000013b04       0x83 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x0000000000013b87      0x324 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
- .debug_macro   0x0000000000013eab      0x307 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_macro   0x00000000000141b2      0x307 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
- .debug_macro   0x00000000000144b9      0x377 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_macro   0x0000000000014830      0x319 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .debug_macro   0x0000000000014b49      0x307 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
- .debug_macro   0x0000000000014e50      0x307 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi_ex.o
- .debug_macro   0x0000000000015157      0x307 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
- .debug_macro   0x000000000001545e      0x307 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
- .debug_macro   0x0000000000015765      0x325 Src/adc.o
- .debug_macro   0x0000000000015a8a      0x311 Src/dma.o
- .debug_macro   0x0000000000015d9b      0x311 Src/gpio.o
- .debug_macro   0x00000000000160ac      0x33d Src/main.o
- .debug_macro   0x00000000000163e9      0x31b Src/spi.o
- .debug_macro   0x0000000000016704      0x307 Src/stm32f1xx_hal_msp.o
- .debug_macro   0x0000000000016a0b      0x311 Src/stm32f1xx_it.o
- .debug_macro   0x0000000000016d1c      0x30d Src/system_stm32f1xx.o
- .debug_macro   0x0000000000017029      0x31b Src/tim.o
+ .debug_macro   0x000000000000032b      0x324 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+ .debug_macro   0x000000000000064f      0x307 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_macro   0x0000000000000956      0x307 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+ .debug_macro   0x0000000000000c5d      0x377 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_macro   0x0000000000000fd4      0x319 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_macro   0x00000000000012ed      0x307 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
+ .debug_macro   0x00000000000015f4      0x307 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi_ex.o
+ .debug_macro   0x00000000000018fb      0x307 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+ .debug_macro   0x0000000000001c02      0x307 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+ .debug_macro   0x0000000000001f09      0x325 Src/adc.o
+ .debug_macro   0x000000000000222e      0x311 Src/dma.o
+ .debug_macro   0x000000000000253f      0x311 Src/gpio.o
+ .debug_macro   0x0000000000002850      0x33d Src/main.o
+ .debug_macro   0x0000000000002b8d      0x31b Src/spi.o
+ .debug_macro   0x0000000000002ea8      0x307 Src/stm32f1xx_hal_msp.o
+ .debug_macro   0x00000000000031af      0x311 Src/stm32f1xx_it.o
+ .debug_macro   0x00000000000034c0      0x30d Src/system_stm32f1xx.o
+ .debug_macro   0x00000000000037cd      0x31b Src/tim.o
 
 .debug_line     0x0000000000000000     0xb2ee
  .debug_line    0x0000000000000000      0x8e6 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o

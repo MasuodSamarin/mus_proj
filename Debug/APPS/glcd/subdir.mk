@@ -4,41 +4,35 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Src/adc.c \
-../Src/dma.c \
-../Src/gpio.c \
-../Src/main.c \
-../Src/spi.c \
-../Src/stm32f1xx_hal_msp.c \
-../Src/stm32f1xx_it.c \
-../Src/system_stm32f1xx.c \
-../Src/tim.c 
+../APPS/glcd/ST7565R.c \
+../APPS/glcd/_STM32F10x.c \
+../APPS/glcd/glcd.c \
+../APPS/glcd/glcd_graphics.c \
+../APPS/glcd/glcd_graphs.c \
+../APPS/glcd/glcd_text.c \
+../APPS/glcd/unit_tests.c 
 
 OBJS += \
-./Src/adc.o \
-./Src/dma.o \
-./Src/gpio.o \
-./Src/main.o \
-./Src/spi.o \
-./Src/stm32f1xx_hal_msp.o \
-./Src/stm32f1xx_it.o \
-./Src/system_stm32f1xx.o \
-./Src/tim.o 
+./APPS/glcd/ST7565R.o \
+./APPS/glcd/_STM32F10x.o \
+./APPS/glcd/glcd.o \
+./APPS/glcd/glcd_graphics.o \
+./APPS/glcd/glcd_graphs.o \
+./APPS/glcd/glcd_text.o \
+./APPS/glcd/unit_tests.o 
 
 C_DEPS += \
-./Src/adc.d \
-./Src/dma.d \
-./Src/gpio.d \
-./Src/main.d \
-./Src/spi.d \
-./Src/stm32f1xx_hal_msp.d \
-./Src/stm32f1xx_it.d \
-./Src/system_stm32f1xx.d \
-./Src/tim.d 
+./APPS/glcd/ST7565R.d \
+./APPS/glcd/_STM32F10x.d \
+./APPS/glcd/glcd.d \
+./APPS/glcd/glcd_graphics.d \
+./APPS/glcd/glcd_graphs.d \
+./APPS/glcd/glcd_text.d \
+./APPS/glcd/unit_tests.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-Src/%.o: ../Src/%.c
+APPS/glcd/%.o: ../APPS/glcd/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU GCC Compiler'
 	@echo $(PWD)
