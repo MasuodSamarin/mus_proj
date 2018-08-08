@@ -26,13 +26,16 @@ extern "C" {
  * */
 //#include "event.h"
 
+
+
 /*
  * there's 3 of volumes
  * */
 typedef enum {
 	VOL_A,
 	VOL_B,
-	VOL_C
+	VOL_C,
+	VOL_MAX
 }vol_name_t;
 
 /*

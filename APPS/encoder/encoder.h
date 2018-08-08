@@ -43,11 +43,18 @@ typedef struct {
 }enc_node_t;
 
 /*public interface:
- * 1. init encoder
- * 2. create and delete enc node
+ * 1. encoder init
+ * 2. encoder get and set timer counter register
+ * 3. encoder get and set timer auto-reload (span) register
+ * 4. encoder process
  *
  * */
 void enc_init(void);
+void enc_set_span(uint32_t span);
+uint32_t enc_get_span(void);
+void enc_set_cnt(uint32_t val);
+uint32_t enc_get_cnt(void);
+void enc_process(void);
 
 #ifdef __cplusplus
 }
