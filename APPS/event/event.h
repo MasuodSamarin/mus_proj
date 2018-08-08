@@ -23,10 +23,11 @@ extern "C" {
 #include "spi.h"
 #include "tim.h"
 
+#include "stdlib.h"
 /*
  * user includes
  * */
-#include "link_list.h"
+//#include "link_list.h"
 #include "push_btn.h"
 #include "encoder.h"
 #include "volume.h"

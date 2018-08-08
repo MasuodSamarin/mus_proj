@@ -18,7 +18,10 @@ extern "C" {
 #include "main.h"
 #include "stm32f1xx_hal.h"
 #include "gpio.h"
-
+/*
+ * user includes
+ * */
+#include "event.h"
 
 /*
  * we use 4 button's in the app
@@ -50,6 +53,9 @@ typedef struct {
  * 1. init button
  * 2. create and delete btn_node
  * */
+void btn_init(void);
+event_node_t* btn_create_node(btn_name_t name, btn_hold_t hold);
+
 
 #ifdef __cplusplus
 }
