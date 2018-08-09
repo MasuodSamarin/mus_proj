@@ -716,17 +716,31 @@ Discarded input sections
  .group         0x0000000000000000        0xc APPS/fv1/fv1.o
  .group         0x0000000000000000        0xc APPS/fv1/fv1.o
  .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
  .text          0x0000000000000000        0x0 APPS/fv1/fv1.o
  .data          0x0000000000000000        0x0 APPS/fv1/fv1.o
  .bss           0x0000000000000000        0x0 APPS/fv1/fv1.o
- .text.fv1_eep_set
+ .text.fv1_latch_reset
+                0x0000000000000000       0x1c APPS/fv1/fv1.o
+ .text.fv1_latch_set
+                0x0000000000000000       0x1c APPS/fv1/fv1.o
+ .text.fv1_code_set
+                0x0000000000000000       0x70 APPS/fv1/fv1.o
+ .text.fv1_code_get
                 0x0000000000000000        0x4 APPS/fv1/fv1.o
- .debug_info    0x0000000000000000     0x138b APPS/fv1/fv1.o
- .debug_abbrev  0x0000000000000000      0x1fc APPS/fv1/fv1.o
+ .text.fv1_eep_off
+                0x0000000000000000       0x1c APPS/fv1/fv1.o
+ .text.fv1_eep_set
+                0x0000000000000000       0x44 APPS/fv1/fv1.o
+ .text.fv1_eep_get
+                0x0000000000000000        0x4 APPS/fv1/fv1.o
+ .debug_info    0x0000000000000000     0x1688 APPS/fv1/fv1.o
+ .debug_abbrev  0x0000000000000000      0x25c APPS/fv1/fv1.o
+ .debug_loc     0x0000000000000000      0x144 APPS/fv1/fv1.o
  .debug_aranges
-                0x0000000000000000       0x20 APPS/fv1/fv1.o
- .debug_ranges  0x0000000000000000       0x10 APPS/fv1/fv1.o
- .debug_macro   0x0000000000000000      0x3ad APPS/fv1/fv1.o
+                0x0000000000000000       0x50 APPS/fv1/fv1.o
+ .debug_ranges  0x0000000000000000       0x40 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000      0x3b2 APPS/fv1/fv1.o
  .debug_macro   0x0000000000000000      0xa60 APPS/fv1/fv1.o
  .debug_macro   0x0000000000000000      0x179 APPS/fv1/fv1.o
  .debug_macro   0x0000000000000000      0x175 APPS/fv1/fv1.o
@@ -792,10 +806,11 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x35 APPS/fv1/fv1.o
  .debug_macro   0x0000000000000000       0x16 APPS/fv1/fv1.o
  .debug_macro   0x0000000000000000       0x29 APPS/fv1/fv1.o
- .debug_line    0x0000000000000000      0x884 APPS/fv1/fv1.o
- .debug_str     0x0000000000000000    0x73aef APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x1c APPS/fv1/fv1.o
+ .debug_line    0x0000000000000000      0x8fd APPS/fv1/fv1.o
+ .debug_str     0x0000000000000000    0x73bdb APPS/fv1/fv1.o
  .comment       0x0000000000000000       0x7f APPS/fv1/fv1.o
- .debug_frame   0x0000000000000000       0x20 APPS/fv1/fv1.o
+ .debug_frame   0x0000000000000000       0xb0 APPS/fv1/fv1.o
  .ARM.attributes
                 0x0000000000000000       0x33 APPS/fv1/fv1.o
  .group         0x0000000000000000        0xc APPS/link_list/link_list.o
