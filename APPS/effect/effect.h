@@ -8,6 +8,12 @@
 #ifndef EFFECT_H_
 #define EFFECT_H_
 
+#include "main.h"
+#include "stm32f1xx_hal.h"
+#include "gpio.h"
+
+
+
 
 typedef struct {
 	// effect number (0-99)
