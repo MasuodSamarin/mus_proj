@@ -4,20 +4,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../APPS/effect/effect.c \
-../APPS/effect/effect_preset.c 
+../APPS/encoder/encoder.c 
 
 OBJS += \
-./APPS/effect/effect.o \
-./APPS/effect/effect_preset.o 
+./APPS/encoder/encoder.o 
 
 C_DEPS += \
-./APPS/effect/effect.d \
-./APPS/effect/effect_preset.d 
+./APPS/encoder/encoder.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-APPS/effect/%.o: ../APPS/effect/%.c
+APPS/encoder/%.o: ../APPS/encoder/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU GCC Compiler'
 	@echo $(PWD)

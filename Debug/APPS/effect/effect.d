@@ -25,12 +25,7 @@ APPS/effect/effect.o: ../APPS/effect/effect.c ../APPS/effect/effect.h \
  /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
  /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
- /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
- /home/sam/w/musavi/mus_proj/Inc/adc.h \
- /home/sam/w/musavi/mus_proj/Inc/dma.h \
- /home/sam/w/musavi/mus_proj/Inc/spi.h \
- /home/sam/w/musavi/mus_proj/Inc/tim.h \
- /home/sam/w/musavi/mus_proj/Inc/gpio.h
+ /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 
 ../APPS/effect/effect.h:
 
@@ -87,13 +82,3 @@ APPS/effect/effect.o: ../APPS/effect/effect.c ../APPS/effect/effect.h \
 /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
 
 /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
-
-/home/sam/w/musavi/mus_proj/Inc/adc.h:
-
-/home/sam/w/musavi/mus_proj/Inc/dma.h:
-
-/home/sam/w/musavi/mus_proj/Inc/spi.h:
-
-/home/sam/w/musavi/mus_proj/Inc/tim.h:
-
-/home/sam/w/musavi/mus_proj/Inc/gpio.h:

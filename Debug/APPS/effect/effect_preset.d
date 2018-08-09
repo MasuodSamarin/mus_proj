@@ -1,4 +1,5 @@
-Src/main.o: ../Src/main.c /home/sam/w/musavi/mus_proj/Inc/main.h \
+APPS/effect/effect_preset.o: ../APPS/effect/effect_preset.c \
+ ../APPS/effect/effect_preset.h /home/sam/w/musavi/mus_proj/Inc/main.h \
  /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  /home/sam/w/musavi/mus_proj/Inc/stm32f1xx_hal_conf.h \
  /home/sam/w/musavi/mus_proj/Inc/main.h \
@@ -24,13 +25,9 @@ Src/main.o: ../Src/main.c /home/sam/w/musavi/mus_proj/Inc/main.h \
  /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
  /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
- /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
- /home/sam/w/musavi/mus_proj/Inc/adc.h \
- /home/sam/w/musavi/mus_proj/Inc/dma.h \
- /home/sam/w/musavi/mus_proj/Inc/spi.h \
- /home/sam/w/musavi/mus_proj/Inc/tim.h \
- /home/sam/w/musavi/mus_proj/Inc/gpio.h \
- ../Src/../APPS/link_list/link_list.h
+ /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+
+../APPS/effect/effect_preset.h:
 
 /home/sam/w/musavi/mus_proj/Inc/main.h:
 
@@ -85,15 +82,3 @@ Src/main.o: ../Src/main.c /home/sam/w/musavi/mus_proj/Inc/main.h \
 /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
 
 /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
-
-/home/sam/w/musavi/mus_proj/Inc/adc.h:
-
-/home/sam/w/musavi/mus_proj/Inc/dma.h:
-
-/home/sam/w/musavi/mus_proj/Inc/spi.h:
-
-/home/sam/w/musavi/mus_proj/Inc/tim.h:
-
-/home/sam/w/musavi/mus_proj/Inc/gpio.h:
-
-../Src/../APPS/link_list/link_list.h:
