@@ -18,9 +18,11 @@ extern "C" {
  * */
 #include "main.h"
 #include "stm32f1xx_hal.h"
-#include "gpio.h"
 #include "adc.h"
 #include "dma.h"
+#include "spi.h"
+#include "tim.h"
+#include "gpio.h"
 /*
  * user includes
  * */
@@ -43,7 +45,8 @@ typedef enum {
  * */
 typedef struct {
 	vol_name_t name;
-	uint32_t val;
+	uint32_t val_adc;
+	uint32_t val_pwm;
 }vol_node_t;
 
 /*public interface:

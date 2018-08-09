@@ -13,5 +13,12 @@
 #include "gpio.h"
 
 
+typedef struct {
+	//spin codes pins
+	//eep codes pin
+	//volumes[3]
+}fv1_type_t;
+
+
 
 #endif /* FV1_H_ */

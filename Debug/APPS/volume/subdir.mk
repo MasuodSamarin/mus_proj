@@ -4,13 +4,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../APPS/volume/volume.c 
+../APPS/volume/volume.c \
+../APPS/volume/volume_pwm.c 
 
 OBJS += \
-./APPS/volume/volume.o 
+./APPS/volume/volume.o \
+./APPS/volume/volume_pwm.o 
 
 C_DEPS += \
-./APPS/volume/volume.d 
+./APPS/volume/volume.d \
+./APPS/volume/volume_pwm.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
