@@ -17,5 +17,7 @@ define some objects:
     
     5. software objects:
         1. link list
-        2. 
+        2. event-driven strategy
+        3. memory management
+        4. flash to eep for hold info
 
