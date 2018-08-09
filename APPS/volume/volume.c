@@ -95,11 +95,15 @@ void vol_process(void){
 
 }
 
+/*
+ * initialize volume handle struct
+ * and the dma
+ * */
 void vol_handle_init(vol_handle_t *handle){
 	handle->state = VOL_STATE_A;
 	handle->vol_state_timer = 0;
 	handle->vol_name = VOL_A;
-	  HAL_ADC_Start_DMA(&hadc1, handle->vol_raw_data, VOL_MAX);
+	HAL_ADC_Start_DMA(&hadc1, handle->vol_raw_data, VOL_MAX);
 
 }
 /*

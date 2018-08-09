@@ -51,10 +51,11 @@ typedef struct {
 
 /*public interface:
  * 1. init volumes
- * 2. create and delete vol node
+ * 2. process the volumes
  *
  * */
 void vol_init(void);
+void vol_process(void);
 
 #ifdef __cplusplus
 }

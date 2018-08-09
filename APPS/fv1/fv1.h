@@ -16,7 +16,7 @@
 typedef struct {
 	//spin codes pins
 	//eep codes pin
-	//volumes[3]
+	vol_node_t vol[VOL_MAX];
 }fv1_type_t;
 
 
