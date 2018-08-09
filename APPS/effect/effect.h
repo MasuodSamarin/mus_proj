@@ -11,6 +11,8 @@
 #include "main.h"
 #include "stm32f1xx_hal.h"
 
+#include "event.h"
+
 
 
 typedef enum {
@@ -34,7 +36,7 @@ typedef struct {
 
 
 	// spins and eep's {4 pin for spin, 2 pind for power of eep's}
-
+	//spin pins
 
 } efx_base_t;
 
@@ -45,7 +47,7 @@ typedef struct {
 	// effect status {enable, disable}
 	uint8_t status;
 	// volumes and pwm's {input volume reading, output pwm's value}
-	//volumes
+	vol_node_t volume[VOL_MAX];
 	// effect mode {user-defined, system-preset}
 	efx_mode_t mode;
 }efx_ext_t;
@@ -53,7 +55,18 @@ typedef struct {
 
 
 
-
+/*
+ * public interface
+ *
+ * 1. make a effect
+ * 		1. efx_ext_t X EFX_PRESET_NUM, every time system start
+ * 		2. efx_ext_t for every single that user makes effect
+ * 	2. delete EFX_MODE_USER effect
+ *
+ * 	note:
+ * 		to make any effect just need the X3 volume's values
+ *
+ * */
 
 
 
