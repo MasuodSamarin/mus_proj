@@ -8,6 +8,7 @@
 #ifndef EFFECT_PRESET_H_
 #define EFFECT_PRESET_H_
 
-
+#include "main.h"
+#include "stm32f1xx_hal.h"
 
 #endif /* EFFECT_PRESET_H_ */
