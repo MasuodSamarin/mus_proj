@@ -12,6 +12,9 @@
 #include "stm32f1xx_hal.h"
 #include "gpio.h"
 
+
+#include "event.h"
+
 /*
  * in the each eep there's a 8 program, it start count from 0b000 to 0b111
  * */
