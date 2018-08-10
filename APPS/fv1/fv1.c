@@ -65,7 +65,7 @@ void fv1_eep_off(fv1_type_t *fv1){
 /*
  * turn on the one of eep in time
  * */
-void fv1_eep_set(fv1_type_t *fv1, fv1_eep_t eep){
+void fv1_eep_on(fv1_type_t *fv1, fv1_eep_t eep){
 
 	HAL_GPIO_WritePin(FV1_EEP1_GPIO_Port, FV1_EEP1_Pin || FV1_EEP2_Pin, GPIO_PIN_RESET);
 

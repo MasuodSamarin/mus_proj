@@ -35,7 +35,7 @@ typedef enum {
 	EFX_FV1_PRST_15,
 	EFX_FV1_PRST_16,
 	EFX_FV1_PRST_MAX
-} efx_fv1_effects;
+} efx_fv1_preset;
 
 /*
  * complete preset effects box

@@ -51,7 +51,7 @@ typedef struct {
 	// effect mode {user-defined, system-preset}
 	efx_mode_t mode;
 
-	// effect types union {spin, isd117xx}
+	// effect types union {fv1, isd117xx}
 	efx_type_t type;
 
 	union{

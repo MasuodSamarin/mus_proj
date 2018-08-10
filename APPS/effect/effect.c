@@ -5,6 +5,7 @@
  *      Author: sam
  */
 
+#include "stdlib.h"
 
 #include "effect.h"
 #include "effect_preset.h"
@@ -18,6 +19,7 @@ list_iterator_t efx_list_iter;
 
 void efx_init_list(void){
 	efx_list = list_create();
+	//TODO: add system node, unless the iterator doesnt work.
 	efx_list_iter = list_make_iterator(efx_list, NULL);
 
 }

@@ -80,7 +80,7 @@ void fv1_latch_set(fv1_type_t *fv1);
 void fv1_code_set(fv1_type_t *fv1, fv1_code_t code);
 fv1_code_t fv1_code_get(fv1_type_t *fv1);
 void fv1_eep_off(fv1_type_t *fv1);
-void fv1_eep_set(fv1_type_t *fv1, fv1_eep_t eep);
+void fv1_eep_on(fv1_type_t *fv1, fv1_eep_t eep);
 fv1_eep_t fv1_eep_get(fv1_type_t *fv1);
 
 #endif /* FV1_H_ */
