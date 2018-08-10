@@ -12,6 +12,7 @@
 #include "stm32f1xx_hal.h"
 
 #include "event.h"
+#include  "fv1.h"
 
 
 
@@ -30,26 +31,40 @@ typedef struct {
 	char *name;
 	// effect comments {some explain to show in lcd}
 	char *comments;
-	// effect types union {spin, isd117xx}
-	// just this is enum
-	efx_type_t type;
 
 
 	// spins and eep's {4 pin for spin, 2 pind for power of eep's}
-	//spin pins
+	fv1_type_t fv1;
 
-} efx_base_t;
+} efx_fv1_base_t;
+
 
 typedef struct {
-	efx_base_t base;
+	/*
+	 * its a isd17xx effect properties*/
+}efx_isd_base_t;
+
+typedef struct {
+	// effect types union {spin, isd117xx}
+	// just this is enum
+	efx_type_t type;
+	union{
+		/*one of the 16 effect's of effect_preset.c*/
+		efx_fv1_base_t fv1_base;
+		/*efx_isd_base_t*/
+		efx_isd_base_t isd_base;
+
+	};
+	// effect mode {user-defined, system-preset}
+	efx_mode_t mode;
+
 	// effect number (0-99)
 	uint8_t number;
 	// effect status {enable, disable}
 	uint8_t status;
 	// volumes and pwm's {input volume reading, output pwm's value}
 	vol_node_t volume[VOL_MAX];
-	// effect mode {user-defined, system-preset}
-	efx_mode_t mode;
+
 }efx_ext_t;
 
 

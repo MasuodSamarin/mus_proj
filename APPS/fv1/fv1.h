@@ -13,7 +13,7 @@
 #include "gpio.h"
 
 
-#include "event.h"
+//#include "event.h"
 
 /*
 uint16_t fv1_eep_pins[FV1_EEP_MAX] = {
@@ -33,6 +33,10 @@ uint16_t fv1_code_pins[FV1_CODE_PIN_MAX] = {
 
 /*
  * in the each eep there's a 8 program, it start count from 0b000 to 0b111
+ * like this:
+ * 			0bLABC
+ * 			0b1001
+ * 	that means first effect of eep A
  * */
 typedef enum {
 	FV1_CODE_0 = 0b0000,
@@ -66,7 +70,7 @@ typedef enum {
 typedef struct {
 	fv1_code_t pin;
 	fv1_eep_t eep;
-	vol_node_t vol[VOL_MAX];
+	//vol_node_t vol[VOL_MAX];
 }fv1_type_t;
 
 
