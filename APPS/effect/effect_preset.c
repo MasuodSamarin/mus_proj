@@ -14,7 +14,7 @@
 /*
  * complete preset effects
  * */
-efx_fv1_base_t efx_preset[EFX_PRESET_NUM]={
+efx_fv1_base_t efx_preset_box[EFX_FV1_PRST_MAX]={
 		{"DELAY",	"PING_PONG",	(fv1_type_t){.pin = FV1_CODE_0, .eep = FV1_EEP_A}},
 		{"DELAY",	"ONE-SHOT",		(fv1_type_t){.pin = FV1_CODE_1, .eep = FV1_EEP_A}},
 		{"DELAY",	"MONO",			(fv1_type_t){.pin = FV1_CODE_2, .eep = FV1_EEP_A}},

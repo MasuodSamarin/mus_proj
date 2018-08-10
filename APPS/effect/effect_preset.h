@@ -14,34 +14,33 @@
 /*
  * there's only 16 fv1 preset in the eeps
  * */
-#define EFX_PRESET_NUM	16
-
 /*
  * using in the efx_preset array to point to preset effects
  * */
 typedef enum {
-	efx_fv1_prst_1,
-	efx_fv1_prst_2,
-	efx_fv1_prst_3,
-	efx_fv1_prst_4,
-	efx_fv1_prst_5,
-	efx_fv1_prst_6,
-	efx_fv1_prst_7,
-	efx_fv1_prst_8,
-	efx_fv1_prst_9,
-	efx_fv1_prst_10,
-	efx_fv1_prst_11,
-	efx_fv1_prst_12,
-	efx_fv1_prst_13,
-	efx_fv1_prst_14,
-	efx_fv1_prst_15,
-	efx_fv1_prst_16,
+	EFX_FV1_PRST_1,
+	EFX_FV1_PRST_2,
+	EFX_FV1_PRST_3,
+	EFX_FV1_PRST_4,
+	EFX_FV1_PRST_5,
+	EFX_FV1_PRST_6,
+	EFX_FV1_PRST_7,
+	EFX_FV1_PRST_8,
+	EFX_FV1_PRST_9,
+	EFX_FV1_PRST_10,
+	EFX_FV1_PRST_11,
+	EFX_FV1_PRST_12,
+	EFX_FV1_PRST_13,
+	EFX_FV1_PRST_14,
+	EFX_FV1_PRST_15,
+	EFX_FV1_PRST_16,
+	EFX_FV1_PRST_MAX
 } efx_fv1_effects;
 
 /*
- * complete preset effects
+ * complete preset effects box
  * */
-extern efx_fv1_base_t efx_preset[EFX_PRESET_NUM];
+extern efx_fv1_base_t efx_preset_box[EFX_FV1_PRST_MAX];
 
 
 

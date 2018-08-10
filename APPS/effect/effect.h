@@ -45,25 +45,28 @@ typedef struct {
 }efx_isd_base_t;
 
 typedef struct {
-	// effect types union {spin, isd117xx}
-	// just this is enum
-	efx_type_t type;
-	union{
-		/*one of the 16 effect's of effect_preset.c*/
-		efx_fv1_base_t fv1_base;
-		/*efx_isd_base_t*/
-		efx_isd_base_t isd_base;
+	// effect number (0-99)
+	uint8_t number;
 
-	};
 	// effect mode {user-defined, system-preset}
 	efx_mode_t mode;
 
-	// effect number (0-99)
-	uint8_t number;
-	// effect status {enable, disable}
-	uint8_t status;
+	// effect types union {spin, isd117xx}
+	efx_type_t type;
+
+	union{
+		/*one of the 16 effect's of effect_preset.c*/
+		efx_fv1_base_t *fv1_base;
+		/*efx_isd_base_t*/
+		efx_isd_base_t *isd_base;
+
+	};
+
 	// volumes and pwm's {input volume reading, output pwm's value}
 	vol_node_t volume[VOL_MAX];
+
+	// effect status {enable, disable}
+	uint8_t status;
 
 }efx_ext_t;
 
