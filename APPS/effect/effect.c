@@ -1,0 +1,72 @@
+/*
+ * effect.c
+ *
+ *  Created on: Aug 9, 2018
+ *      Author: sam
+ */
+
+#include "stdlib.h"
+
+#include "effect.h"
+//#include "effect_preset.h"
+#include  "fv1.h"
+
+#include "link_list.h"
+#include "event.h"
+
+void efx_push_effect(efx_ext_t *efx);
+
+list_t *efx_list;
+list_iterator_t efx_list_iter;
+
+/*
+ * this is the init of the module, possible?
+ * those efx_pushe_list func's must be call before list_make_iterator call
+ * */
+
+void efx_init_list(void){
+	efx_list = list_create();
+	//TODO: add system node, unless the iterator doesnt work.
+	for (efx_fv1_preset pst = EFX_FV1_PRST_1; pst < EFX_FV1_PRST_MAX; ++pst) {
+		efx_ext_t *efx = efx_create_fv1_node((uint8_t)pst, EFX_MODE_PRESET, pst);
+		efx_push_effect(efx);
+	}
+	efx_list_iter = list_make_iterator(efx_list, NULL);
+
+}
+
+
+efx_ext_t* efx_create_fv1_node(uint8_t number, efx_mode_t mode, efx_fv1_preset pst){
+
+	efx_ext_t *efx = malloc(sizeof(*efx));
+	//TODO: check malloc
+	efx_fv1_base_t *base = efx_get_preset(pst);
+
+	efx->number = number;
+	efx->type = EFX_TYPE_ISD;
+	efx->mode = mode;
+	efx->fv1_base = base;
+	efx->status = DISABLE;
+	efx->volume[0] = vol_create_node (VOL_A, 0);
+	efx->volume[1] = vol_create_node (VOL_B, 0);
+	efx->volume[2] = vol_create_node (VOL_C, 0);
+
+	//efx->volume = (vol_node_t*){0};
+
+	return (efx);
+}
+
+void efx_delete_fv1_node(efx_ext_t *efx){
+	free(efx);
+}
+
+efx_ext_t* efx_create_isd_node(){
+
+	return NULL;
+
+}
+
+void efx_push_effect(efx_ext_t *efx){
+
+	list_push_back(efx_list, (void*)efx);
+};

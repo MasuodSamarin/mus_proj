@@ -9,4 +9,5 @@ objects:
   4. push buttons x4
   5. volumes x3
   6. encoder
-  7. link-list
+  7. event driven strategy
+  8. link-list

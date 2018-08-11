@@ -4,41 +4,20 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Src/adc.c \
-../Src/dma.c \
-../Src/gpio.c \
-../Src/main.c \
-../Src/spi.c \
-../Src/stm32f1xx_hal_msp.c \
-../Src/stm32f1xx_it.c \
-../Src/system_stm32f1xx.c \
-../Src/tim.c 
+../APPS/effect/effect.c \
+../APPS/effect/effect_preset.c 
 
 OBJS += \
-./Src/adc.o \
-./Src/dma.o \
-./Src/gpio.o \
-./Src/main.o \
-./Src/spi.o \
-./Src/stm32f1xx_hal_msp.o \
-./Src/stm32f1xx_it.o \
-./Src/system_stm32f1xx.o \
-./Src/tim.o 
+./APPS/effect/effect.o \
+./APPS/effect/effect_preset.o 
 
 C_DEPS += \
-./Src/adc.d \
-./Src/dma.d \
-./Src/gpio.d \
-./Src/main.d \
-./Src/spi.d \
-./Src/stm32f1xx_hal_msp.d \
-./Src/stm32f1xx_it.d \
-./Src/system_stm32f1xx.d \
-./Src/tim.d 
+./APPS/effect/effect.d \
+./APPS/effect/effect_preset.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-Src/%.o: ../Src/%.c
+APPS/effect/%.o: ../APPS/effect/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU GCC Compiler'
 	@echo $(PWD)

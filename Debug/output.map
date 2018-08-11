@@ -7,7 +7,7 @@ Archive member included to satisfy reference by file (symbol)
 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-init.o)
                               /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o (__libc_init_array)
 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-malloc.o)
-                              APPS/event/event.o (malloc)
+                              APPS/effect/effect.o (malloc)
 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memcpy-stub.o)
                               APPS/glcd/glcd.o (memcpy)
 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memset.o)
@@ -54,6 +54,7 @@ glcd_buffer_selected
                     0x4               APPS/glcd/glcd.o
 uwTick              0x4               Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
 pFlash              0x20              Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
+efx_list_iter       0xc               APPS/effect/effect.o
 font_current        0x8               APPS/glcd/glcd_text.o
 hadc1               0x30              Src/adc.o
 hdma_adc1           0x44              Src/adc.o
@@ -61,6 +62,7 @@ htim1               0x40              Src/tim.o
 glcd_bbox_selected  0x4               APPS/glcd/glcd.o
 hspi1               0x58              Src/spi.o
 htim2               0x40              Src/tim.o
+efx_list            0x4               APPS/effect/effect.o
 str                 0xa               APPS/glcd/unit_tests.o
 
 Discarded input sections
@@ -76,6 +78,326 @@ Discarded input sections
  .ARM.exidx     0x0000000000000000        0x8 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
  .ARM.attributes
                 0x0000000000000000       0x1b /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect.o
+ .text          0x0000000000000000        0x0 APPS/effect/effect.o
+ .data          0x0000000000000000        0x0 APPS/effect/effect.o
+ .bss           0x0000000000000000        0x0 APPS/effect/effect.o
+ .text.efx_create_fv1_node
+                0x0000000000000000       0x46 APPS/effect/effect.o
+ .text.efx_delete_fv1_node
+                0x0000000000000000        0x8 APPS/effect/effect.o
+ .text.efx_create_isd_node
+                0x0000000000000000        0x4 APPS/effect/effect.o
+ .text.efx_push_effect
+                0x0000000000000000       0x14 APPS/effect/effect.o
+ .text.efx_init_list
+                0x0000000000000000       0x4c APPS/effect/effect.o
+ .debug_info    0x0000000000000000     0x1833 APPS/effect/effect.o
+ .debug_abbrev  0x0000000000000000      0x2d6 APPS/effect/effect.o
+ .debug_loc     0x0000000000000000      0x12a APPS/effect/effect.o
+ .debug_aranges
+                0x0000000000000000       0x40 APPS/effect/effect.o
+ .debug_ranges  0x0000000000000000       0x30 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000      0x3a8 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000      0xa60 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x17 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x22 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x52 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x8d APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x35 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x9c APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x16 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000      0x10e APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x8d APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x57 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x58 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x1f APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x43 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x20 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000      0x18e APPS/effect/effect.o
+ .debug_macro   0x0000000000000000      0x330 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x16 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x29 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000      0x179 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000      0x175 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x2e APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x22 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0xef APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x6a APPS/effect/effect.o
+ .debug_macro   0x0000000000000000      0x1df APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x34 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x34 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000      0xb8e APPS/effect/effect.o
+ .debug_macro   0x0000000000000000     0xe90a APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x43 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x1c APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x35 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x10 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x10 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x1c APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x52 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x40 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x10 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x40 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0xd7 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x1c APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x3d APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x16 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000      0x16f APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x50 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000      0x5c2 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000      0x28a APPS/effect/effect.o
+ .debug_macro   0x0000000000000000      0x1cb APPS/effect/effect.o
+ .debug_macro   0x0000000000000000      0x11e APPS/effect/effect.o
+ .debug_macro   0x0000000000000000      0x1b3 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x27 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000      0x1bc APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x34 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x3c APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x57 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000      0x46a APPS/effect/effect.o
+ .debug_macro   0x0000000000000000      0x1b5 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x8c APPS/effect/effect.o
+ .debug_macro   0x0000000000000000      0x242 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000      0x143 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000      0x1f4 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000      0x84c APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x1f APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x83 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x16 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x10 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000       0x22 APPS/effect/effect.o
+ .debug_line    0x0000000000000000      0x920 APPS/effect/effect.o
+ .debug_str     0x0000000000000000    0x73e8f APPS/effect/effect.o
+ .comment       0x0000000000000000       0x7f APPS/effect/effect.o
+ .debug_frame   0x0000000000000000       0x90 APPS/effect/effect.o
+ .ARM.attributes
+                0x0000000000000000       0x33 APPS/effect/effect.o
+ COMMON         0x0000000000000000       0x10 APPS/effect/effect.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .text          0x0000000000000000        0x0 APPS/effect/effect_preset.o
+ .data          0x0000000000000000      0x13e APPS/effect/effect_preset.o
+ .bss           0x0000000000000000        0x0 APPS/effect/effect_preset.o
+ .text.efx_get_preset
+                0x0000000000000000        0xc APPS/effect/effect_preset.o
+ .rodata.str1.4
+                0x0000000000000000       0xaa APPS/effect/effect_preset.o
+ .debug_info    0x0000000000000000     0x1404 APPS/effect/effect_preset.o
+ .debug_abbrev  0x0000000000000000      0x20d APPS/effect/effect_preset.o
+ .debug_loc     0x0000000000000000       0x21 APPS/effect/effect_preset.o
+ .debug_aranges
+                0x0000000000000000       0x20 APPS/effect/effect_preset.o
+ .debug_ranges  0x0000000000000000       0x10 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000      0x3c0 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000      0xa60 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000      0x179 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000      0x175 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x2e APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x22 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x22 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x87 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x51 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0xef APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x6a APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000      0x1df APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x34 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x34 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000      0xb8e APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000     0xe90a APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x43 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x58 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x17 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x35 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x9c APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x16 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x97 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000      0x330 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0xfd APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x10 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x58 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x1f APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x43 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x20 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000      0x18e APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x10 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x1c APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x52 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x40 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x10 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x40 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0xd7 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x1c APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x3d APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x16 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000      0x16f APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x50 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000      0x5c2 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000      0x28a APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000      0x1cb APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000      0x11e APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000      0x1b3 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x27 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000      0x1bc APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x34 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x3c APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x57 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000      0x46a APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000      0x1b5 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x8c APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000      0x242 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000      0x143 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000      0x1f4 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000      0x84c APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x1f APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x83 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x1c APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x16 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x35 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x16 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x29 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x16 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x10 APPS/effect/effect_preset.o
+ .debug_line    0x0000000000000000      0x8c2 APPS/effect/effect_preset.o
+ .debug_str     0x0000000000000000    0x73cd3 APPS/effect/effect_preset.o
+ .comment       0x0000000000000000       0x7f APPS/effect/effect_preset.o
+ .debug_frame   0x0000000000000000       0x20 APPS/effect/effect_preset.o
+ .ARM.attributes
+                0x0000000000000000       0x33 APPS/effect/effect_preset.o
+ .group         0x0000000000000000        0xc APPS/encoder/encoder.o
  .group         0x0000000000000000        0xc APPS/encoder/encoder.o
  .group         0x0000000000000000        0xc APPS/encoder/encoder.o
  .group         0x0000000000000000        0xc APPS/encoder/encoder.o
@@ -146,6 +468,74 @@ Discarded input sections
  .data          0x0000000000000000        0x0 APPS/encoder/encoder.o
  .text.enc_set_val
                 0x0000000000000000        0xc APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0xa60 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0x179 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0x175 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x2e APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x22 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x22 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x87 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x51 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0xef APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x6a APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0x1df APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x34 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x34 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0xb8e APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000     0xe90a APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x43 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x58 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x17 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x35 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x9c APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x16 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x97 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0x330 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0xfd APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x10 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x58 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x1f APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x43 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x20 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0x18e APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x10 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x1c APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x52 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x40 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x10 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x40 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0xd7 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x1c APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x3d APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x16 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0x16f APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x50 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0x5c2 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0x28a APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0x1cb APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0x11e APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0x1b3 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x27 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0x1bc APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x34 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x3c APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x57 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0x46a APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0x1b5 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x8c APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0x242 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0x143 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0x1f4 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0x84c APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x1f APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x83 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x16 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x35 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x16 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x29 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x16 APPS/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x10 APPS/encoder/encoder.o
+ .group         0x0000000000000000        0xc APPS/event/event.o
  .group         0x0000000000000000        0xc APPS/event/event.o
  .group         0x0000000000000000        0xc APPS/event/event.o
  .group         0x0000000000000000        0xc APPS/event/event.o
@@ -280,6 +670,162 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x16 APPS/event/event.o
  .debug_macro   0x0000000000000000       0x29 APPS/event/event.o
  .debug_macro   0x0000000000000000       0x16 APPS/event/event.o
+ .debug_macro   0x0000000000000000       0x10 APPS/event/event.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/fv1/fv1.o
+ .text          0x0000000000000000        0x0 APPS/fv1/fv1.o
+ .data          0x0000000000000000        0x0 APPS/fv1/fv1.o
+ .bss           0x0000000000000000        0x0 APPS/fv1/fv1.o
+ .text.fv1_latch_reset
+                0x0000000000000000       0x1c APPS/fv1/fv1.o
+ .text.fv1_latch_set
+                0x0000000000000000       0x1c APPS/fv1/fv1.o
+ .text.fv1_code_set
+                0x0000000000000000       0x70 APPS/fv1/fv1.o
+ .text.fv1_code_get
+                0x0000000000000000        0x4 APPS/fv1/fv1.o
+ .text.fv1_eep_off
+                0x0000000000000000       0x1c APPS/fv1/fv1.o
+ .text.fv1_eep_on
+                0x0000000000000000       0x44 APPS/fv1/fv1.o
+ .text.fv1_eep_get
+                0x0000000000000000        0x4 APPS/fv1/fv1.o
+ .debug_info    0x0000000000000000      0xd2a APPS/fv1/fv1.o
+ .debug_abbrev  0x0000000000000000      0x24b APPS/fv1/fv1.o
+ .debug_loc     0x0000000000000000      0x144 APPS/fv1/fv1.o
+ .debug_aranges
+                0x0000000000000000       0x50 APPS/fv1/fv1.o
+ .debug_ranges  0x0000000000000000       0x40 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000      0x324 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000      0xa60 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000      0x179 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000      0x175 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x2e APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x22 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x22 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x87 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x51 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0xef APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x6a APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000      0x1df APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x34 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x34 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000      0xb8e APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000     0xe90a APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x43 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x58 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x17 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x35 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x9c APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x16 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x97 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000      0x330 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0xfd APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x10 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x58 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x1f APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x43 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x20 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000      0x18e APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x10 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x1c APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x52 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x40 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x10 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x40 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0xd7 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x1c APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x3d APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x16 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000      0x16f APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x50 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000      0x5c2 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000      0x28a APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000      0x1cb APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000      0x11e APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000      0x1b3 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x27 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000      0x1bc APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x34 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x3c APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x57 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000      0x46a APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000      0x1b5 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x8c APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000      0x242 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000      0x143 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000      0x1f4 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000      0x84c APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x1f APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x83 APPS/fv1/fv1.o
+ .debug_macro   0x0000000000000000       0x1c APPS/fv1/fv1.o
+ .debug_line    0x0000000000000000      0x7a7 APPS/fv1/fv1.o
+ .debug_str     0x0000000000000000    0x733b4 APPS/fv1/fv1.o
+ .comment       0x0000000000000000       0x7f APPS/fv1/fv1.o
+ .debug_frame   0x0000000000000000       0xb0 APPS/fv1/fv1.o
+ .ARM.attributes
+                0x0000000000000000       0x33 APPS/fv1/fv1.o
+ .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
  .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
  .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
  .group         0x0000000000000000        0xc APPS/glcd/ST7565R.o
@@ -431,6 +977,8 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x16 APPS/glcd/ST7565R.o
  .debug_macro   0x0000000000000000       0x29 APPS/glcd/ST7565R.o
  .debug_macro   0x0000000000000000       0x16 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/ST7565R.o
+ .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
  .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
  .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
  .group         0x0000000000000000        0xc APPS/glcd/_STM32F10x.o
@@ -574,6 +1122,8 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x16 APPS/glcd/_STM32F10x.o
  .debug_macro   0x0000000000000000       0x29 APPS/glcd/_STM32F10x.o
  .debug_macro   0x0000000000000000       0x16 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/_STM32F10x.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd.o
  .group         0x0000000000000000        0xc APPS/glcd/glcd.o
  .group         0x0000000000000000        0xc APPS/glcd/glcd.o
  .group         0x0000000000000000        0xc APPS/glcd/glcd.o
@@ -657,9 +1207,12 @@ Discarded input sections
                 0x0000000000000000       0x4c APPS/glcd/glcd.o
  .debug_macro   0x0000000000000000      0xa60 APPS/glcd/glcd.o
  .debug_macro   0x0000000000000000       0x22 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x52 APPS/glcd/glcd.o
  .debug_macro   0x0000000000000000       0x17 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x8d APPS/glcd/glcd.o
  .debug_macro   0x0000000000000000       0x35 APPS/glcd/glcd.o
  .debug_macro   0x0000000000000000       0x9c APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x57 APPS/glcd/glcd.o
  .debug_macro   0x0000000000000000       0x58 APPS/glcd/glcd.o
  .debug_macro   0x0000000000000000       0x1f APPS/glcd/glcd.o
  .debug_macro   0x0000000000000000       0x43 APPS/glcd/glcd.o
@@ -667,6 +1220,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x18e APPS/glcd/glcd.o
  .debug_macro   0x0000000000000000      0x330 APPS/glcd/glcd.o
  .debug_macro   0x0000000000000000       0x35 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x1c APPS/glcd/glcd.o
  .debug_macro   0x0000000000000000       0x10 APPS/glcd/glcd.o
  .debug_macro   0x0000000000000000       0x10 APPS/glcd/glcd.o
  .debug_macro   0x0000000000000000       0x6a APPS/glcd/glcd.o
@@ -718,6 +1272,8 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x16 APPS/glcd/glcd.o
  .debug_macro   0x0000000000000000       0x29 APPS/glcd/glcd.o
  .debug_macro   0x0000000000000000       0x16 APPS/glcd/glcd.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/glcd.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
  .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
  .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
  .group         0x0000000000000000        0xc APPS/glcd/glcd_graphics.o
@@ -884,6 +1440,8 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0xd6 APPS/glcd/glcd_graphics.o
  .debug_macro   0x0000000000000000       0x10 APPS/glcd/glcd_graphics.o
  .debug_macro   0x0000000000000000       0x16 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/glcd_graphics.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
  .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
  .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
  .group         0x0000000000000000        0xc APPS/glcd/glcd_graphs.o
@@ -977,7 +1535,7 @@ Discarded input sections
  .debug_aranges
                 0x0000000000000000       0x50 APPS/glcd/glcd_graphs.o
  .debug_ranges  0x0000000000000000       0x40 APPS/glcd/glcd_graphs.o
- .debug_macro   0x0000000000000000      0x460 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000      0x45f APPS/glcd/glcd_graphs.o
  .debug_macro   0x0000000000000000      0xa60 APPS/glcd/glcd_graphs.o
  .debug_macro   0x0000000000000000       0x34 APPS/glcd/glcd_graphs.o
  .debug_macro   0x0000000000000000       0x22 APPS/glcd/glcd_graphs.o
@@ -1048,12 +1606,14 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x16 APPS/glcd/glcd_graphs.o
  .debug_macro   0x0000000000000000       0x29 APPS/glcd/glcd_graphs.o
  .debug_macro   0x0000000000000000       0x16 APPS/glcd/glcd_graphs.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/glcd_graphs.o
  .debug_line    0x0000000000000000      0xb1f APPS/glcd/glcd_graphs.o
- .debug_str     0x0000000000000000    0x7477f APPS/glcd/glcd_graphs.o
+ .debug_str     0x0000000000000000    0x74799 APPS/glcd/glcd_graphs.o
  .comment       0x0000000000000000       0x7f APPS/glcd/glcd_graphs.o
  .debug_frame   0x0000000000000000      0x114 APPS/glcd/glcd_graphs.o
  .ARM.attributes
                 0x0000000000000000       0x33 APPS/glcd/glcd_graphs.o
+ .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
  .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
  .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
  .group         0x0000000000000000        0xc APPS/glcd/glcd_text.o
@@ -1205,6 +1765,8 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x16 APPS/glcd/glcd_text.o
  .debug_macro   0x0000000000000000       0x29 APPS/glcd/glcd_text.o
  .debug_macro   0x0000000000000000       0x16 APPS/glcd/glcd_text.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/glcd_text.o
+ .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
  .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
  .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
  .group         0x0000000000000000        0xc APPS/glcd/unit_tests.o
@@ -1372,6 +1934,8 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0xd6 APPS/glcd/unit_tests.o
  .debug_macro   0x0000000000000000       0x10 APPS/glcd/unit_tests.o
  .debug_macro   0x0000000000000000       0x16 APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/unit_tests.o
+ .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
  .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
  .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
  .group         0x0000000000000000        0xc APPS/glcd/fonts/fonts.o
@@ -1515,6 +2079,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x16 APPS/glcd/fonts/fonts.o
  .debug_macro   0x0000000000000000       0x29 APPS/glcd/fonts/fonts.o
  .debug_macro   0x0000000000000000       0x16 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000000000       0x10 APPS/glcd/fonts/fonts.o
  .group         0x0000000000000000        0xc APPS/link_list/link_list.o
  .group         0x0000000000000000        0xc APPS/link_list/link_list.o
  .group         0x0000000000000000        0xc APPS/link_list/link_list.o
@@ -1575,6 +2140,8 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x35 APPS/link_list/link_list.o
  .debug_macro   0x0000000000000000       0x9c APPS/link_list/link_list.o
  .debug_macro   0x0000000000000000       0x16 APPS/link_list/link_list.o
+ .debug_macro   0x0000000000000000      0x10e APPS/link_list/link_list.o
+ .debug_macro   0x0000000000000000       0x8d APPS/link_list/link_list.o
  .debug_macro   0x0000000000000000       0x57 APPS/link_list/link_list.o
  .debug_macro   0x0000000000000000       0x58 APPS/link_list/link_list.o
  .debug_macro   0x0000000000000000       0x1f APPS/link_list/link_list.o
@@ -1584,6 +2151,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x330 APPS/link_list/link_list.o
  .debug_macro   0x0000000000000000       0x16 APPS/link_list/link_list.o
  .debug_macro   0x0000000000000000       0x29 APPS/link_list/link_list.o
+ .group         0x0000000000000000        0xc APPS/push-btn/push_btn.o
  .group         0x0000000000000000        0xc APPS/push-btn/push_btn.o
  .group         0x0000000000000000        0xc APPS/push-btn/push_btn.o
  .group         0x0000000000000000        0xc APPS/push-btn/push_btn.o
@@ -1717,6 +2285,8 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x16 APPS/push-btn/push_btn.o
  .debug_macro   0x0000000000000000       0x29 APPS/push-btn/push_btn.o
  .debug_macro   0x0000000000000000       0x16 APPS/push-btn/push_btn.o
+ .debug_macro   0x0000000000000000       0x10 APPS/push-btn/push_btn.o
+ .group         0x0000000000000000        0xc APPS/volume/volume.o
  .group         0x0000000000000000        0xc APPS/volume/volume.o
  .group         0x0000000000000000        0xc APPS/volume/volume.o
  .group         0x0000000000000000        0xc APPS/volume/volume.o
@@ -1785,8 +2355,12 @@ Discarded input sections
  .group         0x0000000000000000        0xc APPS/volume/volume.o
  .text          0x0000000000000000        0x0 APPS/volume/volume.o
  .data          0x0000000000000000        0x0 APPS/volume/volume.o
+ .text.vol_create_node
+                0x0000000000000000       0x16 APPS/volume/volume.o
+ .text.vol_delete_node
+                0x0000000000000000        0x8 APPS/volume/volume.o
  .text.vol_get_raw
-                0x0000000000000000       0x10 APPS/volume/volume.o
+                0x0000000000000000        0xc APPS/volume/volume.o
  .debug_macro   0x0000000000000000      0xa60 APPS/volume/volume.o
  .debug_macro   0x0000000000000000      0x179 APPS/volume/volume.o
  .debug_macro   0x0000000000000000      0x175 APPS/volume/volume.o
@@ -1853,6 +2427,142 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x16 APPS/volume/volume.o
  .debug_macro   0x0000000000000000       0x29 APPS/volume/volume.o
  .debug_macro   0x0000000000000000       0x16 APPS/volume/volume.o
+ .debug_macro   0x0000000000000000       0x10 APPS/volume/volume.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .group         0x0000000000000000        0xc APPS/volume/volume_pwm.o
+ .text          0x0000000000000000        0x0 APPS/volume/volume_pwm.o
+ .data          0x0000000000000000        0x0 APPS/volume/volume_pwm.o
+ .bss           0x0000000000000000        0x0 APPS/volume/volume_pwm.o
+ .debug_info    0x0000000000000000     0x121d APPS/volume/volume_pwm.o
+ .debug_abbrev  0x0000000000000000      0x1cf APPS/volume/volume_pwm.o
+ .debug_aranges
+                0x0000000000000000       0x18 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000      0x34d APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000      0xa60 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000      0x179 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000      0x175 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x2e APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x22 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x22 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x87 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x51 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0xef APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x6a APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000      0x1df APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x34 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x34 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000      0xb8e APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000     0xe90a APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x43 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x58 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x17 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x35 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x9c APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x16 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x97 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000      0x330 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0xfd APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x10 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x58 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x1f APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x43 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x20 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000      0x18e APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x10 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x1c APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x52 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x40 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x10 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x40 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0xd7 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x1c APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x3d APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x16 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000      0x16f APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x50 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000      0x5c2 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000      0x28a APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000      0x1cb APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000      0x11e APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000      0x1b3 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x27 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000      0x1bc APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x34 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x3c APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x57 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000      0x46a APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000      0x1b5 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x8c APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000      0x242 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000      0x143 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000      0x1f4 APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000      0x84c APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x1f APPS/volume/volume_pwm.o
+ .debug_macro   0x0000000000000000       0x83 APPS/volume/volume_pwm.o
+ .debug_line    0x0000000000000000      0x74e APPS/volume/volume_pwm.o
+ .debug_str     0x0000000000000000    0x738f8 APPS/volume/volume_pwm.o
+ .comment       0x0000000000000000       0x7f APPS/volume/volume_pwm.o
+ .ARM.attributes
+                0x0000000000000000       0x33 APPS/volume/volume_pwm.o
  .group         0x0000000000000000        0xc Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
  .group         0x0000000000000000        0xc Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
  .group         0x0000000000000000        0xc Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
@@ -5010,6 +5720,7 @@ Discarded input sections
  .group         0x0000000000000000        0xc Src/main.o
  .group         0x0000000000000000        0xc Src/main.o
  .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
  .text          0x0000000000000000        0x0 Src/main.o
  .data          0x0000000000000000        0x0 Src/main.o
  .bss           0x0000000000000000        0x0 Src/main.o
@@ -5083,6 +5794,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x16 Src/main.o
  .debug_macro   0x0000000000000000       0x29 Src/main.o
  .debug_macro   0x0000000000000000       0x16 Src/main.o
+ .debug_macro   0x0000000000000000       0x10 Src/main.o
  .group         0x0000000000000000        0xc Src/spi.o
  .group         0x0000000000000000        0xc Src/spi.o
  .group         0x0000000000000000        0xc Src/spi.o
@@ -5849,8 +6561,11 @@ Linker script and memory map
 LOAD /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
 LOAD /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
 LOAD /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+LOAD APPS/effect/effect.o
+LOAD APPS/effect/effect_preset.o
 LOAD APPS/encoder/encoder.o
 LOAD APPS/event/event.o
+LOAD APPS/fv1/fv1.o
 LOAD APPS/glcd/ST7565R.o
 LOAD APPS/glcd/_STM32F10x.o
 LOAD APPS/glcd/glcd.o
@@ -5862,6 +6577,7 @@ LOAD APPS/glcd/fonts/fonts.o
 LOAD APPS/link_list/link_list.o
 LOAD APPS/push-btn/push_btn.o
 LOAD APPS/volume/volume.o
+LOAD APPS/volume/volume_pwm.o
 LOAD Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
 LOAD Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
 LOAD Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.o
@@ -6078,11 +6794,14 @@ LOAD /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.lin
                 0x0000000008000a14      0x100 APPS/push-btn/push_btn.o
                 0x0000000008000a14                btn_process
  .text.vol_process
-                0x0000000008000b14       0x9c APPS/volume/volume.o
+                0x0000000008000b14       0x88 APPS/volume/volume.o
                 0x0000000008000b14                vol_process
+ .text.vol_handle_init
+                0x0000000008000b9c       0x1c APPS/volume/volume.o
+                0x0000000008000b9c                vol_handle_init
  .text.vol_init
-                0x0000000008000bb0       0x20 APPS/volume/volume.o
-                0x0000000008000bb0                vol_init
+                0x0000000008000bb8       0x18 APPS/volume/volume.o
+                0x0000000008000bb8                vol_init
  .text.HAL_InitTick
                 0x0000000008000bd0       0x48 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
                 0x0000000008000bd0                HAL_InitTick
@@ -6555,7 +7274,7 @@ LOAD /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.lin
  .igot.plt      0x00000000200000cc        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
                 0x00000000200000cc                . = ALIGN (0x4)
 
-.bss            0x00000000200000cc      0x5c0 load address 0x0000000008007e90
+.bss            0x00000000200000cc      0x5bc load address 0x0000000008007e90
                 0x00000000200000cc                _sbss = .
                 0x00000000200000cc                __bss_start__ = _sbss
  *(.bss)
@@ -6563,54 +7282,52 @@ LOAD /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.lin
  .bss           0x00000000200000e8        0x4 APPS/encoder/encoder.o
  .bss           0x00000000200000ec        0x4 APPS/event/event.o
  .bss           0x00000000200000f0       0x14 APPS/push-btn/push_btn.o
- .bss           0x0000000020000104       0x1d APPS/volume/volume.o
+ .bss           0x0000000020000104       0x1c APPS/volume/volume.o
  *(.bss*)
- *fill*         0x0000000020000121        0x3 
  .bss.__malloc_free_list
-                0x0000000020000124        0x4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-mallocr.o)
-                0x0000000020000124                __malloc_free_list
+                0x0000000020000120        0x4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000020000120                __malloc_free_list
  .bss.__malloc_sbrk_start
-                0x0000000020000128        0x4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-mallocr.o)
-                0x0000000020000128                __malloc_sbrk_start
+                0x0000000020000124        0x4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000020000124                __malloc_sbrk_start
  .bss.heap_end.4102
-                0x000000002000012c        0x4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(sbrk.o)
+                0x0000000020000128        0x4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(sbrk.o)
  *(COMMON)
- COMMON         0x0000000020000130      0x40c APPS/glcd/glcd.o
-                0x0000000020000130                glcd_bbox
-                0x0000000020000134                glcd_buffer
-                0x0000000020000534                glcd_buffer_selected
-                0x0000000020000538                glcd_bbox_selected
- COMMON         0x000000002000053c        0x8 APPS/glcd/glcd_text.o
-                0x000000002000053c                font_current
- COMMON         0x0000000020000544        0xa APPS/glcd/unit_tests.o
-                0x0000000020000544                str
- *fill*         0x000000002000054e        0x2 
- COMMON         0x0000000020000550        0x4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
-                0x0000000020000550                uwTick
- COMMON         0x0000000020000554       0x74 Src/adc.o
-                0x0000000020000554                hadc1
-                0x0000000020000584                hdma_adc1
- COMMON         0x00000000200005c8       0xc0 Src/tim.o
-                0x00000000200005c8                htim4
-                0x0000000020000608                htim1
-                0x0000000020000648                htim2
- COMMON         0x0000000020000688        0x4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-reent.o)
-                0x0000000020000688                errno
-                0x000000002000068c                . = ALIGN (0x4)
-                0x000000002000068c                _ebss = .
-                0x000000002000068c                __bss_end__ = _ebss
+ COMMON         0x000000002000012c      0x40c APPS/glcd/glcd.o
+                0x000000002000012c                glcd_bbox
+                0x0000000020000130                glcd_buffer
+                0x0000000020000530                glcd_buffer_selected
+                0x0000000020000534                glcd_bbox_selected
+ COMMON         0x0000000020000538        0x8 APPS/glcd/glcd_text.o
+                0x0000000020000538                font_current
+ COMMON         0x0000000020000540        0xa APPS/glcd/unit_tests.o
+                0x0000000020000540                str
+ *fill*         0x000000002000054a        0x2 
+ COMMON         0x000000002000054c        0x4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+                0x000000002000054c                uwTick
+ COMMON         0x0000000020000550       0x74 Src/adc.o
+                0x0000000020000550                hadc1
+                0x0000000020000580                hdma_adc1
+ COMMON         0x00000000200005c4       0xc0 Src/tim.o
+                0x00000000200005c4                htim4
+                0x0000000020000604                htim1
+                0x0000000020000644                htim2
+ COMMON         0x0000000020000684        0x4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-reent.o)
+                0x0000000020000684                errno
+                0x0000000020000688                . = ALIGN (0x4)
+                0x0000000020000688                _ebss = .
+                0x0000000020000688                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x000000002000068c      0x604 load address 0x0000000008007e90
-                0x0000000020000690                . = ALIGN (0x8)
- *fill*         0x000000002000068c        0x4 
-                0x0000000020000690                PROVIDE (end, .)
+                0x0000000020000688      0x600 load address 0x0000000008007e90
+                0x0000000020000688                . = ALIGN (0x8)
+                0x0000000020000688                PROVIDE (end, .)
                 [!provide]                        PROVIDE (_end, .)
-                0x0000000020000890                . = (. + _Min_Heap_Size)
- *fill*         0x0000000020000690      0x200 
-                0x0000000020000c90                . = (. + _Min_Stack_Size)
- *fill*         0x0000000020000890      0x400 
-                0x0000000020000c90                . = ALIGN (0x8)
+                0x0000000020000888                . = (. + _Min_Heap_Size)
+ *fill*         0x0000000020000688      0x200 
+                0x0000000020000c88                . = (. + _Min_Stack_Size)
+ *fill*         0x0000000020000888      0x400 
+                0x0000000020000c88                . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
@@ -6726,39 +7443,39 @@ LOAD /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.lin
                 0x0000000000000989       0x1d /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
 OUTPUT(mus_proj.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000    0x49f21
+.debug_info     0x0000000000000000    0x4a06b
  .debug_info    0x0000000000000000     0x13c5 APPS/encoder/encoder.o
- .debug_info    0x00000000000013c5     0x1769 APPS/event/event.o
- .debug_info    0x0000000000002b2e     0x6a32 APPS/glcd/ST7565R.o
- .debug_info    0x0000000000009560     0x6755 APPS/glcd/_STM32F10x.o
- .debug_info    0x000000000000fcb5     0x66db APPS/glcd/glcd.o
- .debug_info    0x0000000000016390     0x6f84 APPS/glcd/glcd_graphics.o
- .debug_info    0x000000000001d314     0x6796 APPS/glcd/glcd_text.o
- .debug_info    0x0000000000023aaa     0x75ba APPS/glcd/unit_tests.o
- .debug_info    0x000000000002b064     0x1ad9 APPS/glcd/fonts/fonts.o
- .debug_info    0x000000000002cb3d     0x1101 APPS/link_list/link_list.o
- .debug_info    0x000000000002dc3e     0x144b APPS/push-btn/push_btn.o
- .debug_info    0x000000000002f089     0x13c2 APPS/volume/volume.o
- .debug_info    0x000000000003044b      0xfa6 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_info    0x00000000000313f1     0x162a Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
- .debug_info    0x0000000000032a1b     0x1475 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_info    0x0000000000033e90     0x1014 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
- .debug_info    0x0000000000034ea4      0xe87 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_info    0x0000000000035d2b     0x11ef Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .debug_info    0x0000000000036f1a      0xc67 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
- .debug_info    0x0000000000037b81     0x3660 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
- .debug_info    0x000000000003b1e1     0x1aa8 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
- .debug_info    0x000000000003cc89     0x1158 Src/adc.o
- .debug_info    0x000000000003dde1      0xa02 Src/dma.o
- .debug_info    0x000000000003e7e3      0xc0e Src/gpio.o
- .debug_info    0x000000000003f3f1     0x6a71 Src/main.o
- .debug_info    0x0000000000045e62      0xcd0 Src/stm32f1xx_hal_msp.o
- .debug_info    0x0000000000046b32      0xf5f Src/stm32f1xx_it.o
- .debug_info    0x0000000000047a91      0xc15 Src/system_stm32f1xx.o
- .debug_info    0x00000000000486a6     0x1859 Src/tim.o
- .debug_info    0x0000000000049eff       0x22 startup/startup_stm32f103xb.o
+ .debug_info    0x00000000000013c5     0x1775 APPS/event/event.o
+ .debug_info    0x0000000000002b3a     0x6a32 APPS/glcd/ST7565R.o
+ .debug_info    0x000000000000956c     0x6755 APPS/glcd/_STM32F10x.o
+ .debug_info    0x000000000000fcc1     0x66db APPS/glcd/glcd.o
+ .debug_info    0x000000000001639c     0x6f84 APPS/glcd/glcd_graphics.o
+ .debug_info    0x000000000001d320     0x6796 APPS/glcd/glcd_text.o
+ .debug_info    0x0000000000023ab6     0x75c6 APPS/glcd/unit_tests.o
+ .debug_info    0x000000000002b07c     0x1ad9 APPS/glcd/fonts/fonts.o
+ .debug_info    0x000000000002cb55     0x1101 APPS/link_list/link_list.o
+ .debug_info    0x000000000002dc56     0x144b APPS/push-btn/push_btn.o
+ .debug_info    0x000000000002f0a1     0x14f4 APPS/volume/volume.o
+ .debug_info    0x0000000000030595      0xfa6 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_info    0x000000000003153b     0x162a Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+ .debug_info    0x0000000000032b65     0x1475 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_info    0x0000000000033fda     0x1014 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+ .debug_info    0x0000000000034fee      0xe87 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_info    0x0000000000035e75     0x11ef Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_info    0x0000000000037064      0xc67 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
+ .debug_info    0x0000000000037ccb     0x3660 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+ .debug_info    0x000000000003b32b     0x1aa8 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+ .debug_info    0x000000000003cdd3     0x1158 Src/adc.o
+ .debug_info    0x000000000003df2b      0xa02 Src/dma.o
+ .debug_info    0x000000000003e92d      0xc0e Src/gpio.o
+ .debug_info    0x000000000003f53b     0x6a71 Src/main.o
+ .debug_info    0x0000000000045fac      0xcd0 Src/stm32f1xx_hal_msp.o
+ .debug_info    0x0000000000046c7c      0xf5f Src/stm32f1xx_it.o
+ .debug_info    0x0000000000047bdb      0xc15 Src/system_stm32f1xx.o
+ .debug_info    0x00000000000487f0     0x1859 Src/tim.o
+ .debug_info    0x000000000004a049       0x22 startup/startup_stm32f103xb.o
 
-.debug_abbrev   0x0000000000000000     0x4d66
+.debug_abbrev   0x0000000000000000     0x4d82
  .debug_abbrev  0x0000000000000000      0x2a3 APPS/encoder/encoder.o
  .debug_abbrev  0x00000000000002a3      0x2aa APPS/event/event.o
  .debug_abbrev  0x000000000000054d      0x291 APPS/glcd/ST7565R.o
@@ -6770,27 +7487,27 @@ OUTPUT(mus_proj.elf elf32-littlearm)
  .debug_abbrev  0x000000000000166c      0x203 APPS/glcd/fonts/fonts.o
  .debug_abbrev  0x000000000000186f      0x31b APPS/link_list/link_list.o
  .debug_abbrev  0x0000000000001b8a      0x25a APPS/push-btn/push_btn.o
- .debug_abbrev  0x0000000000001de4      0x26b APPS/volume/volume.o
- .debug_abbrev  0x000000000000204f      0x2f4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_abbrev  0x0000000000002343      0x288 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
- .debug_abbrev  0x00000000000025cb      0x3cd Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_abbrev  0x0000000000002998      0x2e5 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
- .debug_abbrev  0x0000000000002c7d      0x2a7 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_abbrev  0x0000000000002f24      0x335 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .debug_abbrev  0x0000000000003259      0x2b4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
- .debug_abbrev  0x000000000000350d      0x2ef Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
- .debug_abbrev  0x00000000000037fc      0x2e0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
- .debug_abbrev  0x0000000000003adc      0x274 Src/adc.o
- .debug_abbrev  0x0000000000003d50      0x1d8 Src/dma.o
- .debug_abbrev  0x0000000000003f28      0x22b Src/gpio.o
- .debug_abbrev  0x0000000000004153      0x299 Src/main.o
- .debug_abbrev  0x00000000000043ec      0x234 Src/stm32f1xx_hal_msp.o
- .debug_abbrev  0x0000000000004620      0x24a Src/stm32f1xx_it.o
- .debug_abbrev  0x000000000000486a      0x228 Src/system_stm32f1xx.o
- .debug_abbrev  0x0000000000004a92      0x2c2 Src/tim.o
- .debug_abbrev  0x0000000000004d54       0x12 startup/startup_stm32f103xb.o
+ .debug_abbrev  0x0000000000001de4      0x287 APPS/volume/volume.o
+ .debug_abbrev  0x000000000000206b      0x2f4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_abbrev  0x000000000000235f      0x288 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+ .debug_abbrev  0x00000000000025e7      0x3cd Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_abbrev  0x00000000000029b4      0x2e5 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+ .debug_abbrev  0x0000000000002c99      0x2a7 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_abbrev  0x0000000000002f40      0x335 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_abbrev  0x0000000000003275      0x2b4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
+ .debug_abbrev  0x0000000000003529      0x2ef Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+ .debug_abbrev  0x0000000000003818      0x2e0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+ .debug_abbrev  0x0000000000003af8      0x274 Src/adc.o
+ .debug_abbrev  0x0000000000003d6c      0x1d8 Src/dma.o
+ .debug_abbrev  0x0000000000003f44      0x22b Src/gpio.o
+ .debug_abbrev  0x000000000000416f      0x299 Src/main.o
+ .debug_abbrev  0x0000000000004408      0x234 Src/stm32f1xx_hal_msp.o
+ .debug_abbrev  0x000000000000463c      0x24a Src/stm32f1xx_it.o
+ .debug_abbrev  0x0000000000004886      0x228 Src/system_stm32f1xx.o
+ .debug_abbrev  0x0000000000004aae      0x2c2 Src/tim.o
+ .debug_abbrev  0x0000000000004d70       0x12 startup/startup_stm32f103xb.o
 
-.debug_loc      0x0000000000000000     0x8889
+.debug_loc      0x0000000000000000     0x8921
  .debug_loc     0x0000000000000000       0xd1 APPS/encoder/encoder.o
  .debug_loc     0x00000000000000d1      0x277 APPS/event/event.o
  .debug_loc     0x0000000000000348      0x203 APPS/glcd/ST7565R.o
@@ -6800,21 +7517,21 @@ OUTPUT(mus_proj.elf elf32-littlearm)
  .debug_loc     0x0000000000001001      0x384 APPS/glcd/glcd_text.o
  .debug_loc     0x0000000000001385      0x20c APPS/glcd/unit_tests.o
  .debug_loc     0x0000000000001591      0x65d APPS/link_list/link_list.o
- .debug_loc     0x0000000000001bee       0x21 APPS/volume/volume.o
- .debug_loc     0x0000000000001c0f       0xfd Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_loc     0x0000000000001d0c      0x9fa Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
- .debug_loc     0x0000000000002706      0x5ad Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_loc     0x0000000000002cb3      0x7aa Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
- .debug_loc     0x000000000000345d      0x44e Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_loc     0x00000000000038ab      0x4f6 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .debug_loc     0x0000000000003da1      0x2d0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
- .debug_loc     0x0000000000004071     0x367a Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
- .debug_loc     0x00000000000076eb      0xf9e Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
- .debug_loc     0x0000000000008689       0x4a Src/adc.o
- .debug_loc     0x00000000000086d3       0xdf Src/system_stm32f1xx.o
- .debug_loc     0x00000000000087b2       0xd7 Src/tim.o
+ .debug_loc     0x0000000000001bee       0xb9 APPS/volume/volume.o
+ .debug_loc     0x0000000000001ca7       0xfd Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_loc     0x0000000000001da4      0x9fa Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+ .debug_loc     0x000000000000279e      0x5ad Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_loc     0x0000000000002d4b      0x7aa Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+ .debug_loc     0x00000000000034f5      0x44e Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_loc     0x0000000000003943      0x4f6 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_loc     0x0000000000003e39      0x2d0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
+ .debug_loc     0x0000000000004109     0x367a Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+ .debug_loc     0x0000000000007783      0xf9e Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+ .debug_loc     0x0000000000008721       0x4a Src/adc.o
+ .debug_loc     0x000000000000876b       0xdf Src/system_stm32f1xx.o
+ .debug_loc     0x000000000000884a       0xd7 Src/tim.o
 
-.debug_aranges  0x0000000000000000      0xee8
+.debug_aranges  0x0000000000000000      0xf00
  .debug_aranges
                 0x0000000000000000       0x48 APPS/encoder/encoder.o
  .debug_aranges
@@ -6838,45 +7555,45 @@ OUTPUT(mus_proj.elf elf32-littlearm)
  .debug_aranges
                 0x0000000000000420       0x28 APPS/push-btn/push_btn.o
  .debug_aranges
-                0x0000000000000448       0x30 APPS/volume/volume.o
+                0x0000000000000448       0x48 APPS/volume/volume.o
  .debug_aranges
-                0x0000000000000478       0xd0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+                0x0000000000000490       0xd0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
  .debug_aranges
-                0x0000000000000548       0xf0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+                0x0000000000000560       0xf0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
  .debug_aranges
-                0x0000000000000638       0x90 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+                0x0000000000000650       0x90 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
  .debug_aranges
-                0x00000000000006c8       0x80 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+                0x00000000000006e0       0x80 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
  .debug_aranges
-                0x0000000000000748       0x58 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+                0x0000000000000760       0x58 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
  .debug_aranges
-                0x00000000000007a0       0x90 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+                0x00000000000007b8       0x90 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
  .debug_aranges
-                0x0000000000000830       0x30 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
+                0x0000000000000848       0x30 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
  .debug_aranges
-                0x0000000000000860      0x368 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+                0x0000000000000878      0x368 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
  .debug_aranges
-                0x0000000000000bc8      0x138 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+                0x0000000000000be0      0x138 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
  .debug_aranges
-                0x0000000000000d00       0x30 Src/adc.o
+                0x0000000000000d18       0x30 Src/adc.o
  .debug_aranges
-                0x0000000000000d30       0x20 Src/dma.o
+                0x0000000000000d48       0x20 Src/dma.o
  .debug_aranges
-                0x0000000000000d50       0x20 Src/gpio.o
+                0x0000000000000d68       0x20 Src/gpio.o
  .debug_aranges
-                0x0000000000000d70       0x30 Src/main.o
+                0x0000000000000d88       0x30 Src/main.o
  .debug_aranges
-                0x0000000000000da0       0x20 Src/stm32f1xx_hal_msp.o
+                0x0000000000000db8       0x20 Src/stm32f1xx_hal_msp.o
  .debug_aranges
-                0x0000000000000dc0       0x70 Src/stm32f1xx_it.o
+                0x0000000000000dd8       0x70 Src/stm32f1xx_it.o
  .debug_aranges
-                0x0000000000000e30       0x28 Src/system_stm32f1xx.o
+                0x0000000000000e48       0x28 Src/system_stm32f1xx.o
  .debug_aranges
-                0x0000000000000e58       0x68 Src/tim.o
+                0x0000000000000e70       0x68 Src/tim.o
  .debug_aranges
-                0x0000000000000ec0       0x28 startup/startup_stm32f103xb.o
+                0x0000000000000ed8       0x28 startup/startup_stm32f103xb.o
 
-.debug_ranges   0x0000000000000000      0xeb0
+.debug_ranges   0x0000000000000000      0xec8
  .debug_ranges  0x0000000000000000       0x38 APPS/encoder/encoder.o
  .debug_ranges  0x0000000000000038       0x48 APPS/event/event.o
  .debug_ranges  0x0000000000000080       0xd0 APPS/glcd/ST7565R.o
@@ -6887,138 +7604,66 @@ OUTPUT(mus_proj.elf elf32-littlearm)
  .debug_ranges  0x00000000000002e8       0xb0 APPS/glcd/unit_tests.o
  .debug_ranges  0x0000000000000398       0xf0 APPS/link_list/link_list.o
  .debug_ranges  0x0000000000000488       0x18 APPS/push-btn/push_btn.o
- .debug_ranges  0x00000000000004a0       0x20 APPS/volume/volume.o
- .debug_ranges  0x00000000000004c0       0xc0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_ranges  0x0000000000000580       0xe0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
- .debug_ranges  0x0000000000000660       0xe0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_ranges  0x0000000000000740       0x70 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
- .debug_ranges  0x00000000000007b0       0x48 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_ranges  0x00000000000007f8       0xa0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .debug_ranges  0x0000000000000898       0x38 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
- .debug_ranges  0x00000000000008d0      0x358 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
- .debug_ranges  0x0000000000000c28      0x128 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
- .debug_ranges  0x0000000000000d50       0x20 Src/adc.o
- .debug_ranges  0x0000000000000d70       0x10 Src/dma.o
- .debug_ranges  0x0000000000000d80       0x10 Src/gpio.o
- .debug_ranges  0x0000000000000d90       0x20 Src/main.o
- .debug_ranges  0x0000000000000db0       0x10 Src/stm32f1xx_hal_msp.o
- .debug_ranges  0x0000000000000dc0       0x60 Src/stm32f1xx_it.o
- .debug_ranges  0x0000000000000e20       0x18 Src/system_stm32f1xx.o
- .debug_ranges  0x0000000000000e38       0x58 Src/tim.o
- .debug_ranges  0x0000000000000e90       0x20 startup/startup_stm32f103xb.o
+ .debug_ranges  0x00000000000004a0       0x38 APPS/volume/volume.o
+ .debug_ranges  0x00000000000004d8       0xc0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_ranges  0x0000000000000598       0xe0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+ .debug_ranges  0x0000000000000678       0xe0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_ranges  0x0000000000000758       0x70 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+ .debug_ranges  0x00000000000007c8       0x48 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_ranges  0x0000000000000810       0xa0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_ranges  0x00000000000008b0       0x38 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
+ .debug_ranges  0x00000000000008e8      0x358 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+ .debug_ranges  0x0000000000000c40      0x128 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+ .debug_ranges  0x0000000000000d68       0x20 Src/adc.o
+ .debug_ranges  0x0000000000000d88       0x10 Src/dma.o
+ .debug_ranges  0x0000000000000d98       0x10 Src/gpio.o
+ .debug_ranges  0x0000000000000da8       0x20 Src/main.o
+ .debug_ranges  0x0000000000000dc8       0x10 Src/stm32f1xx_hal_msp.o
+ .debug_ranges  0x0000000000000dd8       0x60 Src/stm32f1xx_it.o
+ .debug_ranges  0x0000000000000e38       0x18 Src/system_stm32f1xx.o
+ .debug_ranges  0x0000000000000e50       0x58 Src/tim.o
+ .debug_ranges  0x0000000000000ea8       0x20 startup/startup_stm32f103xb.o
 
-.debug_macro    0x0000000000000000    0x1a3bd
- .debug_macro   0x0000000000000000      0x3a2 APPS/encoder/encoder.o
- .debug_macro   0x00000000000003a2      0xa60 APPS/encoder/encoder.o
- .debug_macro   0x0000000000000e02      0x179 APPS/encoder/encoder.o
- .debug_macro   0x0000000000000f7b      0x175 APPS/encoder/encoder.o
- .debug_macro   0x00000000000010f0       0x2e APPS/encoder/encoder.o
- .debug_macro   0x000000000000111e       0x22 APPS/encoder/encoder.o
- .debug_macro   0x0000000000001140       0x22 APPS/encoder/encoder.o
- .debug_macro   0x0000000000001162       0x87 APPS/encoder/encoder.o
- .debug_macro   0x00000000000011e9       0x51 APPS/encoder/encoder.o
- .debug_macro   0x000000000000123a       0xef APPS/encoder/encoder.o
- .debug_macro   0x0000000000001329       0x6a APPS/encoder/encoder.o
- .debug_macro   0x0000000000001393      0x1df APPS/encoder/encoder.o
- .debug_macro   0x0000000000001572       0x34 APPS/encoder/encoder.o
- .debug_macro   0x00000000000015a6       0x34 APPS/encoder/encoder.o
- .debug_macro   0x00000000000015da      0xb8e APPS/encoder/encoder.o
- .debug_macro   0x0000000000002168     0xe90a APPS/encoder/encoder.o
- .debug_macro   0x0000000000010a72       0x43 APPS/encoder/encoder.o
- .debug_macro   0x0000000000010ab5       0x58 APPS/encoder/encoder.o
- .debug_macro   0x0000000000010b0d       0x17 APPS/encoder/encoder.o
- .debug_macro   0x0000000000010b24       0x35 APPS/encoder/encoder.o
- .debug_macro   0x0000000000010b59       0x9c APPS/encoder/encoder.o
- .debug_macro   0x0000000000010bf5       0x16 APPS/encoder/encoder.o
- .debug_macro   0x0000000000010c0b       0x97 APPS/encoder/encoder.o
- .debug_macro   0x0000000000010ca2      0x330 APPS/encoder/encoder.o
- .debug_macro   0x0000000000010fd2       0xfd APPS/encoder/encoder.o
- .debug_macro   0x00000000000110cf       0x10 APPS/encoder/encoder.o
- .debug_macro   0x00000000000110df       0x58 APPS/encoder/encoder.o
- .debug_macro   0x0000000000011137       0x1f APPS/encoder/encoder.o
- .debug_macro   0x0000000000011156       0x43 APPS/encoder/encoder.o
- .debug_macro   0x0000000000011199       0x20 APPS/encoder/encoder.o
- .debug_macro   0x00000000000111b9      0x18e APPS/encoder/encoder.o
- .debug_macro   0x0000000000011347       0x10 APPS/encoder/encoder.o
- .debug_macro   0x0000000000011357       0x1c APPS/encoder/encoder.o
- .debug_macro   0x0000000000011373       0x52 APPS/encoder/encoder.o
- .debug_macro   0x00000000000113c5       0x40 APPS/encoder/encoder.o
- .debug_macro   0x0000000000011405       0x10 APPS/encoder/encoder.o
- .debug_macro   0x0000000000011415       0x40 APPS/encoder/encoder.o
- .debug_macro   0x0000000000011455       0xd7 APPS/encoder/encoder.o
- .debug_macro   0x000000000001152c       0x1c APPS/encoder/encoder.o
- .debug_macro   0x0000000000011548       0x3d APPS/encoder/encoder.o
- .debug_macro   0x0000000000011585       0x16 APPS/encoder/encoder.o
- .debug_macro   0x000000000001159b      0x16f APPS/encoder/encoder.o
- .debug_macro   0x000000000001170a       0x50 APPS/encoder/encoder.o
- .debug_macro   0x000000000001175a      0x5c2 APPS/encoder/encoder.o
- .debug_macro   0x0000000000011d1c      0x28a APPS/encoder/encoder.o
- .debug_macro   0x0000000000011fa6      0x1cb APPS/encoder/encoder.o
- .debug_macro   0x0000000000012171      0x11e APPS/encoder/encoder.o
- .debug_macro   0x000000000001228f      0x1b3 APPS/encoder/encoder.o
- .debug_macro   0x0000000000012442       0x27 APPS/encoder/encoder.o
- .debug_macro   0x0000000000012469      0x1bc APPS/encoder/encoder.o
- .debug_macro   0x0000000000012625       0x34 APPS/encoder/encoder.o
- .debug_macro   0x0000000000012659       0x3c APPS/encoder/encoder.o
- .debug_macro   0x0000000000012695       0x57 APPS/encoder/encoder.o
- .debug_macro   0x00000000000126ec      0x46a APPS/encoder/encoder.o
- .debug_macro   0x0000000000012b56      0x1b5 APPS/encoder/encoder.o
- .debug_macro   0x0000000000012d0b       0x8c APPS/encoder/encoder.o
- .debug_macro   0x0000000000012d97      0x242 APPS/encoder/encoder.o
- .debug_macro   0x0000000000012fd9      0x143 APPS/encoder/encoder.o
- .debug_macro   0x000000000001311c      0x1f4 APPS/encoder/encoder.o
- .debug_macro   0x0000000000013310      0x84c APPS/encoder/encoder.o
- .debug_macro   0x0000000000013b5c       0x1f APPS/encoder/encoder.o
- .debug_macro   0x0000000000013b7b       0x83 APPS/encoder/encoder.o
- .debug_macro   0x0000000000013bfe       0x16 APPS/encoder/encoder.o
- .debug_macro   0x0000000000013c14       0x35 APPS/encoder/encoder.o
- .debug_macro   0x0000000000013c49       0x16 APPS/encoder/encoder.o
- .debug_macro   0x0000000000013c5f       0x29 APPS/encoder/encoder.o
- .debug_macro   0x0000000000013c88       0x16 APPS/encoder/encoder.o
- .debug_macro   0x0000000000013c9e      0x3a2 APPS/event/event.o
- .debug_macro   0x0000000000014040      0x46d APPS/glcd/ST7565R.o
- .debug_macro   0x00000000000144ad       0x34 APPS/glcd/ST7565R.o
- .debug_macro   0x00000000000144e1       0x3a APPS/glcd/ST7565R.o
- .debug_macro   0x000000000001451b       0xd6 APPS/glcd/ST7565R.o
- .debug_macro   0x00000000000145f1       0x10 APPS/glcd/ST7565R.o
- .debug_macro   0x0000000000014601      0x466 APPS/glcd/_STM32F10x.o
- .debug_macro   0x0000000000014a67      0x485 APPS/glcd/glcd.o
- .debug_macro   0x0000000000014eec       0x52 APPS/glcd/glcd.o
- .debug_macro   0x0000000000014f3e       0x8d APPS/glcd/glcd.o
- .debug_macro   0x0000000000014fcb      0x174 APPS/glcd/glcd.o
- .debug_macro   0x000000000001513f       0x57 APPS/glcd/glcd.o
- .debug_macro   0x0000000000015196       0x10 APPS/glcd/glcd.o
- .debug_macro   0x00000000000151a6       0x1c APPS/glcd/glcd.o
- .debug_macro   0x00000000000151c2       0x3a APPS/glcd/glcd.o
- .debug_macro   0x00000000000151fc      0x485 APPS/glcd/glcd_graphics.o
- .debug_macro   0x0000000000015681       0x16 APPS/glcd/glcd_graphics.o
- .debug_macro   0x0000000000015697      0x466 APPS/glcd/glcd_text.o
- .debug_macro   0x0000000000015afd      0x460 APPS/glcd/unit_tests.o
- .debug_macro   0x0000000000015f5d      0x46a APPS/glcd/fonts/fonts.o
- .debug_macro   0x00000000000163c7      0x100 APPS/link_list/link_list.o
- .debug_macro   0x00000000000164c7      0x10e APPS/link_list/link_list.o
- .debug_macro   0x00000000000165d5       0x8d APPS/link_list/link_list.o
- .debug_macro   0x0000000000016662      0x3b4 APPS/push-btn/push_btn.o
- .debug_macro   0x0000000000016a16      0x3b4 APPS/volume/volume.o
- .debug_macro   0x0000000000016dca      0x32b Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_macro   0x00000000000170f5      0x324 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
- .debug_macro   0x0000000000017419      0x307 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_macro   0x0000000000017720      0x307 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
- .debug_macro   0x0000000000017a27      0x377 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_macro   0x0000000000017d9e      0x319 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .debug_macro   0x00000000000180b7      0x307 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
- .debug_macro   0x00000000000183be      0x307 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
- .debug_macro   0x00000000000186c5      0x307 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
- .debug_macro   0x00000000000189cc      0x325 Src/adc.o
- .debug_macro   0x0000000000018cf1      0x311 Src/dma.o
- .debug_macro   0x0000000000019002      0x311 Src/gpio.o
- .debug_macro   0x0000000000019313      0x46a Src/main.o
- .debug_macro   0x000000000001977d      0x307 Src/stm32f1xx_hal_msp.o
- .debug_macro   0x0000000000019a84      0x311 Src/stm32f1xx_it.o
- .debug_macro   0x0000000000019d95      0x30d Src/system_stm32f1xx.o
- .debug_macro   0x000000000001a0a2      0x31b Src/tim.o
+.debug_macro    0x0000000000000000     0x67d4
+ .debug_macro   0x0000000000000000      0x3a1 APPS/encoder/encoder.o
+ .debug_macro   0x00000000000003a1      0x3a1 APPS/event/event.o
+ .debug_macro   0x0000000000000742      0x46c APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000bae       0x34 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000be2       0x3a APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000c1c       0xd6 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000cf2       0x10 APPS/glcd/ST7565R.o
+ .debug_macro   0x0000000000000d02      0x465 APPS/glcd/_STM32F10x.o
+ .debug_macro   0x0000000000001167      0x484 APPS/glcd/glcd.o
+ .debug_macro   0x00000000000015eb      0x174 APPS/glcd/glcd.o
+ .debug_macro   0x000000000000175f       0x10 APPS/glcd/glcd.o
+ .debug_macro   0x000000000000176f       0x3a APPS/glcd/glcd.o
+ .debug_macro   0x00000000000017a9      0x484 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000001c2d       0x16 APPS/glcd/glcd_graphics.o
+ .debug_macro   0x0000000000001c43      0x465 APPS/glcd/glcd_text.o
+ .debug_macro   0x00000000000020a8      0x45f APPS/glcd/unit_tests.o
+ .debug_macro   0x0000000000002507      0x469 APPS/glcd/fonts/fonts.o
+ .debug_macro   0x0000000000002970      0x100 APPS/link_list/link_list.o
+ .debug_macro   0x0000000000002a70      0x3b3 APPS/push-btn/push_btn.o
+ .debug_macro   0x0000000000002e23      0x3bf APPS/volume/volume.o
+ .debug_macro   0x00000000000031e2      0x32b Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_macro   0x000000000000350d      0x324 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+ .debug_macro   0x0000000000003831      0x307 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_macro   0x0000000000003b38      0x307 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+ .debug_macro   0x0000000000003e3f      0x377 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_macro   0x00000000000041b6      0x319 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_macro   0x00000000000044cf      0x307 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
+ .debug_macro   0x00000000000047d6      0x307 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+ .debug_macro   0x0000000000004add      0x307 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+ .debug_macro   0x0000000000004de4      0x325 Src/adc.o
+ .debug_macro   0x0000000000005109      0x311 Src/dma.o
+ .debug_macro   0x000000000000541a      0x311 Src/gpio.o
+ .debug_macro   0x000000000000572b      0x469 Src/main.o
+ .debug_macro   0x0000000000005b94      0x307 Src/stm32f1xx_hal_msp.o
+ .debug_macro   0x0000000000005e9b      0x311 Src/stm32f1xx_it.o
+ .debug_macro   0x00000000000061ac      0x30d Src/system_stm32f1xx.o
+ .debug_macro   0x00000000000064b9      0x31b Src/tim.o
 
-.debug_line     0x0000000000000000    0x12264
+.debug_line     0x0000000000000000    0x122a0
  .debug_line    0x0000000000000000      0x8ef APPS/encoder/encoder.o
  .debug_line    0x00000000000008ef      0x8f8 APPS/event/event.o
  .debug_line    0x00000000000011e7      0xbf4 APPS/glcd/ST7565R.o
@@ -7030,86 +7675,86 @@ OUTPUT(mus_proj.elf elf32-littlearm)
  .debug_line    0x0000000000005959      0xa6e APPS/glcd/fonts/fonts.o
  .debug_line    0x00000000000063c7      0x5ca APPS/link_list/link_list.o
  .debug_line    0x0000000000006991      0x8b8 APPS/push-btn/push_btn.o
- .debug_line    0x0000000000007249      0x8b9 APPS/volume/volume.o
- .debug_line    0x0000000000007b02      0x8e6 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_line    0x00000000000083e8      0xc77 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
- .debug_line    0x000000000000905f      0x8fe Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_line    0x000000000000995d      0xab1 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
- .debug_line    0x000000000000a40e      0x8e3 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_line    0x000000000000acf1      0xa00 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .debug_line    0x000000000000b6f1      0x7ec Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
- .debug_line    0x000000000000bedd     0x16fb Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
- .debug_line    0x000000000000d5d8      0xcb5 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
- .debug_line    0x000000000000e28d      0x78c Src/adc.o
- .debug_line    0x000000000000ea19      0x71f Src/dma.o
- .debug_line    0x000000000000f138      0x736 Src/gpio.o
- .debug_line    0x000000000000f86e      0xac9 Src/main.o
- .debug_line    0x0000000000010337      0x72d Src/stm32f1xx_hal_msp.o
- .debug_line    0x0000000000010a64      0x7dd Src/stm32f1xx_it.o
- .debug_line    0x0000000000011241      0x763 Src/system_stm32f1xx.o
- .debug_line    0x00000000000119a4      0x843 Src/tim.o
- .debug_line    0x00000000000121e7       0x7d startup/startup_stm32f103xb.o
+ .debug_line    0x0000000000007249      0x8f5 APPS/volume/volume.o
+ .debug_line    0x0000000000007b3e      0x8e6 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_line    0x0000000000008424      0xc77 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+ .debug_line    0x000000000000909b      0x8fe Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_line    0x0000000000009999      0xab1 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+ .debug_line    0x000000000000a44a      0x8e3 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_line    0x000000000000ad2d      0xa00 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_line    0x000000000000b72d      0x7ec Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
+ .debug_line    0x000000000000bf19     0x16fb Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+ .debug_line    0x000000000000d614      0xcb5 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+ .debug_line    0x000000000000e2c9      0x78c Src/adc.o
+ .debug_line    0x000000000000ea55      0x71f Src/dma.o
+ .debug_line    0x000000000000f174      0x736 Src/gpio.o
+ .debug_line    0x000000000000f8aa      0xac9 Src/main.o
+ .debug_line    0x0000000000010373      0x72d Src/stm32f1xx_hal_msp.o
+ .debug_line    0x0000000000010aa0      0x7dd Src/stm32f1xx_it.o
+ .debug_line    0x000000000001127d      0x763 Src/system_stm32f1xx.o
+ .debug_line    0x00000000000119e0      0x843 Src/tim.o
+ .debug_line    0x0000000000012223       0x7d startup/startup_stm32f103xb.o
 
-.debug_str      0x0000000000000000    0x77b9a
- .debug_str     0x0000000000000000    0x73784 APPS/encoder/encoder.o
-                                      0x73b03 (size before relaxing)
- .debug_str     0x0000000000073784      0x1c3 APPS/event/event.o
-                                      0x73c57 (size before relaxing)
- .debug_str     0x0000000000073947      0xccb APPS/glcd/ST7565R.o
-                                      0x747cf (size before relaxing)
- .debug_str     0x0000000000074612       0x60 APPS/glcd/_STM32F10x.o
-                                      0x74736 (size before relaxing)
- .debug_str     0x0000000000074672       0xe0 APPS/glcd/glcd.o
-                                      0x74771 (size before relaxing)
- .debug_str     0x0000000000074752      0x11b APPS/glcd/glcd_graphics.o
-                                      0x747c6 (size before relaxing)
- .debug_str     0x000000000007486d       0xd0 APPS/glcd/glcd_text.o
-                                      0x7473f (size before relaxing)
- .debug_str     0x000000000007493d      0x2e9 APPS/glcd/unit_tests.o
-                                      0x74af9 (size before relaxing)
- .debug_str     0x0000000000074c26       0x1b APPS/glcd/fonts/fonts.o
-                                      0x74649 (size before relaxing)
- .debug_str     0x0000000000074c41      0x195 APPS/link_list/link_list.o
+.debug_str      0x0000000000000000    0x77c37
+ .debug_str     0x0000000000000000    0x7379e APPS/encoder/encoder.o
+                                      0x73b1d (size before relaxing)
+ .debug_str     0x000000000007379e      0x1d3 APPS/event/event.o
+                                      0x73c81 (size before relaxing)
+ .debug_str     0x0000000000073971      0xccb APPS/glcd/ST7565R.o
+                                      0x747e9 (size before relaxing)
+ .debug_str     0x000000000007463c       0x60 APPS/glcd/_STM32F10x.o
+                                      0x74750 (size before relaxing)
+ .debug_str     0x000000000007469c       0xe0 APPS/glcd/glcd.o
+                                      0x7478b (size before relaxing)
+ .debug_str     0x000000000007477c      0x11b APPS/glcd/glcd_graphics.o
+                                      0x747e0 (size before relaxing)
+ .debug_str     0x0000000000074897       0xd0 APPS/glcd/glcd_text.o
+                                      0x74759 (size before relaxing)
+ .debug_str     0x0000000000074967      0x2e9 APPS/glcd/unit_tests.o
+                                      0x74b23 (size before relaxing)
+ .debug_str     0x0000000000074c50       0x1b APPS/glcd/fonts/fonts.o
+                                      0x74663 (size before relaxing)
+ .debug_str     0x0000000000074c6b      0x195 APPS/link_list/link_list.o
                                        0x63b8 (size before relaxing)
- .debug_str     0x0000000000074dd6       0x96 APPS/push-btn/push_btn.o
-                                      0x73b67 (size before relaxing)
- .debug_str     0x0000000000074e6c       0xea APPS/volume/volume.o
-                                      0x73b69 (size before relaxing)
- .debug_str     0x0000000000074f56      0x708 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_str     0x0000000000074e00       0x96 APPS/push-btn/push_btn.o
+                                      0x73b81 (size before relaxing)
+ .debug_str     0x0000000000074e96      0x15d APPS/volume/volume.o
+                                      0x73c29 (size before relaxing)
+ .debug_str     0x0000000000074ff3      0x708 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
                                       0x739ae (size before relaxing)
- .debug_str     0x000000000007565e      0x3bc Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+ .debug_str     0x00000000000756fb      0x3bc Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
                                       0x73955 (size before relaxing)
- .debug_str     0x0000000000075a1a      0x2e1 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_str     0x0000000000075ab7      0x2e1 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
                                       0x73903 (size before relaxing)
- .debug_str     0x0000000000075cfb      0x220 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+ .debug_str     0x0000000000075d98      0x220 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
                                       0x73667 (size before relaxing)
- .debug_str     0x0000000000075f1b      0x34a Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_str     0x0000000000075fb8      0x34a Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
                                       0x7364a (size before relaxing)
- .debug_str     0x0000000000076265      0x368 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_str     0x0000000000076302      0x368 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
                                       0x7369f (size before relaxing)
- .debug_str     0x00000000000765cd      0x110 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
+ .debug_str     0x000000000007666a      0x110 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
                                       0x7342b (size before relaxing)
- .debug_str     0x00000000000766dd      0xd2b Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+ .debug_str     0x000000000007677a      0xd2b Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
                                       0x7439f (size before relaxing)
- .debug_str     0x0000000000077408      0x4f1 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+ .debug_str     0x00000000000774a5      0x4f1 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
                                       0x73c41 (size before relaxing)
- .debug_str     0x00000000000778f9       0x40 Src/adc.o
+ .debug_str     0x0000000000077996       0x40 Src/adc.o
                                       0x736a3 (size before relaxing)
- .debug_str     0x0000000000077939        0xd Src/dma.o
+ .debug_str     0x00000000000779d6        0xd Src/dma.o
                                       0x73251 (size before relaxing)
- .debug_str     0x0000000000077946       0x1b Src/gpio.o
+ .debug_str     0x00000000000779e3       0x1b Src/gpio.o
                                       0x732ec (size before relaxing)
- .debug_str     0x0000000000077961       0x33 Src/main.o
-                                      0x74c33 (size before relaxing)
- .debug_str     0x0000000000077994       0x1b Src/stm32f1xx_hal_msp.o
+ .debug_str     0x00000000000779fe       0x33 Src/main.o
+                                      0x74c4d (size before relaxing)
+ .debug_str     0x0000000000077a31       0x1b Src/stm32f1xx_hal_msp.o
                                       0x7358b (size before relaxing)
- .debug_str     0x00000000000779af       0xe1 Src/stm32f1xx_it.o
+ .debug_str     0x0000000000077a4c       0xe1 Src/stm32f1xx_it.o
                                       0x736f9 (size before relaxing)
- .debug_str     0x0000000000077a90       0x69 Src/system_stm32f1xx.o
+ .debug_str     0x0000000000077b2d       0x69 Src/system_stm32f1xx.o
                                       0x732f5 (size before relaxing)
- .debug_str     0x0000000000077af9       0x71 Src/tim.o
+ .debug_str     0x0000000000077b96       0x71 Src/tim.o
                                       0x73da5 (size before relaxing)
- .debug_str     0x0000000000077b6a       0x30 startup/startup_stm32f103xb.o
+ .debug_str     0x0000000000077c07       0x30 startup/startup_stm32f103xb.o
                                          0x52 (size before relaxing)
 
 .comment        0x0000000000000000       0x7e
@@ -7144,7 +7789,7 @@ OUTPUT(mus_proj.elf elf32-littlearm)
  .comment       0x000000000000007e       0x7f Src/system_stm32f1xx.o
  .comment       0x000000000000007e       0x7f Src/tim.o
 
-.debug_frame    0x0000000000000000     0x2a20
+.debug_frame    0x0000000000000000     0x2a6c
  .debug_frame   0x0000000000000000       0x84 APPS/encoder/encoder.o
  .debug_frame   0x0000000000000084       0xdc APPS/event/event.o
  .debug_frame   0x0000000000000160      0x19c APPS/glcd/ST7565R.o
@@ -7155,39 +7800,39 @@ OUTPUT(mus_proj.elf elf32-littlearm)
  .debug_frame   0x00000000000006c0      0x20c APPS/glcd/unit_tests.o
  .debug_frame   0x00000000000008cc      0x238 APPS/link_list/link_list.o
  .debug_frame   0x0000000000000b04       0x38 APPS/push-btn/push_btn.o
- .debug_frame   0x0000000000000b3c       0x58 APPS/volume/volume.o
- .debug_frame   0x0000000000000b94      0x1ac Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_frame   0x0000000000000d40      0x2c4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
- .debug_frame   0x0000000000001004      0x12c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_frame   0x0000000000001130      0x148 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
- .debug_frame   0x0000000000001278       0xd4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_frame   0x000000000000134c      0x174 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .debug_frame   0x00000000000014c0       0x6c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
- .debug_frame   0x000000000000152c      0x9e0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
- .debug_frame   0x0000000000001f0c      0x374 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
- .debug_frame   0x0000000000002280       0x68 Src/adc.o
- .debug_frame   0x00000000000022e8       0x28 Src/dma.o
- .debug_frame   0x0000000000002310       0x38 Src/gpio.o
- .debug_frame   0x0000000000002348       0x58 Src/main.o
- .debug_frame   0x00000000000023a0       0x2c Src/stm32f1xx_hal_msp.o
- .debug_frame   0x00000000000023cc       0xd8 Src/stm32f1xx_it.o
- .debug_frame   0x00000000000024a4       0x30 Src/system_stm32f1xx.o
- .debug_frame   0x00000000000024d4      0x11c Src/tim.o
- .debug_frame   0x00000000000025f0       0x2c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-init.o)
- .debug_frame   0x000000000000261c       0x30 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-malloc.o)
- .debug_frame   0x000000000000264c       0x28 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x0000000000002674       0x20 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memset.o)
- .debug_frame   0x0000000000002694       0x38 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-freer.o)
- .debug_frame   0x00000000000026cc       0x2c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-mallocr.o)
- .debug_frame   0x00000000000026f8       0x2c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sbrkr.o)
- .debug_frame   0x0000000000002724       0x6c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sprintf.o)
- .debug_frame   0x0000000000002790       0x48 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-utoa.o)
- .debug_frame   0x00000000000027d8       0x30 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-mlock.o)
- .debug_frame   0x0000000000002808       0x90 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
- .debug_frame   0x0000000000002898       0x60 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
- .debug_frame   0x00000000000028f8       0x5c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-reent.o)
- .debug_frame   0x0000000000002954       0x28 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memchr-stub.o)
- .debug_frame   0x000000000000297c       0x28 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memmove.o)
- .debug_frame   0x00000000000029a4       0x3c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-reallocr.o)
- .debug_frame   0x00000000000029e0       0x20 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-msizer.o)
- .debug_frame   0x0000000000002a00       0x20 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(sbrk.o)
+ .debug_frame   0x0000000000000b3c       0xa4 APPS/volume/volume.o
+ .debug_frame   0x0000000000000be0      0x1ac Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_frame   0x0000000000000d8c      0x2c4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+ .debug_frame   0x0000000000001050      0x12c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_frame   0x000000000000117c      0x148 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+ .debug_frame   0x00000000000012c4       0xd4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_frame   0x0000000000001398      0x174 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_frame   0x000000000000150c       0x6c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
+ .debug_frame   0x0000000000001578      0x9e0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+ .debug_frame   0x0000000000001f58      0x374 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+ .debug_frame   0x00000000000022cc       0x68 Src/adc.o
+ .debug_frame   0x0000000000002334       0x28 Src/dma.o
+ .debug_frame   0x000000000000235c       0x38 Src/gpio.o
+ .debug_frame   0x0000000000002394       0x58 Src/main.o
+ .debug_frame   0x00000000000023ec       0x2c Src/stm32f1xx_hal_msp.o
+ .debug_frame   0x0000000000002418       0xd8 Src/stm32f1xx_it.o
+ .debug_frame   0x00000000000024f0       0x30 Src/system_stm32f1xx.o
+ .debug_frame   0x0000000000002520      0x11c Src/tim.o
+ .debug_frame   0x000000000000263c       0x2c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-init.o)
+ .debug_frame   0x0000000000002668       0x30 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-malloc.o)
+ .debug_frame   0x0000000000002698       0x28 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x00000000000026c0       0x20 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x00000000000026e0       0x38 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x0000000000002718       0x2c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x0000000000002744       0x2c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x0000000000002770       0x6c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sprintf.o)
+ .debug_frame   0x00000000000027dc       0x48 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-utoa.o)
+ .debug_frame   0x0000000000002824       0x30 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-mlock.o)
+ .debug_frame   0x0000000000002854       0x90 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .debug_frame   0x00000000000028e4       0x60 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x0000000000002944       0x5c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-reent.o)
+ .debug_frame   0x00000000000029a0       0x28 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memchr-stub.o)
+ .debug_frame   0x00000000000029c8       0x28 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memmove.o)
+ .debug_frame   0x00000000000029f0       0x3c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x0000000000002a2c       0x20 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-msizer.o)
+ .debug_frame   0x0000000000002a4c       0x20 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(sbrk.o)

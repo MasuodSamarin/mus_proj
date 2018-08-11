@@ -50,6 +50,10 @@
 #include "glcd.h"
 #include "unit_tests.h"
 #include "event.h"
+
+/* USER CODE BEGIN Includes */
+
+
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/

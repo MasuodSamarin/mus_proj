@@ -15,8 +15,10 @@ C_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+APPS/effect \
 APPS/encoder \
 APPS/event \
+APPS/fv1 \
 APPS/glcd \
 APPS/glcd/fonts \
 APPS/link_list \

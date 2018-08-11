@@ -90,7 +90,7 @@ event_node_t* event_create_vol_node(vol_name_t name, uint32_t val){
 	vol_node_t *vol = malloc(sizeof(*vol));
 /*TODO: check the malloc */
 	vol->name = name;
-	vol->val = val;
+	vol->val_adc = val;
 
 	node->type = EVENT_VOL;
 	node->vol = vol;

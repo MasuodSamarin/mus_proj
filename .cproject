@@ -45,6 +45,13 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/link_list}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/glcd}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/glcd/fonts}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/glcd}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/glcd/fonts}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/fv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/glcd}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/glcd/fonts}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/effect}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/link_list}&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.2122180815" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="__weak=&quot;__attribute__((weak))&quot;"/>
@@ -105,6 +112,8 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/effect"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/link-list"/>
 						<entry excluding="event|encoder|push-btn|link_list|volume" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/encoder"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/event"/>
@@ -113,6 +122,7 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/volume"/>
 						<entry excluding="fonts" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/glcd"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/glcd/fonts"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/fv1"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/link-list"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Inc"/>
@@ -224,6 +234,8 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/effect"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/link-list"/>
 						<entry excluding="event|encoder|push-btn|link_list|volume" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/encoder"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/event"/>
@@ -232,6 +244,7 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/volume"/>
 						<entry excluding="fonts" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/glcd"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/glcd/fonts"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/fv1"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/link-list"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Inc"/>

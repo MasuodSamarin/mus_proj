@@ -484,7 +484,7 @@ void unit_print_vol(vol_node_t *vol){
 	glcd_clear_buffer();
 	glcd_draw_string(5,5, "VOLUME");
 	glcd_draw_string(5,15, unit_vol_name[vol->name]);
-	glcd_draw_string(5,25, (char*)utoa(vol->val, str, 10));
+	glcd_draw_string(5,25, (char*)utoa(vol->val_adc, str, 10));
 	sprintf(str, "%p", vol);
 	glcd_draw_string(5,35, str);
 	glcd_write();
