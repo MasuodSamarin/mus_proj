@@ -436,6 +436,7 @@ void glcd_test_bitmap_128x64(void)
  * user includes
  * */
 #include "event.h"
+#include "push_btn.h"
 
 char str[10];
 
