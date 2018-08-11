@@ -15,8 +15,8 @@
 #include "event.h"
 
 
-list_t *efx_list;
-list_iterator_t efx_list_iter;
+static list_t *efx_list;
+static list_iterator_t efx_list_iter;
 
 /*
  * this is the init of the module, possible?
@@ -39,13 +39,13 @@ efx_node_t* efx_create_fv1_node(uint8_t number, efx_mode_t mode, efx_fv1_preset 
 
 	efx_node_t *efx = malloc(sizeof(*efx));
 	//TODO: check malloc
-	efx_fv1_base_t *base = efx_get_fv1_base_preset(pst);
+	efx_fv1_base_t *base = efx_get_fv1_effect(pst);
 
 	/*effect list number start from 1 not zero*/
 	efx->number = number + 1;
 	efx->type = EFX_TYPE_FV1;
 	efx->mode = mode;
-	efx->fv1_base = base;
+	efx->fv1 = base;
 	efx->status = DISABLE;
 	efx->volume[0] = vol_create_node (VOL_A, 0);
 	efx->volume[1] = vol_create_node (VOL_B, 0);
@@ -66,7 +66,24 @@ efx_node_t* efx_create_isd_node(){
 
 }
 
+void efx_delete_isd_node(efx_node_t *efx){
+	free(efx);
+}
+
+
 void efx_push_effect(efx_node_t *efx){
 
 	list_push_back(efx_list, (void*)efx);
 };
+
+efx_node_t* efx_next_node(void){
+	node_t *node = list_iterator_next(&efx_list_iter);
+
+	return ((efx_node_t*)(node->element));
+}
+
+efx_node_t* efx_prev_node(void){
+	node_t *node = list_iterator_prev(&efx_list_iter);
+
+	return ((efx_node_t*)(node->element));
+}

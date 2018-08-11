@@ -55,6 +55,8 @@ Src/main.o: ../Src/main.c /home/sam/w/musavi/mus_proj/Inc/main.h \
  /home/sam/w/musavi/mus_proj/APPS/push-btn/push_btn.h \
  /home/sam/w/musavi/mus_proj/APPS/encoder/encoder.h \
  /home/sam/w/musavi/mus_proj/APPS/volume/volume.h \
+ /home/sam/w/musavi/mus_proj/APPS/fv1/fv1.h \
+ /home/sam/w/musavi/mus_proj/APPS/effect/effect.h \
  /home/sam/w/musavi/mus_proj/APPS/glcd/unit_tests.h
 
 /home/sam/w/musavi/mus_proj/Inc/main.h:
@@ -170,5 +172,9 @@ Src/main.o: ../Src/main.c /home/sam/w/musavi/mus_proj/Inc/main.h \
 /home/sam/w/musavi/mus_proj/APPS/encoder/encoder.h:
 
 /home/sam/w/musavi/mus_proj/APPS/volume/volume.h:
+
+/home/sam/w/musavi/mus_proj/APPS/fv1/fv1.h:
+
+/home/sam/w/musavi/mus_proj/APPS/effect/effect.h:
 
 /home/sam/w/musavi/mus_proj/APPS/glcd/unit_tests.h:

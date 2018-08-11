@@ -152,6 +152,6 @@ void efx_deinit_preset_box(void){
 
 #endif
 
-efx_fv1_base_t* efx_get_preset(efx_fv1_preset pst){
+efx_fv1_base_t* efx_get_fv1_effect(efx_fv1_preset pst){
 	return (efx_preset_box[pst]);
 }

@@ -473,13 +473,22 @@ void unit_print_btn(btn_node_t *btn){
 	glcd_write();
 }
 void unit_print_enc(enc_node_t *enc){
-	glcd_clear_buffer();
+	static efx_node_t *node;
+	/*glcd_clear_buffer();
 	glcd_draw_string(5,5, "ENCODER");
 	glcd_draw_string(5,15, unit_enc_dir[enc->dir]);
 	glcd_draw_string(5,25, (char*)utoa(enc->val, str, 10));
 	sprintf(str, "%p", enc);
 	glcd_draw_string(5,35, str);
 	glcd_write();
+	*/
+	if (enc->dir == ENC_DIR_CCW)
+		node = efx_next_node();
+
+	else if (enc->dir == ENC_DIR_CW)
+		node = efx_prev_node();
+
+	unit_test_effect_print(node);
 }
 void unit_print_vol(vol_node_t *vol){
 	glcd_clear_buffer();
@@ -498,7 +507,7 @@ void uint_print_not(void){
 	glcd_draw_string(5,35, "VOLUMES");
 	glcd_write();
 }
-void unit_test(void){
+void unit_test_events(void){
 	event_node_t node;
 
 	//if(!event_get_size())
@@ -506,9 +515,10 @@ void unit_test(void){
 	node = event_pop_node();
 
 	switch (node.type) {
-		case EVENT_NOT:
+		/*case EVENT_NOT:
 			uint_print_not();
 			break;
+		*/
 		case EVENT_BTN:
 			unit_print_btn(node.btn);
 			break;
@@ -522,3 +532,56 @@ void unit_test(void){
 
 	}
 }
+
+
+
+
+void unit_test_init(void){
+	efx_init_list();
+		glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
+		glcd_clear_buffer();
+		glcd_write();
+
+}
+
+void unit_test_effect_print(efx_node_t *node){
+
+	if (node == NULL)
+		return;
+
+	//for (int var = 0; var < 20; ++var) {
+		glcd_clear_buffer();
+		glcd_write();
+
+		glcd_draw_string(2,5, "EFFECTS");
+
+		sprintf(str, "%d", node->number);
+		glcd_draw_string(5,15, "num:");
+		glcd_draw_string(55,15, str);
+
+		glcd_draw_string(5,25, (char*)node->fv1->name);
+		glcd_draw_string(55,25, (char*)node->fv1->comments);
+
+		sprintf(str, "%d", node->fv1->fv1->eep);
+		glcd_draw_string(5,35, "eep:");
+		glcd_draw_string(55,35, str);
+
+		sprintf(str, "%d", node->fv1->fv1->pin);
+		glcd_draw_string(5,45, "pin:");
+		glcd_draw_string(55,45, str);
+
+		glcd_write();
+		//free(node);
+		//HAL_Delay(2000);
+
+
+
+
+}
+
+
+
+
+
+
+

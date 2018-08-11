@@ -49,7 +49,9 @@ APPS/glcd/glcd_text.o: ../APPS/glcd/glcd_text.c \
  /home/sam/w/musavi/mus_proj/APPS/link_list/link_list.h \
  /home/sam/w/musavi/mus_proj/APPS/push-btn/push_btn.h \
  /home/sam/w/musavi/mus_proj/APPS/encoder/encoder.h \
- /home/sam/w/musavi/mus_proj/APPS/volume/volume.h
+ /home/sam/w/musavi/mus_proj/APPS/volume/volume.h \
+ /home/sam/w/musavi/mus_proj/APPS/fv1/fv1.h \
+ /home/sam/w/musavi/mus_proj/APPS/effect/effect.h
 
 /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 
@@ -162,3 +164,7 @@ APPS/glcd/glcd_text.o: ../APPS/glcd/glcd_text.c \
 /home/sam/w/musavi/mus_proj/APPS/encoder/encoder.h:
 
 /home/sam/w/musavi/mus_proj/APPS/volume/volume.h:
+
+/home/sam/w/musavi/mus_proj/APPS/fv1/fv1.h:
+
+/home/sam/w/musavi/mus_proj/APPS/effect/effect.h:

@@ -98,8 +98,8 @@ typedef struct {
 	efx_mode_t mode;
 	efx_type_t type;
 	union{
-		efx_fv1_base_t *fv1_base;
-		efx_isd_base_t *isd_base;
+		efx_fv1_base_t *fv1;
+		efx_isd_base_t *isd;
 
 	};
 	vol_node_t *volume[VOL_MAX];
@@ -123,9 +123,12 @@ typedef struct {
  * */
 efx_node_t* efx_create_fv1_node(uint8_t number, efx_mode_t mode, efx_fv1_preset pst);
 void efx_push_effect(efx_node_t *efx);
+void efx_init_list(void);
+efx_node_t* efx_next_node(void);
+efx_node_t* efx_prev_node(void);
 /////////////////////////////////////////////////////////
 
-efx_fv1_base_t* efx_get_fv1_base_preset(efx_fv1_preset pst);
+efx_fv1_base_t* efx_get_fv1_effect(efx_fv1_preset pst);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 

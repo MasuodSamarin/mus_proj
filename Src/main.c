@@ -120,17 +120,22 @@ int main(void)
   unit_init();
 
   HAL_TIM_Base_Start_IT(&htim2);
-  /* USER CODE END 2 */
 
+  /* USER CODE END 2 */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
+  unit_test_init();
+
+
   while (1)
   {
 
   /* USER CODE END WHILE */
-	  unit_test();
+	  //unit_test_effects();
+	  unit_test_events();
 	  HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
-	  HAL_Delay(500);
+	  //HAL_Delay(500);
 	  //glcd_test_hello_world();
   /* USER CODE BEGIN 3 */
 

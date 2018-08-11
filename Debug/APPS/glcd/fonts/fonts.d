@@ -56,7 +56,9 @@ APPS/glcd/fonts/fonts.o: ../APPS/glcd/fonts/fonts.c \
  /home/sam/w/musavi/mus_proj/APPS/link_list/link_list.h \
  /home/sam/w/musavi/mus_proj/APPS/push-btn/push_btn.h \
  /home/sam/w/musavi/mus_proj/APPS/encoder/encoder.h \
- /home/sam/w/musavi/mus_proj/APPS/volume/volume.h
+ /home/sam/w/musavi/mus_proj/APPS/volume/volume.h \
+ /home/sam/w/musavi/mus_proj/APPS/fv1/fv1.h \
+ /home/sam/w/musavi/mus_proj/APPS/effect/effect.h
 
 /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/fonts.h:
 
@@ -173,3 +175,7 @@ APPS/glcd/fonts/fonts.o: ../APPS/glcd/fonts/fonts.c \
 /home/sam/w/musavi/mus_proj/APPS/encoder/encoder.h:
 
 /home/sam/w/musavi/mus_proj/APPS/volume/volume.h:
+
+/home/sam/w/musavi/mus_proj/APPS/fv1/fv1.h:
+
+/home/sam/w/musavi/mus_proj/APPS/effect/effect.h:
