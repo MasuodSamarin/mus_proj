@@ -30,7 +30,6 @@ Common symbol       size              file
 
 htim4               0x40              Src/tim.o
 errno               0x4               /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-reent.o)
-efx_preset_box      0x40              APPS/effect/effect_preset.o
 uwTick              0x4               Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
 pFlash              0x20              Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
 efx_list_iter       0xc               APPS/effect/effect.o
@@ -124,23 +123,23 @@ Discarded input sections
  .text          0x0000000000000000        0x0 APPS/effect/effect.o
  .data          0x0000000000000000        0x0 APPS/effect/effect.o
  .bss           0x0000000000000000        0x0 APPS/effect/effect.o
- .text.efx_init_list
-                0x0000000000000000       0x30 APPS/effect/effect.o
  .text.efx_create_fv1_node
-                0x0000000000000000       0x4c APPS/effect/effect.o
+                0x0000000000000000       0x46 APPS/effect/effect.o
  .text.efx_delete_fv1_node
                 0x0000000000000000        0x8 APPS/effect/effect.o
  .text.efx_create_isd_node
                 0x0000000000000000        0x4 APPS/effect/effect.o
  .text.efx_push_effect
-                0x0000000000000000        0x2 APPS/effect/effect.o
- .debug_info    0x0000000000000000     0x17af APPS/effect/effect.o
- .debug_abbrev  0x0000000000000000      0x2d1 APPS/effect/effect.o
- .debug_loc     0x0000000000000000       0xc0 APPS/effect/effect.o
+                0x0000000000000000       0x14 APPS/effect/effect.o
+ .text.efx_init_list
+                0x0000000000000000       0x4c APPS/effect/effect.o
+ .debug_info    0x0000000000000000     0x182e APPS/effect/effect.o
+ .debug_abbrev  0x0000000000000000      0x2d6 APPS/effect/effect.o
+ .debug_loc     0x0000000000000000      0x12a APPS/effect/effect.o
  .debug_aranges
                 0x0000000000000000       0x40 APPS/effect/effect.o
  .debug_ranges  0x0000000000000000       0x30 APPS/effect/effect.o
- .debug_macro   0x0000000000000000      0x3b3 APPS/effect/effect.o
+ .debug_macro   0x0000000000000000      0x3a9 APPS/effect/effect.o
  .debug_macro   0x0000000000000000      0xa60 APPS/effect/effect.o
  .debug_macro   0x0000000000000000       0x17 APPS/effect/effect.o
  .debug_macro   0x0000000000000000       0x22 APPS/effect/effect.o
@@ -208,10 +207,10 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x83 APPS/effect/effect.o
  .debug_macro   0x0000000000000000       0x10 APPS/effect/effect.o
  .debug_macro   0x0000000000000000       0x22 APPS/effect/effect.o
- .debug_line    0x0000000000000000      0x91a APPS/effect/effect.o
- .debug_str     0x0000000000000000    0x73e65 APPS/effect/effect.o
+ .debug_line    0x0000000000000000      0x920 APPS/effect/effect.o
+ .debug_str     0x0000000000000000    0x73e5d APPS/effect/effect.o
  .comment       0x0000000000000000       0x7f APPS/effect/effect.o
- .debug_frame   0x0000000000000000       0x88 APPS/effect/effect.o
+ .debug_frame   0x0000000000000000       0x90 APPS/effect/effect.o
  .ARM.attributes
                 0x0000000000000000       0x33 APPS/effect/effect.o
  COMMON         0x0000000000000000       0x10 APPS/effect/effect.o
@@ -283,21 +282,19 @@ Discarded input sections
  .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
  .group         0x0000000000000000        0xc APPS/effect/effect_preset.o
  .text          0x0000000000000000        0x0 APPS/effect/effect_preset.o
- .data          0x0000000000000000       0x80 APPS/effect/effect_preset.o
+ .data          0x0000000000000000      0x13e APPS/effect/effect_preset.o
  .bss           0x0000000000000000        0x0 APPS/effect/effect_preset.o
- .text.efx_init_preset_box
-                0x0000000000000000       0x58 APPS/effect/effect_preset.o
- .text.efx_deinit_preset_box
-                0x0000000000000000       0x38 APPS/effect/effect_preset.o
+ .text.efx_get_preset
+                0x0000000000000000        0xc APPS/effect/effect_preset.o
  .rodata.str1.4
-                0x0000000000000000       0xb8 APPS/effect/effect_preset.o
- .debug_info    0x0000000000000000     0x1522 APPS/effect/effect_preset.o
- .debug_abbrev  0x0000000000000000      0x279 APPS/effect/effect_preset.o
- .debug_loc     0x0000000000000000       0xd4 APPS/effect/effect_preset.o
+                0x0000000000000000       0xaa APPS/effect/effect_preset.o
+ .debug_info    0x0000000000000000     0x13ff APPS/effect/effect_preset.o
+ .debug_abbrev  0x0000000000000000      0x20d APPS/effect/effect_preset.o
+ .debug_loc     0x0000000000000000       0x21 APPS/effect/effect_preset.o
  .debug_aranges
-                0x0000000000000000       0x28 APPS/effect/effect_preset.o
- .debug_ranges  0x0000000000000000       0x48 APPS/effect/effect_preset.o
- .debug_macro   0x0000000000000000      0x3bf APPS/effect/effect_preset.o
+                0x0000000000000000       0x20 APPS/effect/effect_preset.o
+ .debug_ranges  0x0000000000000000       0x10 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000      0x3c1 APPS/effect/effect_preset.o
  .debug_macro   0x0000000000000000      0xa60 APPS/effect/effect_preset.o
  .debug_macro   0x0000000000000000      0x179 APPS/effect/effect_preset.o
  .debug_macro   0x0000000000000000      0x175 APPS/effect/effect_preset.o
@@ -359,19 +356,18 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x84c APPS/effect/effect_preset.o
  .debug_macro   0x0000000000000000       0x1f APPS/effect/effect_preset.o
  .debug_macro   0x0000000000000000       0x83 APPS/effect/effect_preset.o
+ .debug_macro   0x0000000000000000       0x1c APPS/effect/effect_preset.o
  .debug_macro   0x0000000000000000       0x16 APPS/effect/effect_preset.o
  .debug_macro   0x0000000000000000       0x35 APPS/effect/effect_preset.o
  .debug_macro   0x0000000000000000       0x16 APPS/effect/effect_preset.o
  .debug_macro   0x0000000000000000       0x29 APPS/effect/effect_preset.o
  .debug_macro   0x0000000000000000       0x10 APPS/effect/effect_preset.o
- .debug_macro   0x0000000000000000       0x22 APPS/effect/effect_preset.o
- .debug_line    0x0000000000000000      0x955 APPS/effect/effect_preset.o
- .debug_str     0x0000000000000000    0x73cea APPS/effect/effect_preset.o
+ .debug_line    0x0000000000000000      0x8c2 APPS/effect/effect_preset.o
+ .debug_str     0x0000000000000000    0x73ca1 APPS/effect/effect_preset.o
  .comment       0x0000000000000000       0x7f APPS/effect/effect_preset.o
- .debug_frame   0x0000000000000000       0x48 APPS/effect/effect_preset.o
+ .debug_frame   0x0000000000000000       0x20 APPS/effect/effect_preset.o
  .ARM.attributes
                 0x0000000000000000       0x33 APPS/effect/effect_preset.o
- COMMON         0x0000000000000000       0x40 APPS/effect/effect_preset.o
  .group         0x0000000000000000        0xc APPS/encoder/encoder.o
  .group         0x0000000000000000        0xc APPS/encoder/encoder.o
  .group         0x0000000000000000        0xc APPS/encoder/encoder.o

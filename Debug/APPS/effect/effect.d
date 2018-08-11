@@ -36,8 +36,7 @@ APPS/effect/effect.o: ../APPS/effect/effect.c ../APPS/effect/effect.h \
  /home/sam/w/musavi/mus_proj/APPS/push-btn/push_btn.h \
  /home/sam/w/musavi/mus_proj/APPS/encoder/encoder.h \
  /home/sam/w/musavi/mus_proj/APPS/volume/volume.h \
- /home/sam/w/musavi/mus_proj/APPS/fv1/fv1.h \
- ../APPS/effect/effect_preset.h
+ /home/sam/w/musavi/mus_proj/APPS/fv1/fv1.h
 
 ../APPS/effect/effect.h:
 
@@ -116,5 +115,3 @@ APPS/effect/effect.o: ../APPS/effect/effect.c ../APPS/effect/effect.h \
 /home/sam/w/musavi/mus_proj/APPS/volume/volume.h:
 
 /home/sam/w/musavi/mus_proj/APPS/fv1/fv1.h:
-
-../APPS/effect/effect_preset.h:
