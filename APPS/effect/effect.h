@@ -104,7 +104,7 @@ typedef struct {
 	};
 	vol_node_t *volume[VOL_MAX];
 	uint8_t status;
-}efx_ext_t;
+}efx_node_t;
 
 
 
@@ -121,11 +121,11 @@ typedef struct {
  * 		to make any effect just need the X3 volume's values
  *
  * */
-efx_ext_t* efx_create_fv1_node(uint8_t number, efx_mode_t mode, efx_fv1_preset pst);
-
+efx_node_t* efx_create_fv1_node(uint8_t number, efx_mode_t mode, efx_fv1_preset pst);
+void efx_push_effect(efx_node_t *efx);
 /////////////////////////////////////////////////////////
 
-efx_fv1_base_t* efx_get_preset(efx_fv1_preset pst);
+efx_fv1_base_t* efx_get_fv1_base_preset(efx_fv1_preset pst);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
