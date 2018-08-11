@@ -28,13 +28,13 @@ typedef enum {
 
 typedef struct {
 	// effect names	{from a list of effects}
-	char *name;
+	 const char *name;
 	// effect comments {some explain to show in lcd}
-	char *comments;
+	 const char *comments;
 
 
 	// spins and eep's {4 pin for spin, 2 pind for power of eep's}
-	fv1_type_t fv1;
+	 fv1_type_t *fv1;
 
 } efx_fv1_base_t;
 
@@ -63,7 +63,7 @@ typedef struct {
 	};
 
 	// volumes and pwm's {input volume reading, output pwm's value}
-	vol_node_t volume[VOL_MAX];
+	vol_node_t *volume[VOL_MAX];
 
 	// effect status {enable, disable}
 	uint8_t status;

@@ -40,8 +40,15 @@ typedef enum {
 /*
  * complete preset effects box
  * */
-extern efx_fv1_base_t efx_preset_box[EFX_FV1_PRST_MAX];
+//#ifdef EFX_PRESET_STATIC
 
+extern efx_fv1_base_t *efx_preset_box[EFX_FV1_PRST_MAX];
+
+//#else
+
+//extern efx_fv1_base_t *efx_preset_box;
+
+//#endif
 
 
 

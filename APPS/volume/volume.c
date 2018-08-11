@@ -117,6 +117,25 @@ void vol_init(void){
 
 }
 
+
+/*
+ * create the vol struct used in effcet module
+ * */
+vol_node_t* vol_create_node(vol_name_t name, uint32_t val){
+	vol_node_t *node = malloc(sizeof(*node));
+	/*TODO: check the malloc
+	 * node->vals must be correct, it maybe needs VOL_ADC_PWM_FACTOR
+	 * */
+	node->name = name;
+	node->val_adc = val;
+	node->val_pwm = val << VOL_ADC_PWM_FACTOR;
+
+	return (node);
+}
+
+void vol_delete_node(vol_node_t *node){
+	free(node);
+}
 /*
  * return the raw value of the volume
  * */

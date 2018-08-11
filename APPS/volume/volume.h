@@ -28,6 +28,10 @@ extern "C" {
  * */
 //#include "event.h"
 
+/*
+ * conver adc to pwm factor
+ * */
+#define VOL_ADC_PWM_FACTOR	(1<<4)
 
 
 /*
@@ -56,6 +60,11 @@ typedef struct {
  * */
 void vol_init(void);
 void vol_process(void);
+
+
+vol_node_t* vol_create_node(vol_name_t name, uint32_t val);
+void vol_delete_node(vol_node_t *node);
+
 
 #ifdef __cplusplus
 }
