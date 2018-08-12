@@ -18,8 +18,9 @@
 
 /******************************************start of the state machine core***************************************************************************/
 
+#include "../fsme/fsme.h"
+
 #include    <stdio.h>
-#include    "fsme.h"
 
 /*
  * Private Static Variable
