@@ -86,13 +86,14 @@ void vol_process(void){
 
 			delta = vol_handle.vol_data[vol_handle.vol_name] = vol_handle.vol_raw_data[vol_handle.vol_name];
 			if (abs(delta) >= VOL_MIN_TOLERANCE){
+				//vol_handle.vol_state_timer = VOL_STATE_TIME;
 				event_push_node(event_create_vol_node(vol_handle.vol_name, vol_handle.vol_raw_data[vol_handle.vol_name]));
 			}
 
-			if (vol_handle.vol_state_timer){
+			if (vol_handle.vol_state_timer == 0)
 				vol_handle.state = VOL_STATE_A;
-			}
-			vol_handle.vol_state_timer = vol_handle.vol_state_timer - 1;
+			else
+				vol_handle.vol_state_timer = vol_handle.vol_state_timer - 1;
 			break;
 	}
 

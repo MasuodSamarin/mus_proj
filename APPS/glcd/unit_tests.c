@@ -515,10 +515,10 @@ void unit_test_events(void){
 	node = event_pop_node();
 
 	switch (node.type) {
-		/*case EVENT_NOT:
-			uint_print_not();
+		case EVENT_NOT:
+			//uint_print_not();
 			break;
-		*/
+
 		case EVENT_BTN:
 			unit_print_btn(node.btn);
 			break;
@@ -549,7 +549,6 @@ void unit_test_effect_print(efx_node_t *node){
 	if (node == NULL)
 		return;
 
-	//for (int var = 0; var < 20; ++var) {
 		glcd_clear_buffer();
 		glcd_write();
 
@@ -571,8 +570,6 @@ void unit_test_effect_print(efx_node_t *node){
 		glcd_draw_string(55,45, str);
 
 		glcd_write();
-		//free(node);
-		//HAL_Delay(2000);
 
 
 

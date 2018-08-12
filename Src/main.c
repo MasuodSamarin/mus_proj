@@ -113,6 +113,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   glcd_init();
+  unit_test_init();
+
   event_init();
   enc_init();
   vol_init();
@@ -120,13 +122,11 @@ int main(void)
   unit_init();
 
 
+  HAL_TIM_Base_Start_IT(&htim2);
+
   /* USER CODE END 2 */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-
-  unit_test_init();
-
-  HAL_TIM_Base_Start_IT(&htim2);
 
   while (1)
   {
@@ -135,8 +135,8 @@ int main(void)
 	  //unit_test_effects();
 	  unit_test_events();
 
-	  if (HAL_GetTick() % 1000 == 0)
-		  HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
+	  //if (HAL_GetTick() % 1000 == 0)
+		  //HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
 
 	  //HAL_Delay(500);
 	  //glcd_test_hello_world();
