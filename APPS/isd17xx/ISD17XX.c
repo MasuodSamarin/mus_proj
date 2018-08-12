@@ -1,8 +1,9 @@
 
-#include "ISD17XX.h"
-#include "ISD17XXConfig.h"
+#include "../isd17xx/ISD17XX.h"
+
 #include "spi.h"
 #include <string.h>
+#include "../isd17xx/ISD17XXConfig.h"
 
 
 Isd17xx_t isd17xx;
