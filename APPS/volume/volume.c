@@ -17,8 +17,8 @@
  * 	in few ms later it can work even by little, in below max define first turn
  * 	and min is the later turn
  * 	*/
-#define VOL_MAX_TOLERANCE	120
-#define VOL_MIN_TOLERANCE	40
+//#define VOL_MAX_TOLERANCE	120
+//#define VOL_MIN_TOLERANCE	40
 
 //#define VOL_RATIO	4
 
@@ -74,7 +74,7 @@ void vol_process(void){
 		case VOL_STATE_A:
 
 			delta = vol_handle.vol_raw_data[vol_handle.vol_name] - vol_handle.vol_data[vol_handle.vol_name];
-			vol_handle.vol_name = vol_handle.vol_name + 1;
+			vol_handle.vol_name = (vol_handle.vol_name + 1) % VOL_MAX;
 			if (abs(delta) >= VOL_MAX_TOLERANCE){
 				//vol_old_data[vol_name] = vol_raw_data[vol_name];
 				vol_handle.state = VOL_STATE_B;

@@ -25,7 +25,18 @@ Src/stm32f1xx_it.o: ../Src/stm32f1xx_it.c \
  /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
  /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
- /home/sam/w/musavi/mus_proj/Inc/stm32f1xx_it.h
+ /home/sam/w/musavi/mus_proj/Inc/stm32f1xx_it.h \
+ /home/sam/w/musavi/mus_proj/APPS/event/event.h \
+ /home/sam/w/musavi/mus_proj/Inc/main.h \
+ /home/sam/w/musavi/mus_proj/Inc/gpio.h \
+ /home/sam/w/musavi/mus_proj/Inc/adc.h \
+ /home/sam/w/musavi/mus_proj/Inc/dma.h \
+ /home/sam/w/musavi/mus_proj/Inc/spi.h \
+ /home/sam/w/musavi/mus_proj/Inc/tim.h \
+ /home/sam/w/musavi/mus_proj/APPS/link_list/link_list.h \
+ /home/sam/w/musavi/mus_proj/APPS/push-btn/push_btn.h \
+ /home/sam/w/musavi/mus_proj/APPS/encoder/encoder.h \
+ /home/sam/w/musavi/mus_proj/APPS/volume/volume.h
 
 /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 
@@ -80,3 +91,25 @@ Src/stm32f1xx_it.o: ../Src/stm32f1xx_it.c \
 /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
 
 /home/sam/w/musavi/mus_proj/Inc/stm32f1xx_it.h:
+
+/home/sam/w/musavi/mus_proj/APPS/event/event.h:
+
+/home/sam/w/musavi/mus_proj/Inc/main.h:
+
+/home/sam/w/musavi/mus_proj/Inc/gpio.h:
+
+/home/sam/w/musavi/mus_proj/Inc/adc.h:
+
+/home/sam/w/musavi/mus_proj/Inc/dma.h:
+
+/home/sam/w/musavi/mus_proj/Inc/spi.h:
+
+/home/sam/w/musavi/mus_proj/Inc/tim.h:
+
+/home/sam/w/musavi/mus_proj/APPS/link_list/link_list.h:
+
+/home/sam/w/musavi/mus_proj/APPS/push-btn/push_btn.h:
+
+/home/sam/w/musavi/mus_proj/APPS/encoder/encoder.h:
+
+/home/sam/w/musavi/mus_proj/APPS/volume/volume.h:

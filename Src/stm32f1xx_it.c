@@ -36,6 +36,7 @@
 #include "stm32f1xx_it.h"
 
 /* USER CODE BEGIN 0 */
+#include "event.h"
 
 /* USER CODE END 0 */
 
