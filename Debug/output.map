@@ -243,7 +243,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x16 APPS/isd17xx/ISD17XX.o
  .debug_macro   0x0000000000000000       0x35 APPS/isd17xx/ISD17XX.o
  .debug_macro   0x0000000000000000       0x34 APPS/isd17xx/ISD17XX.o
- .debug_line    0x0000000000000000      0xc26 APPS/isd17xx/ISD17XX.o
+ .debug_line    0x0000000000000000      0xc0b APPS/isd17xx/ISD17XX.o
  .debug_str     0x0000000000000000    0x73c6c APPS/isd17xx/ISD17XX.o
  .comment       0x0000000000000000       0x7f APPS/isd17xx/ISD17XX.o
  .debug_frame   0x0000000000000000      0x344 APPS/isd17xx/ISD17XX.o

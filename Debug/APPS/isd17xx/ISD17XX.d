@@ -1,6 +1,5 @@
 APPS/isd17xx/ISD17XX.o: ../APPS/isd17xx/ISD17XX.c \
- ../APPS/isd17xx/../isd17xx/ISD17XX.h \
- /home/sam/w/musavi/mus_proj/Inc/spi.h \
+ ../APPS/isd17xx/ISD17XX.h /home/sam/w/musavi/mus_proj/Inc/spi.h \
  /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  /home/sam/w/musavi/mus_proj/Inc/stm32f1xx_hal_conf.h \
  /home/sam/w/musavi/mus_proj/Inc/main.h \
@@ -27,9 +26,9 @@ APPS/isd17xx/ISD17XX.o: ../APPS/isd17xx/ISD17XX.c \
  /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
  /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
- ../APPS/isd17xx/../isd17xx/ISD17XXConfig.h
+ ../APPS/isd17xx/ISD17XXConfig.h
 
-../APPS/isd17xx/../isd17xx/ISD17XX.h:
+../APPS/isd17xx/ISD17XX.h:
 
 /home/sam/w/musavi/mus_proj/Inc/spi.h:
 
@@ -85,4 +84,4 @@ APPS/isd17xx/ISD17XX.o: ../APPS/isd17xx/ISD17XX.c \
 
 /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
 
-../APPS/isd17xx/../isd17xx/ISD17XXConfig.h:
+../APPS/isd17xx/ISD17XXConfig.h:
