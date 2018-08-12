@@ -133,7 +133,7 @@ Discarded input sections
                 0x0000000000000000       0x14 APPS/effect/effect.o
  .text.efx_init_list
                 0x0000000000000000       0x4c APPS/effect/effect.o
- .debug_info    0x0000000000000000     0x182e APPS/effect/effect.o
+ .debug_info    0x0000000000000000     0x1833 APPS/effect/effect.o
  .debug_abbrev  0x0000000000000000      0x2d6 APPS/effect/effect.o
  .debug_loc     0x0000000000000000      0x12a APPS/effect/effect.o
  .debug_aranges
@@ -288,7 +288,7 @@ Discarded input sections
                 0x0000000000000000        0xc APPS/effect/effect_preset.o
  .rodata.str1.4
                 0x0000000000000000       0xaa APPS/effect/effect_preset.o
- .debug_info    0x0000000000000000     0x13ff APPS/effect/effect_preset.o
+ .debug_info    0x0000000000000000     0x1404 APPS/effect/effect_preset.o
  .debug_abbrev  0x0000000000000000      0x20d APPS/effect/effect_preset.o
  .debug_loc     0x0000000000000000       0x21 APPS/effect/effect_preset.o
  .debug_aranges
