@@ -8,8 +8,8 @@
 //#include "volume.h"
 #include "event.h"
 
-#define VOL_MAX_TOLERANCE	200
-#define VOL_MIN_TOLERANCE	100
+#define VOL_MAX_TOLERANCE	120
+#define VOL_MIN_TOLERANCE	40
 
 /*
  * when volume turn by user:
@@ -72,21 +72,26 @@ void vol_process(void){
 
 	switch (vol_handle.state) {
 		case VOL_STATE_A:
+			vol_handle.vol_name = (vol_handle.vol_name + 1) % VOL_MAX;
 
 			delta = vol_handle.vol_raw_data[vol_handle.vol_name] - vol_handle.vol_data[vol_handle.vol_name];
-			vol_handle.vol_name = (vol_handle.vol_name + 1) % VOL_MAX;
+
+
 			if (abs(delta) >= VOL_MAX_TOLERANCE){
 				//vol_old_data[vol_name] = vol_raw_data[vol_name];
 				vol_handle.state = VOL_STATE_B;
 				vol_handle.vol_state_timer = VOL_STATE_TIME;
 			}
+
 			break;
 
 		case VOL_STATE_B:
 
-			delta = vol_handle.vol_data[vol_handle.vol_name] = vol_handle.vol_raw_data[vol_handle.vol_name];
+			delta = vol_handle.vol_data[vol_handle.vol_name] - vol_handle.vol_raw_data[vol_handle.vol_name];
+
 			if (abs(delta) >= VOL_MIN_TOLERANCE){
 				//vol_handle.vol_state_timer = VOL_STATE_TIME;
+				vol_handle.vol_data[vol_handle.vol_name] = vol_handle.vol_raw_data[vol_handle.vol_name];
 				event_push_node(event_create_vol_node(vol_handle.vol_name, vol_handle.vol_raw_data[vol_handle.vol_name]));
 			}
 
@@ -94,6 +99,7 @@ void vol_process(void){
 				vol_handle.state = VOL_STATE_A;
 			else
 				vol_handle.vol_state_timer = vol_handle.vol_state_timer - 1;
+
 			break;
 	}
 
@@ -107,7 +113,7 @@ void vol_process(void){
 void vol_handle_init(vol_handle_t *handle){
 	handle->state = VOL_STATE_A;
 	handle->vol_state_timer = 0;
-	handle->vol_name = VOL_A;
+	handle->vol_name = VOL_C;
 	HAL_ADC_Start_DMA(&hadc1, handle->vol_raw_data, VOL_MAX);
 
 }

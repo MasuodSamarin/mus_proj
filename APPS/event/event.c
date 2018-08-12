@@ -32,7 +32,10 @@ size_t event_get_size(void){
 /*
  * add the event to the end of the list
  * */
+#define EVENT_QEUE_SIZE 10
 void event_push_node(event_node_t *node){
+	if(event_get_size() > EVENT_QEUE_SIZE)
+		return;
 	list_push_back(event_list, (void*)node);
 }
 

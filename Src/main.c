@@ -44,7 +44,6 @@
 #include "spi.h"
 #include "tim.h"
 #include "gpio.h"
-//#include "../APPS/link_list/link_list.h"
 
 /* USER CODE BEGIN Includes */
 #include "glcd.h"
@@ -104,7 +103,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  //MX_DMA_Init();
+ // MX_DMA_Init();
   MX_TIM2_Init();
   //MX_ADC1_Init();
   //MX_SPI1_Init();
@@ -125,22 +124,22 @@ int main(void)
   HAL_TIM_Base_Start_IT(&htim2);
 
   /* USER CODE END 2 */
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
   while (1)
   {
-
   /* USER CODE END WHILE */
-	  //unit_test_effects();
+  /* USER CODE BEGIN 3 */
+
+
+
 	  unit_test_events();
 
-	  //if (HAL_GetTick() % 1000 == 0)
-		  //HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
 
-	  //HAL_Delay(500);
-	  //glcd_test_hello_world();
-  /* USER CODE BEGIN 3 */
+
+
 
   }
   /* USER CODE END 3 */

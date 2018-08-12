@@ -499,7 +499,7 @@ void unit_print_vol(vol_node_t *vol){
 	glcd_draw_string(5,35, str);
 	glcd_write();
 }
-void uint_print_not(void){
+void unit_print_not(void){
 	glcd_clear_buffer();
 	glcd_draw_string(5,5, "EVENT-DRIVEN TEST");
 	glcd_draw_string(5,15, "BUTTONS");
@@ -549,31 +549,27 @@ void unit_test_effect_print(efx_node_t *node){
 	if (node == NULL)
 		return;
 
-		glcd_clear_buffer();
-		glcd_write();
+	glcd_clear_buffer();
+	glcd_write();
 
-		glcd_draw_string(2,5, "EFFECTS");
+	glcd_draw_string(2,5, "EFFECTS");
 
-		sprintf(str, "%d", node->number);
-		glcd_draw_string(5,15, "num:");
-		glcd_draw_string(55,15, str);
+	sprintf(str, "%d", node->number);
+	glcd_draw_string(5,15, "num:");
+	glcd_draw_string(55,15, str);
 
-		glcd_draw_string(5,25, (char*)node->fv1->name);
-		glcd_draw_string(55,25, (char*)node->fv1->comments);
+	glcd_draw_string(5,25, (char*)node->fv1->name);
+	glcd_draw_string(55,25, (char*)node->fv1->comments);
 
-		sprintf(str, "%d", node->fv1->fv1->eep);
-		glcd_draw_string(5,35, "eep:");
-		glcd_draw_string(55,35, str);
+	sprintf(str, "%d", node->fv1->fv1->eep);
+	glcd_draw_string(5,35, "eep:");
+	glcd_draw_string(55,35, str);
 
-		sprintf(str, "%d", node->fv1->fv1->pin);
-		glcd_draw_string(5,45, "pin:");
-		glcd_draw_string(55,45, str);
+	sprintf(str, "%d", node->fv1->fv1->pin);
+	glcd_draw_string(5,45, "pin:");
+	glcd_draw_string(55,45, str);
 
-		glcd_write();
-
-
-
-
+	glcd_write();
 }
 
 
