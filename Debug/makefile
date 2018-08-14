@@ -17,6 +17,7 @@ RM := rm -rf
 -include APPS/glcd/fonts/subdir.mk
 -include APPS/glcd/subdir.mk
 -include APPS/fv1/subdir.mk
+-include APPS/fsme/subdir.mk
 -include APPS/event/subdir.mk
 -include APPS/encoder/subdir.mk
 -include APPS/effect/subdir.mk

@@ -162,7 +162,7 @@ static void FSM1_ActionSet( void )
  * =====================================================================================
  */
     int
-main ( int argc, char *argv[] )
+unit_test ( int argc, char *argv[] )
 {
 
     printf("\n  simple fsm demo \n");

@@ -18,6 +18,7 @@ SUBDIRS := \
 APPS/effect \
 APPS/encoder \
 APPS/event \
+APPS/fsme \
 APPS/fv1 \
 APPS/glcd \
 APPS/glcd/fonts \
