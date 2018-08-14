@@ -24,8 +24,7 @@
 typedef unsigned char uint8_t;
 
 
-
-
+static int in, out;
 
 typedef enum {
 
@@ -36,8 +35,6 @@ typedef enum {
     FSM1_MAX_STATE
 
 }FSM1_STATES; 
-
-int in, out;
 
 
 /*
@@ -120,33 +117,37 @@ static void FSM1_ActionClr( void )
     { 
         //actions to be executed only once in this state at the state change 
          out = 0; 
-//         printf("\n\t FSM1_ActionClr ----> state change");
+         
+    //     printf("\n\e[1;34min:%d\tout:%d\e[0m", in, out);
+         printf("\n->ActionClr ----> state change");
          // reset state changed flag 
-         FSM1.StateChanged =     
-         FSME_STATE_NOT_CHANGED; 
+         FSM1.StateChanged = FSME_STATE_NOT_CHANGED; 
     } 
     else 
     { 
      // actions to be executed continuously in this state 
-//         printf("\n\t FSM1_ActionClr ----------------> executed continouslly");
+         printf("\nActionClr ----------------> executed continouslly");
     } 
+
+    printf("\n\e[1;34min:%d\tout:%d\e[0m\t CurrentState:%d\n", in, out, FSM1.CurrentState);
 } 
 static void FSM1_ActionSet( void ) 
 { 
     if ( FSM1.StateChanged  ==  FSME_STATE_CHANGED )  
     { 
         // actions to be executed only once in this state at the state change 
-        out = 1; 
-//         printf("\n\t FSM1_ActionSet ----> state change");
+        out = 1;
+
+         printf("\n->ActionSet ----> state change");
         // reset state changed flag 
-        FSM1.StateChanged =    
-        FSME_STATE_NOT_CHANGED; 
+        FSM1.StateChanged = FSME_STATE_NOT_CHANGED; 
     } 
     else 
     { 
         // actions to be executed continouslly in this state 
-//         printf("\n\t FSM1_ActionSet ----------------> executed continouslly");
+         printf("\nActionSet ----------------> executed continouslly");
     } 
+    printf("\n\e[1;34min:%d\tout:%d\e[0m\t CurrentState:%d\n", in, out, FSM1.CurrentState);
 } 
 
 
@@ -169,18 +170,18 @@ main ( int argc, char *argv[] )
     srand(time(NULL));
     FSM_Status_Enable(&FSM1);
 
-    printf ("\n\tin: ");
-    for (; i<100; i++){
+    //printf ("\n\tin: ");
+    for (; i<6; i++){
 
         in = rand() % 2;
         FSM_Run(&FSM1);
-        if (out){
-            printf("%d, ", in);
-            printf ("\n\e[1;34m-->out:%d\e[0m", out);
-            printf ("\n\tin: ");
-        }
-        else
-            printf("%d, ", in);
+        //if (out){
+            //printf("%d, ", in);
+            //printf ("\n\e[1;34m-->out:%d\e[0m", out);
+            //printf ("\n\tin: ");
+       // }
+       // else;
+            //printf("%d, ", in);
     
     }
     printf("\n");
