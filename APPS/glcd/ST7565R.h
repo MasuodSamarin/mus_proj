@@ -61,11 +61,10 @@
  */
 void glcd_init(void);
 
-
-
 /**
  * Write a byte to the connected SPI slave.
  * \param c Byte to be written
+ * \cause it uses gpio mode it's nothing to the return
  * \return Returned value from SPI (often not used)
  */
 void glcd_spi_write(uint8_t c);
