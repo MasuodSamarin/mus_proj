@@ -15,11 +15,15 @@
 
 /*
  * main staruct of application
- * it's hold every thing need base state machine
+ * it's hold every thing need base fsm
  * */
 typedef struct {
 	efx_node_t *efx;
 	event_node_t *event;
+	uint8_t status;
+	uint32_t timer;
 
 }fsm_handle_t;
+
+
 #endif /* FSM_MAIN_H_ */

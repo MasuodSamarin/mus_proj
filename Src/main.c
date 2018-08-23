@@ -118,7 +118,7 @@ int main(void)
   enc_init();
   vol_init();
   btn_init();
-  unit_init();
+  //unit_init();
 
 
   HAL_TIM_Base_Start_IT(&htim2);
