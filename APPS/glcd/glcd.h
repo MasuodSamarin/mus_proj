@@ -69,7 +69,7 @@
 #include <stdint.h>
 #include "main.h"
 #include "stm32f1xx_hal.h"
-#include "_STM32F10x.h"
+//#include "_STM32F10x.h"
 
 
 

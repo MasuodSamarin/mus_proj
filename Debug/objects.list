@@ -1,5 +1,4 @@
 "APPS/glcd/ST7565R.o"
-"APPS/glcd/_STM32F10x.o"
 "APPS/glcd/glcd.o"
 "APPS/glcd/glcd_graphics.o"
 "APPS/glcd/glcd_graphs.o"
