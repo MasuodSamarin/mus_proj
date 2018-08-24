@@ -8,8 +8,14 @@
 //#include "volume.h"
 #include "event.h"
 
-#define VOL_MAX_TOLERANCE	120
-#define VOL_MIN_TOLERANCE	40
+#define VOL_MAX_TOLERANCE	50
+#define VOL_MIN_TOLERANCE	10
+
+/*
+ * tiny timer value
+ * */
+#define VOL_STATE_TIME 100
+
 
 /*
  * when volume turn by user:
@@ -33,10 +39,6 @@ typedef enum {
 	VOL_STATE_B
 }vol_state;
 
-/*
- * tiny timer value
- * */
-#define VOL_STATE_TIME 50
 
 /*
  * raw data means a data that comes dma

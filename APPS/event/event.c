@@ -80,6 +80,7 @@ event_node_t event_pop_node(void){
 		event_free_event_node(np);
 	}
 	//return (event_node_t*)(NULL);
+	free(np);
 	return (n);
 }
 
