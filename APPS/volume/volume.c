@@ -94,7 +94,7 @@ void vol_process(void){
 			if (abs(delta) >= VOL_MIN_TOLERANCE){
 				//vol_handle.vol_state_timer = VOL_STATE_TIME;
 				vol_handle.vol_data[vol_handle.vol_name] = vol_handle.vol_raw_data[vol_handle.vol_name];
-				event_push_node(event_create_vol_node(vol_handle.vol_name, vol_handle.vol_raw_data[vol_handle.vol_name]));
+				event_push_node(event_create_vol_node(vol_handle.vol_name, vol_handle.vol_data[vol_handle.vol_name]));
 			}
 
 			if (vol_handle.vol_state_timer == 0)
@@ -139,6 +139,9 @@ vol_node_t* vol_create_node(vol_name_t name, uint32_t val){
 	/*TODO: check the malloc
 	 * node->vals must be correct, it maybe needs VOL_ADC_PWM_FACTOR
 	 * */
+	if (!node)
+		return (vol_node_t*)NULL;
+
 	node->name = name;
 	node->val_adc = val;
 	node->val_pwm = val << VOL_ADC_PWM_FACTOR;

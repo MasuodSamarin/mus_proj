@@ -39,6 +39,9 @@ efx_node_t* efx_create_fv1_node(uint8_t number, efx_mode_t mode, efx_fv1_preset 
 
 	efx_node_t *efx = malloc(sizeof(*efx));
 	//TODO: check malloc
+	if(!efx)
+		return (efx_node_t*)NULL;
+
 	efx_fv1_base_t *base = efx_get_fv1_effect(pst);
 
 	/*effect list number start from 1 not zero*/
