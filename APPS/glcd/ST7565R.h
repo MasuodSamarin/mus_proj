@@ -42,6 +42,42 @@
 #define ST7565R_H_
 #include "stm32f1xx_hal.h"
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+ * define some basic static func
+ * */
+#define GLCD_SELECT()     	HAL_GPIO_WritePin(LCD_CS_GPIO_Port, LCD_CS_Pin, GPIO_PIN_SET)
+#define GLCD_DESELECT()   	HAL_GPIO_WritePin(LCD_CS_GPIO_Port, LCD_CS_Pin, GPIO_PIN_RESET)
+#define GLCD_DC_LOW()		HAL_GPIO_WritePin(LCD_A0_GPIO_Port, LCD_A0_Pin, GPIO_PIN_RESET)
+#define GLCD_DC_HIGH()    	HAL_GPIO_WritePin(LCD_A0_GPIO_Port, LCD_A0_Pin, GPIO_PIN_SET)
+#define GLCD_A0_LOW()     	HAL_GPIO_WritePin(LCD_A0_GPIO_Port, LCD_A0_Pin, GPIO_PIN_RESET)
+#define GLCD_A0_HIGH()    	HAL_GPIO_WritePin(LCD_A0_GPIO_Port, LCD_A0_Pin, GPIO_PIN_SET)
+#define GLCD_RESET_LOW()	HAL_GPIO_WritePin(LCD_RESET_GPIO_Port, LCD_RESET_Pin, GPIO_PIN_RESET)
+#define GLCD_RESET_HIGH()	HAL_GPIO_WritePin(LCD_RESET_GPIO_Port, LCD_RESET_Pin, GPIO_PIN_SET)
+
+/**
+ * Initialize the LCD. This function is platform and controller specific.
+ */
+void glcd_init(void);
+
+/**
+ * Write a byte to the connected SPI slave.
+ * \param c Byte to be written
+ * \cause it uses gpio mode it's nothing to the return
+ * \return Returned value from SPI (often not used)
+ */
+void glcd_spi_write(uint8_t c);
+
+/**
+ *  Reset the LCD.
+ *  \note Not all LCD controllers support reset.
+ */
+void glcd_reset(void);
+
+/** @}*/
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /* Commands */
 
 #define BLACK 1

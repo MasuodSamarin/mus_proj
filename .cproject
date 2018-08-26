@@ -48,6 +48,13 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_cube/APPS/volume}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_cube/APPS/push-btn}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_cube/APPS/encoder}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/event}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/push-btn}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_proj/APPS/volume}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_cube/mus_proj/APPS/encoder}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_cube/mus_proj/APPS/link-list}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_cube/APPS/glcd}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_cube/APPS/glcd/fonts}&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.2122180815" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="__weak=&quot;__attribute__((weak))&quot;"/>

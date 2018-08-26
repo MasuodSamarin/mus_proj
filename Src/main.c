@@ -123,7 +123,7 @@ int main(void)
 
 
   HAL_TIM_Base_Start_IT(&htim2);
-
+  glcd_init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -138,6 +138,7 @@ int main(void)
 
 	  unit_test_events();
 
+	  //glcd_test_my_test();
 
 
 

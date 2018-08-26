@@ -10,8 +10,84 @@
 #include "glcd.h"
 #include "ST7565R.h"
 #include "main.h"
-#include "_STM32F10x.h"
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+void glcd_init(void)
+{
+
+	/* Initialization of glcd module
+	 * it can be work in 2ways:
+	 * 	1. GPIO mode <---we use this method,
+	 * 	2. SPI mode
+	 * 	TODO: change to the SPI mode
+	 * 	*/
+
+	/* Send reset pulse to LCD */
+	glcd_reset();
+	HAL_Delay(GLCD_RESET_TIME);
+
+	/*
+	 * send HW-base commands
+	 * in this place we can add some other LCD module
+	 *  */
+	glcd_ST7565R_init();
+
+	/* Set all dots black and hold for 1s, then clear it, we do this so we can visually check init sequence is working */
+	glcd_all_on();
+	HAL_Delay(1000);
+	glcd_normal();
+
+	glcd_set_start_line(0);
+	glcd_clear_now();
+
+	glcd_select_screen(glcd_buffer,&glcd_bbox);
+	glcd_clear();
+
+}
+
+/*
+ * this is the write to glcd HW
+ * it uses the GPIO mode but
+ * TODO: change to the SPI mode
+ * */
+void glcd_spi_write(uint8_t c)
+{
+	 int8_t i;
+	  for (i=7; i>=0; i--) {
+			HAL_GPIO_WritePin(LCD_SCK_GPIO_Port, LCD_SCK_Pin, GPIO_PIN_RESET);
+
+	    //SCLK_PORT &= ~_BV(SCLK);
+	    if (c & (1<<i))
+			HAL_GPIO_WritePin(LCD_DATA_GPIO_Port, LCD_DATA_Pin, GPIO_PIN_SET);
+
+	      //SID_PORT |= _BV(SID);
+	    else
+			HAL_GPIO_WritePin(LCD_DATA_GPIO_Port, LCD_DATA_Pin, GPIO_PIN_RESET);
+
+	      //SID_PORT &= ~_BV(SID);
+
+		HAL_GPIO_WritePin(LCD_SCK_GPIO_Port, LCD_SCK_Pin, GPIO_PIN_SET);
+
+	    //SCLK_PORT |= _BV(SCLK);
+	  }
+}
+
+
+/*
+ * this is the hard reset of glcd
+ * use of low signal on reset pin of glcd
+ * */
+void glcd_reset(void)
+{
+	GLCD_SELECT();
+	GLCD_RESET_LOW();
+	HAL_Delay(GLCD_RESET_TIME);
+	GLCD_RESET_HIGH();
+	GLCD_DESELECT();
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void glcd_command(uint8_t c)
 {
 	GLCD_A0_LOW();

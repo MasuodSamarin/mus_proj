@@ -5,7 +5,6 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../APPS/glcd/ST7565R.c \
-../APPS/glcd/_STM32F10x.c \
 ../APPS/glcd/glcd.c \
 ../APPS/glcd/glcd_graphics.c \
 ../APPS/glcd/glcd_graphs.c \
@@ -14,7 +13,6 @@ C_SRCS += \
 
 OBJS += \
 ./APPS/glcd/ST7565R.o \
-./APPS/glcd/_STM32F10x.o \
 ./APPS/glcd/glcd.o \
 ./APPS/glcd/glcd_graphics.o \
 ./APPS/glcd/glcd_graphs.o \
@@ -23,7 +21,6 @@ OBJS += \
 
 C_DEPS += \
 ./APPS/glcd/ST7565R.d \
-./APPS/glcd/_STM32F10x.d \
 ./APPS/glcd/glcd.d \
 ./APPS/glcd/glcd_graphics.d \
 ./APPS/glcd/glcd_graphs.d \

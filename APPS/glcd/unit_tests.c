@@ -60,14 +60,27 @@ extern ADC_HandleTypeDef hadc1;
 #endif /* GLCD_UNIT_TEST_BITMAP_ENABLE */
 
 
+char *strings[] = {
+		"HELLO WORD",
+		"BYE, BYE",
+		"GOOD",
+		"BAD",
+		"UGLY",
+		"SOUND",
+		"COLOR",
+		"WATER"
+};
 void glcd_test_my_test(void){
 
-	glcd_clear_buffer();
-	//glcd_font(Font5x7,5,7,32,127,STANG);
-	//glcd_draw_string_xy(0,10,"Hello World!");
+	//glcd_clear_buffer();
+	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
+	for (int var = 0; var < 8; ++var) {
+		glcd_draw_string_ammend(10, 0, 48, strings[var]);
 
+		HAL_Delay(500);
 
-	glcd_write();
+	}
+
 
 }
 void glcd_test_circles(void)

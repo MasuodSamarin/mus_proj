@@ -26,7 +26,7 @@ APPS/glcd/glcd_graphs.o: ../APPS/glcd/glcd_graphs.c ../APPS/glcd/glcd.h \
  /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
  /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
- ../APPS/glcd/_STM32F10x.h ../APPS/glcd/fonts/fonts.h \
+ ../APPS/glcd/fonts/fonts.h \
  /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Bebas_Neue18x36_Numbers.h \
  /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Bebas_Neue20x36_Bold_Numbers.h \
  /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Liberation_Sans11x14_Numbers.h \
@@ -108,8 +108,6 @@ APPS/glcd/glcd_graphs.o: ../APPS/glcd/glcd_graphs.c ../APPS/glcd/glcd.h \
 /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
 
 /home/sam/w/musavi/mus_proj/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
-
-../APPS/glcd/_STM32F10x.h:
 
 ../APPS/glcd/fonts/fonts.h:
 

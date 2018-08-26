@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /APPS/
 /Drivers/
 /Src/
@@ -15,3 +16,9 @@
 =======
 /startup/
 >>>>>>> master
+=======
+/Drivers/
+/Src/
+/startup/
+/APPS/
+>>>>>>> glcd

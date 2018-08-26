@@ -39,7 +39,6 @@ APPS/glcd/fonts/fonts.o: ../APPS/glcd/fonts/fonts.c \
  /home/sam/w/musavi/mus_proj/APPS/glcd/glcd_text.h \
  /home/sam/w/musavi/mus_proj/APPS/glcd/glcd.h \
  /home/sam/w/musavi/mus_proj/Inc/main.h \
- /home/sam/w/musavi/mus_proj/APPS/glcd/_STM32F10x.h \
  /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/fonts.h \
  /home/sam/w/musavi/mus_proj/APPS/glcd/ST7565R.h \
  /home/sam/w/musavi/mus_proj/APPS/glcd/glcd_controllers.h \
@@ -139,8 +138,6 @@ APPS/glcd/fonts/fonts.o: ../APPS/glcd/fonts/fonts.c \
 /home/sam/w/musavi/mus_proj/APPS/glcd/glcd.h:
 
 /home/sam/w/musavi/mus_proj/Inc/main.h:
-
-/home/sam/w/musavi/mus_proj/APPS/glcd/_STM32F10x.h:
 
 /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/fonts.h:
 

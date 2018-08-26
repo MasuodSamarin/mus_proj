@@ -31,7 +31,10 @@ Src/main.o: ../Src/main.c /home/sam/w/musavi/mus_proj/Inc/main.h \
  /home/sam/w/musavi/mus_proj/Inc/tim.h \
  /home/sam/w/musavi/mus_proj/Inc/gpio.h \
  /home/sam/w/musavi/mus_proj/APPS/glcd/glcd.h \
+<<<<<<< HEAD
  /home/sam/w/musavi/mus_proj/APPS/glcd/_STM32F10x.h \
+=======
+>>>>>>> glcd
  /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/fonts.h \
  /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Bebas_Neue18x36_Numbers.h \
  /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Bebas_Neue20x36_Bold_Numbers.h \
@@ -49,6 +52,7 @@ Src/main.o: ../Src/main.c /home/sam/w/musavi/mus_proj/Inc/main.h \
  /home/sam/w/musavi/mus_proj/APPS/glcd/glcd_graphs.h \
  /home/sam/w/musavi/mus_proj/APPS/glcd/glcd_text.h \
  /home/sam/w/musavi/mus_proj/APPS/glcd/glcd.h \
+<<<<<<< HEAD
  /home/sam/w/musavi/mus_proj/APPS/glcd/unit_tests.h \
  /home/sam/w/musavi/mus_proj/APPS/event/event.h \
  /home/sam/w/musavi/mus_proj/APPS/link_list/link_list.h \
@@ -57,6 +61,8 @@ Src/main.o: ../Src/main.c /home/sam/w/musavi/mus_proj/Inc/main.h \
  /home/sam/w/musavi/mus_proj/APPS/volume/volume.h \
  /home/sam/w/musavi/mus_proj/APPS/fv1/fv1.h \
  /home/sam/w/musavi/mus_proj/APPS/effect/effect.h \
+=======
+>>>>>>> glcd
  /home/sam/w/musavi/mus_proj/APPS/glcd/unit_tests.h
 
 /home/sam/w/musavi/mus_proj/Inc/main.h:
@@ -125,8 +131,11 @@ Src/main.o: ../Src/main.c /home/sam/w/musavi/mus_proj/Inc/main.h \
 
 /home/sam/w/musavi/mus_proj/APPS/glcd/glcd.h:
 
+<<<<<<< HEAD
 /home/sam/w/musavi/mus_proj/APPS/glcd/_STM32F10x.h:
 
+=======
+>>>>>>> glcd
 /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/fonts.h:
 
 /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Bebas_Neue18x36_Numbers.h:
@@ -162,6 +171,7 @@ Src/main.o: ../Src/main.c /home/sam/w/musavi/mus_proj/Inc/main.h \
 /home/sam/w/musavi/mus_proj/APPS/glcd/glcd.h:
 
 /home/sam/w/musavi/mus_proj/APPS/glcd/unit_tests.h:
+<<<<<<< HEAD
 
 /home/sam/w/musavi/mus_proj/APPS/event/event.h:
 
@@ -178,3 +188,5 @@ Src/main.o: ../Src/main.c /home/sam/w/musavi/mus_proj/Inc/main.h \
 /home/sam/w/musavi/mus_proj/APPS/effect/effect.h:
 
 /home/sam/w/musavi/mus_proj/APPS/glcd/unit_tests.h:
+=======
+>>>>>>> glcd
