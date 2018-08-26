@@ -111,14 +111,14 @@ void glcd_draw_string_P(uint8_t x, uint8_t y, const char *str)
 }
 
 
-void glcd_draw_string_ammend(char *str) {
-	glcd_scroll_line();
-	glcd_draw_string(0, (GLCD_LCD_HEIGHT/8-1), str);
+void glcd_draw_string_ammend(uint8_t x, uint8_t top, uint8_t down, char *str) {
+	glcd_scroll_line(top);
+	glcd_draw_string(x, (down), str);
 	glcd_write();
 }
 
 void glcd_draw_string_ammend_P(const char *str) {
-	glcd_scroll_line();
+	glcd_scroll_line(2);
 	glcd_draw_string_P(0, (GLCD_LCD_HEIGHT/8-1), str);
 	glcd_write();
 }

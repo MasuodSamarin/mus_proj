@@ -181,9 +181,10 @@ void glcd_scroll(int8_t x, int8_t y);
 /**
  * Scroll screen buffer up by 8 pixels.
  * This is designed to be used in conjunciton with tiny text functions which are 8 bits high.
+ * top is first line from top of lcd
  * \see Tiny Text
  */
-void glcd_scroll_line(void);
+void glcd_scroll_line(uint8_t top);
 
 /** @}*/
 

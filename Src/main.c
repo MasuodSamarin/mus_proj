@@ -47,7 +47,7 @@
 
 /* USER CODE BEGIN Includes */
 #include "glcd.h"
-
+#include "unit_tests.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -117,10 +117,16 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-
   /* USER CODE END WHILE */
-
   /* USER CODE BEGIN 3 */
+
+
+
+	  glcd_test_my_test();
+
+	  HAL_Delay(1000);
+
+
 
   }
   /* USER CODE END 3 */
