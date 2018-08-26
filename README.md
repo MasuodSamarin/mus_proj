@@ -11,3 +11,15 @@ objects:
   6. encoder
   7. event driven strategy
   8. link-list
+
+branch's that merged directly:
+    1. effect
+    2. output
+    3. events
+    4. event-out
+    5. master
+    6. unit-test-check-point
+    7. unit-test
+    8. state-machine
+    9. unit-test-fsme
+
