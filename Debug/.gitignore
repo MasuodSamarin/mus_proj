@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 /APPS/
 /Drivers/
 /Src/
 /startup/
+=======
+/Drivers/
+/Src/
+>>>>>>> master
 /makefile
 /objects.list
 /objects.mk
 /sources.mk
+<<<<<<< HEAD
+=======
+/startup/
+>>>>>>> master

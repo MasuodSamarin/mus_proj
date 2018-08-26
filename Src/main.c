@@ -109,7 +109,8 @@ int main(void)
   //MX_SPI1_Init();
   //MX_TIM1_Init();
   //MX_TIM4_Init();
-  /* USER CODE BEGIN 2 */
+
+ /* USER CODE BEGIN 2 */
 
   glcd_init();
   unit_test_init();
