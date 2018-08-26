@@ -10,7 +10,7 @@
 
 #define VOL_MAX_TOLERANCE	10
 #define VOL_MIN_TOLERANCE	10
-#define VOL_TOLERANCE		10
+#define VOL_TOLERANCE		5
 
 /*
  * tiny timer value
@@ -112,12 +112,10 @@ void vol_process(void){
 
 			break;
 	}
-
-/*
- * it's the second way to process the volumes
- * */
 #else
-
+	/*
+	 * it's the second way to process the volumes
+	 * */
 	vol_handle.vol_name = (vol_handle.vol_name + 1) % VOL_MAX;
 	delta = vol_handle.vol_raw_data[vol_handle.vol_name] - vol_handle.vol_data[vol_handle.vol_name];
 
@@ -125,9 +123,7 @@ void vol_process(void){
 		vol_handle.vol_data[vol_handle.vol_name] = vol_handle.vol_raw_data[vol_handle.vol_name];
 		event_push_node(event_create_vol_node(vol_handle.vol_name, vol_handle.vol_data[vol_handle.vol_name]));
 	}
-
 #endif
-
 }
 
 /*
