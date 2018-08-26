@@ -61,7 +61,7 @@ void glcd_command(uint8_t c);
  *  \param c Data byte to be written to LCD
  */
 void glcd_data(uint8_t c);
-	
+
 /**
  * Set contrast.
  * \param val Value from 0 to 127.  This should be experimentally determined. Supported by PCD8544 only.
