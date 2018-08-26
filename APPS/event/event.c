@@ -29,10 +29,7 @@ size_t event_get_size(void){
 	return(list_get_size(event_list));
 }
 
-/*
- * add the event to the end of the list
- * */
-#define EVENT_QEUE_SIZE 10
+
 void event_push_node(event_node_t *node){
 	if(event_get_size() > EVENT_QEUE_SIZE)
 		return;

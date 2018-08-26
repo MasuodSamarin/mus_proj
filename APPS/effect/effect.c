@@ -30,6 +30,30 @@ void efx_init_list(void){
 		efx_node_t *efx = efx_create_fv1_node((uint8_t)pst, EFX_MODE_PRESET, pst);
 		efx_push_effect(efx);
 	}
+	for (efx_fv1_preset pst = EFX_FV1_PRST_1; pst < EFX_FV1_PRST_MAX; ++pst) {
+		efx_node_t *efx = efx_create_fv1_node((uint8_t)pst+16, EFX_MODE_PRESET, pst);
+		efx_push_effect(efx);
+	}
+	for (efx_fv1_preset pst = EFX_FV1_PRST_1; pst < EFX_FV1_PRST_MAX; ++pst) {
+		efx_node_t *efx = efx_create_fv1_node((uint8_t)pst+32, EFX_MODE_PRESET, pst);
+		efx_push_effect(efx);
+	}
+	for (efx_fv1_preset pst = EFX_FV1_PRST_1; pst < EFX_FV1_PRST_MAX; ++pst) {
+		efx_node_t *efx = efx_create_fv1_node((uint8_t)pst+48, EFX_MODE_PRESET, pst);
+		efx_push_effect(efx);
+	}
+	for (efx_fv1_preset pst = EFX_FV1_PRST_1; pst < EFX_FV1_PRST_MAX; ++pst) {
+		efx_node_t *efx = efx_create_fv1_node((uint8_t)pst+64, EFX_MODE_PRESET, pst);
+		efx_push_effect(efx);
+	}
+	for (efx_fv1_preset pst = EFX_FV1_PRST_1; pst < EFX_FV1_PRST_MAX; ++pst) {
+		efx_node_t *efx = efx_create_fv1_node((uint8_t)pst+80, EFX_MODE_PRESET, pst);
+		efx_push_effect(efx);
+	}
+	for (efx_fv1_preset pst = EFX_FV1_PRST_1; pst < EFX_FV1_PRST_MAX; ++pst) {
+		efx_node_t *efx = efx_create_fv1_node((uint8_t)pst+96, EFX_MODE_PRESET, pst);
+		efx_push_effect(efx);
+	}
 	efx_list_iter = list_make_iterator(efx_list, NULL);
 
 }

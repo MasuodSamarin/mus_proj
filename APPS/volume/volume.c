@@ -10,6 +10,7 @@
 
 #define VOL_MAX_TOLERANCE	10
 #define VOL_MIN_TOLERANCE	10
+#define VOL_TOLERANCE		10
 
 /*
  * tiny timer value
@@ -67,10 +68,17 @@ static vol_handle_t vol_handle;
  * the heart of this module is the process the volumes
  * it's must run periodically in timer interupt
  * the raw data's comes from dma then process it and result
- * put on vol_data
+ * put on vol_data.
+ * there is 2 ways you can choose to do it by define
  * */
+//#define VOL_PROC_METHOD_1
 void vol_process(void){
 	__IO int32_t delta;
+
+/*
+ * its first way to do it
+ * */
+#ifdef VOL_PROC_METHOD_1
 
 	switch (vol_handle.state) {
 		case VOL_STATE_A:
@@ -105,6 +113,20 @@ void vol_process(void){
 			break;
 	}
 
+/*
+ * it's the second way to process the volumes
+ * */
+#else
+
+	vol_handle.vol_name = (vol_handle.vol_name + 1) % VOL_MAX;
+	delta = vol_handle.vol_raw_data[vol_handle.vol_name] - vol_handle.vol_data[vol_handle.vol_name];
+
+	if (abs(delta) >= VOL_TOLERANCE){
+		vol_handle.vol_data[vol_handle.vol_name] = vol_handle.vol_raw_data[vol_handle.vol_name];
+		event_push_node(event_create_vol_node(vol_handle.vol_name, vol_handle.vol_data[vol_handle.vol_name]));
+	}
+
+#endif
 
 }
 

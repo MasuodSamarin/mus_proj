@@ -33,6 +33,13 @@ extern "C" {
 #include "volume.h"
 
 
+
+/*
+ * add the event to the end of the list
+ * */
+#define EVENT_QEUE_SIZE 10
+
+
 /*
  * event types enum
  * there's 3 types of event nodes we can created
