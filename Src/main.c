@@ -138,7 +138,6 @@ int main(void)
 
 	  unit_test_events();
 
-	  //glcd_test_my_test();
 
 
 

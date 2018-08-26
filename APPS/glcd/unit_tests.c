@@ -70,7 +70,7 @@ char *strings[] = {
 		"COLOR",
 		"WATER"
 };
-void glcd_test_my_test(void){
+void glcd_test_scroll_text(void){
 
 	//glcd_clear_buffer();
 	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);

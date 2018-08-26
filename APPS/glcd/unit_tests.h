@@ -43,7 +43,7 @@ extern volatile uint8_t unit_test_return;
 /*
  * my test func to testing some func
  * */
-void glcd_test_my_test(void);
+void glcd_test_scroll_text(void);
 
 
 /** Make random "exploding circles" */
