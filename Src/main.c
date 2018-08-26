@@ -124,7 +124,6 @@ int main(void)
 
 	  glcd_test_my_test();
 
-	  HAL_Delay(1000);
 
 
 

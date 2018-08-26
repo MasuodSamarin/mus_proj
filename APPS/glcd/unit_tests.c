@@ -72,8 +72,8 @@ char *strings[] = {
 };
 void glcd_test_my_test(void){
 
-	glcd_clear_buffer();
-	glcd_set_font_c(FC_Tahoma11x13_AlphaNumber);
+	//glcd_clear_buffer();
+	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
 	for (int var = 0; var < 8; ++var) {
 		glcd_draw_string_ammend(10, 0, 48, strings[var]);
 
