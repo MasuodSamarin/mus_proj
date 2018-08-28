@@ -346,25 +346,34 @@ Discarded input sections
  .group         0x0000000000000000        0x8 APPS/eep/eeprom.o
  .group         0x0000000000000000        0x8 APPS/eep/eeprom.o
  .group         0x0000000000000000        0x8 APPS/eep/eeprom.o
+ .group         0x0000000000000000        0x8 APPS/eep/eeprom.o
+ .group         0x0000000000000000        0x8 APPS/eep/eeprom.o
+ .group         0x0000000000000000        0x8 APPS/eep/eeprom.o
+ .group         0x0000000000000000        0x8 APPS/eep/eeprom.o
+ .group         0x0000000000000000        0x8 APPS/eep/eeprom.o
+ .group         0x0000000000000000        0x8 APPS/eep/eeprom.o
+ .group         0x0000000000000000        0x8 APPS/eep/eeprom.o
  .text          0x0000000000000000        0x0 APPS/eep/eeprom.o
  .data          0x0000000000000000        0x0 APPS/eep/eeprom.o
  .bss           0x0000000000000000        0x0 APPS/eep/eeprom.o
  .text.EE_Format
                 0x0000000000000000       0x44 APPS/eep/eeprom.o
  .text.EE_Read  0x0000000000000000       0x1a APPS/eep/eeprom.o
+ .text.EE_Read_Efx
+                0x0000000000000000       0x28 APPS/eep/eeprom.o
  .text.EE_Reads
                 0x0000000000000000       0x28 APPS/eep/eeprom.o
  .text.EE_Write
                 0x0000000000000000       0xa8 APPS/eep/eeprom.o
  .text.EE_Writes
                 0x0000000000000000       0x80 APPS/eep/eeprom.o
- .debug_info    0x0000000000000000      0xd08 APPS/eep/eeprom.o
- .debug_abbrev  0x0000000000000000      0x26a APPS/eep/eeprom.o
- .debug_loc     0x0000000000000000      0x25b APPS/eep/eeprom.o
+ .debug_info    0x0000000000000000     0x1856 APPS/eep/eeprom.o
+ .debug_abbrev  0x0000000000000000      0x2a9 APPS/eep/eeprom.o
+ .debug_loc     0x0000000000000000      0x2d9 APPS/eep/eeprom.o
  .debug_aranges
-                0x0000000000000000       0x40 APPS/eep/eeprom.o
- .debug_ranges  0x0000000000000000       0x60 APPS/eep/eeprom.o
- .debug_macro   0x0000000000000000      0x32c APPS/eep/eeprom.o
+                0x0000000000000000       0x48 APPS/eep/eeprom.o
+ .debug_ranges  0x0000000000000000       0x68 APPS/eep/eeprom.o
+ .debug_macro   0x0000000000000000      0x3df APPS/eep/eeprom.o
  .debug_macro   0x0000000000000000      0x8bc APPS/eep/eeprom.o
  .debug_macro   0x0000000000000000       0x22 APPS/eep/eeprom.o
  .debug_macro   0x0000000000000000      0x179 APPS/eep/eeprom.o
@@ -425,10 +434,17 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x1f APPS/eep/eeprom.o
  .debug_macro   0x0000000000000000       0x83 APPS/eep/eeprom.o
  .debug_macro   0x0000000000000000       0x16 APPS/eep/eeprom.o
- .debug_line    0x0000000000000000      0x82c APPS/eep/eeprom.o
- .debug_str     0x0000000000000000    0x72b85 APPS/eep/eeprom.o
+ .debug_macro   0x0000000000000000       0x16 APPS/eep/eeprom.o
+ .debug_macro   0x0000000000000000       0x35 APPS/eep/eeprom.o
+ .debug_macro   0x0000000000000000       0x16 APPS/eep/eeprom.o
+ .debug_macro   0x0000000000000000       0x29 APPS/eep/eeprom.o
+ .debug_macro   0x0000000000000000       0x16 APPS/eep/eeprom.o
+ .debug_macro   0x0000000000000000       0x16 APPS/eep/eeprom.o
+ .debug_macro   0x0000000000000000       0x22 APPS/eep/eeprom.o
+ .debug_line    0x0000000000000000      0xa04 APPS/eep/eeprom.o
+ .debug_str     0x0000000000000000    0x735ed APPS/eep/eeprom.o
  .comment       0x0000000000000000       0x80 APPS/eep/eeprom.o
- .debug_frame   0x0000000000000000       0x90 APPS/eep/eeprom.o
+ .debug_frame   0x0000000000000000       0xac APPS/eep/eeprom.o
  .ARM.attributes
                 0x0000000000000000       0x33 APPS/eep/eeprom.o
  COMMON         0x0000000000000000      0x400 APPS/eep/eeprom.o

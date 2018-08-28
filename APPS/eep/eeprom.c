@@ -6,10 +6,12 @@
  */
 
 #include "eeprom.h"
-
 #include <eeprom.h>
-
 #include "eepromConfig.h"
+
+/*
+ * usr files*/
+#include "effect.h"
 
 #ifdef  _EEPROM_F1_LOW_DESTINY
 #define		_EEPROM_FLASH_PAGE_SIZE								1024
@@ -77,6 +79,14 @@ bool EE_Read(uint16_t VirtualAddress, uint32_t* Data)
 	return true;
 }
 //##########################################################################################################
+bool EE_Read_Efx(uint16_t VirtualAddress, efx_node_t* Data)
+{
+	if(VirtualAddress >=	(_EEPROM_FLASH_PAGE_SIZE/sizeof(efx_node_t)))
+		return false;
+	*Data =  (*(__IO efx_node_t*)((VirtualAddress*4)+_EEPROM_FLASH_PAGE_ADDRESS));
+	return true;
+}
+//##########################################################################################################
 bool EE_Write(uint16_t VirtualAddress, uint32_t Data)
 {
 	if(VirtualAddress >=	(_EEPROM_FLASH_PAGE_SIZE/4))
@@ -96,11 +106,11 @@ bool EE_Write(uint16_t VirtualAddress, uint32_t Data)
 		HAL_FLASH_Unlock();
 		for(uint16_t	i=0 ; i<_EEPROM_FLASH_PAGE_SIZE/4 ; i++)
 		{
-      if(HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD,(i*4)+_EEPROM_FLASH_PAGE_ADDRESS,(uint64_t)EEPROMPageBackup[i])!=HAL_OK)
-			{
-				HAL_FLASH_Lock();
-				return false;
-			}
+			if(HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD,(i*4)+_EEPROM_FLASH_PAGE_ADDRESS,(uint64_t)EEPROMPageBackup[i])!=HAL_OK)
+				{
+					HAL_FLASH_Lock();
+					return false;
+				}
 		}
 	}
 	HAL_FLASH_Unlock();
