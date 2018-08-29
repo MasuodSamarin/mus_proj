@@ -37,7 +37,7 @@
 #include "glcd.h"
 #include "unit_tests.h"
 
-
+#include "eeprom.h"
 
 
 
@@ -591,5 +591,37 @@ void unit_test_effect_print(efx_node_t *node){
 
 
 
+void unit_test_eep(void){
 
+	glcd_clear_buffer();
+/*
+  	uint32_t val = 8;
+	uint32_t nval = 4;
+	uint16_t addr = 1;
+
+	glcd_draw_string(5,5, "EEPROM");
+
+	//EE_Format();
+	//EE_Write(addr, val);
+
+	val = nval;
+	sprintf(str, "%ld%%", val);
+	glcd_draw_string(40,45, str);
+
+	EE_Read(addr, &val);
+	sprintf(str, "%ld%%", val);
+	glcd_draw_string(80,45, str);
+*/
+	efx_node_t *node = efx_create_fv1_node(1, EFX_MODE_PRESET, 1);
+	efx_node_t *n = NULL;
+
+	EE_Format();
+	EE_Write_Efx(1, node);
+	EE_Read_Efx(1, n);
+
+
+	glcd_draw_string(15,15, (char*)node->fv1->name);
+	//glcd_draw_string(25,25, (char*)n->fv1->name);
+	glcd_write();
+}
 

@@ -98,4 +98,9 @@ void unit_test_events(void);
 void unit_test_init(void);
 void unit_test_effect_print(efx_node_t *node);
 
+
+void unit_test_eep(void);
+
+
+
 #endif

@@ -50,6 +50,8 @@
 #include "unit_tests.h"
 #include "event.h"
 
+#include "eeprom.h"
+
 /* USER CODE BEGIN Includes */
 
 
@@ -124,6 +126,8 @@ int main(void)
 
   HAL_TIM_Base_Start_IT(&htim2);
   glcd_init();
+
+  unit_test_eep();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -136,7 +140,7 @@ int main(void)
 
 
 
-	  unit_test_events();
+	  //unit_test_events();
 
 
 
