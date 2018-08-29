@@ -128,6 +128,7 @@ int main(void)
   glcd_init();
 
   unit_test_eep();
+  //unit_test_sizes();
   /* USER CODE END 2 */
 
   /* Infinite loop */

@@ -102,7 +102,7 @@ typedef struct {
 		efx_isd_base_t *isd;
 
 	};
-	vol_node_t *volume[VOL_MAX];
+	uint32_t volume[VOL_MAX];
 	uint8_t status;
 }efx_node_t;
 

@@ -6,7 +6,6 @@
  */
 
 #include "eeprom.h"
-//#include <eeprom.h>
 #include "eepromConfig.h"
 
 
@@ -127,7 +126,7 @@ bool EE_Reads(uint16_t StartVirtualAddress,uint16_t HowMuchToRead,uint32_t* Data
 {
 	if((StartVirtualAddress+HowMuchToRead) >	(_EEPROM_FLASH_PAGE_SIZE/4))
 		return false;
-	for(uint16_t	i=StartVirtualAddress ; i<HowMuchToRead+StartVirtualAddress ; i++)
+	for(uint16_t i=StartVirtualAddress; i<HowMuchToRead+StartVirtualAddress; i++)
 	{
 		*Data =  (*(__IO uint32_t*)((i*4)+_EEPROM_FLASH_PAGE_ADDRESS));
 		Data++;
@@ -162,18 +161,24 @@ bool 	EE_Writes(uint16_t StartVirtualAddress,uint16_t HowMuchToWrite,uint32_t* D
 }
 //##########################################################################################################
 
-
-
+#include <stdio.h>
+#include <string.h>
+#define size_of_node sizeof(efx_node_t)/sizeof(uint32_t)
 
 bool EE_Read_Efx(uint16_t VirtualAddress, efx_node_t* Data)
 {
-	EE_Reads(VirtualAddress, 6, (uint32_t*)((void*)Data));
+	uint32_t d[size_of_node] = {0};
+	EE_Reads(VirtualAddress, size_of_node, d);
+	memmove((void*)Data, (void*)d, size_of_node);
 	return true;
 }
 
 bool EE_Write_Efx(uint16_t VirtualAddress, efx_node_t *Data){
 
-	EE_Writes(VirtualAddress, 6, (uint32_t*)((void*)Data));
+	uint32_t d[size_of_node] = {0};
+	memmove((void*)d, (void*)Data, size_of_node);
+
+	EE_Writes(VirtualAddress, size_of_node, d);
 
 
 	return true;

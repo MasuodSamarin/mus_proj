@@ -74,9 +74,9 @@ efx_node_t* efx_create_fv1_node(uint8_t number, efx_mode_t mode, efx_fv1_preset 
 	efx->mode = mode;
 	efx->fv1 = base;
 	efx->status = DISABLE;
-	efx->volume[0] = vol_create_node (VOL_A, 0);
-	efx->volume[1] = vol_create_node (VOL_B, 0);
-	efx->volume[2] = vol_create_node (VOL_C, 0);
+	efx->volume[0] = 0;
+	efx->volume[1] = 0;
+	efx->volume[2] = 0;
 
 	//efx->volume = (vol_node_t*){0};
 

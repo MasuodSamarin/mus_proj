@@ -588,40 +588,81 @@ void unit_test_effect_print(efx_node_t *node){
 }
 
 
+void unit_test_sizes(void){
+	glcd_clear_buffer();
+	efx_node_t node;
+	uint8_t number;
+	efx_mode_t mode;
+	efx_type_t type;
+	efx_fv1_base_t *fv1;
+	vol_node_t volume;
+
+	sprintf(str, "node:%d", sizeof(node));
+	glcd_draw_string(5,5, str);
+
+	sprintf(str, "number:%d", sizeof(number));
+	glcd_draw_string(5,15, str);
+
+	sprintf(str, "type:%d", sizeof(type));
+	glcd_draw_string(5,25, str);
+
+	sprintf(str, "fv1:%d", sizeof(fv1));
+	glcd_draw_string(5,35, str);
+
+	sprintf(str, "mode:%d", sizeof(mode));
+	glcd_draw_string(5,45, str);
+
+	sprintf(str, "volume:%d", sizeof(volume));
+	glcd_draw_string(5,55, str);
+
+	glcd_write();
+}
+
+#include <stdio.h>
+#include <string.h>
+#include "stm32f1xx_hal.h"
 
 
+#define size_of_node sizeof(efx_node_t)/sizeof(uint32_t)
 
 void unit_test_eep(void){
 
 	glcd_clear_buffer();
-/*
-  	uint32_t val = 8;
-	uint32_t nval = 4;
+
+  	uint32_t val[2] = {1,2};
+	uint32_t nval[2] = {0,0};
 	uint16_t addr = 1;
 
 	glcd_draw_string(5,5, "EEPROM");
+/*	EE_Format();
+	EE_Writes(addr, 2, val);
+	val[0] = nval[0]; val[1] = nval[1];
+	sprintf(str, "val%ld,%ld", val[0], val[1]);
+	glcd_draw_string(5,15, str);
+	EE_Reads(addr, 2, val);
+	sprintf(str, "val%ld,%ld", val[0], val[1]);
+	glcd_draw_string(5,25, str);
+*/
+
+	//efx_node_t *node = efx_create_fv1_node(1, EFX_MODE_PRESET, 1);
+	efx_node_t *n = efx_create_fv1_node(5, EFX_MODE_PRESET, 5);
+	//efx_node_t no = *node;
+
+	//uint32_t d[size_of_node] = {0};
+	//memmove((void*)d, (void*)node, size_of_node);
+	//memmove((void*)n, (void*)d, size_of_node);
 
 	//EE_Format();
-	//EE_Write(addr, val);
-
-	val = nval;
-	sprintf(str, "%ld%%", val);
-	glcd_draw_string(40,45, str);
-
-	EE_Read(addr, &val);
-	sprintf(str, "%ld%%", val);
-	glcd_draw_string(80,45, str);
-*/
-	efx_node_t *node = efx_create_fv1_node(1, EFX_MODE_PRESET, 1);
-	efx_node_t *n = NULL;
-
-	EE_Format();
-	EE_Write_Efx(1, node);
-	EE_Read_Efx(1, n);
+	//EE_Write_Efx(addr, node);
+	EE_Read_Efx(addr, n);
 
 
-	glcd_draw_string(15,15, (char*)node->fv1->name);
-	//glcd_draw_string(25,25, (char*)n->fv1->name);
+	//glcd_draw_string(5,35, (char*)node->fv1->comments);
+	glcd_draw_string(5,45, (char*)n->fv1->comments);
+
+	//free(node);
+	free(n);
+
 	glcd_write();
 }
 

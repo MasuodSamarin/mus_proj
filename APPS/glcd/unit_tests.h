@@ -101,6 +101,6 @@ void unit_test_effect_print(efx_node_t *node);
 
 void unit_test_eep(void);
 
-
+void unit_test_sizes(void);
 
 #endif
