@@ -622,7 +622,7 @@ void unit_test_sizes(void){
 
 void unit_test_eep(void){
 
-	#define num 10
+	#define num 16
 
   	efx_node_t *node = NULL;
 
@@ -641,7 +641,7 @@ void unit_test_eep(void){
 		glcd_draw_string(5,35, (char*)node->fv1->comments);
 		glcd_draw_string(5,45, (char *)utoa(var,str,10));
 		glcd_write();
-		HAL_Delay(1000);
+		HAL_Delay(500);
 	}
 
 	free(node);
