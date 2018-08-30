@@ -618,51 +618,31 @@ void unit_test_sizes(void){
 	glcd_write();
 }
 
-#include <stdio.h>
 #include <string.h>
-#include "stm32f1xx_hal.h"
-
-
-#define size_of_node sizeof(efx_node_t)/sizeof(uint32_t)
 
 void unit_test_eep(void){
 
-	glcd_clear_buffer();
+	#define num 10
 
-  	uint32_t val[2] = {1,2};
-	uint32_t nval[2] = {0,0};
-	uint16_t addr = 1;
+  	efx_node_t *node = NULL;
 
-	glcd_draw_string(5,5, "EEPROM");
-/*	EE_Format();
-	EE_Writes(addr, 2, val);
-	val[0] = nval[0]; val[1] = nval[1];
-	sprintf(str, "val%ld,%ld", val[0], val[1]);
-	glcd_draw_string(5,15, str);
-	EE_Reads(addr, 2, val);
-	sprintf(str, "val%ld,%ld", val[0], val[1]);
-	glcd_draw_string(5,25, str);
-*/
+	EE_Format();
 
-	//efx_node_t *node = efx_create_fv1_node(1, EFX_MODE_PRESET, 1);
-	efx_node_t *n = efx_create_fv1_node(5, EFX_MODE_PRESET, 5);
-	//efx_node_t no = *node;
+	for (int var = 0; var < num; ++var) {
+		node = efx_create_fv1_node(var+1, EFX_MODE_PRESET, var);
+		EE_Write_Efx(var, node);
+	}
 
-	//uint32_t d[size_of_node] = {0};
-	//memmove((void*)d, (void*)node, size_of_node);
-	//memmove((void*)n, (void*)d, size_of_node);
+	for (int var = 0; var < num; ++var) {
+		glcd_clear_buffer();
+		glcd_draw_string(5,5, "EEPROM");
+		EE_Read_Efx(var, node);
+		glcd_draw_string(5,25, (char*)node->fv1->name);
+		glcd_draw_string(5,35, (char*)node->fv1->comments);
+		glcd_write();
+		HAL_Delay(2000);
+	}
 
-	//EE_Format();
-	//EE_Write_Efx(addr, node);
-	EE_Read_Efx(addr, n);
-
-
-	//glcd_draw_string(5,35, (char*)node->fv1->comments);
-	glcd_draw_string(5,45, (char*)n->fv1->comments);
-
-	//free(node);
-	free(n);
-
-	glcd_write();
+	free(node);
 }
 

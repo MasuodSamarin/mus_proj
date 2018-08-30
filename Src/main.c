@@ -127,7 +127,6 @@ int main(void)
   HAL_TIM_Base_Start_IT(&htim2);
   glcd_init();
 
-  unit_test_eep();
   //unit_test_sizes();
   /* USER CODE END 2 */
 
@@ -142,6 +141,7 @@ int main(void)
 
 
 	  //unit_test_events();
+	  unit_test_eep();
 
 
 

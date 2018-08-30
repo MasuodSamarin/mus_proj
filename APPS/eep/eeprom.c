@@ -168,18 +168,19 @@ bool 	EE_Writes(uint16_t StartVirtualAddress,uint16_t HowMuchToWrite,uint32_t* D
 bool EE_Read_Efx(uint16_t VirtualAddress, efx_node_t* Data)
 {
 	uint32_t d[size_of_node] = {0};
-	EE_Reads(VirtualAddress, size_of_node, d);
-	memmove((void*)Data, (void*)d, size_of_node);
+
+	EE_Reads(VirtualAddress*size_of_node, size_of_node, d);
+	memcpy((void*)Data, (void*)d, size_of_node);
+
 	return true;
 }
 
 bool EE_Write_Efx(uint16_t VirtualAddress, efx_node_t *Data){
 
 	uint32_t d[size_of_node] = {0};
-	memmove((void*)d, (void*)Data, size_of_node);
 
-	EE_Writes(VirtualAddress, size_of_node, d);
-
+	memcpy((void*)d, (void*)Data, size_of_node);
+	EE_Writes(VirtualAddress*size_of_node, size_of_node, d);
 
 	return true;
 }
