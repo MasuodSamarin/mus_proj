@@ -50,12 +50,13 @@ uint32_t	EEPROMPageBackup[_EEPROM_FLASH_PAGE_SIZE/4];
 bool	EE_Format(void)
 {
 	uint32_t	error;
-	HAL_FLASH_Unlock();
 	FLASH_EraseInitTypeDef	flashErase;
 	flashErase.NbPages=1;
 	flashErase.Banks = FLASH_BANK_1;
 	flashErase.PageAddress = _EEPROM_FLASH_PAGE_ADDRESS;
 	flashErase.TypeErase = FLASH_TYPEERASE_PAGES;
+
+	HAL_FLASH_Unlock();
 	if(HAL_FLASHEx_Erase(&flashErase,&error)==HAL_OK)
 	{
 		HAL_FLASH_Lock();
@@ -65,6 +66,7 @@ bool	EE_Format(void)
 			return true;
 	}
 	HAL_FLASH_Lock();
+
 	return false;
 }
 //##########################################################################################################
@@ -163,25 +165,28 @@ bool 	EE_Writes(uint16_t StartVirtualAddress,uint16_t HowMuchToWrite,uint32_t* D
 
 #include <stdio.h>
 #include <string.h>
-#define size_of_node sizeof(efx_node_t)/sizeof(uint32_t)
-
-bool EE_Read_Efx(uint16_t VirtualAddress, efx_node_t* Data)
-{
-	uint32_t d[size_of_node] = {0};
-
+//#define size_of_node sizeof(efx_node_t)/sizeof(uint32_t)
+/*
+ * TODO: d is fucking shit*/
+bool EE_Read_Efx(uint16_t VirtualAddress, efx_node_t* Data, uint8_t size_of_node){
+	uint32_t *d = malloc(sizeof(uint32_t) * size_of_node);
+	if (!d)
+		return false;
 	EE_Reads(VirtualAddress*size_of_node, size_of_node, d);
 	memcpy((void*)Data, (void*)d, size_of_node);
 
+	free(d);
 	return true;
 }
 
-bool EE_Write_Efx(uint16_t VirtualAddress, efx_node_t *Data){
-
-	uint32_t d[size_of_node] = {0};
-
+bool EE_Write_Efx(uint16_t VirtualAddress, efx_node_t *Data, uint8_t size_of_node){
+	uint32_t *d = malloc(sizeof(uint32_t) * size_of_node);
+	if (!d)
+		return false;
 	memcpy((void*)d, (void*)Data, size_of_node);
 	EE_Writes(VirtualAddress*size_of_node, size_of_node, d);
 
+	free(d);
 	return true;
 }
 
