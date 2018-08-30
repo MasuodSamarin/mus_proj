@@ -639,8 +639,9 @@ void unit_test_eep(void){
 		EE_Read_Efx(var, node);
 		glcd_draw_string(5,25, (char*)node->fv1->name);
 		glcd_draw_string(5,35, (char*)node->fv1->comments);
+		glcd_draw_string(5,45, (char *)utoa(var,str,10));
 		glcd_write();
-		HAL_Delay(2000);
+		HAL_Delay(1000);
 	}
 
 	free(node);
