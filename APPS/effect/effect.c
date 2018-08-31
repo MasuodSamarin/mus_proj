@@ -63,22 +63,22 @@ efx_node_t* efx_create_fv1_node(uint8_t number, efx_mode_t mode, efx_fv1_preset 
 
 	efx_node_t *efx = malloc(sizeof(*efx));
 	//TODO: check malloc
-	if(!efx)
+	if(!efx){
+		_Error_Handler(__FILE__, __LINE__);
 		return (efx_node_t*)NULL;
-
-	efx_fv1_base_t *base = efx_get_fv1_effect(pst);
+	}
+	//efx_fv1_base_t *base = efx_get_fv1_effect(pst);
 
 	/*effect list number start from 1 not zero*/
 	efx->number = number + 1;
 	efx->type = EFX_TYPE_FV1;
 	efx->mode = mode;
-	efx->fv1 = base;
+	efx->fv1 =  (efx_fv1_base_t*)efx_get_fv1_effect(pst);
 	efx->status = DISABLE;
 	efx->volume[0] = 0;
 	efx->volume[1] = 0;
 	efx->volume[2] = 0;
 
-	//efx->volume = (vol_node_t*){0};
 
 	return (efx);
 }

@@ -90,8 +90,10 @@ event_node_t* event_create_vol_node(vol_name_t name, uint32_t val){
 	event_node_t *node = malloc(sizeof(*node));
 	vol_node_t *vol = malloc(sizeof(*vol));
 /*TODO: check the malloc */
-	if(!node || !vol)
+	if(!node || !vol){
+		_Error_Handler(__FILE__, __LINE__);
 		return (event_node_t*)NULL;
+	}
 	vol->name = name;
 	vol->val_adc = val;
 	vol->val_pwm = val << VOL_ADC_PWM_FACTOR;
@@ -108,8 +110,10 @@ event_node_t* event_create_btn_node(btn_name_t name, btn_hold_t hold){
 	event_node_t *node = malloc(sizeof(*node));
 	btn_node_t *btn = malloc(sizeof(*btn));
 /*TODO: check the malloc */
-	if(!node || !btn)
+	if(!node || !btn){
+		_Error_Handler(__FILE__, __LINE__);
 		return (event_node_t*)NULL;
+	}
 	btn->name = name;
 	btn->hold = hold;
 
@@ -125,8 +129,10 @@ event_node_t* event_create_enc_node(enc_dir_t dir, uint32_t val){
 	event_node_t *node = malloc(sizeof(*node));
 	enc_node_t *enc = malloc(sizeof(*enc));
 /*TODO: check the malloc */
-	if(!node || !enc)
+	if(!node || !enc){
+		_Error_Handler(__FILE__, __LINE__);
 		return (event_node_t*)NULL;
+	}
 	enc->dir = dir;
 	enc->val = val;
 

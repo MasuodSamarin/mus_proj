@@ -619,25 +619,41 @@ void unit_test_sizes(void){
 }
 
 #include <string.h>
-#define num 8
+#include "eepromConfig.h"
+#define num 4
 
 #define		_EEPROM_FLASH_PAGE_SIZE				1024
-#define		_EEPROM_USE_FLASH_PAGE				127
 #define ADDR_FLASH_PAGE_0     ((uint32_t)0x08000000) /* Base @ of Page 0, 1 Kbytes */
 #define _EEPROM_FLASH_PAGE_ADDRESS    (ADDR_FLASH_PAGE_0|(_EEPROM_FLASH_PAGE_SIZE*_EEPROM_USE_FLASH_PAGE))
-#define size_of_node sizeof(efx_node_t)/sizeof(uint32_t)
+#define size_of_node (sizeof(uint32_t))//sizeof(efx_node_t) / sizeof(uint32_t)
 
-void unit_test_eep(void){
-	static uint8_t cnt = 0;
-  	static efx_node_t *node = NULL;
+uint32_t d_src[size_of_node] = {1, 2, 3, 4};
+uint32_t d_des[size_of_node] = {0};
+#define addr_index var*size_of_node
+
+void unit_test_eep_save(void){
 
 	EE_Format();
+/*
+   	efx_node_t *node = NULL;
 
 	for (int var = 0; var < num; ++var) {
-		node = efx_create_fv1_node(var+1, EFX_MODE_PRESET, var);
+		node = efx_create_fv1_node(var, EFX_MODE_PRESET, var);
 		if(!EE_Write_Efx(var, node, size_of_node))
 			_Error_Handler(__FILE__, __LINE__);
 	}
+	*/
+
+	for (int var = 0; var < size_of_node; ++var) {
+		EE_Writes(var*size_of_node, size_of_node, d_src);
+	}
+
+}
+void unit_test_eep_read(void){
+	static uint8_t cnt = 0;
+  	/*
+	efx_node_t *node = NULL;
+
 	for (int var = 0; var < num; ++var) {
 		if(!EE_Read_Efx(var, node, size_of_node))
 			_Error_Handler(__FILE__, __LINE__);
@@ -654,7 +670,26 @@ void unit_test_eep(void){
 		glcd_draw_string(5,35, str);
 		glcd_write();
 
+		HAL_Delay(50);
+	}
+	*/
+
+	for (int var = 0; var < size_of_node; ++var) {
+		EE_Reads(var*size_of_node, size_of_node, d_des);
+		glcd_clear_buffer();
+		glcd_draw_string(5,5, "EEPROM");
+		glcd_draw_string(5,15, (char *)utoa(d_des[0],str,10));
+		glcd_draw_string(95,15, (char *)utoa(d_des[1],str,10));
+		glcd_draw_string(5,25, (char *)utoa(d_des[2],str,10));
+		glcd_draw_string(95,25, (char *)utoa(d_des[3],str,10));
+		glcd_draw_string(5,35, (char *)utoa(cnt,str,10));
+		glcd_draw_string(95,35, (char *)utoa(sizeof(d_des),str,10));
+		sprintf(str, "%p", &(d_des[var]));
+		glcd_draw_string(5,45, str);
+		glcd_write();
+
 		HAL_Delay(10);
+
 	}
 	cnt++;
 }

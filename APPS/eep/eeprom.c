@@ -51,7 +51,7 @@ bool	EE_Format(void)
 {
 	uint32_t	error;
 	FLASH_EraseInitTypeDef	flashErase;
-	flashErase.NbPages=1;
+	flashErase.NbPages=128-_EEPROM_USE_FLASH_PAGE;
 	flashErase.Banks = FLASH_BANK_1;
 	flashErase.PageAddress = _EEPROM_FLASH_PAGE_ADDRESS;
 	flashErase.TypeErase = FLASH_TYPEERASE_PAGES;
@@ -168,25 +168,29 @@ bool 	EE_Writes(uint16_t StartVirtualAddress,uint16_t HowMuchToWrite,uint32_t* D
 //#define size_of_node sizeof(efx_node_t)/sizeof(uint32_t)
 /*
  * TODO: d is fucking shit*/
-bool EE_Read_Efx(uint16_t VirtualAddress, efx_node_t* Data, uint8_t size_of_node){
-	uint32_t *d = malloc(sizeof(uint32_t) * size_of_node);
-	if (!d)
-		return false;
-	EE_Reads(VirtualAddress*size_of_node, size_of_node, d);
-	memcpy((void*)Data, (void*)d, size_of_node);
+uint32_t d[10];
+bool EE_Read_Efx(uint16_t VirtualAddress, efx_node_t* Data, uint8_t size){
+	/*uint32_t *d = malloc(sizeof(uint32_t) * size_of_node);
+	if (!d){
 
-	free(d);
+		_Error_Handler(__FILE__, __LINE__);
+		return false;
+	}*/
+	EE_Reads(VirtualAddress*size, size, d);
+	memmove((void*)Data, (void*)d, size);
+
+	//free(d);
 	return true;
 }
 
-bool EE_Write_Efx(uint16_t VirtualAddress, efx_node_t *Data, uint8_t size_of_node){
-	uint32_t *d = malloc(sizeof(uint32_t) * size_of_node);
+bool EE_Write_Efx(uint16_t VirtualAddress, efx_node_t *Data, uint8_t size){
+	/*uint32_t *d = malloc(sizeof(uint32_t) * size_of_node);
 	if (!d)
-		return false;
-	memcpy((void*)d, (void*)Data, size_of_node);
-	EE_Writes(VirtualAddress*size_of_node, size_of_node, d);
+		return false;*/
+	memmove((void*)d, (void*)Data, size);
+	EE_Writes(VirtualAddress*size, size, d);
 
-	free(d);
+	//free(d);
 	return true;
 }
 

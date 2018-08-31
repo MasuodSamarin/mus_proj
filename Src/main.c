@@ -123,7 +123,6 @@ int main(void)
   //btn_init();
   //unit_init();
 
-
   //HAL_TIM_Base_Start_IT(&htim2);
   //glcd_init();
 
@@ -140,7 +139,9 @@ int main(void)
 
 
 	  //unit_test_events();
-	  unit_test_eep();
+	  unit_test_eep_save();
+
+	  unit_test_eep_read();
 
 
 

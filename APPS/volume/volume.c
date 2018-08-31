@@ -157,8 +157,10 @@ vol_node_t* vol_create_node(vol_name_t name, uint32_t val){
 	/*TODO: check the malloc
 	 * node->vals must be correct, it maybe needs VOL_ADC_PWM_FACTOR
 	 * */
-	if (!node)
+	if (!node){
+		_Error_Handler(__FILE__, __LINE__);
 		return (vol_node_t*)NULL;
+	}
 
 	node->name = name;
 	node->val_adc = val;
