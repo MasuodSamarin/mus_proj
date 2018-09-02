@@ -655,12 +655,12 @@ void unit_test_sizes(void){
 uint32_t d_src[size_of_node] = {1, 2, 3, 4};
 uint32_t d_des[size_of_node] = {0};
 #define addr_index var*size_of_node
-#define number_of_efx	8
+#define number_of_efx	16
 void unit_test_eep_save(void){
 
 	EE_Format();
 
-   	efx_node_t *node[number_of_efx]= {0};
+   	efx_node_t *node[number_of_efx] = {0};
 	for (int var = 0; var < number_of_efx; ++var) {
 		//efx_node_t *efx = efx_create_fv1_node((uint8_t)var, EFX_MODE_PRESET, (efx_fv1_preset)var);
 		node[var] = efx_create_fv1_node((uint8_t)var, EFX_MODE_PRESET, (efx_fv1_preset)var);
