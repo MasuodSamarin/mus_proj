@@ -660,12 +660,12 @@ void unit_test_eep_save(void){
 
 	EE_Format();
 
-   	efx_node_t *node[number_of_efx];
-
+   	efx_node_t *node[number_of_efx]= {0};
 	for (int var = 0; var < number_of_efx; ++var) {
 		//efx_node_t *efx = efx_create_fv1_node((uint8_t)var, EFX_MODE_PRESET, (efx_fv1_preset)var);
 		node[var] = efx_create_fv1_node((uint8_t)var, EFX_MODE_PRESET, (efx_fv1_preset)var);
 	}
+
 	if(!EE_Writes_Efx(0, number_of_efx, node))
 		_Error_Handler(__FILE__, __LINE__);
 
@@ -676,14 +676,12 @@ void unit_test_eep_save(void){
 }
 void unit_test_eep_read(void){
 	static uint64_t cnt = 0;
-   	efx_node_t *node[number_of_efx] = {0};
 
+	efx_node_t *node[number_of_efx] = {0};
 	if(!EE_Reads_Efx(0,  number_of_efx, node))
 		_Error_Handler(__FILE__, __LINE__);
 
 	for (int var = 0; var < number_of_efx; ++var) {
-
-		//__IO efx_node_t *n = ((__IO efx_node_t*)((var*size_of_node)+_EEPROM_FLASH_PAGE_ADDRESS));
 
 		glcd_clear_buffer();
 		glcd_draw_string(5,5, "EEPROM");
