@@ -655,42 +655,33 @@ void unit_test_sizes(void){
 uint32_t d_src[size_of_node] = {1, 2, 3, 4};
 uint32_t d_des[size_of_node] = {0};
 #define addr_index var*size_of_node
-
+#define number_of_efx	8
 void unit_test_eep_save(void){
 
 	EE_Format();
 
-   	efx_node_t *node[8];
+   	efx_node_t *node[number_of_efx];
 
-	for (int var = 0; var < 8; ++var) {
-		//node = efx_create_fv1_node(var, EFX_MODE_PRESET, var);
-		efx_node_t *efx = efx_create_fv1_node((uint8_t)var, EFX_MODE_PRESET, (efx_fv1_preset)var);
-	   	//efx_node_t node[var] = malloc(sizeof(efx_fv1_preset));
-
-		node[var] = efx;
-
+	for (int var = 0; var < number_of_efx; ++var) {
+		//efx_node_t *efx = efx_create_fv1_node((uint8_t)var, EFX_MODE_PRESET, (efx_fv1_preset)var);
+		node[var] = efx_create_fv1_node((uint8_t)var, EFX_MODE_PRESET, (efx_fv1_preset)var);
 	}
-	if(!EE_Writes_Efx(0, 8, node))
+	if(!EE_Writes_Efx(0, number_of_efx, node))
 		_Error_Handler(__FILE__, __LINE__);
 
-/*
-	for (int var = 0; var < size_of_node; ++var) {
-		EE_Writes(var*size_of_node, size_of_node, d_src);
+	for (int var = 0; var < 8; ++var) {
+		//free(node[var]->fv1);
+		free(node[var]);
 	}
-	*/
-	//for (int var = 0; var < 8; ++var) {
-			//free(node[var]);
-		//}
-	//free(node);
 }
 void unit_test_eep_read(void){
-	static uint8_t cnt = 0;
-   	efx_node_t *node[8] = {0};
+	static uint64_t cnt = 0;
+   	efx_node_t *node[number_of_efx] = {0};
 
-	if(!EE_Reads_Efx(0,  8, node))
+	if(!EE_Reads_Efx(0,  number_of_efx, node))
 		_Error_Handler(__FILE__, __LINE__);
 
-	for (int var = 0; var < 8; ++var) {
+	for (int var = 0; var < number_of_efx; ++var) {
 
 		//__IO efx_node_t *n = ((__IO efx_node_t*)((var*size_of_node)+_EEPROM_FLASH_PAGE_ADDRESS));
 
@@ -703,9 +694,13 @@ void unit_test_eep_read(void){
 		glcd_draw_string(95,25, (char *)utoa(sizeof(efx_node_t),str,10));
 		sprintf(str, "%p", (node[var]));
 		glcd_draw_string(5,35, str);
+		sprintf(str, "%d", (node[var]->number));
+		glcd_draw_string(95,35, str);
+		sprintf(str, "%p", (node[var]->fv1));
+		glcd_draw_string(5,45, str);
 		glcd_write();
 
-		HAL_Delay(10);
+		HAL_Delay(1);
 	}
 	//for (int var = 0; var < 8; ++var) {
 			//free(node[var]);
