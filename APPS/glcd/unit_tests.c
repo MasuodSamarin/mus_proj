@@ -451,7 +451,7 @@ void glcd_test_bitmap_128x64(void)
 #include "event.h"
 #include "push_btn.h"
 
-char str[10];
+char str[50];
 
 char *unit_btn_name[] = {
 		"BTN_1", "BTN_2", "BTN_3", "BTN_4"
@@ -590,32 +590,56 @@ void unit_test_effect_print(efx_node_t *node){
 
 void unit_test_sizes(void){
 	glcd_clear_buffer();
-	efx_node_t node;
-	uint8_t number;
+/*
+	uint8_t *id[2];
+	id[0] = malloc(sizeof(uint8_t*));
+	id[1] = malloc(sizeof(uint8_t*));
+
+	uint8_t is[2] = {0};
+
+	sprintf(str, "is[0]:%p", &is[0]);
+	glcd_draw_string(5,5, str);
+
+	sprintf(str, "is[1]:%p", &is[1]);
+	glcd_draw_string(5,15, str);
+
+	sprintf(str, "is[1]-is[0]:%d", (&is[1] - &is[0]));
+	glcd_draw_string(5,25, str);
+
+	sprintf(str, "id[0]:%p", &id[0]);
+	glcd_draw_string(5,35, str);
+
+
+	sprintf(str, "id[1]:%p", &id[1]);
+	glcd_draw_string(5,45, str);
+
+	sprintf(str, "id[1]-id[0]:%d", (&id[1] - &id[0]));
+	glcd_draw_string(5,55, str);
+*/
+	efx_node_t n[1];
+	efx_node_t *np = n;
+	uint64_t number;
 	efx_mode_t mode;
 	efx_type_t type;
 	efx_fv1_base_t *fv1;
-	vol_node_t volume;
-
-	sprintf(str, "node:%d", sizeof(node));
+	/*efx_isd_base_t *isd;
+	uint32_t volume[VOL_MAX];
+	uint8_t status;
+*/
+	sprintf(str, "n:%d", sizeof(n));
 	glcd_draw_string(5,5, str);
-
-	sprintf(str, "number:%d", sizeof(number));
+	sprintf(str, "*np:%d", sizeof(np));
 	glcd_draw_string(5,15, str);
-
-	sprintf(str, "type:%d", sizeof(type));
+	sprintf(str, "number:%d", sizeof(number));
 	glcd_draw_string(5,25, str);
-
-	sprintf(str, "fv1:%d", sizeof(fv1));
-	glcd_draw_string(5,35, str);
-
 	sprintf(str, "mode:%d", sizeof(mode));
+	glcd_draw_string(5,35, str);
+	sprintf(str, "type:%d", sizeof(type));
 	glcd_draw_string(5,45, str);
-
-	sprintf(str, "volume:%d", sizeof(volume));
+	sprintf(str, "*fv1:%d", sizeof(fv1));
 	glcd_draw_string(5,55, str);
-
 	glcd_write();
+	while(1);
 }
 
 #include <string.h>
@@ -625,7 +649,8 @@ void unit_test_sizes(void){
 #define		_EEPROM_FLASH_PAGE_SIZE				1024
 #define ADDR_FLASH_PAGE_0     ((uint32_t)0x08000000) /* Base @ of Page 0, 1 Kbytes */
 #define _EEPROM_FLASH_PAGE_ADDRESS    (ADDR_FLASH_PAGE_0|(_EEPROM_FLASH_PAGE_SIZE*_EEPROM_USE_FLASH_PAGE))
-#define size_of_node (sizeof(uint32_t))//sizeof(efx_node_t) / sizeof(uint32_t)
+//#define size_of_node (sizeof(uint32_t))
+#define size_of_node (sizeof(efx_node_t) / sizeof(uint32_t))
 
 uint32_t d_src[size_of_node] = {1, 2, 3, 4};
 uint32_t d_des[size_of_node] = {0};
@@ -634,46 +659,60 @@ uint32_t d_des[size_of_node] = {0};
 void unit_test_eep_save(void){
 
 	EE_Format();
-/*
-   	efx_node_t *node = NULL;
 
-	for (int var = 0; var < num; ++var) {
-		node = efx_create_fv1_node(var, EFX_MODE_PRESET, var);
-		if(!EE_Write_Efx(var, node, size_of_node))
-			_Error_Handler(__FILE__, __LINE__);
+   	efx_node_t *node[8];
+
+	for (int var = 0; var < 8; ++var) {
+		//node = efx_create_fv1_node(var, EFX_MODE_PRESET, var);
+		efx_node_t *efx = efx_create_fv1_node((uint8_t)var, EFX_MODE_PRESET, (efx_fv1_preset)var);
+	   	//efx_node_t node[var] = malloc(sizeof(efx_fv1_preset));
+
+		node[var] = efx;
+
 	}
-	*/
+	if(!EE_Writes_Efx(0, 8, node))
+		_Error_Handler(__FILE__, __LINE__);
 
+/*
 	for (int var = 0; var < size_of_node; ++var) {
 		EE_Writes(var*size_of_node, size_of_node, d_src);
 	}
-
+	*/
+	//for (int var = 0; var < 8; ++var) {
+			//free(node[var]);
+		//}
+	//free(node);
 }
 void unit_test_eep_read(void){
 	static uint8_t cnt = 0;
-  	/*
-	efx_node_t *node = NULL;
+   	efx_node_t *node[8] = {0};
 
-	for (int var = 0; var < num; ++var) {
-		if(!EE_Read_Efx(var, node, size_of_node))
-			_Error_Handler(__FILE__, __LINE__);
-		__IO efx_node_t *n = ((__IO efx_node_t*)((var*size_of_node)+_EEPROM_FLASH_PAGE_ADDRESS));
+	if(!EE_Reads_Efx(0,  8, node))
+		_Error_Handler(__FILE__, __LINE__);
+
+	for (int var = 0; var < 8; ++var) {
+
+		//__IO efx_node_t *n = ((__IO efx_node_t*)((var*size_of_node)+_EEPROM_FLASH_PAGE_ADDRESS));
 
 		glcd_clear_buffer();
 		glcd_draw_string(5,5, "EEPROM");
-		glcd_draw_string(5,15, (char*)node->fv1->name);
-		glcd_draw_string(75,15, (char*)node->fv1->comments);
+		glcd_draw_string(5,15, (char*)node[var]->fv1->name);
+		glcd_draw_string(75,15, (char*)node[var]->fv1->comments);
 		glcd_draw_string(5,25, (char *)utoa(var,str,10));
 		glcd_draw_string(45,25, (char *)utoa(cnt,str,10));
 		glcd_draw_string(95,25, (char *)utoa(sizeof(efx_node_t),str,10));
-		sprintf(str, "%p", (n));
+		sprintf(str, "%p", (node[var]));
 		glcd_draw_string(5,35, str);
 		glcd_write();
 
-		HAL_Delay(50);
+		HAL_Delay(10);
 	}
-	*/
+	//for (int var = 0; var < 8; ++var) {
+			//free(node[var]);
+		//}
+	//free(node);
 
+/*
 	for (int var = 0; var < size_of_node; ++var) {
 		EE_Reads(var*size_of_node, size_of_node, d_des);
 		glcd_clear_buffer();
@@ -691,6 +730,11 @@ void unit_test_eep_read(void){
 		HAL_Delay(10);
 
 	}
+	*/
+
 	cnt++;
 }
 
+void unit_test_eep(void){
+
+}

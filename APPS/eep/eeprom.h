@@ -23,7 +23,6 @@ bool	EE_Reads(uint16_t StartVirtualAddress,uint16_t HowMuchToRead,uint32_t* Data
 bool 	EE_Writes(uint16_t StartVirtualAddress,uint16_t HowMuchToWrite,uint32_t* Data);
 //################################################################################################################
 
-bool EE_Read_Efx(uint16_t VirtualAddress, efx_node_t* Data, uint8_t size_of_node);
-bool EE_Write_Efx(uint16_t VirtualAddress, efx_node_t *Data, uint8_t size_of_node);
-
+bool EE_Reads_Efx(uint16_t start, uint16_t size,  efx_node_t** data);
+bool EE_Writes_Efx(uint16_t start, uint16_t size, efx_node_t** data);
 #endif

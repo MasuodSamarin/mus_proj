@@ -97,13 +97,13 @@ typedef struct {
 	uint8_t number;
 	efx_mode_t mode;
 	efx_type_t type;
+	uint8_t status;
 	union{
 		efx_fv1_base_t *fv1;
 		efx_isd_base_t *isd;
 
 	};
-	uint32_t volume[VOL_MAX];
-	uint8_t status;
+	uint16_t volume[VOL_MAX];
 }efx_node_t;
 
 
