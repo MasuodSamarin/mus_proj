@@ -707,7 +707,6 @@ void unit_test_eep_read(void){
 		glcd_draw_string_P(80, 32, str);
 		glcd_write();
 
-		HAL_Delay(1);
 	}
 	//for (int var = 0; var < 8; ++var) {
 			//free(node[var]);

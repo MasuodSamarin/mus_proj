@@ -145,6 +145,7 @@ int main(void)
 
 	  //unit_test_events();
 	  unit_test_eep_read();
+	  HAL_Delay(500);
 
 	  //unit_test_sizes();
 
