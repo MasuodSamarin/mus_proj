@@ -656,6 +656,7 @@ uint32_t d_src[size_of_node] = {1, 2, 3, 4};
 uint32_t d_des[size_of_node] = {0};
 #define addr_index var*size_of_node
 #define number_of_efx	16
+
 void unit_test_eep_save(void){
 
 	EE_Format();
@@ -669,7 +670,7 @@ void unit_test_eep_save(void){
 	if(!EE_Writes_Efx(0, number_of_efx, node))
 		_Error_Handler(__FILE__, __LINE__);
 
-	for (int var = 0; var < 8; ++var) {
+	for (int var = 0; var < number_of_efx; ++var) {
 		//free(node[var]->fv1);
 		free(node[var]);
 	}
@@ -705,7 +706,7 @@ void unit_test_eep_read(void){
 		glcd_draw_string_P(80, 32, str);
 		glcd_write();
 
-		HAL_Delay(1000);
+		HAL_Delay(1);
 	}
 	//for (int var = 0; var < 8; ++var) {
 			//free(node[var]);
