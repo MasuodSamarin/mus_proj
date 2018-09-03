@@ -655,34 +655,35 @@ void unit_test_sizes(void){
 uint32_t d_src[size_of_node] = {1, 2, 3, 4};
 uint32_t d_des[size_of_node] = {0};
 #define addr_index var*size_of_node
-#define number_of_efx	16
+#define number_of_node	16
 
 void unit_test_eep_save(void){
 
 	EE_Format();
 
-   	efx_node_t *node[number_of_efx] = {0};
-	for (int var = 0; var < number_of_efx; ++var) {
+   	efx_node_t *node[number_of_node] = {0};
+	for (int var = 0; var < number_of_node; ++var) {
 		//efx_node_t *efx = efx_create_fv1_node((uint8_t)var, EFX_MODE_PRESET, (efx_fv1_preset)var);
 		node[var] = efx_create_fv1_node((uint8_t)var, EFX_MODE_PRESET, (efx_fv1_preset)var);
 	}
 
-	if(!EE_Writes_Efx(0, number_of_efx, node))
+	if(!EE_Writes_Efx(0, number_of_node, node))
 		_Error_Handler(__FILE__, __LINE__);
 
-	for (int var = 0; var < number_of_efx; ++var) {
+	for (int var = 0; var < number_of_node; ++var) {
 		//free(node[var]->fv1);
 		free(node[var]);
 	}
+
 }
 void unit_test_eep_read(void){
 	static uint64_t cnt = 0;
 
-	efx_node_t *node[number_of_efx] = {0};
-	if(!EE_Reads_Efx(0,  number_of_efx, node))
+	efx_node_t *node[number_of_node] = {0};
+	if(!EE_Reads_Efx(0,  number_of_node, node))
 		_Error_Handler(__FILE__, __LINE__);
 
-	for (int var = 0; var < number_of_efx; ++var) {
+	for (int var = 0; var < number_of_node; ++var) {
 
 		glcd_clear_buffer();
 		glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
