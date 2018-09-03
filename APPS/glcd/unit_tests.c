@@ -644,7 +644,6 @@ void unit_test_sizes(void){
 
 #include <string.h>
 #include "eepromConfig.h"
-#define num 4
 
 #define		_EEPROM_FLASH_PAGE_SIZE				1024
 #define ADDR_FLASH_PAGE_0     ((uint32_t)0x08000000) /* Base @ of Page 0, 1 Kbytes */
@@ -688,19 +687,20 @@ void unit_test_eep_read(void){
 		glcd_clear_buffer();
 		glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
 		glcd_draw_rect(0, 0, 127, 64, 1);
-		glcd_draw_rect(1, 1, 125, 62, 1);
+		//glcd_draw_rect(1, 1, 125, 62, 1);
 		glcd_draw_rect(2, 2, 123, 60, 1);
-		glcd_draw_string(40,5, "EEPROM");
+		glcd_draw_string(10,5, "--[ EEPROM ]--");
 		glcd_draw_string(6,16, (char*)node[var]->fv1->name);
 		glcd_draw_string(55,16, (char*)node[var]->fv1->comments);
 		glcd_invert_area(4, 14, 114, 11);
 		//glcd_draw_string(5,26, (char *)utoa(var,str,10));
-		glcd_draw_string(5,26, (char *)utoa(cnt,str,10));
-		glcd_draw_string(45,26, (char *)utoa(sizeof(efx_node_t),str,10));
-		sprintf(str, "%p", (node[var]));
-		glcd_draw_string(5,36, str);
-		sprintf(str, "%p", (node[var]->fv1));
-		glcd_draw_string(5,46, str);
+		sprintf(str, "cnt:%llu", cnt);
+		glcd_draw_string(6,26, str);
+		//glcd_draw_string(45,26, (char *)utoa(var,str,10));
+		sprintf(str, "n:%p", (node[var]));
+		glcd_draw_string(6,36, str);
+		sprintf(str, "f:%p", (node[var]->fv1));
+		glcd_draw_string(6,46, str);
 
 		glcd_set_font_c(FC_Tekton_Pro_Ext27x28_AlphaNumber);
 		sprintf(str, "%d", (node[var]->number));
