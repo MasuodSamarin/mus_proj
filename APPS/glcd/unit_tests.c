@@ -684,21 +684,28 @@ void unit_test_eep_read(void){
 	for (int var = 0; var < number_of_efx; ++var) {
 
 		glcd_clear_buffer();
-		glcd_draw_string(5,5, "EEPROM");
-		glcd_draw_string(5,15, (char*)node[var]->fv1->name);
-		glcd_draw_string(75,15, (char*)node[var]->fv1->comments);
-		glcd_draw_string(5,25, (char *)utoa(var,str,10));
-		glcd_draw_string(45,25, (char *)utoa(cnt,str,10));
-		glcd_draw_string(95,25, (char *)utoa(sizeof(efx_node_t),str,10));
+		glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
+		glcd_draw_rect(0, 0, 127, 64, 1);
+		glcd_draw_rect(1, 1, 125, 62, 1);
+		glcd_draw_rect(2, 2, 123, 60, 1);
+		glcd_draw_string(40,5, "EEPROM");
+		glcd_draw_string(6,16, (char*)node[var]->fv1->name);
+		glcd_draw_string(55,16, (char*)node[var]->fv1->comments);
+		glcd_invert_area(4, 14, 114, 11);
+		//glcd_draw_string(5,26, (char *)utoa(var,str,10));
+		glcd_draw_string(5,26, (char *)utoa(cnt,str,10));
+		glcd_draw_string(45,26, (char *)utoa(sizeof(efx_node_t),str,10));
 		sprintf(str, "%p", (node[var]));
-		glcd_draw_string(5,35, str);
-		sprintf(str, "%d", (node[var]->number));
-		glcd_draw_string(95,35, str);
+		glcd_draw_string(5,36, str);
 		sprintf(str, "%p", (node[var]->fv1));
-		glcd_draw_string(5,45, str);
+		glcd_draw_string(5,46, str);
+
+		glcd_set_font_c(FC_Tekton_Pro_Ext27x28_AlphaNumber);
+		sprintf(str, "%d", (node[var]->number));
+		glcd_draw_string_P(80, 32, str);
 		glcd_write();
 
-		HAL_Delay(1);
+		HAL_Delay(1000);
 	}
 	//for (int var = 0; var < 8; ++var) {
 			//free(node[var]);
