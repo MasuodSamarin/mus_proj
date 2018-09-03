@@ -141,7 +141,7 @@ int main(void)
   /* USER CODE END WHILE */
   /* USER CODE BEGIN 3 */
 
-	  unit_test_eep_save();
+	  //unit_test_eep_save();
 
 	  //unit_test_events();
 	  unit_test_eep_read();
