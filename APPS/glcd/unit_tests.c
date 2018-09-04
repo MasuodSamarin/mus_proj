@@ -61,58 +61,60 @@ extern ADC_HandleTypeDef hadc1;
 
 
 char *strings[] = {
-		"HELLO WORD",
-		"BYE, BYE",
-		"GOOD",
-		"BAD",
-		"UGLY",
-		"SOUND",
-		"COLOR",
-		"WATER"
+		"1.GOOD",
+		"2.BYE, BYE",
+		"3.PIGS",
+		"4.BAD",
+		"5.UGLY",
+		"6.SOUND",
+		"7.COLOR",
+		"8.WATER"
 };
-void glcd_test_my_test(void){
-
-	//glcd_clear_buffer();
+void glcd_test_roll_text(void){
 	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
-	for (int var = 0; var < 8; ++var) {
-		glcd_draw_string_ammend(10, 0, 48, strings[var]);
+	glcd_clear_buffer();
+	glcd_draw_string_ammend(10, 0, 48, strings[0]);
+	glcd_draw_invert_line(6);
+	HAL_Delay(500);
 
+	for (int var = 1; var < 8; ++var) {
+
+		glcd_draw_string_ammend(10, 0, 48, strings[var]);
 		HAL_Delay(500);
 
 	}
-
-
 }
+
 void glcd_test_circles(void)
 {
-	//uint8_t x,y,radius;
+	uint8_t x,y,radius;
 
 	while (1) {
-		//uint8_t i;
+		uint8_t i;
 		
 		glcd_clear();
 
 		// generate random(ish) position on display
-		//x = rand() % GLCD_LCD_WIDTH;
-		//y = rand() % GLCD_LCD_HEIGHT;
-		//radius = rand() % 50;
+		x = rand() % GLCD_LCD_WIDTH;
+		y = rand() % GLCD_LCD_HEIGHT;
+		radius = rand() % 50;
 
-		//x = 70; y=25; radius=50; // for debugging
+		x = 70; y=25; radius=50; // for debugging
 
 		// fill circle with black
 		
-		//for (i=0; i<=radius; i++) {
-			//glcd_fill_circle(x,y,i,BLACK);
+		for (i=0; i<=radius; i++) {
+			glcd_draw_circle_fill(x,y,i,BLACK);
 			glcd_write();
 			HAL_Delay(2);
-		//}
+		}
 
 		// fill the same circle above but with white
-		//for (i=0; i<=radius; i++) {
-			//glcd_fill_circle(x,y,i,WHITE);
+		for (i=0; i<=radius; i++) {
+			glcd_draw_circle_fill(x,y,i,WHITE);
 			glcd_write();
 			HAL_Delay(1);
-		//}
+		}
 		DEMO_RETURN();
 	}
 }
@@ -213,18 +215,17 @@ void glcd_test_counter_and_graph(void)
 	char string[8] = "";
 	while(1) {
 		glcd_clear_buffer();
+		glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
+		glcd_draw_string_P(0,40,(char *)utoa(count,string,10));
 
-		//glcd_tiny_set_font(Font5x7,5,7,32,127);
-		//glcd_draw_string_xy(0,40,(char *)utoa(count,string,10));
-
-		//glcd_set_font(Liberation_Sans15x21_Numbers,15,21,46,57);
+		glcd_set_font_c(FC_Liberation_Sans15x21_Numbers);
 		//glcd_set_font(Liberation_Sans27x36_Numbers,27,36,46,57);
 		//glcd_set_font(Bebas_Neue20x36_Bold_Numbers,20,36,46,57);
 		//glcd_set_font(Bebas_Neue18x36_Numbers,18,36,46,57);
 		//glcd_set_font(HelveticaNeueLT_Com_57_Cn23x35_Numbers,23,35,46,57); // commercial font - not for public distribution
 
 		sprintf(string,"%d",count);
-		//glcd_draw_string_xy(0,0,string);
+		glcd_draw_string_P(0,0,string);
 		glcd_bar_graph_horizontal(10,38,30,6,count*4);
 		glcd_bar_graph_vertical(70,0,8,30,count*2);
 
@@ -247,10 +248,10 @@ void glcd_test_glcdutils(void)
 		glcd_clear_buffer();
 
 		/* Set the font */
-		//glcd_font(font_Earthbound_12x19_48to57,12,19,48,57,GLCD_UTILS);
+		glcd_set_font_c(FC_Liberation_Sans20x28_Numbers);
 
 		sprintf(string,"%d",count);
-		//glcd_draw_string_xy(0,0,string);
+		glcd_draw_string_P(30, 15, string);
 		glcd_write();
 		
 		count += 1;
@@ -266,6 +267,8 @@ void glcd_test_text_up_down(void)
 	uint8_t y;
 	uint8_t max_y;
 	
+	glcd_set_font_c(FC_Tekton_Pro_Ext27x28_AlphaNumber);
+
 	//glcd_set_font(Liberation_Sans11x14_Numbers,11,14,46,57);
 	//glcd_set_font(Liberation_Sans15x21_Numbers,15,21,46,57);
 	//glcd_set_font(Liberation_Sans27x36_Numbers,27,36,46,57);
@@ -278,7 +281,7 @@ void glcd_test_text_up_down(void)
 		for (y=0; y<max_y; y++) {
 			DEMO_RETURN();
 			glcd_clear_buffer();
-			//glcd_draw_string_xy(0,y,"12ab3");
+			glcd_draw_string_P(0,y,"123ABC");
 			glcd_write();
 			HAL_Delay(80);
 		}
@@ -287,7 +290,7 @@ void glcd_test_text_up_down(void)
 		for (y=(max_y); y>0; y--) {
 			DEMO_RETURN();
 			glcd_clear_buffer();
-			//glcd_draw_string_xy(0,y,"456");
+			glcd_draw_string_P(0,y,"456XYZ");
 			glcd_write();
 			HAL_Delay(80);
 		}
@@ -300,18 +303,19 @@ void glcd_test_tiny_text(void)
 {
 	/* Write tiny text on display, all chars, scrolling up every second */
 	
-	//char string[GLCD_LCD_WIDTH / 6 + 1];
+	char string[GLCD_LCD_WIDTH / 6 + 1];
 
 	uint8_t c = 32;
 	uint8_t len = GLCD_LCD_WIDTH / 6;
 	
 	//GLCD_TEXT_INIT();
-	
+	glcd_set_font_c(FC_Tekton_Pro_Ext27x28_AlphaNumber);
+
 	while(1) {
 		// write chars to string from 32 to 127 ASCII
 		uint8_t i;
 		for (i=0; i<len; i++) {
-			//string[i] = c;
+			string[i] = c;
 			c++;
 			if (c > 127) {
 				c = 32;
@@ -319,10 +323,11 @@ void glcd_test_tiny_text(void)
 		}
 
 		// write null terminator
-		//string[len] = '\0';
+		string[len] = '\0';
 
-		//GLCD_WRITE(string);
-		
+		glcd_draw_string_P(0,15,string);
+		glcd_write();
+
 		DEMO_RETURN();
 		
 		HAL_Delay(250);
@@ -332,18 +337,98 @@ void glcd_test_tiny_text(void)
 
 void glcd_test_hello_world(void)
 {
-	glcd_clear_buffer();
-	//glcd_tiny_set_font(Font5x7,5,7,32,127);
-	//glcd_tiny_draw_string(0,0,"Hello World!");
-	//glcd_set_font(Liberation_Sans27x36_Numbers,27,36,46,57);
-	//glcd_draw_string_xy(0,13,"123");
-	//glcd_tiny_set_font(Font5x7,5,7,32,127);
-	//glcd_tiny_draw_string(0,7,"Hello World!");
+	uint32_t delay = 1000;
+	uint8_t x = 15;
+	uint8_t y = 15;
 
+	glcd_clear_buffer();
+	glcd_set_font_c(FC_Liberation_Sans17x17_Numbers);
+	glcd_draw_string(x,y,"1234");
 	glcd_write();
-	while(1) {
-		DEMO_RETURN();
-	}
+	HAL_Delay(delay);
+
+	glcd_clear_buffer();
+	glcd_set_font_c(FC_Bebas_Neue18x36_Numbers);
+	glcd_draw_string(x,y,"1234");
+	glcd_write();
+	HAL_Delay(delay);
+
+	glcd_clear_buffer();
+	glcd_set_font_c(FC_Bebas_Neue20x36_Bold_Numbers);
+	glcd_draw_string(x,y,"2234");
+	glcd_write();
+	HAL_Delay(delay);
+
+	glcd_clear_buffer();
+	glcd_set_font_c(FC_Liberation_Sans11x14_Numbers);
+	glcd_draw_string(x,y,"3234");
+	glcd_write();
+	HAL_Delay(delay);
+
+	glcd_clear_buffer();
+	glcd_set_font_c(FC_Liberation_Sans15x21_Numbers);
+	glcd_draw_string(x,y,"4234");
+	glcd_write();
+	HAL_Delay(delay);
+
+	glcd_clear_buffer();
+	glcd_set_font_c(FC_Liberation_Sans20x28_Numbers);
+	glcd_draw_string(x,y,"5234");
+	glcd_write();
+	HAL_Delay(delay);
+
+	glcd_clear_buffer();
+	glcd_set_font_c(FC_Liberation_Sans27x36_Numbers);
+	glcd_draw_string(x,y,"6234");
+	glcd_write();
+	HAL_Delay(delay);
+
+	glcd_clear_buffer();
+	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
+	glcd_draw_string(x,y,"7234");
+	glcd_write();
+	HAL_Delay(delay);
+
+	glcd_clear_buffer();
+	glcd_set_font_c(FC_Tahoma11x13_AlphaNumber);
+	glcd_draw_string(x,y,"8234");
+	glcd_write();
+	HAL_Delay(delay);
+
+	glcd_clear_buffer();
+	glcd_set_font_c(FC_Tekton_Pro_Ext27x28_AlphaNumber);
+	glcd_draw_string(x,y,"9234");
+	glcd_write();
+	HAL_Delay(delay);
+
+	glcd_clear_buffer();
+	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
+	glcd_draw_string(x,y,"7 HELLO");
+	glcd_write();
+	HAL_Delay(delay);
+
+	glcd_clear_buffer();
+	glcd_set_font_c(FC_Tahoma11x13_AlphaNumber);
+	glcd_draw_string(x,y,"8 HELLO");
+	glcd_write();
+	HAL_Delay(delay);
+
+	glcd_clear_buffer();
+	glcd_set_font_c(FC_Tekton_Pro_Ext27x28_AlphaNumber);
+	glcd_draw_string(x,y,"9 HELLO");
+	glcd_write();
+	HAL_Delay(delay);
+
+/*	glcd_set_font_c(FC_Bebas_Neue20x36_Bold_Numbers);
+	glcd_draw_string_P(5,23,"42");
+
+	glcd_set_font_c(FC_Tekton_Pro_Ext27x28_AlphaNumber);
+	glcd_draw_string_P(5,37,"FOO");
+*/
+	//glcd_write();
+	//while(1) {
+		//DEMO_RETURN();
+	//}
 }
 
 void glcd_test_rectangles(void)

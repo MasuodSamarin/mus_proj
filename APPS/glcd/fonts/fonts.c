@@ -58,7 +58,7 @@ const glcd_FontConfig_t FC_Liberation_Sans27x36_Numbers = {
 /*
  * alfa-numbers fonts
  * */
-const glcd_FontConfig_t FC_Liberation_Sans17x17__AlphaNumber = {
+const glcd_FontConfig_t FC_Liberation_Sans17x17_Numbers = {
 		.font_table = Liberation_Sans15x21_Numbers,
 		.width = 17,
 		.height = 17,

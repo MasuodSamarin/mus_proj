@@ -122,9 +122,13 @@ int main(void)
 
 
 
-	  glcd_test_my_test();
-
-
+	  //glcd_test_roll_text();
+	  //glcd_test_circles();
+	  //glcd_test_counter_and_graph();
+	  //glcd_test_glcdutils();
+	  //glcd_test_text_up_down();
+	  //glcd_test_tiny_text();
+	  glcd_test_hello_world();
 
 
   }
