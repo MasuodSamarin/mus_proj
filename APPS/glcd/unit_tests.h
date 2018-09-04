@@ -51,11 +51,6 @@ void glcd_test_circles(void);
 
 /* Shows a 8-bit counter incorementing, with a verticla and horizontal bar graph */
 void glcd_test_counter_and_graph(void);
-/* test encoder tim4*/
-void glcd_test_ENC(void);
-/* test adc convert*/
-void glcd_test_ADC(void);
-
 
 /* Shows a 16-bit counter incrementing, using glcdutils font format */
 void glcd_test_glcdutils(void);
@@ -77,5 +72,10 @@ void glcd_test_scrolling_graph(void);
 
 /** Demonstrate bitmap display */
 void glcd_test_bitmap_128x64(void);
+
+/*
+ * show all of the tests*/
+void glcd_tests(void);
+
 
 #endif

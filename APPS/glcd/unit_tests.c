@@ -42,14 +42,15 @@
 
 
 volatile uint8_t unit_test_return = 0;
-extern TIM_HandleTypeDef htim4;
-extern ADC_HandleTypeDef hadc1;
+
 
 /**
  *  Return from test procedure. Global var \p unit_test_return is set to 1 elsewhere,
  *  to signal function to return.
  */
-#define DEMO_RETURN() if (unit_test_return) { unit_test_return = 0; return; }
+//#define DEMO_RETURN() if (unit_test_return) { unit_test_return = 0; return; }
+#define DEMO_RETURN() HAL_Delay(100)
+
 
 #if defined(GLCD_UNIT_TEST_BITMAP_ENABLE)
 	/* Open Source logo -- Size: 128x64 */
@@ -88,8 +89,8 @@ void glcd_test_roll_text(void){
 void glcd_test_circles(void)
 {
 	uint8_t x,y,radius;
-
-	while (1) {
+	uint8_t cnt = 3;
+	while (cnt--) {
 		uint8_t i;
 		
 		glcd_clear();
@@ -118,102 +119,12 @@ void glcd_test_circles(void)
 		DEMO_RETURN();
 	}
 }
-void glcd_test_ADC(void)
-{
-	int v1,v2,v3;
 
-
-
-	//char string[8] = "";
-	while(1) {
-		hadc1.Init.NbrOfConversion = 1;
-		HAL_ADC_Init(&hadc1);
-		HAL_ADC_Start(&hadc1);
-		while(HAL_ADC_PollForConversion(&hadc1, 100) != HAL_OK);
-		v1 = HAL_ADC_GetValue(&hadc1) >> 4;
-
-		hadc1.Init.NbrOfConversion = 2;
-		HAL_ADC_Init(&hadc1);
-		HAL_ADC_Start(&hadc1);
-		while(HAL_ADC_PollForConversion(&hadc1, 100) != HAL_OK);
-		v2 = HAL_ADC_GetValue(&hadc1) >> 4;
-
-		hadc1.Init.NbrOfConversion = 3;
-		HAL_ADC_Init(&hadc1);
-		HAL_ADC_Start(&hadc1);
-		while(HAL_ADC_PollForConversion(&hadc1, 100) != HAL_OK);
-		v3 = HAL_ADC_GetValue(&hadc1) >> 4;
-
-		glcd_clear_buffer();
-
-		//glcd_tiny_set_font(Font5x7,5,7,32,127);
-		//glcd_draw_string_xy(90,38,(char *)utoa(v1,string,10));
-
-		//glcd_set_font(Liberation_Sans15x21_Numbers,15,21,46,57);
-		//glcd_set_font(Liberation_Sans27x36_Numbers,27,36,46,57);
-		//glcd_set_font(Bebas_Neue20x36_Bold_Numbers,20,36,46,57);
-		//glcd_set_font(Bebas_Neue18x36_Numbers,18,36,46,57);
-		//glcd_set_font(HelveticaNeueLT_Com_57_Cn23x35_Numbers,23,35,46,57); // commercial font - not for public distribution
-
-		//sprintf(string,"%d %d %d",v1,v2,v3);
-		//glcd_draw_string_xy(0,0,string);
-		glcd_bar_graph_horizontal_no_border(10,38,70,6,v1);
-		//glcd_draw_string_xy(90,38,(char *)utoa(v1,string,10));
-
-		glcd_bar_graph_horizontal_no_border(10,28,70,6,v2);
-		//glcd_draw_string_xy(90,28,(char *)utoa(v2,string,10));
-
-		glcd_bar_graph_horizontal(10,18,70,6,v3);
-		//glcd_draw_string_xy(90,18,(char *)utoa(v3,string,10));
-
-		//glcd_bar_graph_vertical_no_border(70,0,8,30,v2);
-		glcd_write();
-
-		//DEMO_RETURN();
-	}
-
-}
-void glcd_test_ENC(void)
-{
-	int cnt = __HAL_TIM_GET_COUNTER(&htim4);
-
-	char string[8] = "";
-	while(1) {
-		cnt = htim4.Instance->CNT;
-		//glcd_clear_buffer();
-
-		//glcd_tiny_set_font(Font5x7,5,7,32,127);
-		//glcd_draw_string_xy(0,40,(char *)utoa(count,string,10));
-
-		//glcd_set_font(Liberation_Sans15x21_Numbers,15,21,46,57);
-		//glcd_set_font(Liberation_Sans27x36_Numbers,27,36,46,57);
-		//glcd_set_font(Bebas_Neue20x36_Bold_Numbers,20,36,46,57);
-		//glcd_set_font(Bebas_Neue18x36_Numbers,18,36,46,57);
-		//glcd_set_font(HelveticaNeueLT_Com_57_Cn23x35_Numbers,23,35,46,57); // commercial font - not for public distribution
-
-		sprintf(string,"%d",cnt);
-		//glcd_draw_string_xy(0,0,string);
-		//glcd_bar_graph_horizontal(10,38,30,6,cnt*4);
-		//glcd_bar_graph_vertical(70,0,8,30,cnt*2);
-		//for (int var = 0; var < 100; ++var) {
-			glcd_scrolling_bar_graph(60,35,60,20,cnt*5);
-
-		//}
-
-		glcd_write();
-		if (!HAL_GPIO_ReadPin(PUSH_BTN_1_GPIO_Port, PUSH_BTN_1_Pin))
-				__HAL_TIM_SET_AUTORELOAD(&htim4, 50);
-		if (!HAL_GPIO_ReadPin(PUSH_BTN_2_GPIO_Port, PUSH_BTN_2_Pin))
-				__HAL_TIM_SET_AUTORELOAD(&htim4, 90);
-		//DEMO_RETURN();
-	}
-
-}
 void glcd_test_counter_and_graph(void)
 {
 	uint8_t count = 0;
 	char string[8] = "";
-	while(1) {
+	while(count<40) {
 		glcd_clear_buffer();
 		glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
 		glcd_draw_string_P(0,40,(char *)utoa(count,string,10));
@@ -226,8 +137,8 @@ void glcd_test_counter_and_graph(void)
 
 		sprintf(string,"%d",count);
 		glcd_draw_string_P(0,0,string);
-		glcd_bar_graph_horizontal(10,38,30,6,count*4);
-		glcd_bar_graph_vertical(70,0,8,30,count*2);
+		glcd_bar_graph_horizontal(10,38,30,6,count*20);
+		glcd_bar_graph_vertical(70,0,8,30,count*10);
 
 		glcd_write();
 		count += 1;
@@ -244,7 +155,7 @@ void glcd_test_glcdutils(void)
 {
 	uint16_t count = 0;
 	char string[8] = "";
-	while(1) {
+	while(count<20) {
 		glcd_clear_buffer();
 
 		/* Set the font */
@@ -266,7 +177,8 @@ void glcd_test_text_up_down(void)
 
 	uint8_t y;
 	uint8_t max_y;
-	
+	uint8_t cnt = 1;
+
 	glcd_set_font_c(FC_Tekton_Pro_Ext27x28_AlphaNumber);
 
 	//glcd_set_font(Liberation_Sans11x14_Numbers,11,14,46,57);
@@ -276,14 +188,14 @@ void glcd_test_text_up_down(void)
 
 	max_y = GLCD_LCD_HEIGHT - font_current.height - 2; // max y start position for draw_string
 
-	//while(1) {
+	while(cnt--) {
 		// move top to bottom
 		for (y=0; y<max_y; y++) {
 			DEMO_RETURN();
 			glcd_clear_buffer();
 			glcd_draw_string_P(0,y,"123ABC");
 			glcd_write();
-			HAL_Delay(80);
+			HAL_Delay(10);
 		}
 
 		// move bottom to top
@@ -292,10 +204,11 @@ void glcd_test_text_up_down(void)
 			glcd_clear_buffer();
 			glcd_draw_string_P(0,y,"456XYZ");
 			glcd_write();
-			HAL_Delay(80);
+			HAL_Delay(10);
 		}
 		
-	//}
+	}
+	DEMO_RETURN();
 
 }
 
@@ -307,11 +220,12 @@ void glcd_test_tiny_text(void)
 
 	uint8_t c = 32;
 	uint8_t len = GLCD_LCD_WIDTH / 6;
-	
+	uint8_t cnt = 10;
+
 	//GLCD_TEXT_INIT();
 	glcd_set_font_c(FC_Tekton_Pro_Ext27x28_AlphaNumber);
 
-	while(1) {
+	while(cnt--) {
 		// write chars to string from 32 to 127 ASCII
 		uint8_t i;
 		for (i=0; i<len; i++) {
@@ -330,7 +244,6 @@ void glcd_test_tiny_text(void)
 
 		DEMO_RETURN();
 		
-		HAL_Delay(250);
 	}
 
 }
@@ -433,17 +346,18 @@ void glcd_test_hello_world(void)
 
 void glcd_test_rectangles(void)
 {
-	//glcd_tiny_set_font(Font5x7,5,7,32,127);
+	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
 	glcd_clear_buffer();
-	//glcd_tiny_draw_string(0,0,"RECTANGLE DEMO");
+	glcd_draw_string(3,10,"RECTANGLE DEMO");
 	glcd_write();
 	HAL_Delay(1000);
-	
-	while(1) {
+	uint8_t cnt = 2;
+
+	while(cnt--) {
 		
 		glcd_clear();
 		glcd_draw_rect(30,10,50,30,BLACK);
-		//glcd_tiny_draw_string(0,GLCD_NUMBER_OF_BANKS-9,"glcd_draw_rect");
+		glcd_draw_string(3,10,"draw_rect");
 		glcd_write();
 		HAL_Delay(500);
 
@@ -459,7 +373,7 @@ void glcd_test_rectangles(void)
 		
 
 		glcd_clear();
-		//glcd_tiny_draw_string(0,GLCD_NUMBER_OF_BANKS-9,"glcd_draw_rect_thick");
+		glcd_draw_string(3,10,"draw_rect_thick");
 		glcd_write();
 
 		glcd_draw_rect_thick(5,5,80,25,3,6,BLACK);
@@ -478,7 +392,7 @@ void glcd_test_rectangles(void)
 		DEMO_RETURN();
 
 		glcd_clear();
-		//glcd_tiny_draw_string(0,GLCD_NUMBER_OF_BANKS-9,"glcd_draw_rect_shadow");
+		glcd_draw_string(3,10,"draw_rect_shadow");
 		glcd_draw_rect_shadow(0,0,45,30,BLACK);
 		glcd_write();
 		HAL_Delay(500);
@@ -501,17 +415,19 @@ void glcd_test_scrolling_graph(void)
 {
 	glcd_clear();
 	glcd_write();
-	while(1) {
+	uint8_t cnt = 2;
+
+	while(cnt--) {
 		uint16_t n;
 		for (n=0; n<=255; n += 20) {
 			glcd_scrolling_bar_graph(0,0,50,50,n);
-			//glcd_scrolling_bar_graph(60,0,50,30,n);
-			//glcd_scrolling_bar_graph(60,35,60,20,n);
+			glcd_scrolling_bar_graph(60,0,50,30,n);
+			glcd_scrolling_bar_graph(60,35,60,20,n);
 			DEMO_RETURN();
 		}
 		for (n=0; n<=255; n += 20) {
 			glcd_scrolling_bar_graph(0,0,50,50,255-n);
-			//glcd_scrolling_bar_graph(60,0,50,30,n);
+			glcd_scrolling_bar_graph(60,0,50,30,n);
 			glcd_scrolling_bar_graph(60,35,60,20,n);
 			DEMO_RETURN();
 		}
@@ -522,9 +438,55 @@ void glcd_test_scrolling_graph(void)
 void glcd_test_bitmap_128x64(void)
 {
 	glcd_draw_bitmap(bmp_oslogo);
-	glcd_write();	
-	while (1) {
-		DEMO_RETURN();
-	}
+	glcd_write();
+
+	HAL_Delay(3000);
 }
 #endif
+
+
+void glcd_tests(void){
+	static uint8_t state;
+
+	switch ((state++)%10) {
+		case 1:
+			glcd_test_roll_text();
+			break;
+		case 2:
+			glcd_test_circles();
+			break;
+		case 3:
+			glcd_test_counter_and_graph();
+			break;
+		case 4:
+			glcd_test_glcdutils();
+			break;
+		case 5:
+			glcd_test_text_up_down();
+			break;
+		case 6:
+			glcd_test_hello_world();
+			break;
+		case 7:
+			glcd_test_rectangles();
+			break;
+		case 8:
+			glcd_test_scrolling_graph();
+			break;
+		case 9:
+			glcd_test_bitmap_128x64();
+			break;
+
+	}
+
+	//
+	//();
+	//();
+	//();
+	//();
+	//();
+	//();
+	//();
+	//();
+	//();
+}
