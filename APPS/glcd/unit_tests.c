@@ -687,7 +687,7 @@ void unit_test_eep_read(void){
 		glcd_clear_buffer();
 		glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
 		glcd_draw_rect(0, 0, 127, 64, 1);
-		//glcd_draw_rect(1, 1, 125, 62, 1);
+		glcd_draw_rect(1, 1, 125, 62, 1);
 		glcd_draw_rect(2, 2, 123, 60, 1);
 		glcd_draw_string(10,5, "--[ EEPROM ]--");
 		glcd_draw_string(6,16, (char*)node[var]->fv1->name);
