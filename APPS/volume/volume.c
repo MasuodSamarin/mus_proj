@@ -8,7 +8,7 @@
 //#include "volume.h"
 #include "event.h"
 
-#define VOL_MAX_TOLERANCE	10
+#define VOL_MAX_TOLERANCE	200
 #define VOL_MIN_TOLERANCE	10
 #define VOL_TOLERANCE		5
 
