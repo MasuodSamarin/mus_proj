@@ -676,7 +676,7 @@ void unit_test_eep_save(void){
 
 }
 void unit_test_eep_read(void){
-	static uint64_t cnt = 0;
+	static uint32_t cnt = 0;
 
 	efx_node_t *node[number_of_node] = {0};
 	if(!EE_Reads_Efx(0,  number_of_node, node))
@@ -694,7 +694,7 @@ void unit_test_eep_read(void){
 		glcd_draw_string(55,16, (char*)node[var]->fv1->comments);
 		glcd_invert_area(4, 14, 114, 11);
 		//glcd_draw_string(5,26, (char *)utoa(var,str,10));
-		sprintf(str, "cnt:%llu", cnt);
+		sprintf(str, "cnt:%lu", cnt);
 		glcd_draw_string(6,26, str);
 		//glcd_draw_string(45,26, (char *)utoa(var,str,10));
 		sprintf(str, "n:%p", (node[var]));
@@ -707,7 +707,7 @@ void unit_test_eep_read(void){
 		glcd_draw_string_P(80, 32, str);
 		glcd_write();
 
-		HAL_Delay(500);
+		HAL_Delay(250);
 	}
 	//for (int var = 0; var < 8; ++var) {
 			//free(node[var]);
