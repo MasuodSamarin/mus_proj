@@ -105,30 +105,30 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_DMA_Init();
-  MX_TIM2_Init();
-  MX_ADC1_Init();
-  MX_SPI1_Init();
-  MX_TIM1_Init();
-  MX_TIM4_Init();
+  //MX_DMA_Init();
+  //MX_TIM2_Init();
+  //MX_ADC1_Init();
+  //MX_SPI1_Init();
+  //MX_TIM1_Init();
+  //MX_TIM4_Init();
 
  /* USER CODE BEGIN 2 */
 
   glcd_init();
-  unit_test_init();
+  //unit_test_init();
 
-  event_init();
-  enc_init();
-  vol_init();
-  btn_init();
-  unit_init();
+  //event_init();
+  //enc_init();
+  //vol_init();
+  //btn_init();
+  //unit_init();
 
-  HAL_TIM_Base_Start_IT(&htim2);
+  //HAL_TIM_Base_Start_IT(&htim2);
   //glcd_init();
 
   //unit_test_sizes();
 
-  unit_test_eep_save();
+  //unit_test_eep_save();
 
 
 

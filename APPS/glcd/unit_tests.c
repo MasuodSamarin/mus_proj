@@ -709,30 +709,6 @@ void unit_test_eep_read(void){
 
 		HAL_Delay(250);
 	}
-	//for (int var = 0; var < 8; ++var) {
-			//free(node[var]);
-		//}
-	//free(node);
-
-/*
-	for (int var = 0; var < size_of_node; ++var) {
-		EE_Reads(var*size_of_node, size_of_node, d_des);
-		glcd_clear_buffer();
-		glcd_draw_string(5,5, "EEPROM");
-		glcd_draw_string(5,15, (char *)utoa(d_des[0],str,10));
-		glcd_draw_string(95,15, (char *)utoa(d_des[1],str,10));
-		glcd_draw_string(5,25, (char *)utoa(d_des[2],str,10));
-		glcd_draw_string(95,25, (char *)utoa(d_des[3],str,10));
-		glcd_draw_string(5,35, (char *)utoa(cnt,str,10));
-		glcd_draw_string(95,35, (char *)utoa(sizeof(d_des),str,10));
-		sprintf(str, "%p", &(d_des[var]));
-		glcd_draw_string(5,45, str);
-		glcd_write();
-
-		HAL_Delay(10);
-
-	}
-	*/
 
 	cnt++;
 }
