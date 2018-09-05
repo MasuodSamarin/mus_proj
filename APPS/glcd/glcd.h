@@ -105,11 +105,11 @@ extern glcd_BoundingBox_t *glcd_bbox_selected;
 
 #include "ST7565R.h"
 
-#include "glcd_controllers.h"
+
 #include "glcd_graphics.h"
 #include "glcd_graphs.h"
 #include "glcd_text.h"
-//#include "unit_tests.h"
+#include "unit_tests.h"
 
 /** \name Base Functions 
  *  @{

@@ -48,6 +48,13 @@
 /* USER CODE BEGIN Includes */
 #include "glcd.h"
 #include "unit_tests.h"
+#include "event.h"
+
+#include "eeprom.h"
+
+/* USER CODE BEGIN Includes */
+
+
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -99,21 +106,45 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
 
-  /* USER CODE BEGIN 2 */
+
+ /* USER CODE BEGIN 2 */
 
   glcd_init();
-  /* USER CODE END 2 */
+  //unit_test_init();
 
+  //event_init();
+  //enc_init();
+  //vol_init();
+  //btn_init();
+  //unit_init();
+
+  //HAL_TIM_Base_Start_IT(&htim2);
+  //glcd_init();
+
+  //unit_test_sizes();
+
+  //unit_test_eep_save();
+
+
+
+  /* USER CODE END 2 */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
   while (1)
   {
   /* USER CODE END WHILE */
   /* USER CODE BEGIN 3 */
 
+	  unit_test_eep_save();
 
+	  //unit_test_events();
+	  unit_test_eep_read();
 
 	  glcd_tests();
+	  //unit_test_sizes();
+
+
 
   }
   /* USER CODE END 3 */
@@ -191,6 +222,22 @@ void _Error_Handler(char *file, int line)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
   /* User can add his own implementation to report the HAL error return state */
+	/*
+	 * print the file and line in lcd
+	 */
+	char str[50];
+	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
+	glcd_clear_buffer();
+
+	glcd_draw_string(5,5, "ERROR");
+
+	sprintf(str, "file: %s", (file));
+	glcd_draw_string(0,25, str);
+
+	sprintf(str, "line: %d", (line));
+	glcd_draw_string(0,45, str);
+
+	glcd_write();
   while(1)
   {
   }

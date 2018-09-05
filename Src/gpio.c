@@ -69,12 +69,12 @@ void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, ISD_GPIO_OUTPUT_Pin|LCD_RESET_Pin|LED_STATUS_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, ISD_GPIO_OUTPUT_Pin|LCD_RESET_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, FV1_CODE_L_Pin|FV1_CODE_C_Pin|FV1_CODE_B_Pin|FV1_CODE_A_Pin 
                           |LCD_CS_Pin|LCD_SCK_Pin|LCD_A0_Pin|LCD_DATA_Pin 
-                          |FV1_EEP2_Pin|FV1_EEP1_Pin, GPIO_PIN_RESET);
+                          |LED_STATUS_Pin|FV1_EEP2_Pin|FV1_EEP1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : PCPin PCPin PCPin */
   GPIO_InitStruct.Pin = PUSH_BTN_1_Pin|PUSH_BTN_2_Pin|PUSH_BTN_3_Pin;
@@ -82,8 +82,8 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PAPin PAPin PAPin */
-  GPIO_InitStruct.Pin = ISD_GPIO_OUTPUT_Pin|LCD_RESET_Pin|LED_STATUS_Pin;
+  /*Configure GPIO pins : PAPin PAPin */
+  GPIO_InitStruct.Pin = ISD_GPIO_OUTPUT_Pin|LCD_RESET_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
@@ -96,10 +96,10 @@ void MX_GPIO_Init(void)
 
   /*Configure GPIO pins : PBPin PBPin PBPin PBPin 
                            PBPin PBPin PBPin PBPin 
-                           PBPin PBPin */
+                           PBPin PBPin PBPin */
   GPIO_InitStruct.Pin = FV1_CODE_L_Pin|FV1_CODE_C_Pin|FV1_CODE_B_Pin|FV1_CODE_A_Pin 
                           |LCD_CS_Pin|LCD_SCK_Pin|LCD_A0_Pin|LCD_DATA_Pin 
-                          |FV1_EEP2_Pin|FV1_EEP1_Pin;
+                          |LED_STATUS_Pin|FV1_EEP2_Pin|FV1_EEP1_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);

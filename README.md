@@ -12,6 +12,8 @@ objects:
   7. event driven strategy
   8. link-list
 
+branch's that merged directly:
+=======
 branch's histrography :
     1. effect
     2. output
