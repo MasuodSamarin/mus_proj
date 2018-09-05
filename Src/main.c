@@ -122,8 +122,7 @@ int main(void)
 
 
 
-	  //glcd_tests();
-	  glcd_test_hello_world();
+	  glcd_tests();
 
   }
   /* USER CODE END 3 */
