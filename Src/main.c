@@ -46,8 +46,8 @@
 #include "gpio.h"
 
 /* USER CODE BEGIN Includes */
-
-
+#include "glcd.h"
+#include "unit_tests.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -99,27 +99,21 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
 
-  /*
-	  MX_DMA_Init();
-	  MX_TIM2_Init();
-	  MX_ADC1_Init();
-	  MX_SPI1_Init();
-	  MX_TIM1_Init();
-	  MX_TIM4_Init();
-   */
-
   /* USER CODE BEGIN 2 */
 
+  glcd_init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-
   /* USER CODE END WHILE */
-
   /* USER CODE BEGIN 3 */
+
+
+
+	  glcd_tests();
 
   }
   /* USER CODE END 3 */
