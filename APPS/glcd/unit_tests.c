@@ -688,23 +688,23 @@ void unit_test_eep_read(void){
 		glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
 		glcd_draw_rect(0, 0, 127, 64, 1);
 		glcd_draw_rect(1, 1, 125, 62, 1);
-		glcd_draw_rect(2, 2, 123, 60, 1);
+		//glcd_draw_rect(2, 2, 123, 60, 1);
 		glcd_draw_string(10,5, "--[ EEPROM ]--");
 		glcd_draw_string(6,16, (char*)node[var]->fv1->name);
-		glcd_draw_string(55,16, (char*)node[var]->fv1->comments);
-		glcd_invert_area(4, 14, 114, 11);
+		glcd_draw_string(6,26, (char*)node[var]->fv1->comments);
+		glcd_invert_area(4, 14, 70, 22);
 		//glcd_draw_string(5,26, (char *)utoa(var,str,10));
 		sprintf(str, "cnt:%lu", cnt);
-		glcd_draw_string(6,26, str);
-		//glcd_draw_string(45,26, (char *)utoa(var,str,10));
-		sprintf(str, "n:%p", (node[var]));
 		glcd_draw_string(6,36, str);
+		//glcd_draw_string(45,26, (char *)utoa(var,str,10));
+		//sprintf(str, "n:%p", (node[var]));
+		//glcd_draw_string(6,36, str);
 		sprintf(str, "f:%p", (node[var]->fv1));
 		glcd_draw_string(6,46, str);
 
-		glcd_set_font_c(FC_Tekton_Pro_Ext27x28_AlphaNumber);
+		glcd_set_font_c(FC_Bebas_Neue18x36_Numbers);
 		sprintf(str, "%d", (node[var]->number));
-		glcd_draw_string_P(80, 32, str);
+		glcd_draw_string_P(80, 24, str);
 		glcd_write();
 
 		HAL_Delay(250);
