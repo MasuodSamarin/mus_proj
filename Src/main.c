@@ -106,24 +106,18 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
 
-
  /* USER CODE BEGIN 2 */
 
   glcd_init();
-  //unit_test_init();
+  unit_init();
 
   //event_init();
   //enc_init();
   //vol_init();
   //btn_init();
-  //unit_init();
 
   //HAL_TIM_Base_Start_IT(&htim2);
-  //glcd_init();
 
-  //unit_test_sizes();
-
-  //unit_test_eep_save();
 
 
 
@@ -136,12 +130,13 @@ int main(void)
   /* USER CODE END WHILE */
   /* USER CODE BEGIN 3 */
 
-	  unit_test_eep_save();
-
 	  //unit_test_events();
+
+	  unit_test_eep_save();
 	  unit_test_eep_read();
 
-	  glcd_tests();
+	  //glcd_tests();
+
 	  //unit_test_sizes();
 
 

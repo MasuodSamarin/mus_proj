@@ -479,6 +479,7 @@ void glcd_tests(void){
 			break;
 
 	}
+}
 
 	//
 	//();
