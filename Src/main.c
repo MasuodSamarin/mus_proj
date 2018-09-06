@@ -105,7 +105,6 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  //MX_ADC1_Init();
   MX_TIM2_Init();
   MX_TIM1_Init();
   MX_DMA_Init();
@@ -136,12 +135,12 @@ int main(void)
   /* USER CODE END WHILE */
   /* USER CODE BEGIN 3 */
 
-	  unit_test_events();
+	  //unit_test_events();
 
 	  //unit_test_eep_save();
 	  //unit_test_eep_read();
 
-	  //glcd_tests();
+	  glcd_tests();
 
 	  //unit_test_sizes();
 
