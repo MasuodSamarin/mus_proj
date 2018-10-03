@@ -52,8 +52,8 @@
  * GLCD_NUMBER_OF_BANKS is typically GLCD_LCD_HEIGHT/8
  * Don't adjust these below unless required.
  */
-#define GLCD_NUMBER_OF_BANKS (GLCD_LCD_WIDTH / 8)
-#define GLCD_NUMBER_OF_COLS  GLCD_LCD_WIDTH
+#define GLCD_NUMBER_OF_BANKS (GLCD_LCD_WIDTH / 8)   // its 128/8 = 16
+#define GLCD_NUMBER_OF_COLS  GLCD_LCD_WIDTH			// its 128
 
 /**@}*/
 
@@ -95,10 +95,10 @@ typedef struct {
 
 
 /* Global variables used for GLCD library */
-extern uint8_t glcd_buffer[GLCD_LCD_WIDTH * GLCD_LCD_HEIGHT / 8];
+extern uint8_t glcd_buffer[GLCD_LCD_WIDTH * GLCD_LCD_HEIGHT / 8]; //its uses 1024B = 1KB of ram for handle lcd screen
 extern glcd_BoundingBox_t glcd_bbox;
 extern uint8_t *glcd_buffer_selected;
-extern glcd_BoundingBox_t *glcd_bbox_selected;
+//extern glcd_BoundingBox_t *glcd_bbox_selected;
 
 
 #include "fonts/fonts.h"
@@ -167,7 +167,7 @@ void glcd_clear_buffer(void);
  * \param bbox   Pointer to bounding box object.
  * \see glcd_BoundingBox_t
  */
-void glcd_select_screen(uint8_t *buffer, glcd_BoundingBox_t *bbox);
+void glcd_select_buffer(uint8_t *buffer);
 
 /**
  * Scroll entire screne buffer by x and y pixels. (not implemented yet)
@@ -190,6 +190,6 @@ void glcd_scroll_line(uint8_t top);
 
 
 extern uint8_t *glcd_buffer_selected;
-extern glcd_BoundingBox_t *glcd_bbox_selected;
+//extern glcd_BoundingBox_t *glcd_bbox_selected;
 
 #endif
