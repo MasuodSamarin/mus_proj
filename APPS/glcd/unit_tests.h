@@ -73,6 +73,13 @@ void glcd_test_scrolling_graph(void);
 /** Demonstrate bitmap display */
 void glcd_test_bitmap_128x64(void);
 
+
+/* demonstarte graph and volume*/
+void glcd_test_scrolling_graph_rand(void);
+
+/* demonstrare the volume box func*/
+void glcd_test_volume_box(void);
+
 /*
  * show all of the tests*/
 void glcd_tests(void);

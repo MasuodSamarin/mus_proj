@@ -62,7 +62,7 @@ uint8_t *glcd_buffer_selected;
 /**
  * Pointer to bounding box currently in use.
  */
-glcd_BoundingBox_t *glcd_bbox_selected;
+//glcd_BoundingBox_t *glcd_bbox_selected;
 
 /** @} */
 
@@ -84,27 +84,27 @@ void glcd_update_bbox(uint8_t xmin, uint8_t ymin, uint8_t xmax, uint8_t ymax)
 	}
 
 	/* Update the bounding box size */
-	if (xmin < glcd_bbox_selected->x_min) {
-		glcd_bbox_selected->x_min = xmin;
+	if (xmin < glcd_bbox.x_min) {
+		glcd_bbox.x_min = xmin;
 	}		
-	if (xmax > glcd_bbox_selected->x_max) {
-		glcd_bbox_selected->x_max = xmax;
+	if (xmax > glcd_bbox.x_max) {
+		glcd_bbox.x_max = xmax;
 	}
-	if (ymin < glcd_bbox_selected->y_min) {
-		glcd_bbox_selected->y_min = ymin;
+	if (ymin < glcd_bbox.y_min) {
+		glcd_bbox.y_min = ymin;
 	}		
-	if (ymax > glcd_bbox_selected->y_max) {
-		glcd_bbox_selected->y_max = ymax;
+	if (ymax > glcd_bbox.y_max) {
+		glcd_bbox.y_max = ymax;
 	}			
 }
 
 void glcd_reset_bbox()
 {
 	/* Used after physically writing to the LCD */
-	glcd_bbox_selected->x_min = GLCD_LCD_WIDTH - 1;
-	glcd_bbox_selected->x_max = 0;
-	glcd_bbox_selected->y_min = GLCD_LCD_HEIGHT -1;
-	glcd_bbox_selected->y_max = 0;	
+	glcd_bbox.x_min = GLCD_LCD_WIDTH - 1;
+	glcd_bbox.x_max = 0;
+	glcd_bbox.y_min = GLCD_LCD_HEIGHT -1;
+	glcd_bbox.y_max = 0;
 }
 
 void glcd_bbox_reset() {
@@ -113,10 +113,10 @@ void glcd_bbox_reset() {
 
 void glcd_bbox_refresh() {
 	/* Marks bounding box as entire screen, so on next glcd_write(), it writes the entire buffer to the LCD */
-	glcd_bbox_selected->x_min = 0;
-	glcd_bbox_selected->x_max = GLCD_LCD_WIDTH - 1;
-	glcd_bbox_selected->y_min = 0;
-	glcd_bbox_selected->y_max = GLCD_LCD_HEIGHT -1;		
+	glcd_bbox.x_min = 0;
+	glcd_bbox.x_max = GLCD_LCD_WIDTH - 1;
+	glcd_bbox.y_min = 0;
+	glcd_bbox.y_max = GLCD_LCD_HEIGHT -1;
 }
 
 void glcd_clear(void) {
@@ -131,10 +131,10 @@ void glcd_clear_buffer(void) {
 	glcd_update_bbox(0,0,GLCD_LCD_WIDTH - 1,GLCD_LCD_HEIGHT - 1);
 }
 
-void glcd_select_screen(uint8_t *buffer, glcd_BoundingBox_t *bbox)
+void glcd_select_buffer(uint8_t *buffer)
 {
 	glcd_buffer_selected = buffer;
-	glcd_bbox_selected = bbox;
+	//glcd_bbox_selected = bbox;
 }
 
 void glcd_scroll(int8_t x, int8_t y)

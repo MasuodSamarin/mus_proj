@@ -141,6 +141,10 @@ int main(void)
 	  //unit_test_eep_read();
 
 	  glcd_tests();
+	  //glcd_test_scrolling_graph_rand();
+	  //glcd_test_counter_and_graph();
+	  glcd_test_volume_box();
+	  //glcd_tests();
 
 	  //unit_test_sizes();
 

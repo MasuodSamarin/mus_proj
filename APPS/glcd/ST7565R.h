@@ -49,7 +49,6 @@
  * Controller specific functions.
  *
  * Currently only the following controllers are supported:
- *  - PCD8544 (Nokia 5110 LCD) SPI interface
  *  - ST7565R with SPI interface
  *
  * The C and header files defining these functions are stored in the subdirectory:

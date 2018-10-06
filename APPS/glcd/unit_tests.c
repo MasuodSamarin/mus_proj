@@ -256,7 +256,7 @@ void glcd_test_hello_world(void)
 	uint8_t y = 15;
 
 	glcd_clear_buffer();
-	glcd_set_font_c(FC_Liberation_Sans17x17_Numbers);
+	glcd_set_font_c(FC_Liberation_Sans17x17_Alpha);
 	glcd_draw_string(x,y,"1234");
 	glcd_write();
 	HAL_Delay(delay);
@@ -410,6 +410,73 @@ void glcd_test_rectangles(void)
 		DEMO_RETURN();
 	}
 	
+}
+#include <stdlib.h>
+void glcd_test_scrolling_graph_rand(void){
+	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
+
+	glcd_clear();
+	glcd_write();
+	//uint8_t cnt = 2;
+	int i;//=rand();
+//char string[10];
+	while(1) {
+		//uint16_t n;
+		i=rand()%200;
+		//glcd_draw_string_P(30,30,(char *)utoa(i,string,10));
+		//glcd_draw_string(10,10,"hello");
+		//glcd_write();
+
+		glcd_scrolling_bar_graph(8,20,115,40,i);
+		HAL_Delay(50);
+
+	}
+}
+
+void glcd_test_volume_box(void){
+	//uint8_t count = 0;
+	char string[8] = "";
+
+
+	while(1) {
+		glcd_clear_buffer();
+		glcd_set_font_c(FC_Tekton_Pro_Ext27x28_AlphaNumber);
+		glcd_draw_string_P(5,5,"POT 3");
+		glcd_write();
+
+		glcd_set_font_c(FC_Liberation_Sans20x28_Numbers);
+
+		int x = 5;
+		int y = 40;
+		int w = 60;
+		int h = 10;
+		for (int i=x+w-3; i<x+w; i++) {
+				for (int j=y; j<y+h; j++) {
+					glcd_set_pixel(i, j, 1);
+				}
+			}
+		glcd_update_bbox(x, y, x+w-1, y+h-1);
+		glcd_write();
+		HAL_Delay(500);
+		int cnt = 0;
+
+		while((cnt++) < 255){
+			sprintf(string,"%d",cnt);
+
+			glcd_bar_graph_horizontal_no_border(x, y, w-3, h, cnt);//*255/100);
+			glcd_draw_string(x+w+1, y-10, string);
+			glcd_update_bbox(x, y, GLCD_LCD_WIDTH, GLCD_LCD_HEIGHT);
+			glcd_write();
+			HAL_Delay(10);
+		}
+
+
+		HAL_Delay(1000);
+
+	}
+
+	DEMO_RETURN();
+
 }
 
 void glcd_test_scrolling_graph(void)

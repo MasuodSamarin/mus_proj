@@ -40,7 +40,7 @@ void glcd_init(void)
 	glcd_set_start_line(0);
 	glcd_clear_now();
 
-	glcd_select_screen(glcd_buffer,&glcd_bbox);
+	glcd_select_buffer(glcd_buffer);
 	glcd_clear();
 
 }
@@ -211,18 +211,18 @@ void glcd_write()
 		// Each bank is a single row 8 bits tall /
 		uint8_t column;		
 		
-		if (glcd_bbox_selected->y_min >= (bank+1)*8) {
+		if (glcd_bbox.y_min >= (bank+1)*8) {
 			continue; // Skip the entire bank /
 		}
 		
-		if (glcd_bbox_selected->y_max < bank*8) {
+		if (glcd_bbox.y_max < bank*8) {
 			break;    // No more banks need updating /
 		}
 		
 		glcd_set_y_address(bank);
-		glcd_set_x_address(glcd_bbox_selected->x_min);
+		glcd_set_x_address(glcd_bbox.x_min);
 
-		for (column = glcd_bbox_selected->x_min; column <= glcd_bbox_selected->x_max; column++)
+		for (column = glcd_bbox.x_min; column <= glcd_bbox.x_max; column++)
 		{
 			glcd_data( glcd_buffer_selected[GLCD_NUMBER_OF_COLS * bank + column] );
 		}
