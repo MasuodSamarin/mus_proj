@@ -121,8 +121,10 @@ int main(void)
   /* USER CODE BEGIN 3 */
 
 
-
-	  glcd_tests();
+	  //glcd_test_scrolling_graph_rand();
+	  //glcd_test_counter_and_graph();
+	  glcd_test_volume_box();
+	  //glcd_tests();
 
   }
   /* USER CODE END 3 */
