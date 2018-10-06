@@ -666,9 +666,9 @@ void unit_test_events(void){
 
 void unit_test_init(void){
 	efx_init_list();
-		glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
-		glcd_clear_buffer();
-		glcd_write();
+	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
+	glcd_clear_buffer();
+	glcd_write();
 
 }
 
