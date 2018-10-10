@@ -422,16 +422,17 @@ void glcd_test_scrolling_graph_rand(void){
 //char string[10];
 	while(1) {
 		//uint16_t n;
-		i=rand()%200;
+		i=rand()%300;
 		//glcd_draw_string_P(30,30,(char *)utoa(i,string,10));
 		//glcd_draw_string(10,10,"hello");
 		//glcd_write();
 
-		glcd_scrolling_bar_graph(8,20,115,40,i);
+		glcd_scrolling_bar_graph(8,10,115,50,i);
 		HAL_Delay(50);
 
 	}
 }
+
 
 void glcd_test_volume_box(void){
 	//uint8_t count = 0;
@@ -449,7 +450,8 @@ void glcd_test_volume_box(void){
 		int x = 5;
 		int y = 40;
 		int w = 60;
-		int h = 10;
+		int h = 7;
+/*
 		for (int i=x+w-3; i<x+w; i++) {
 				for (int j=y; j<y+h; j++) {
 					glcd_set_pixel(i, j, 1);
@@ -458,12 +460,13 @@ void glcd_test_volume_box(void){
 		glcd_update_bbox(x, y, x+w-1, y+h-1);
 		glcd_write();
 		HAL_Delay(500);
+*/
 		int cnt = 0;
 
 		while((cnt++) < 255){
 			sprintf(string,"%d",cnt);
 
-			glcd_bar_graph_horizontal_no_border(x, y, w-3, h, cnt);//*255/100);
+			glcd_bar_graph_horizontal_title(x, y, w-3, h, cnt);//*255/100);
 			glcd_draw_string(x+w+1, y-10, string);
 			glcd_update_bbox(x, y, GLCD_LCD_WIDTH, GLCD_LCD_HEIGHT);
 			glcd_write();
@@ -584,6 +587,7 @@ char *unit_vol_name[] = {
 };
 
 void unit_init(void){
+	efx_init_list();
 	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
 	glcd_clear_buffer();
 	glcd_write();
