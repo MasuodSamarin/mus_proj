@@ -106,7 +106,7 @@ event_node_t* event_create_vol_node(vol_name_t name, uint32_t val){
 /*
  * create event node consist button event
  * */
-event_node_t* event_create_btn_node(btn_name_t name, btn_hold_t hold){
+event_node_t* event_create_btn_node(btn_name_t name){//, btn_hold_t hold){
 	event_node_t *node = malloc(sizeof(*node));
 	btn_node_t *btn = malloc(sizeof(*btn));
 /*TODO: check the malloc */
@@ -115,7 +115,7 @@ event_node_t* event_create_btn_node(btn_name_t name, btn_hold_t hold){
 		return (event_node_t*)NULL;
 	}
 	btn->name = name;
-	btn->hold = hold;
+	//btn->hold = hold;
 
 	node->type = EVENT_BTN;
 	node->btn = btn;

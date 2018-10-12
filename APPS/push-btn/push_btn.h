@@ -29,11 +29,12 @@ extern "C" {
  * other 3 is normal push button
  * */
 typedef enum {
-	BTN_1,
-	BTN_2,
+	BTN_NOT,
+	BTN_ENTER,
+	BTN_BYPASS,
 /*	BTN_3,
 	BTN_4,*/
-	BTN_MAX
+	//BTN_MAX
 }btn_name_t;
 
 /*

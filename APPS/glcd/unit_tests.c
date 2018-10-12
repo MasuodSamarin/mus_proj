@@ -572,7 +572,7 @@ void glcd_tests(void){
 char str[50];
 
 char *unit_btn_name[] = {
-		"BTN_1", "BTN_2", "BTN_3", "BTN_4"
+		"BTN_ENTER", "BTN_BYPASS"//, "BTN_3", "BTN_4"
 };
 
 char *unit_btn_hold[] = {
@@ -599,7 +599,7 @@ void unit_print_btn(btn_node_t *btn){
 	glcd_clear_buffer();
 	glcd_draw_string(5,5, "BUTTON");
 	glcd_draw_string(5,15, unit_btn_name[btn->name]);
-	glcd_draw_string(5,25, unit_btn_hold[btn->hold]);
+	//glcd_draw_string(5,25, unit_btn_hold[btn->hold]);
 	sprintf(str, "%p", btn);
 	glcd_draw_string(5,35, str);
 	glcd_write();

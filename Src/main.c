@@ -74,7 +74,38 @@ void SystemClock_Config(void);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
+/* timer2 elapseed time interupt
+ * used to */
+/*
+ * multiply magic numbers by 100ms to set interval time to run snippet code
+ * */
+#define time_btn	20
+#define time_enc	5
+#define time_vol	2
+#define time_out	500
 
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
+	static uint32_t ticks;
+
+	//if(htim == &htim2){
+		++ticks;
+
+		if(!((ticks)%time_btn)){
+			btn_process();
+		}
+		if(!((ticks)%time_vol)){
+			vol_process();
+		}
+		if(!((ticks)%time_enc)){
+			enc_process();
+		}
+		if(!((ticks)%time_out)){
+				g_timeout = 1;
+		}
+
+	//}
+
+}
 /* USER CODE END 0 */
 
 /**
@@ -137,7 +168,7 @@ int main(void)
 
   /* USER CODE BEGIN 3 */
 
-	  //unit_test_events();
+	  unit_test_events();
 
 	  //unit_test_eep_save();
 	  //unit_test_eep_read();
@@ -149,6 +180,7 @@ int main(void)
 	  //glcd_tests();
 
 	  //unit_test_sizes();
+
 	  if(g_timeout){
 		  g_timeout = 0;
 		  HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
@@ -219,40 +251,7 @@ void SystemClock_Config(void)
 
 /* USER CODE BEGIN 4 */
 
-/* timer2 elapseed time interupt
- * used to */
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
-	static uint32_t ticks;
 
-#define _test_tim 0
-#if _test_tim
-	if(htim == &htim2){
-#endif
-
-#define time1	3
-#define time2	7
-#define time3	7
-#define time4	9
-
-		++ticks;
-
-		if(!((ticks)%time1)){
-				g_timeout = 1;
-			}
-		if(!((ticks)%time2)){
-				g_timeout = 1;
-			}
-/*		if(!((ticks)%time3)){
-				g_timeout = 1;
-			}
-		if(!((ticks)%time4)){
-				g_timeout = 1;
-			}
-*/
-#if _test_tim
-	}
-#endif
-}
 
 
 
