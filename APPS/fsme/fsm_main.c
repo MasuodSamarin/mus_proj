@@ -18,7 +18,7 @@
 char str[10];
 extern char *unit_btn_name[];
 extern char *unit_btn_hold[];
-extern char *unit_enc_dir[];
+//extern char *unit_enc_dir[];
 extern char *unit_vol_name[];
 
 
@@ -174,7 +174,7 @@ static void fsm1_action_sys_init( void ){
 	glcd_write();
 
 
-	fsm_handle.status = 1; //init sucsses
+	fsm_handle.status = 1; //init success
 }
 
 static void fsm1_action_ready( void ){

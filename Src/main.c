@@ -61,6 +61,8 @@
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
 
+__IO int g_timeout=0;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -141,13 +143,16 @@ int main(void)
 	  //unit_test_eep_read();
 
 	  //glcd_tests();
-	  glcd_test_scrolling_graph_rand();
+	  //glcd_test_scrolling_graph_rand();
 	  //glcd_test_counter_and_graph();
 	  //glcd_test_volume_box();
 	  //glcd_tests();
 
 	  //unit_test_sizes();
-
+	  if(g_timeout){
+		  g_timeout = 0;
+		  HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
+	  }
 
 
   }
@@ -213,6 +218,25 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+/* timer2 elapseed time interupt
+ * used to */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
+	static uint32_t ticks;
+
+#define _test_tim 0
+#if _test_tim
+	if(htim == &htim2){
+#endif
+
+		if(!((++ticks)%3)){
+				g_timeout = 1;
+			}
+
+#if _test_tim
+	}
+#endif
+}
 
 /* USER CODE END 4 */
 
