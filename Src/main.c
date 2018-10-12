@@ -50,7 +50,7 @@
 #include "event.h"
 
 #include "eeprom.h"
-
+#include "app.h"
 /* USER CODE BEGIN Includes */
 
 
@@ -100,7 +100,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 			enc_process();
 		}
 		if(!((ticks)%time_out)){
-			g_timeout = 1;
+			app_data.timeout = 1;
 		}
 
 	//}
@@ -181,8 +181,8 @@ int main(void)
 
 	  //unit_test_sizes();
 
-	  if(g_timeout){
-		  g_timeout = 0;
+	  if(app_data.timeout){
+		  app_data.timeout = 0;
 		  HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
 	  }
 
