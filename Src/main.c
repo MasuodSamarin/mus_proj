@@ -61,7 +61,7 @@
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
 
-__IO int g_timeout=0;
+__IO int g_timeout;
 
 /* USER CODE END PV */
 
