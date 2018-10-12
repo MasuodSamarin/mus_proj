@@ -54,19 +54,19 @@ void glcd_spi_write(uint8_t c)
 {
 	 int8_t i;
 	  for (i=7; i>=0; i--) {
-			HAL_GPIO_WritePin(LCD_SCK_GPIO_Port, LCD_SCK_Pin, GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(LCD_SPI2_SCK_GPIO_Port, LCD_SPI2_SCK_Pin, GPIO_PIN_RESET);
 
 	    //SCLK_PORT &= ~_BV(SCLK);
 	    if (c & (1<<i))
-			HAL_GPIO_WritePin(LCD_DATA_GPIO_Port, LCD_DATA_Pin, GPIO_PIN_SET);
+			HAL_GPIO_WritePin(LCD_SPI2_DATA_GPIO_Port, LCD_SPI2_DATA_Pin, GPIO_PIN_SET);
 
 	      //SID_PORT |= _BV(SID);
 	    else
-			HAL_GPIO_WritePin(LCD_DATA_GPIO_Port, LCD_DATA_Pin, GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(LCD_SPI2_DATA_GPIO_Port, LCD_SPI2_DATA_Pin, GPIO_PIN_RESET);
 
 	      //SID_PORT &= ~_BV(SID);
 
-		HAL_GPIO_WritePin(LCD_SCK_GPIO_Port, LCD_SCK_Pin, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(LCD_SPI2_SCK_GPIO_Port, LCD_SPI2_SCK_Pin, GPIO_PIN_SET);
 
 	    //SCLK_PORT |= _BV(SCLK);
 	  }

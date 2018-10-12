@@ -29,10 +29,14 @@ static uint8_t btn_state = BTN_STATE_A;
  * btn_haldle track the btn in time
  * */
 btn_handle_t btn_buttons[BTN_MAX] = {
+		/*
 		{BTN_1, PUSH_BTN_1_GPIO_Port, PUSH_BTN_1_Pin},
-		{BTN_2, PUSH_BTN_2_GPIO_Port, PUSH_BTN_2_Pin},
+		{BTN_2, PUSH_BTN_BYPASS_GPIO_Port, PUSH_BTN_BYPASS_Pin},
 		{BTN_3, PUSH_BTN_3_GPIO_Port, PUSH_BTN_3_Pin},
 		{BTN_4, PUSH_BTN_ENC_GPIO_Port, PUSH_BTN_ENC_Pin}
+		*/
+		{BTN_1, PUSH_BTN_ENTER_GPIO_Port, PUSH_BTN_ENTER_Pin},
+		{BTN_2, PUSH_BTN_BYPASS_GPIO_Port, PUSH_BTN_BYPASS_Pin},
 };
 static btn_handle_t btn_handle = {0};
 
@@ -55,6 +59,7 @@ void btn_process(void){
 				btn_handle = btn_buttons[BTN_2];
 				btn_state = BTN_STATE_B;
 			}
+			/*
 			else if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(btn_buttons[BTN_3].port, btn_buttons[BTN_3].pin)){
 				btn_handle = btn_buttons[BTN_3];
 				btn_state = BTN_STATE_B;
@@ -63,7 +68,7 @@ void btn_process(void){
 				btn_handle = btn_buttons[BTN_4];
 				btn_state = BTN_STATE_B;
 			}
-
+			*/
 			break;
 		case BTN_STATE_B:
 			if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(btn_handle.port, btn_handle.pin)	&& (btn_cnt <= BTN_HOLD_LONG_TIME))

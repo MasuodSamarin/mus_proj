@@ -31,8 +31,8 @@ extern "C" {
 typedef enum {
 	BTN_1,
 	BTN_2,
-	BTN_3,
-	BTN_4,
+/*	BTN_3,
+	BTN_4,*/
 	BTN_MAX
 }btn_name_t;
 

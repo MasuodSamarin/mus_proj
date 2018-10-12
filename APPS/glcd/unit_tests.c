@@ -450,7 +450,7 @@ void glcd_test_volume_box(void){
 		int x = 5;
 		int y = 40;
 		int w = 60;
-		int h = 7;
+		//int h = 7;
 /*
 		for (int i=x+w-3; i<x+w; i++) {
 				for (int j=y; j<y+h; j++) {
@@ -466,7 +466,7 @@ void glcd_test_volume_box(void){
 		while((cnt++) < 255){
 			sprintf(string,"%d",cnt);
 
-			glcd_bar_graph_horizontal_title(x, y, w-3, h, cnt);//*255/100);
+			//glcd_bar_graph_horizontal_title(x, y, w-3, h, cnt);//*255/100);
 			glcd_draw_string(x+w+1, y-10, string);
 			glcd_update_bbox(x, y, GLCD_LCD_WIDTH, GLCD_LCD_HEIGHT);
 			glcd_write();
