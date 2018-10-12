@@ -16,20 +16,20 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
 
 	switch (GPIO_Pin)
-  {
-  	case PUSH_BTN_BYPASS_Pin:
-		  HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
-		  HAL_Delay(100);
+	{
+		case PUSH_BTN_BYPASS_Pin:
+			  HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
+			  HAL_Delay(100);
 
-  		break;
-  	case PUSH_BTN_ENTER_Pin:
-		  HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
-		  HAL_Delay(100);
-  		break;
+			break;
+		case PUSH_BTN_ENTER_Pin:
+			  HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
+			  HAL_Delay(100);
+			break;
 
-  	default:
-  		break;
-  }//END of switch (GPIO_Pin)
+		default:
+			break;
+	}//END of switch (GPIO_Pin)
 }
 
 

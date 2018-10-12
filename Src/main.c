@@ -151,7 +151,7 @@ int main(void)
 	  //unit_test_sizes();
 	  if(g_timeout){
 		  g_timeout = 0;
-		  //HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
+		  HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
 	  }
 
 
@@ -229,10 +229,26 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	if(htim == &htim2){
 #endif
 
-		if(!((++ticks)%3)){
+#define time1	3
+#define time2	7
+#define time3	7
+#define time4	9
+
+		++ticks;
+
+		if(!((ticks)%time1)){
 				g_timeout = 1;
 			}
-
+		if(!((ticks)%time2)){
+				g_timeout = 1;
+			}
+/*		if(!((ticks)%time3)){
+				g_timeout = 1;
+			}
+		if(!((ticks)%time4)){
+				g_timeout = 1;
+			}
+*/
 #if _test_tim
 	}
 #endif
