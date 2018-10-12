@@ -41,7 +41,6 @@
 #include "stm32f1xx_hal.h"
 #include "adc.h"
 #include "dma.h"
-#include "spi.h"
 #include "tim.h"
 #include "gpio.h"
 
@@ -110,7 +109,6 @@ int main(void)
   MX_ADC1_Init();
   MX_TIM1_Init();
   MX_TIM4_Init();
-  //MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
 
   glcd_init();

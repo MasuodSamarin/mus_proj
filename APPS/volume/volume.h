@@ -20,7 +20,7 @@ extern "C" {
 #include "stm32f1xx_hal.h"
 #include "adc.h"
 #include "dma.h"
-#include "spi.h"
+//#include "spi.h"
 #include "tim.h"
 #include "gpio.h"
 /*

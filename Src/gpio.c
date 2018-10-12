@@ -70,7 +70,8 @@ void MX_GPIO_Init(void)
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, FV1_CODE_L_Pin|FV1_CODE_C_Pin|FV1_CODE_B_Pin|FV1_CODE_A_Pin 
-                          |LCD_A0_Pin|FV1_EEP2_Pin|FV1_EEP1_Pin, GPIO_PIN_RESET);
+                          |LCD_CS_Pin|LCD_SCK_Pin|LCD_A0_Pin|LCD_DATA_Pin 
+                          |FV1_EEP2_Pin|FV1_EEP1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, LCD_RESET_Pin|LED_STATUS_Pin, GPIO_PIN_RESET);
@@ -82,9 +83,11 @@ void MX_GPIO_Init(void)
   HAL_GPIO_Init(PUSH_BTN_BYPASS_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PBPin PBPin PBPin PBPin 
-                           PBPin PBPin PBPin */
+                           PBPin PBPin PBPin PBPin 
+                           PBPin PBPin */
   GPIO_InitStruct.Pin = FV1_CODE_L_Pin|FV1_CODE_C_Pin|FV1_CODE_B_Pin|FV1_CODE_A_Pin 
-                          |LCD_A0_Pin|FV1_EEP2_Pin|FV1_EEP1_Pin;
+                          |LCD_CS_Pin|LCD_SCK_Pin|LCD_A0_Pin|LCD_DATA_Pin 
+                          |FV1_EEP2_Pin|FV1_EEP1_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -102,16 +105,6 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(PUSH_BTN_ENTER_GPIO_Port, &GPIO_InitStruct);
-
-  /* USER CODE BEGIN 1 */
-
-  /*Configure GPIO pins : LCD_PINS_COMMON_WITH_SPI2_FOR_NON_SPI_MODE */
-  GPIO_InitStruct.Pin = LCD_SPI2_NSS_Pin|LCD_SPI2_SCK_Pin|LCD_SPI2_DATA_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-  /* USER CODE END 1 */
 
 }
 

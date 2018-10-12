@@ -116,8 +116,8 @@ void glcd_write(void);
 /*
  * define some basic static func
  * */
-#define GLCD_SELECT()     	HAL_GPIO_WritePin(LCD_SPI2_NSS_GPIO_Port, LCD_SPI2_NSS_Pin, GPIO_PIN_SET)
-#define GLCD_DESELECT()   	HAL_GPIO_WritePin(LCD_SPI2_NSS_GPIO_Port, LCD_SPI2_NSS_Pin, GPIO_PIN_RESET)
+#define GLCD_SELECT()     	HAL_GPIO_WritePin(LCD_CS_GPIO_Port, LCD_CS_Pin, GPIO_PIN_SET)
+#define GLCD_DESELECT()   	HAL_GPIO_WritePin(LCD_CS_GPIO_Port, LCD_CS_Pin, GPIO_PIN_RESET)
 //#define GLCD_DC_LOW()		HAL_GPIO_WritePin(LCD_A0_GPIO_Port, LCD_A0_Pin, GPIO_PIN_RESET)
 //#define GLCD_DC_HIGH()    	HAL_GPIO_WritePin(LCD_A0_GPIO_Port, LCD_A0_Pin, GPIO_PIN_SET)
 #define GLCD_A0_LOW()     	HAL_GPIO_WritePin(LCD_A0_GPIO_Port, LCD_A0_Pin, GPIO_PIN_RESET)
