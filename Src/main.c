@@ -79,10 +79,10 @@ void SystemClock_Config(void);
 /*
  * multiply magic numbers by 100ms to set interval time to run snippet code
  * */
-#define time_btn	20
+#define time_btn	10
 #define time_enc	5
 #define time_vol	2
-#define time_out	500
+#define time_out	700
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	static uint32_t ticks;
@@ -100,7 +100,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 			enc_process();
 		}
 		if(!((ticks)%time_out)){
-				g_timeout = 1;
+			g_timeout = 1;
 		}
 
 	//}

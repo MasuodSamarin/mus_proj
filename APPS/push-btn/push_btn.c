@@ -76,7 +76,7 @@ void btn_process(void){
 
 		switch (btn_name) {
 			case BTN_NOT:
-				btn_name = BTN_NOT;
+				//btn_name = BTN_NOT;
 				//event_push_node(event_create_btn_node(BTN_ENTER));//, BTN_HOLD_LONG));
 			break;
 			case BTN_ENTER:

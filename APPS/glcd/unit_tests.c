@@ -640,25 +640,25 @@ void unit_print_not(void){
 	glcd_write();
 }
 void unit_test_events(void){
-	event_node_t node;
+	event_node_t event;
 
 	//if(!event_get_size())
 		//return;
-	node = event_pop_node();
+	event = event_pop_node();
 
-	switch (node.type) {
+	switch (event.type) {
 		case EVENT_NOT:
 			//uint_print_not();
 			break;
 
 		case EVENT_BTN:
-			unit_print_btn(node.btn);
+			unit_print_btn(event.btn);
 			break;
 		case EVENT_ENC:
-			unit_print_enc(node.enc);
+			unit_print_enc(event.enc);
 			break;
 		case EVENT_VOL:
-			unit_print_vol(node.vol);
+			unit_print_vol(event.vol);
 			break;
 
 
