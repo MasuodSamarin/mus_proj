@@ -151,7 +151,7 @@ int main(void)
 	  //unit_test_sizes();
 	  if(g_timeout){
 		  g_timeout = 0;
-		  HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
+		  //HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
 	  }
 
 
@@ -237,6 +237,11 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	}
 #endif
 }
+
+
+
+
+
 
 /* USER CODE END 4 */
 
