@@ -103,6 +103,16 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(PUSH_BTN_ENTER_GPIO_Port, &GPIO_InitStruct);
 
+  /* USER CODE BEGIN 1 */
+
+  /*Configure GPIO pins : LCD_PINS_COMMON_WITH_SPI2_FOR_NON_SPI_MODE */
+  GPIO_InitStruct.Pin = LCD_SPI2_NSS_Pin|LCD_SPI2_SCK_Pin|LCD_SPI2_DATA_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  /* USER CODE END 1 */
+
 }
 
 /* USER CODE BEGIN 2 */
