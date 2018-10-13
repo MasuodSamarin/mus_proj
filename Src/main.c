@@ -82,7 +82,7 @@ void SystemClock_Config(void);
 #define time_btn	10
 #define time_enc	5
 #define time_vol	2
-#define time_out	700
+#define time_out	1000
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	static uint32_t ticks;
@@ -168,7 +168,7 @@ int main(void)
 
   /* USER CODE BEGIN 3 */
 
-	  unit_test_events();
+	  //unit_test_events();
 
 	  //unit_test_eep_save();
 	  //unit_test_eep_read();
@@ -180,6 +180,9 @@ int main(void)
 	  //glcd_tests();
 
 	  //unit_test_sizes();
+
+
+	  App_Exec();
 
 	  if(app_data.timeout){
 		  app_data.timeout = 0;

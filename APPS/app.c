@@ -12,6 +12,37 @@
 APP_typedef app_data;
 
 
+EVENTS_typedef event_handle(void);
+void State_Machine(EVENTS_typedef event);
+void App_Exec(void);
+
+void print_on_screen(char* msg);
+
+void Enter_S_SET(void);
+void Enter_S_IDLE(void);
+void Enter_S_ENC(void);
+void Enter_S_VOL(void);
+void Enter_S_SLEEP(void);
+void Enter_S_BYPASS(void);
+void On_Enter(void);
+
+
+void Do_S_SET(void);
+void Do_S_IDLE(void);
+void Do_S_ENC(void);
+void Do_S_VOL(void);
+void Do_S_SLEEP(void);
+void Do_S_BYPASS(void);
+void Do(void);
+
+
+
+
+
+/*
+ *
+ *
+ * */
 EVENTS_typedef event_handle(void){
 	app_data.event = event_pop_node();
 
@@ -48,10 +79,11 @@ EVENTS_typedef event_handle(void){
 
 }
 
-void On_Enter(STATES_typedef state){}
-void Do(STATES_typedef state){}
 
-
+/*
+ *
+ *
+ * */
 void State_Machine(EVENTS_typedef event){
 	STATES_typedef cur_state = app_data.cur_state;
 	STATES_typedef next_state = cur_state;//app_data.cur_state;
@@ -67,23 +99,22 @@ void State_Machine(EVENTS_typedef event){
 			switch (event) {
 				case E_VOL:
 					next_state = S_VOL;
-
 					break;
+
 				case E_ENC:
 					next_state = S_ENC;
-
 					break;
+
 				case E_BTN_ENTER:
 					next_state = S_SET;
-
 					break;
+
 				case E_BTN_BYPASS:
 					next_state = S_BYPASS;
-
 					break;
+
 				case E_TIMEOUT:
 					next_state = S_SLEEP;
-
 					break;
 			}
 			break;
@@ -93,20 +124,18 @@ void State_Machine(EVENTS_typedef event){
 			switch (event) {
 				case E_VOL:
 					next_state = S_VOL;
-
 					break;
 
 				case E_BTN_ENTER:
 					next_state = S_SET;
-
 					break;
+
 				case E_BTN_BYPASS:
 					next_state = S_BYPASS;
-
 					break;
+
 				case E_TIMEOUT:
 					next_state = S_SET;
-
 					break;
 			}
 			break;
@@ -116,19 +145,18 @@ void State_Machine(EVENTS_typedef event){
 			switch (event) {
 				case E_ENC:
 					next_state = S_ENC;
-
 					break;
+
 				case E_BTN_ENTER:
 					next_state = S_SET;
-
 					break;
+
 				case E_BTN_BYPASS:
 					next_state = S_BYPASS;
-
 					break;
+
 				case E_TIMEOUT:
 					next_state = S_SET;
-
 					break;
 			}
 			break;
@@ -151,7 +179,6 @@ void State_Machine(EVENTS_typedef event){
 				case E_BTN_BYPASS:
 					next_state = S_BYPASS;
 					break;
-
 			}
 			break;
 
@@ -172,15 +199,24 @@ void State_Machine(EVENTS_typedef event){
         //OnExit(Current_State);		// Not used in this project
         app_data.pre_state = cur_state;
         app_data.cur_state = next_state;
-        On_Enter(next_state);
+        On_Enter();
 
     }
-    else if( event != E_MAX)
-    	{Do( cur_state );}
+    else if( event != E_MAX){
+    	app_data.pre_state = app_data.cur_state;
+    	Do();
+    }
+
 }
+
+/*
+ *
+ *
+ * */
 void App_Exec(void){
 
 	while ( app_data.cur_state != S_MAX ){
+		  HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
 
 		State_Machine(event_handle());
 
@@ -188,3 +224,118 @@ void App_Exec(void){
 	}
 
 }
+
+
+void print_on_screen(char* msg){
+	glcd_clear_buffer();
+	glcd_set_font_c(FC_Tahoma11x13_AlphaNumber);
+	glcd_draw_string(10, 20, msg);
+	glcd_write();
+	HAL_Delay(2000);
+}
+
+
+void Enter_S_SET(void){print_on_screen("Enter_S_SET");};
+void Enter_S_IDLE(void){print_on_screen("Enter_S_IDLE");};
+void Enter_S_ENC(void){print_on_screen("Enter_S_ENC");};
+void Enter_S_VOL(void){print_on_screen("Enter_S_VOL");};
+void Enter_S_SLEEP(void){print_on_screen("Enter_S_SLEEP");};
+void Enter_S_BYPASS(void){print_on_screen("Enter_S_BYPASS");};
+
+
+
+/*
+ *
+ *
+ * */
+void On_Enter(void){
+	STATES_typedef cur_state = app_data.cur_state;
+	//STATES_typedef pre_state = app_data.pre_state;
+
+	switch (cur_state) {
+		/*state set and update*/
+		case S_SET:
+			Enter_S_SET();
+			break;
+
+		/*state IDLE*/
+		case S_IDLE:
+			Enter_S_IDLE();
+			break;
+
+		/*state encoder, change programm*/
+		case S_ENC:
+			Enter_S_ENC();
+			break;
+
+		/*state VOL, show rect instead number front of volume*/
+		case S_VOL:
+			Enter_S_VOL();
+			break;
+
+		/*state sleep, show wav input*/
+		case S_SLEEP:
+			Enter_S_SLEEP();
+			break;
+
+		/*state Bypass, turn off FV1, spin-1001 */
+		case S_BYPASS:
+			Enter_S_BYPASS();
+			break;
+
+	}
+
+}
+
+
+
+void Do_S_SET(void){print_on_screen("Do_S_SET");};
+void Do_S_IDLE(void){print_on_screen("Do_S_IDLE");};
+void Do_S_ENC(void){print_on_screen("Do_S_ENC");};
+void Do_S_VOL(void){print_on_screen("Do_S_VOL");};
+void Do_S_SLEEP(void){print_on_screen("Do_S_SLEEP");};
+void Do_S_BYPASS(void){print_on_screen("Do_S_BYPASS");};
+
+/*
+ *
+ *
+ * */
+void Do(void){
+	STATES_typedef cur_state = app_data.cur_state;
+	//STATES_typedef pre_state = app_data.pre_state;
+
+	switch (cur_state) {
+		/*state set and update*/
+		case S_SET:
+			Do_S_SET();
+			break;
+
+		/*state IDLE*/
+		case S_IDLE:
+			Do_S_IDLE();
+			break;
+
+		/*state encoder, change programm*/
+		case S_ENC:
+			Do_S_ENC();
+			break;
+
+		/*state VOL, show rect instead number front of volume*/
+		case S_VOL:
+			Do_S_VOL();
+			break;
+
+		/*state sleep, show wav input*/
+		case S_SLEEP:
+			Do_S_SLEEP();
+			break;
+
+		/*state Bypass, turn off FV1, spin-1001 */
+		case S_BYPASS:
+			Do_S_BYPASS();
+			break;
+
+	}
+
+}
+
