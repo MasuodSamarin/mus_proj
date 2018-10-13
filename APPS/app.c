@@ -16,7 +16,7 @@ EVENTS_typedef event_handle(void);
 void State_Machine(EVENTS_typedef event);
 void App_Exec(void);
 
-void print_on_screen(char* msg);
+//void print_on_screen(char* msg);
 
 void Enter_S_SET(void);
 void Enter_S_IDLE(void);
@@ -38,6 +38,14 @@ void Do(void);
 
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wswitch"
+
+
+void app_test_init(void){
+	  unit_test_init();
+
+	app_data.cur_efx = *(efx_next_node());
+
+}
 
 
 /*
@@ -137,7 +145,7 @@ void State_Machine(EVENTS_typedef event){
 					break;
 
 				case E_TIMEOUT:
-					next_state = S_SET;
+					next_state = S_IDLE;
 					break;
 			}
 			break;
@@ -158,7 +166,7 @@ void State_Machine(EVENTS_typedef event){
 					break;
 
 				case E_TIMEOUT:
-					next_state = S_SET;
+					next_state = S_IDLE;
 					break;
 			}
 			break;
@@ -205,7 +213,7 @@ void State_Machine(EVENTS_typedef event){
         On_Enter();
 
     }
-    else if( event != E_MAX){
+    if( event != E_MAX){
     	//app_data.pre_state = cur_state;
     	Do();
     }

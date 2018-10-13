@@ -783,7 +783,7 @@ void unit_test_eep_save(void){
    	efx_node_t *node[number_of_node] = {0};
 	for (int var = 0; var < number_of_node; ++var) {
 		//efx_node_t *efx = efx_create_fv1_node((uint8_t)var, EFX_MODE_PRESET, (efx_fv1_preset)var);
-		node[var] = efx_create_fv1_node((uint8_t)var, EFX_MODE_PRESET, (efx_fv1_preset)var);
+		node[var] = efx_create_fv1_node((uint8_t)var+1, EFX_MODE_PRESET, (efx_fv1_preset)var, 0, 0, 0);
 	}
 
 	if(!EE_Writes_Efx(0, number_of_node, node))

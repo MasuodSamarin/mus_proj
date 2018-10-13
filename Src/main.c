@@ -145,7 +145,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   glcd_init();
-  unit_test_init();
+  app_test_init();
 
   event_init();
   enc_init();
@@ -180,8 +180,7 @@ int main(void)
 	  //glcd_tests();
 
 	  //unit_test_sizes();
-
-	  Enter_S_SET();
+	  Do_S_IDLE();
 	  //App_Exec();
 
 	  if(app_data.timeout){

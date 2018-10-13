@@ -81,7 +81,7 @@ typedef struct {
 
 extern APP_typedef app_data;
 
-
+void app_test_init(void);
 
 EVENTS_typedef event_handle(void);
 void State_Machine(EVENTS_typedef event);
@@ -109,7 +109,7 @@ void Do(void);
 
 
 /*just to test*/
-void app_draw_frame(void);
+//void app_draw_frame(void);
 
 
 

@@ -20,7 +20,7 @@
 
 efx_fv1_base_t *efx_preset_box[EFX_FV1_PRST_MAX] = {
 
-		&((efx_fv1_base_t){ .name = "DELAY", .comments = "PING_PONG",
+		&((efx_fv1_base_t){ .name = "MONO ECHO 1", .comments = "PING_PONG",
 								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_0, .eep = FV1_EEP_A})}),
 
 		&((efx_fv1_base_t){ .name = "DELAY", .comments = "ONE-SHOT",
