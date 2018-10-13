@@ -75,11 +75,37 @@ typedef struct {
 
 }APP_typedef;
 
+
+
+
+
 extern APP_typedef app_data;
 
 
 
+EVENTS_typedef event_handle(void);
+void State_Machine(EVENTS_typedef event);
 void App_Exec(void);
+
+//void print_on_screen(char* msg);
+
+void Enter_S_SET(void);
+void Enter_S_IDLE(void);
+void Enter_S_ENC(void);
+void Enter_S_VOL(void);
+void Enter_S_SLEEP(void);
+void Enter_S_BYPASS(void);
+void On_Enter(void);
+
+
+void Do_S_SET(void);
+void Do_S_IDLE(void);
+void Do_S_ENC(void);
+void Do_S_VOL(void);
+void Do_S_SLEEP(void);
+void Do_S_BYPASS(void);
+void Do(void);
+
 
 #endif /* APP_H_ */
 
