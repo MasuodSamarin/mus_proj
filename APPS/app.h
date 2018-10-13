@@ -107,6 +107,13 @@ void Do_S_BYPASS(void);
 void Do(void);
 
 
+
+/*just to test*/
+void app_draw_frame(void);
+
+
+
+
 #endif /* APP_H_ */
 
 

@@ -181,8 +181,8 @@ int main(void)
 
 	  //unit_test_sizes();
 
-
-	  App_Exec();
+	  Enter_S_SET();
+	  //App_Exec();
 
 	  if(app_data.timeout){
 		  app_data.timeout = 0;

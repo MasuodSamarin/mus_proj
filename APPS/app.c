@@ -89,6 +89,7 @@ void State_Machine(EVENTS_typedef event){
 	STATES_typedef cur_state = app_data.cur_state;
 	STATES_typedef next_state = cur_state;//app_data.cur_state;
 
+
 	switch (cur_state) {
 		/*state set and update*/
 		case S_SET:
@@ -194,6 +195,7 @@ void State_Machine(EVENTS_typedef event){
 
     // The code below executes every time the state machine function
     //is called, and runs after the transition into the next state
+	app_data.next_event = event;
 
     if (next_state != cur_state)	// NextState (NOT =) to Current_State
     {						//which should always be the case
@@ -204,7 +206,7 @@ void State_Machine(EVENTS_typedef event){
 
     }
     else if( event != E_MAX){
-    	app_data.pre_state = app_data.cur_state;
+    	//app_data.pre_state = cur_state;
     	Do();
     }
 
