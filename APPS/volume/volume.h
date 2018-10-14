@@ -39,6 +39,7 @@ extern "C" {
  * there's 3 of volumes
  * */
 typedef enum {
+	//VOL_NOT,
 	VOL_A,
 	VOL_B,
 	VOL_C,

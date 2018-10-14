@@ -52,10 +52,16 @@ typedef enum {
 	E_ENC,
 	E_BTN_ENTER,
 	E_BTN_BYPASS,
-	E_TIMEOUT,
+	E_TIMEOUT_SHORT,
+	E_TIMEOUT_LONG,
 	E_MAX
 }EVENTS_typedef;
 
+typedef enum{
+	TO_NOT,
+	TO_SHORT,
+	TO_LONG
+}TimeOut_typedef;
 
 
 typedef struct {
@@ -65,18 +71,27 @@ typedef struct {
 
 	EVENTS_typedef 	next_event;
 
-	int 			timeout;
+	uint16_t		timeout_long_time;
+	uint16_t		timeout_short_time;
+	TimeOut_typedef timeout;
+	uint32_t		ticks;
 
 	efx_node_t		cur_efx;
 	event_node_t	event;
 
+	vol_name_t		vol_last_name;
+	uint16_t		vol_last_val;
 
-
+	uint8_t			state_changed;
 
 }APP_typedef;
 
+#define TIMEOUT_LONG_TIME	5000
+#define TIMEOUT_SHORT_TIME	500
 
-
+void app_reset_timeout_timer(void);
+void app_set_timeout_short(uint16_t interval);
+void app_set_timeout_long(uint16_t interval);
 
 
 extern APP_typedef app_data;

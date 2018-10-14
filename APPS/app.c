@@ -12,6 +12,7 @@
 APP_typedef app_data;
 
 
+
 EVENTS_typedef event_handle(void);
 void State_Machine(EVENTS_typedef event);
 void App_Exec(void);
@@ -44,15 +45,28 @@ void app_test_init(void){
 	  unit_test_init();
 
 	app_data.cur_efx = *(efx_next_node());
+	app_set_timeout_long(TIMEOUT_LONG_TIME);
+	app_set_timeout_short(TIMEOUT_SHORT_TIME);
+}
+
+void app_reset_timeout_timer(void){
+	app_data.ticks = 0;
 
 }
 
+void app_set_timeout_short(uint16_t interval){
+	app_data.timeout_short_time = interval;
+}
+void app_set_timeout_long(uint16_t interval){
+	app_data.timeout_long_time = interval;
 
+}
 /*
  *
  *
  * */
 EVENTS_typedef event_handle(void){
+	//static int timeout_cnt = 0;
 	app_data.event = event_pop_node();
 
 	switch (app_data.event.type) {
@@ -60,6 +74,8 @@ EVENTS_typedef event_handle(void){
 			break;
 
 		case EVENT_BTN:
+			app_reset_timeout_timer();
+
 			switch (app_data.event.btn->name) {
 				case BTN_ENTER:
 					return E_BTN_ENTER;
@@ -71,17 +87,27 @@ EVENTS_typedef event_handle(void){
 			break;
 
 		case EVENT_ENC:
+			app_data.state_changed = 1;
+			app_reset_timeout_timer();
 			return E_ENC;
 			break;
 
 		case EVENT_VOL:
+			app_reset_timeout_timer();
+			app_data.vol_last_name = app_data.event.vol->name;
+			app_data.vol_last_val = app_data.event.vol->val_adc;
+			//app_data.cur_efx.volume[app_data.event.vol->name] = app_data.event.vol->val_adc;
 			return E_VOL;
 			break;
 	}
 
-	if(app_data.timeout){
-		app_data.timeout = 0;
-		return E_TIMEOUT;
+	if(app_data.timeout == TO_LONG){
+		app_data.timeout = TO_NOT;
+		return E_TIMEOUT_LONG;
+	}
+	if(app_data.timeout == TO_SHORT){
+		app_data.timeout = TO_NOT;
+		return E_TIMEOUT_SHORT;
 	}
 
 	return E_NOT;
@@ -123,7 +149,7 @@ void State_Machine(EVENTS_typedef event){
 					next_state = S_BYPASS;
 					break;
 
-				case E_TIMEOUT:
+				case E_TIMEOUT_LONG:
 					next_state = S_SLEEP;
 					break;
 			}
@@ -144,7 +170,7 @@ void State_Machine(EVENTS_typedef event){
 					next_state = S_BYPASS;
 					break;
 
-				case E_TIMEOUT:
+				case E_TIMEOUT_SHORT:
 					next_state = S_IDLE;
 					break;
 			}
@@ -165,7 +191,7 @@ void State_Machine(EVENTS_typedef event){
 					next_state = S_BYPASS;
 					break;
 
-				case E_TIMEOUT:
+				case E_TIMEOUT_SHORT:
 					next_state = S_IDLE;
 					break;
 			}
@@ -205,6 +231,7 @@ void State_Machine(EVENTS_typedef event){
     //is called, and runs after the transition into the next state
 	app_data.next_event = event;
 
+
     if (next_state != cur_state)	// NextState (NOT =) to Current_State
     {						//which should always be the case
         //OnExit(Current_State);		// Not used in this project
@@ -214,7 +241,7 @@ void State_Machine(EVENTS_typedef event){
 
     }
     if( event != E_MAX){
-    	//app_data.pre_state = cur_state;
+    	app_data.pre_state = cur_state;
     	Do();
     }
 
@@ -227,7 +254,7 @@ void State_Machine(EVENTS_typedef event){
 void App_Exec(void){
 
 	while ( app_data.cur_state != S_MAX ){
-		  HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
+		  //HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
 
 		State_Machine(event_handle());
 

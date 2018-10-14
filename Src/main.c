@@ -82,13 +82,23 @@ void SystemClock_Config(void);
 #define time_btn	10
 #define time_enc	5
 #define time_vol	2
-#define time_out	1000
+#define time_out_short	1000
+#define time_out_long	2000
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
-	static uint32_t ticks;
-
-	//if(htim == &htim2){
+		static uint32_t ticks;
 		++ticks;
+	//if(htim == &htim2){
+		//++((app_data.ticks));
+		app_data.ticks = app_data.ticks + 1;
+
+		if(0 == (app_data.ticks%(app_data.timeout_short_time)))
+			app_data.timeout = TO_SHORT;
+		else if(app_data.ticks > app_data.timeout_long_time){
+			app_data.timeout = TO_LONG;
+			app_data.ticks = 0;
+		}else
+			app_data.timeout = TO_NOT;
 
 		if(!((ticks)%time_btn)){
 			btn_process();
@@ -99,10 +109,12 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 		if(!((ticks)%time_enc)){
 			enc_process();
 		}
-		if(!((ticks)%time_out)){
-			app_data.timeout = 1;
+		/*if(!((ticks)%time_out_long)){
+			app_data.timeout_long = 1;
 		}
-
+		if(!((ticks)%time_out_short)){
+			app_data.timeout_short = 1;
+		}*/
 	//}
 
 }
@@ -180,13 +192,13 @@ int main(void)
 	  //glcd_tests();
 
 	  //unit_test_sizes();
-	  Do_S_IDLE();
-	  //App_Exec();
+	  //Do_S_IDLE();
+	  App_Exec();
 
-	  if(app_data.timeout){
-		  app_data.timeout = 0;
+	 /* if(event_handle() == E_TIMEOUT_LONG){
+		  //app_data.timeout = TO_NOT;
 		  HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
-	  }
+	  }*/
 
 
   }
