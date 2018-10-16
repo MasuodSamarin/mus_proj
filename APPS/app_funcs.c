@@ -9,6 +9,14 @@
 #include "app.h"
 char str[20];
 
+/*
+ * adc to percent calculator:
+ * 	4096	100
+ * 	ADC		 X = (ADC * 100) / 4096
+ * 	so:	X = ADC * 0.024414062
+ * 	*/
+#define ADC_TO_PERSENT(ADC)	(ADC * 0.024414062 + 1)
+
 void print_on_screen(char* msg){
 	glcd_clear_buffer();
 	glcd_set_font_c(FC_Tahoma11x13_AlphaNumber);
@@ -19,15 +27,13 @@ void print_on_screen(char* msg){
 
 
 static void app_draw_frame(void){
-	int x = 2;
-	int y = 3;
-	int w = 126;
-	int h = 61;
-	int tx = 2;
-	int ty = 3;
+	int x = 0;
+	int y = 0;
+	int w = 127;
+	int h = 63;
 
 	glcd_clear_buffer();
-	glcd_draw_rect_thick(x, y, w, h, tx, ty, BLACK);
+	glcd_draw_rect(x, y, w, h,BLACK);
 }
 
 static void app_add_new_efx_to_ring(APP_typedef *data){
@@ -54,49 +60,77 @@ static void app_update_efx(APP_typedef *data){
 	efx_set_vols(&(data->cur_efx), vol);
 
 }
-static void app_print_idle(APP_typedef *data){
+
+static void app_print_efx_name_number_big(APP_typedef *data){
 	char *name = (char*)data->cur_efx.fv1->name;
 	int number = data->cur_efx.number;
 
+	//print the name of efx
+	glcd_set_font_c(FC_Tahoma11x13_AlphaNumber);
+	glcd_draw_string(7, 5, name);
+
+	//print the number of efx and inert it
+	glcd_set_font_c(FC_Liberation_Sans15x21_Numbers);
+	sprintf(str, "%.2d", number);
+	glcd_draw_string(80, 33, str);
+	glcd_invert_area(75, 31, 40, 26);
+
+}
+
+static void app_print_efx_name_number_small(APP_typedef *data){
+	char *name = (char*)data->cur_efx.fv1->name;
+	int number = data->cur_efx.number;
+
+	//print the name of efx
+	glcd_set_font_c(FC_Tahoma11x13_AlphaNumber);
+	glcd_draw_string(18, 9, name);
+
+	//print the number of efx and inert it
+	glcd_set_font_c(FC_Liberation_Sans15x21_Numbers);
+	sprintf(str, "%.2d", number);
+	glcd_draw_string(80, 4, str);
+	glcd_invert_area(78, 4, 33, 22);
+
+}
+
+static void app_print_efx_vols(APP_typedef *data){
 	uint16_t vol[VOL_MAX];
-	vol[VOL_A] = data->cur_efx.volume[VOL_A];
-	vol[VOL_B] = data->cur_efx.volume[VOL_B];
-	vol[VOL_C] = data->cur_efx.volume[VOL_C];
+	vol[VOL_A] = ADC_TO_PERSENT(data->cur_efx.volume[VOL_A]);
+	vol[VOL_B] = ADC_TO_PERSENT(data->cur_efx.volume[VOL_B]);
+	vol[VOL_C] = ADC_TO_PERSENT(data->cur_efx.volume[VOL_C]);
+
+	//print the volumes in number
+	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
+	glcd_draw_string(8,30, "REPEAT");
+	sprintf(str, "%.2d", vol[VOL_A]);
+	glcd_draw_string(55, 30, str);
+
+	glcd_draw_string(8,40, "TIME");
+	sprintf(str, "%.2d", vol[VOL_B]);
+	glcd_draw_string(55, 40, str);
+
+	glcd_draw_string(8,50, "REVERB");
+	sprintf(str, "%.2d", vol[VOL_C]);
+	glcd_draw_string(55, 50, str);
+
+
+}
+static void app_print_idle(APP_typedef *data){
+
 
 	//clear and draw border
 	app_draw_frame();
 
-	//print the name of efx
-	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
-	glcd_draw_string(10,15, name);
+	//print efx names and number on the screen
+	app_print_efx_name_number_big(data);
 
-	//print the number of efx and inert it
-	glcd_set_font_c(FC_Liberation_Sans11x14_Numbers);
-	sprintf(str, "%d", number);
-	glcd_draw_string(83, 12, str);
-	glcd_invert_area(80, 10, 35, 20);
-
-	//print the volumes in number
-	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
-	glcd_draw_string(10,30, "volA");
-	sprintf(str, "%d", vol[VOL_A]);
-	glcd_draw_string(40, 30, str);
-
-	glcd_draw_string(10,40, "volB");
-	sprintf(str, "%d", vol[VOL_B]);
-	glcd_draw_string(40, 40, str);
-
-	glcd_draw_string(10,50, "volC");
-	sprintf(str, "%d", vol[VOL_C]);
-	glcd_draw_string(40, 50, str);
+	app_print_efx_vols(data);
 
 	glcd_write();
 
 }
 
 static void app_print_vol(APP_typedef *data){
-	char *name = (char*)data->cur_efx.fv1->name;
-		int number = data->cur_efx.number;
 
 		/*uint16_t vol[VOL_MAX];
 		vol[VOL_A] = app_data.cur_efx.volume[VOL_A];
@@ -105,18 +139,9 @@ static void app_print_vol(APP_typedef *data){
 	*/
 	//clear and draw border
 		app_draw_frame();
+		app_print_efx_name_number_small(data);
 
-		//print the name of efx
-		//Change font
-		glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
-		glcd_draw_string(10,15, name);
-
-		//print the number of efx and inert it
-		//Change font
-		glcd_set_font_c(FC_Liberation_Sans11x14_Numbers);
-		sprintf(str, "%d", number);
-		glcd_draw_string(88, 10, str);
-		glcd_invert_area(87, 10, 30, 18);
+		app_print_efx_vols(data);
 
 		//Change font
 		glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);

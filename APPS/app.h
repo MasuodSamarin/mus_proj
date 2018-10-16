@@ -93,8 +93,8 @@ typedef struct {
 
 }APP_typedef;
 
-#define TIMEOUT_LONG_TIME	5000
-#define TIMEOUT_SHORT_TIME	100
+#define TIMEOUT_LONG_TIME	3000
+#define TIMEOUT_SHORT_TIME	30
 
 void app_reset_timeout_timer(void);
 void app_set_timeout_short(uint16_t interval);

@@ -82,8 +82,8 @@ void SystemClock_Config(void);
 #define time_btn	10
 #define time_enc	5
 #define time_vol	1
-#define time_out_short	500
-#define time_out_long	5000
+//#define time_out_short	500
+//#define time_out_long	5000
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 		static uint32_t ticks;
@@ -159,7 +159,6 @@ int main(void)
   glcd_init();
   app_test_init();
 
-  event_init();
   enc_init();
   vol_init();
   btn_init();
@@ -194,6 +193,7 @@ int main(void)
 	  //unit_test_sizes();
 	  //Do_S_IDLE();
 	  App_Exec();
+
 
 	 /* if(event_handle() == E_TIMEOUT_LONG){
 		  //app_data.timeout = TO_NOT;

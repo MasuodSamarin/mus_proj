@@ -47,6 +47,10 @@ void app_test_init(void){
 	app_data.cur_efx = *(efx_next_node());
 	app_set_timeout_long(TIMEOUT_LONG_TIME);
 	app_set_timeout_short(TIMEOUT_SHORT_TIME);
+
+	///come from main.c
+	  event_init();
+
 }
 
 void app_reset_timeout_timer(void){
@@ -68,6 +72,18 @@ void app_set_timeout_long(uint16_t interval){
 EVENTS_typedef event_handle(void){
 	//static int timeout_cnt = 0;
 	app_data.event = event_pop_node();
+
+
+
+	if(app_data.timeout == TO_LONG){
+		app_data.timeout = TO_NOT;
+		return E_TIMEOUT_LONG;
+	}
+	if(app_data.timeout == TO_SHORT){
+		app_data.timeout = TO_NOT;
+		return E_TIMEOUT_SHORT;
+	}
+
 
 	switch (app_data.event.type) {
 		case EVENT_NOT:
@@ -101,19 +117,13 @@ EVENTS_typedef event_handle(void){
 			break;
 	}
 
-	if(app_data.timeout == TO_LONG){
-		app_data.timeout = TO_NOT;
-		return E_TIMEOUT_LONG;
-	}
-	if(app_data.timeout == TO_SHORT){
-		app_data.timeout = TO_NOT;
-		return E_TIMEOUT_SHORT;
-	}
 
 	return E_NOT;
 
 }
 
+
+#define STATE_SLEEP_ENABLE	0
 
 /*
  *
@@ -148,10 +158,11 @@ void State_Machine(EVENTS_typedef event){
 				case E_BTN_BYPASS:
 					next_state = S_BYPASS;
 					break;
-
+#if STATE_SLEEP_ENABLE
 				case E_TIMEOUT_LONG:
 					next_state = S_SLEEP;
 					break;
+#endif
 			}
 			break;
 
@@ -197,6 +208,7 @@ void State_Machine(EVENTS_typedef event){
 			}
 			break;
 
+#if STATE_SLEEP_ENABLE
 		/*state sleep, show wav input*/
 		case S_SLEEP:
 			switch (event) {
@@ -217,6 +229,7 @@ void State_Machine(EVENTS_typedef event){
 					break;
 			}
 			break;
+#endif
 
 		/*state Bypass, turn off FV1, spin-1001 */
 		case S_BYPASS:

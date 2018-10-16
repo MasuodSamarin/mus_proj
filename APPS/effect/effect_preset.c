@@ -23,49 +23,49 @@ efx_fv1_base_t *efx_preset_box[EFX_FV1_PRST_MAX] = {
 		&((efx_fv1_base_t){ .name = "MONO ECHO 1", .comments = "PING_PONG",
 								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_0, .eep = FV1_EEP_A})}),
 
-		&((efx_fv1_base_t){ .name = "DELAY", .comments = "ONE-SHOT",
+		&((efx_fv1_base_t){ .name = "ABCDE", .comments = "ONE-SHOT",
 								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_1, .eep = FV1_EEP_A})}),
 
-		&((efx_fv1_base_t){ .name = "REVERB", .comments = "MONO",
+		&((efx_fv1_base_t){ .name = "FGHIJ", .comments = "MONO",
 								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_2, .eep = FV1_EEP_A})}),
 
-		&((efx_fv1_base_t){ .name = "REVERB", .comments = "STEREO",
+		&((efx_fv1_base_t){ .name = "KLMNO", .comments = "STEREO",
 								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_3, .eep = FV1_EEP_A})}),
 
-		&((efx_fv1_base_t){ .name = "REVERB", .comments = "PLATE1",
+		&((efx_fv1_base_t){ .name = "PQRST", .comments = "PLATE1",
 								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_4, .eep = FV1_EEP_A})}),
 
-		&((efx_fv1_base_t){ .name = "REVERB", .comments = "PLATE2",
+		&((efx_fv1_base_t){ .name = "UVWXY", .comments = "PLATE2",
 								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_5, .eep = FV1_EEP_A})}),
 
-		&((efx_fv1_base_t){ .name = "CHOROUS", .comments = "SPRING1",
+		&((efx_fv1_base_t){ .name = "Z0123", .comments = "SPRING1",
 								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_6, .eep = FV1_EEP_A})}),
 
-		&((efx_fv1_base_t){ .name = "CHOROUS", .comments = "SPRING2",
+		&((efx_fv1_base_t){ .name = "45678", .comments = "SPRING2",
 								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_7, .eep = FV1_EEP_A})}),
 
-		&((efx_fv1_base_t){ .name = "DLY-CHR", .comments = "POLY1",
+		&((efx_fv1_base_t){ .name = "90ABC", .comments = "POLY1",
 								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_0, .eep = FV1_EEP_B})}),
 
-		&((efx_fv1_base_t){ .name = "DLY-CHR", .comments = "POLY2",
+		&((efx_fv1_base_t){ .name = "VOICE RVB", .comments = "POLY2",
 								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_1, .eep = FV1_EEP_B})}),
 
-		&((efx_fv1_base_t){ .name = "RVB-CHR", .comments = "DRY-WET1",
+		&((efx_fv1_base_t){ .name = "HALL REVERB", .comments = "DRY-WET1",
 								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_2, .eep = FV1_EEP_B})}),
 
-		&((efx_fv1_base_t){ .name = "RVB-CHR", .comments = "DRY-WET1",
+		&((efx_fv1_base_t){ .name = "RVB FLNG", .comments = "DRY-WET1",
 								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_3, .eep = FV1_EEP_B})}),
 
-		&((efx_fv1_base_t){ .name = "DLY-RVB", .comments = "PLT-PLY1",
+		&((efx_fv1_base_t){ .name = "ECHO FLANG", .comments = "PLT-PLY1",
 								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_4, .eep = FV1_EEP_B})}),
 
-		&((efx_fv1_base_t){ .name = "DLY-RVB", .comments = "PLT-PLY2",
+		&((efx_fv1_base_t){ .name = "VOICE FLANG", .comments = "PLT-PLY2",
 								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_5, .eep = FV1_EEP_B})}),
 
-		&((efx_fv1_base_t){ .name = "DELAY", .comments = "POLY1",
+		&((efx_fv1_base_t){ .name = "VOICE PLATE", .comments = "POLY1",
 								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_6, .eep = FV1_EEP_B})}),
 
-		&((efx_fv1_base_t){ .name = "DELAY", .comments = "POLY2",
+		&((efx_fv1_base_t){ .name = "VOICE CHUOROS", .comments = "POLY2",
 								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_7, .eep = FV1_EEP_B})}),
 
 };
