@@ -111,6 +111,8 @@ void efx_delete_isd_node(efx_node_t *efx){
 void efx_push_effect(efx_node_t *efx){
 
 	list_push_back(efx_list, (void*)efx);
+	list_iterator_set_current(&efx_list_iter);
+	// list_
 };
 
 efx_node_t* efx_next_node(void){

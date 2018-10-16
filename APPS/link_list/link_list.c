@@ -311,6 +311,14 @@ node_t* list_iterator_prev(list_iterator_t* it)
 }
 
 /**
+ * @brief TODO: write some usefull info
+ * NULL otherwise.
+ */
+node_t* list_iterator_set_current(list_iterator_t* it)
+{
+  return (it->current = it->list->tail);
+}
+/**
  * @brief Removes the given `node` from the `list`
  * and frees the memory allocated by the `node`.
  * @return a positive value if the given `node` has

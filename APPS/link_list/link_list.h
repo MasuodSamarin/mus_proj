@@ -198,6 +198,12 @@ extern "C" {
   node_t* list_iterator_prev(list_iterator_t* it);
   
   /**
+     * @brief TODO: write some usefull info
+     * NULL otherwise.
+     */
+  node_t* list_iterator_set_current(list_iterator_t* it);
+
+  /**
    * @brief Removes the current node from the list.
    * @return a positive value if the removal succeeded,
    * zero otherwise.

@@ -10,6 +10,7 @@
 
 
 APP_typedef app_data;
+#define STATE_SLEEP_ENABLE	0
 
 
 
@@ -123,7 +124,6 @@ EVENTS_typedef event_handle(void){
 }
 
 
-#define STATE_SLEEP_ENABLE	0
 
 /*
  *
@@ -132,12 +132,23 @@ EVENTS_typedef event_handle(void){
 void State_Machine(EVENTS_typedef event){
 	STATES_typedef cur_state = app_data.cur_state;
 	STATES_typedef next_state = cur_state;//app_data.cur_state;
+	static int s_set_cnt = 0;
 
 
 	switch (cur_state) {
-		/*state set and update*/
+		/*state set and update
+		 * its run 10 times then goes stright to the IDLE state
+		 * */
 		case S_SET:
-			next_state = S_IDLE;
+			if(s_set_cnt++ < 10){
+				next_state = S_SET;
+				//app_data.state_changed = 1;
+			}
+			else{
+				s_set_cnt = 0;
+				next_state = S_IDLE;
+
+			}
 			break;
 
 		/*state IDLE*/
@@ -269,14 +280,22 @@ void App_Exec(void){
 	while ( app_data.cur_state != S_MAX ){
 		  //HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
 
+		/*
+		 * run button handler*/
 		if(app_data.run_btn_process == 1){
 			app_data.run_btn_process = 0;
 			btn_process();
 		}
+		/*
+		 * run encoder handler
+		 * */
 		if(app_data.run_enc_process == 1){
 			app_data.run_enc_process = 0;
 			enc_process();
 		}
+		/*
+		 * run volume handler
+		 * */
 		if(app_data.run_vol_process == 1){
 			app_data.run_vol_process = 0;
 			vol_process();

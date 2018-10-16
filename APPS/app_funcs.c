@@ -17,7 +17,7 @@ char str[20];
  * 	*/
 #define ADC_TO_PERSENT(ADC)	(ADC * 0.024414062 + 1)
 
-void print_on_screen(char* msg){
+void app_print_on_screen(char* msg){
 	glcd_clear_buffer();
 	glcd_set_font_c(FC_Tahoma11x13_AlphaNumber);
 	glcd_draw_string(10, 20, msg);
@@ -26,15 +26,20 @@ void print_on_screen(char* msg){
 }
 
 
-static void app_draw_frame(void){
+static void app_draw_empty_frame(void){
 	int x = 0;
 	int y = 0;
-	int w = 127;
-	int h = 63;
+	int w = 128;
+	int h = 64;
 
 	glcd_clear_buffer();
 	glcd_draw_rect(x, y, w, h,BLACK);
 }
+
+static void app_update_efx(APP_typedef *data, efx_node_t *efx){
+	data->cur_efx = *efx;
+}
+
 
 static void app_add_new_efx_to_ring(APP_typedef *data){
 
@@ -48,9 +53,11 @@ static void app_add_new_efx_to_ring(APP_typedef *data){
 
 	efx_node_t *efx = efx_create_fv1_node(number, EFX_MODE_USER, pst, vol[0], vol[1], vol[2]);
 	efx_push_effect(efx);
+	app_update_efx(&app_data, efx);
+	enc_set_val(app_data.cur_efx.number+1);
 }
 
-static void app_update_efx(APP_typedef *data){
+static void app_update_preset_efx(APP_typedef *data){
 
 
 	uint16_t vol[VOL_MAX];
@@ -73,7 +80,7 @@ static void app_print_efx_name_number_big(APP_typedef *data){
 	glcd_set_font_c(FC_Liberation_Sans15x21_Numbers);
 	sprintf(str, "%.2d", number);
 	glcd_draw_string(80, 33, str);
-	glcd_invert_area(75, 31, 40, 26);
+	//glcd_invert_area(75, 31, 40, 26);
 
 }
 
@@ -91,6 +98,13 @@ static void app_print_efx_name_number_small(APP_typedef *data){
 	glcd_draw_string(80, 4, str);
 	glcd_invert_area(78, 4, 33, 22);
 
+}
+
+static void app_print_save_msg(APP_typedef *data){
+
+	glcd_set_font_c(FC_Tekton_Pro_Ext27x28_AlphaNumber);
+	glcd_draw_string(25, 20, "SAVE");
+	glcd_invert_area(23, 17, 87, 26);
 }
 
 static void app_print_efx_vols(APP_typedef *data){
@@ -119,7 +133,7 @@ static void app_print_idle(APP_typedef *data){
 
 
 	//clear and draw border
-	app_draw_frame();
+	app_draw_empty_frame();
 
 	//print efx names and number on the screen
 	app_print_efx_name_number_big(data);
@@ -138,7 +152,7 @@ static void app_print_vol(APP_typedef *data){
 		vol[VOL_C] = app_data.cur_efx.volume[VOL_C];
 	*/
 	//clear and draw border
-		app_draw_frame();
+		app_draw_empty_frame();
 		app_print_efx_name_number_small(data);
 
 		app_print_efx_vols(data);
@@ -183,7 +197,7 @@ static void app_print_vol(APP_typedef *data){
 
 static void app_print_enc(APP_typedef *data){
 	//static efx_node_t *node = NULL;
-	  HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
+	 // HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
 
 	if (data->event.enc->dir == ENC_DIR_CCW)
 		data->node_tmp = efx_next_node();
@@ -224,6 +238,39 @@ void Enter_S_BYPASS(void){
 
 void Do_S_SET(void){
 
+	switch (app_data.next_event) {
+		case E_BTN_ENTER:
+			switch (app_data.cur_efx.mode) {
+				case EFX_MODE_USER:
+					/*
+					 * update the USER PRESET VOLUMES
+					 * */
+					app_update_preset_efx(&app_data);
+					break;
+
+				case EFX_MODE_PRESET:
+					/* add new PRESET and add it to the rig and set it
+					 * */
+					app_add_new_efx_to_ring(&app_data);
+					break;
+			}
+			break;
+
+		case E_NOT:
+				//clear and draw border
+				app_draw_empty_frame();
+				app_print_save_msg(&app_data);
+				glcd_write();
+
+			break;
+
+		default:
+			break;
+
+	}
+
+#if 0
+
 		switch (app_data.pre_state) {
 			case S_ENC:
 
@@ -233,21 +280,25 @@ void Do_S_SET(void){
 				/*change the */
 				if(app_data.cur_efx.mode == EFX_MODE_PRESET){
 					/* make a new efx and save it and set it. EFX_MODE_PRESET*/
-					//app_add_new_efx_to_ring(app_data);
+					app_add_new_efx_to_ring(&app_data);
 
 				}else{
 					/* update the efx and set it. EFX_MODE_USER*/
-					//app_update_efx(app_data);
+					app_update_preset_efx(&app_data);
 				}
 				break;
-
+#if STATE_SLEEP_ENABLE
 			case S_SLEEP:
 				/* recover from sleep or screen saver, do not change fv1 state*/
 
 				break;
+#endif
+
 			default:
 				break;
 		}
+#endif
+
 }
 
 void Do_S_IDLE(void){
@@ -268,11 +319,11 @@ void Do_S_VOL(void){
 }
 
 void Do_S_SLEEP(void){
-	print_on_screen("Do_S_SLEEP");
+	app_print_on_screen("Do_S_SLEEP");
 }
 void Do_S_BYPASS(void){
 	//Do_S_IDLE();
-	print_on_screen("Do_S_BYPASS");
+	app_print_on_screen("Do_S_BYPASS");
 }
 
 
