@@ -302,7 +302,6 @@ void Do_S_SET(void){
 }
 
 void Do_S_IDLE(void){
-
 	app_print_idle(&app_data);
 }
 void Do_S_ENC(void){
