@@ -237,7 +237,7 @@ void State_Machine(EVENTS_typedef event){
         //OnExit(Current_State);		// Not used in this project
         app_data.pre_state = cur_state;
         app_data.cur_state = next_state;
-        On_Enter();
+        //On_Enter();
 
     }
     if( event != E_MAX){
@@ -255,6 +255,20 @@ void App_Exec(void){
 
 	while ( app_data.cur_state != S_MAX ){
 		  //HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
+
+		if(app_data.run_btn_process == 1){
+			app_data.run_btn_process = 0;
+			btn_process();
+		}
+		if(app_data.run_enc_process == 1){
+			app_data.run_enc_process = 0;
+			enc_process();
+		}
+		if(app_data.run_vol_process == 1){
+			app_data.run_vol_process = 0;
+			vol_process();
+
+		}
 
 		State_Machine(event_handle());
 

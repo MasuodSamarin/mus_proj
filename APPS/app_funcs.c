@@ -5,7 +5,7 @@
  *      Author: sam
  */
 
-
+#include "string.h"
 #include "app.h"
 char str[20];
 
@@ -30,38 +30,38 @@ static void app_draw_frame(void){
 	glcd_draw_rect_thick(x, y, w, h, tx, ty, BLACK);
 }
 
-static void app_add_new_efx_to_ring(APP_typedef data){
+static void app_add_new_efx_to_ring(APP_typedef *data){
 
 	size_t number = efx_get_list_size() + 1;
-	efx_fv1_preset pst = (efx_fv1_preset)((uint8_t)data.cur_efx.number-1);
+	efx_fv1_preset pst = (efx_fv1_preset)((uint8_t)data->cur_efx.number-1);
 	uint16_t vol[VOL_MAX];
-	vol[VOL_A] = data.cur_efx.volume[VOL_A];
-	vol[VOL_B] = data.cur_efx.volume[VOL_B];
-	vol[VOL_C] = data.cur_efx.volume[VOL_C];
+	vol[VOL_A] = data->cur_efx.volume[VOL_A];
+	vol[VOL_B] = data->cur_efx.volume[VOL_B];
+	vol[VOL_C] = data->cur_efx.volume[VOL_C];
 
 
 	efx_node_t *efx = efx_create_fv1_node(number, EFX_MODE_USER, pst, vol[0], vol[1], vol[2]);
 	efx_push_effect(efx);
 }
 
-static void app_update_efx(APP_typedef data){
+static void app_update_efx(APP_typedef *data){
 
 
 	uint16_t vol[VOL_MAX];
-	vol[VOL_A] = data.cur_efx.volume[VOL_A];
-	vol[VOL_B] = data.cur_efx.volume[VOL_B];
-	vol[VOL_C] = data.cur_efx.volume[VOL_C];
-	efx_set_vols(&(data.cur_efx), vol);
+	vol[VOL_A] = data->cur_efx.volume[VOL_A];
+	vol[VOL_B] = data->cur_efx.volume[VOL_B];
+	vol[VOL_C] = data->cur_efx.volume[VOL_C];
+	efx_set_vols(&(data->cur_efx), vol);
 
 }
-static void app_print_idle(APP_typedef data){
-	char *name = (char*)data.cur_efx.fv1->name;
-	int number = data.cur_efx.number;
+static void app_print_idle(APP_typedef *data){
+	char *name = (char*)data->cur_efx.fv1->name;
+	int number = data->cur_efx.number;
 
 	uint16_t vol[VOL_MAX];
-	vol[VOL_A] = app_data.cur_efx.volume[VOL_A];
-	vol[VOL_B] = app_data.cur_efx.volume[VOL_B];
-	vol[VOL_C] = app_data.cur_efx.volume[VOL_C];
+	vol[VOL_A] = data->cur_efx.volume[VOL_A];
+	vol[VOL_B] = data->cur_efx.volume[VOL_B];
+	vol[VOL_C] = data->cur_efx.volume[VOL_C];
 
 	//clear and draw border
 	app_draw_frame();
@@ -94,9 +94,9 @@ static void app_print_idle(APP_typedef data){
 
 }
 
-static void app_print_vol(APP_typedef data){
-	char *name = (char*)app_data.cur_efx.fv1->name;
-		int number = app_data.cur_efx.number;
+static void app_print_vol(APP_typedef *data){
+	char *name = (char*)data->cur_efx.fv1->name;
+		int number = data->cur_efx.number;
 
 		/*uint16_t vol[VOL_MAX];
 		vol[VOL_A] = app_data.cur_efx.volume[VOL_A];
@@ -122,32 +122,32 @@ static void app_print_vol(APP_typedef data){
 		glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
 
 		glcd_draw_string(10,30, "volA");
-		if(app_data.vol_last_name == VOL_A ){
-			app_data.vol_last_name = VOL_MAX;
-			app_data.cur_efx.volume[VOL_A] = app_data.vol_last_val;
-			glcd_bar_graph_horizontal(40, 30, 70, 7, (app_data.vol_last_val >> 4));
+		if(data->vol_last_name == VOL_A ){
+			//app_data.vol_last_name = VOL_MAX;
+			data->cur_efx.volume[VOL_A] = data->vol_last_val;
+			glcd_bar_graph_horizontal(40, 30, 70, 7, (data->vol_last_val >> 4));
 		}else{
-			sprintf(str, "%d", app_data.cur_efx.volume[VOL_A]>>6);//*vol_factor_persent);
+			sprintf(str, "%d", data->cur_efx.volume[VOL_A]>>6);//*vol_factor_persent);
 			glcd_draw_string(40, 30, str);
 		}
 
 		glcd_draw_string(10,40, "volB");
-		if(app_data.vol_last_name == VOL_B){
-			app_data.vol_last_name = VOL_MAX;
-			app_data.cur_efx.volume[VOL_B] = app_data.vol_last_val;
-			glcd_bar_graph_horizontal(40, 40, 70, 7, (app_data.vol_last_val >> 4));
+		if(data->vol_last_name == VOL_B){
+			//app_data.vol_last_name = VOL_MAX;
+			data->cur_efx.volume[VOL_B] = data->vol_last_val;
+			glcd_bar_graph_horizontal(40, 40, 70, 7, (data->vol_last_val >> 4));
 		}else{
-			sprintf(str, "%d", app_data.cur_efx.volume[VOL_B]>>6);//*vol_factor_persent);
+			sprintf(str, "%d", data->cur_efx.volume[VOL_B]>>6);//*vol_factor_persent);
 			glcd_draw_string(40, 40, str);
 		}
 
 		glcd_draw_string(10,50, "volC");
-		if(app_data.vol_last_name == VOL_C){
-			app_data.vol_last_name = VOL_MAX;
-			app_data.cur_efx.volume[VOL_C] = app_data.vol_last_val;
-			glcd_bar_graph_horizontal(40, 50, 70, 7, (app_data.vol_last_val >> 4));
+		if(data->vol_last_name == VOL_C){
+			//app_data.vol_last_name = VOL_MAX;
+			data->cur_efx.volume[VOL_C] = data->vol_last_val;
+			glcd_bar_graph_horizontal(40, 50, 70, 7, (data->vol_last_val >> 4));
 		}else{
-			sprintf(str, "%d", app_data.cur_efx.volume[VOL_C]>>6);//*vol_factor_persent);
+			sprintf(str, "%d", data->cur_efx.volume[VOL_C]>>6);//*vol_factor_persent);
 			glcd_draw_string(40, 50, str);
 		}
 
@@ -156,24 +156,25 @@ static void app_print_vol(APP_typedef data){
 }
 
 
-static void app_print_enc(APP_typedef data){
-	static efx_node_t *node = NULL;
+static void app_print_enc(APP_typedef *data){
+	//static efx_node_t *node = NULL;
 	  HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
 
-	if (data.event.enc->dir == ENC_DIR_CCW)
-		node = efx_next_node();
+	if (data->event.enc->dir == ENC_DIR_CCW)
+		data->node_tmp = efx_next_node();
 
-	else if (data.event.enc->dir == ENC_DIR_CW)
-		node = efx_prev_node();
+	else if (data->event.enc->dir == ENC_DIR_CW)
+		data->node_tmp = efx_prev_node();
 
-	if (node == NULL)
+	if (data->node_tmp == NULL)
 			return;
 
-	data.cur_efx = *node;
+	//strcpy(&(data.cur_efx), (data.node_tmp));
+	data->cur_efx = *(data->node_tmp);
 	app_print_idle(data);
 
 }
-
+/*
 void Enter_S_SET(void){
 	//print_on_screen("Enter_S_IDLE");
 }
@@ -193,14 +194,16 @@ void Enter_S_SLEEP(void){
 void Enter_S_BYPASS(void){
 	//print_on_screen("Enter_S_BYPASS");
 }
-
+*/
 
 
 void Do_S_SET(void){
 
 		switch (app_data.pre_state) {
-			case S_IDLE:
 			case S_ENC:
+
+				break;
+			case S_IDLE:
 			case S_VOL:
 				/*change the */
 				if(app_data.cur_efx.mode == EFX_MODE_PRESET){
@@ -224,20 +227,21 @@ void Do_S_SET(void){
 
 void Do_S_IDLE(void){
 
-	app_print_idle(app_data);
+	app_print_idle(&app_data);
 }
 void Do_S_ENC(void){
 	if(app_data.state_changed == 1){
 		app_data.state_changed = 0;
-		app_print_enc(app_data);
+		app_print_enc(&app_data);
 
 	}
 	//print_on_screen("Do_S_ENC");
 }
 //#define vol_factor_persent	((float)((float)100/(float)4096))
 void Do_S_VOL(void){
-	app_print_vol(app_data);
+	app_print_vol(&app_data);
 }
+
 void Do_S_SLEEP(void){
 	print_on_screen("Do_S_SLEEP");
 }

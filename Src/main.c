@@ -81,9 +81,9 @@ void SystemClock_Config(void);
  * */
 #define time_btn	10
 #define time_enc	5
-#define time_vol	2
-#define time_out_short	1000
-#define time_out_long	2000
+#define time_vol	1
+#define time_out_short	500
+#define time_out_long	5000
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 		static uint32_t ticks;
@@ -101,13 +101,13 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 			app_data.timeout = TO_NOT;
 
 		if(!((ticks)%time_btn)){
-			btn_process();
+			app_data.run_btn_process = 1;
 		}
 		if(!((ticks)%time_vol)){
-			vol_process();
+			app_data.run_vol_process = 1;
 		}
 		if(!((ticks)%time_enc)){
-			enc_process();
+			app_data.run_enc_process = 1;
 		}
 		/*if(!((ticks)%time_out_long)){
 			app_data.timeout_long = 1;
