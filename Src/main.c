@@ -86,11 +86,11 @@ void SystemClock_Config(void);
 //#define time_out_long	5000
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
-		static uint32_t ticks;
-		++ticks;
+
+		//++ticks;
 	//if(htim == &htim2){
 		//++((app_data.ticks));
-		app_data.ticks = app_data.ticks + 1;
+		uint32_t ticks = app_data.ticks = app_data.ticks + 1;
 
 		if(0 == (app_data.ticks%(app_data.timeout_short_time)))
 			app_data.timeout = TO_SHORT;
