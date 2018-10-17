@@ -88,18 +88,34 @@ void SystemClock_Config(void);
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 
 		//++ticks;
-	//if(htim == &htim2){
+#if TIM2_CHECK
+	if(htim == &htim2){
+#endif
+
 		//++((app_data.ticks));
 		uint32_t ticks = app_data.ticks = app_data.ticks + 1;
 
 		if(0 == (app_data.ticks%(app_data.timeout_short_time)))
+			/*
+			 * elapsed short time and set the timeout flag on the app_data to short
+			 * */
 			app_data.timeout = TO_SHORT;
 		else if(app_data.ticks > app_data.timeout_long_time){
+			/*
+			 * elapsed long time and set the app_data.timeout flag
+			 * */
 			app_data.timeout = TO_LONG;
 			app_data.ticks = 0;
 		}else
+			/*
+			 * run on the other times */
 			app_data.timeout = TO_NOT;
 
+		/*
+		 * check whether or not run the desire event routine
+		 * if reach the specific time, trigger the appropriate functions.
+		 *
+		 * */
 		if(!((ticks)%time_btn)){
 			app_data.run_btn_process = 1;
 		}
@@ -109,13 +125,10 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 		if(!((ticks)%time_enc)){
 			app_data.run_enc_process = 1;
 		}
-		/*if(!((ticks)%time_out_long)){
-			app_data.timeout_long = 1;
-		}
-		if(!((ticks)%time_out_short)){
-			app_data.timeout_short = 1;
-		}*/
-	//}
+
+#if TIM2_CHECK
+	}
+#endif
 
 }
 /* USER CODE END 0 */
