@@ -75,6 +75,11 @@ typedef enum {
 typedef struct {
 	 const char *name;
 	 const char *comments;
+	 uint8_t vol_nums;
+	 const char *volA_name;
+	 const char *volB_name;
+	 const char *volC_name;
+
 	 const fv1_type_t *fv1;
 } efx_fv1_base_t;
 

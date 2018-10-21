@@ -68,18 +68,52 @@ static void app_update_preset_efx(APP_typedef *data){
 
 }
 
-static void app_print_efx_name_number_big(APP_typedef *data){
-	char *name = (char*)data->cur_efx.fv1->name;
-	int number = data->cur_efx.number;
+static void app_set_preset_efx(APP_typedef *data){
+
+
+	(data->cur_efx) = *(data->node_tmp);
+
+}
+static void app_print_efx_number_blink(efx_node_t *efx){
+	char *name = (char*)efx->fv1->name;
+	int number = efx->number;
+	sprintf(str, "%.2d", number);
+	glcd_set_font_c(FC_Bebas_Neue18x36_Numbers);
+
+	if((app_data.blink)<5){
+		app_data.blink += 1;
+		glcd_draw_string(80, 23, str);
+		//glcd_draw_circle_fill(120, 10, 3, 1);
+
+	}else if(app_data.blink<10){
+		app_data.blink += 1;
+		glcd_draw_rect_fill(79, 22, 10, 10, 0);
+	}else{
+		app_data.blink = 0;
+
+	}
+	//print the name of efx
+	//glcd_set_font_c(FC_Tahoma11x13_AlphaNumber);
+	//glcd_draw_string(7, 7, name);
+
+	//print the number of efx and inert it
+
+	//glcd_invert_area(75, 31, 40, 26);
+
+}
+
+static void app_print_efx_name_number_big(efx_node_t *efx){
+	char *name = (char*)efx->fv1->name;
+	int number = efx->number;
 
 	//print the name of efx
 	glcd_set_font_c(FC_Tahoma11x13_AlphaNumber);
-	glcd_draw_string(7, 5, name);
+	glcd_draw_string(7, 7, name);
 
 	//print the number of efx and inert it
-	glcd_set_font_c(FC_Liberation_Sans15x21_Numbers);
+	glcd_set_font_c(FC_Bebas_Neue18x36_Numbers);
 	sprintf(str, "%.2d", number);
-	glcd_draw_string(80, 33, str);
+	glcd_draw_string(80, 23, str);
 	//glcd_invert_area(75, 31, 40, 26);
 
 }
@@ -89,14 +123,14 @@ static void app_print_efx_name_number_small(APP_typedef *data){
 	int number = data->cur_efx.number;
 
 	//print the name of efx
-	glcd_set_font_c(FC_Tahoma11x13_AlphaNumber);
-	glcd_draw_string(18, 9, name);
+	//glcd_set_font_c(FC_Tahoma11x13_AlphaNumber);
+	//glcd_draw_string(18, 9, name);
 
 	//print the number of efx and inert it
-	glcd_set_font_c(FC_Liberation_Sans15x21_Numbers);
+	glcd_set_font_c(FC_Liberation_Sans11x14_Numbers);
 	sprintf(str, "%.2d", number);
-	glcd_draw_string(80, 4, str);
-	glcd_invert_area(78, 4, 33, 22);
+	glcd_draw_string(57, 6, str);
+	glcd_invert_area(54, 6, 27, 18);
 
 }
 
@@ -109,9 +143,18 @@ static void app_print_save_msg(APP_typedef *data){
 
 static void app_print_efx_vols(APP_typedef *data){
 	uint16_t vol[VOL_MAX];
-	vol[VOL_A] = ADC_TO_PERSENT(data->cur_efx.volume[VOL_A]);
-	vol[VOL_B] = ADC_TO_PERSENT(data->cur_efx.volume[VOL_B]);
-	vol[VOL_C] = ADC_TO_PERSENT(data->cur_efx.volume[VOL_C]);
+	if(data->cur_efx.mode == EFX_MODE_PRESET){
+		/*load volume from adcs*/
+		vol[VOL_A] = ADC_TO_PERSENT(data->cur_efx.volume[VOL_A]);
+		vol[VOL_B] = ADC_TO_PERSENT(data->cur_efx.volume[VOL_B]);
+		vol[VOL_C] = ADC_TO_PERSENT(data->cur_efx.volume[VOL_C]);
+
+	}else{
+		/*load volumes from memory*/
+		vol[VOL_A] = data->cur_efx.volume[VOL_A];
+		vol[VOL_B] = data->cur_efx.volume[VOL_B];
+		vol[VOL_C] = data->cur_efx.volume[VOL_C];
+	}
 
 	//print the volumes in number
 	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
@@ -136,7 +179,7 @@ static void app_print_idle(APP_typedef *data){
 	app_draw_empty_frame();
 
 	//print efx names and number on the screen
-	app_print_efx_name_number_big(data);
+	app_print_efx_name_number_big(&data->cur_efx);
 
 	app_print_efx_vols(data);
 
@@ -155,7 +198,7 @@ static void app_print_vol(APP_typedef *data){
 		app_draw_empty_frame();
 		app_print_efx_name_number_small(data);
 
-		app_print_efx_vols(data);
+		//app_print_efx_vols(data);
 
 		//Change font
 		glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
@@ -164,7 +207,7 @@ static void app_print_vol(APP_typedef *data){
 		if(data->vol_last_name == VOL_A ){
 			//app_data.vol_last_name = VOL_MAX;
 			data->cur_efx.volume[VOL_A] = data->vol_last_val;
-			glcd_bar_graph_horizontal(40, 30, 70, 7, (data->vol_last_val >> 4));
+			glcd_bar_graph_horizontal(40, 30, 70, 5, (data->vol_last_val >> 4));
 		}else{
 			sprintf(str, "%d", data->cur_efx.volume[VOL_A]>>6);//*vol_factor_persent);
 			glcd_draw_string(40, 30, str);
@@ -174,7 +217,7 @@ static void app_print_vol(APP_typedef *data){
 		if(data->vol_last_name == VOL_B){
 			//app_data.vol_last_name = VOL_MAX;
 			data->cur_efx.volume[VOL_B] = data->vol_last_val;
-			glcd_bar_graph_horizontal(40, 40, 70, 7, (data->vol_last_val >> 4));
+			glcd_bar_graph_horizontal(40, 40, 70, 5, (data->vol_last_val >> 4));
 		}else{
 			sprintf(str, "%d", data->cur_efx.volume[VOL_B]>>6);//*vol_factor_persent);
 			glcd_draw_string(40, 40, str);
@@ -184,7 +227,7 @@ static void app_print_vol(APP_typedef *data){
 		if(data->vol_last_name == VOL_C){
 			//app_data.vol_last_name = VOL_MAX;
 			data->cur_efx.volume[VOL_C] = data->vol_last_val;
-			glcd_bar_graph_horizontal(40, 50, 70, 7, (data->vol_last_val >> 4));
+			glcd_bar_graph_horizontal(40, 50, 70, 5, (data->vol_last_val >> 4));
 		}else{
 			sprintf(str, "%d", data->cur_efx.volume[VOL_C]>>6);//*vol_factor_persent);
 			glcd_draw_string(40, 50, str);
@@ -199,6 +242,7 @@ static void app_print_enc(APP_typedef *data){
 	//static efx_node_t *node = NULL;
 	 // HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
 
+	data->node_tmp = NULL;
 	if (data->event.enc->dir == ENC_DIR_CCW)
 		data->node_tmp = efx_next_node();
 
@@ -213,7 +257,8 @@ static void app_print_enc(APP_typedef *data){
 	app_print_idle(data);
 
 }
-/*
+
+#if ON_ENTER_ENABLED
 void Enter_S_SET(void){
 	//print_on_screen("Enter_S_IDLE");
 }
@@ -233,34 +278,52 @@ void Enter_S_SLEEP(void){
 void Enter_S_BYPASS(void){
 	//print_on_screen("Enter_S_BYPASS");
 }
-*/
+#endif
 
+/*
+ * functions run on every single time the state-machine kicked
+ *
+ */
 
 void Do_S_SET(void){
-
+	/*
+	 * TODO:
+	 * 	vaqti dakhel state set mishim chand massale hast:
+	 * 		age state qabli enc ya vol bashe mikhad update kone
+	 * 		age idle bashe save mikhad kone
+	 * 		taggrat ro bayad eslah konim
+	 * 		*/
 	switch (app_data.next_event) {
 		case E_BTN_ENTER:
-			switch (app_data.cur_efx.mode) {
-				case EFX_MODE_USER:
-					/*
-					 * update the USER PRESET VOLUMES
-					 * */
+			switch (app_data.pre_state) {
+				case S_VOL:
 					app_update_preset_efx(&app_data);
 					break;
+				case S_ENC:
+					app_set_preset_efx(&app_data);
+					break;
+				case S_IDLE:
+					/*change the */
+					if(app_data.cur_efx.mode == EFX_MODE_PRESET){
+						/* make a new efx and save it and set it. EFX_MODE_PRESET*/
+						app_add_new_efx_to_ring(&app_data);
 
-				case EFX_MODE_PRESET:
-					/* add new PRESET and add it to the rig and set it
-					 * */
-					app_add_new_efx_to_ring(&app_data);
+					}else{
+						/* update the efx and set it. EFX_MODE_USER*/
+						app_update_preset_efx(&app_data);
+					}
 					break;
 			}
 			break;
-
 		case E_NOT:
-				//clear and draw border
-				app_draw_empty_frame();
-				app_print_save_msg(&app_data);
-				glcd_write();
+			//if(app_data.pre_state != app_data.cur_state){
+			//clear and draw border
+			app_draw_empty_frame();
+			app_print_save_msg(&app_data);
+			glcd_write();
+			//}
+			//clear and draw border
+
 
 			break;
 
@@ -270,10 +333,8 @@ void Do_S_SET(void){
 	}
 
 #if 0
-
 		switch (app_data.pre_state) {
 			case S_ENC:
-
 				break;
 			case S_IDLE:
 			case S_VOL:
@@ -287,13 +348,12 @@ void Do_S_SET(void){
 					app_update_preset_efx(&app_data);
 				}
 				break;
+
 #if STATE_SLEEP_ENABLE
 			case S_SLEEP:
 				/* recover from sleep or screen saver, do not change fv1 state*/
-
 				break;
 #endif
-
 			default:
 				break;
 		}
@@ -308,9 +368,35 @@ void Do_S_IDLE(void){
 void Do_S_ENC(void){
 	if(app_data.state_changed == 1){
 		app_data.state_changed = 0;
-		app_print_enc(&app_data);
+		//app_print_enc(&app_data);
+		app_data.node_tmp = NULL;
+			if (app_data.event.enc->dir == ENC_DIR_CCW)
+				app_data.node_tmp = efx_next_node();
+
+			else if (app_data.event.enc->dir == ENC_DIR_CW)
+				app_data.node_tmp = efx_prev_node();
+
+			if (app_data.node_tmp == NULL)
+					return;
+			//app_data.cur_efx = *(app_data.node_tmp);
+
 
 	}
+	//clear and draw border
+		app_draw_empty_frame();
+
+		//print efx names and number on the screen
+		app_print_efx_number_blink(app_data.node_tmp);
+
+		app_print_efx_vols(&app_data);
+
+
+	//glcd_draw_circle_fill(80, 10, 3, 1);
+	glcd_write();
+
+
+
+	//strcpy(&(data.cur_efx), (data.node_tmp));
 	//print_on_screen("Do_S_ENC");
 }
 //#define vol_factor_persent	((float)((float)100/(float)4096))

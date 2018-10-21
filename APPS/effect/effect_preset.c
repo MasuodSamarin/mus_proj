@@ -21,53 +21,68 @@
 efx_fv1_base_t *efx_preset_box[EFX_FV1_PRST_MAX] = {
 
 		&((efx_fv1_base_t){ .name = "MONO ECHO 1", .comments = "PING_PONG",
-								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_0, .eep = FV1_EEP_A})}),
+			.vol_nums = 2, .volA_name = "REAPEAT", .volB_name = "TIME", .volC_name = NULL,
+			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_0, .eep = FV1_EEP_A})}),
 
-		&((efx_fv1_base_t){ .name = "ABCDE", .comments = "ONE-SHOT",
-								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_1, .eep = FV1_EEP_A})}),
+		&((efx_fv1_base_t){ .name = "MONO ECHO 2", .comments = "ONE-SHOT",
+			.vol_nums = 2, .volA_name = "REAPEAT", .volB_name = "TIME", .volC_name = NULL,
+			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_1, .eep = FV1_EEP_A})}),
 
-		&((efx_fv1_base_t){ .name = "FGHIJ", .comments = "MONO",
-								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_2, .eep = FV1_EEP_A})}),
+		&((efx_fv1_base_t){ .name = "MONO ECHO 3", .comments = "MONO",
+			.vol_nums = 2, .volA_name = "REAPEAT", .volB_name = "TIME", .volC_name = NULL,
+			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_2, .eep = FV1_EEP_A})}),
 
-		&((efx_fv1_base_t){ .name = "KLMNO", .comments = "STEREO",
-								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_3, .eep = FV1_EEP_A})}),
+		&((efx_fv1_base_t){ .name = "MONO ECHO 4", .comments = "STEREO",
+			.vol_nums = 2, .volA_name = "REAPEAT", .volB_name = "TIME", .volC_name = NULL,
+			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_3, .eep = FV1_EEP_A})}),
 
-		&((efx_fv1_base_t){ .name = "PQRST", .comments = "PLATE1",
-								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_4, .eep = FV1_EEP_A})}),
+		&((efx_fv1_base_t){ .name = "MULTI PONG", .comments = "PLATE1",
+			.vol_nums = 2, .volA_name = "REAPEAT", .volB_name = "TIME", .volC_name = NULL,
+			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_4, .eep = FV1_EEP_A})}),
 
-		&((efx_fv1_base_t){ .name = "UVWXY", .comments = "PLATE2",
-								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_5, .eep = FV1_EEP_A})}),
+		&((efx_fv1_base_t){ .name = "PING PONG", .comments = "PLATE2",
+			.vol_nums = 2, .volA_name = "REAPEAT", .volB_name = "TIME", .volC_name = NULL,
+			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_5, .eep = FV1_EEP_A})}),
 
-		&((efx_fv1_base_t){ .name = "Z0123", .comments = "SPRING1",
-								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_6, .eep = FV1_EEP_A})}),
+		&((efx_fv1_base_t){ .name = "ECHO + DELAY", .comments = "SPRING1",
+			.vol_nums = 2, .volA_name = "REAPEAT", .volB_name = "TIME", .volC_name = NULL,
+			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_6, .eep = FV1_EEP_A})}),
 
-		&((efx_fv1_base_t){ .name = "45678", .comments = "SPRING2",
-								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_7, .eep = FV1_EEP_A})}),
+		&((efx_fv1_base_t){ .name = "ECHO + REVERB", .comments = "SPRING2",
+			.vol_nums = 2, .volA_name = "REAPEAT", .volB_name = "TIME", .volC_name = NULL,
+			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_7, .eep = FV1_EEP_A})}),
 
-		&((efx_fv1_base_t){ .name = "90ABC", .comments = "POLY1",
-								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_0, .eep = FV1_EEP_B})}),
+		&((efx_fv1_base_t){ .name = "VOICE DELAY", .comments = "POLY1",
+			.vol_nums = 2, .volA_name = "REAPEAT", .volB_name = "TIME", .volC_name = NULL,
+			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_0, .eep = FV1_EEP_B})}),
 
-		&((efx_fv1_base_t){ .name = "VOICE RVB", .comments = "POLY2",
-								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_1, .eep = FV1_EEP_B})}),
+		&((efx_fv1_base_t){ .name = "VOICE REVERB", .comments = "POLY2",
+			.vol_nums = 2, .volA_name = "REAPEAT", .volB_name = "TIME", .volC_name = NULL,
+			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_1, .eep = FV1_EEP_B})}),
 
 		&((efx_fv1_base_t){ .name = "HALL REVERB", .comments = "DRY-WET1",
-								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_2, .eep = FV1_EEP_B})}),
+			.vol_nums = 2, .volA_name = "REAPEAT", .volB_name = "TIME", .volC_name = NULL,
+			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_2, .eep = FV1_EEP_B})}),
 
-		&((efx_fv1_base_t){ .name = "RVB FLNG", .comments = "DRY-WET1",
-								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_3, .eep = FV1_EEP_B})}),
+		&((efx_fv1_base_t){ .name = "REVERB + FLNG", .comments = "DRY-WET1",
+			.vol_nums = 2, .volA_name = "REAPEAT", .volB_name = "TIME", .volC_name = NULL,
+			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_3, .eep = FV1_EEP_B})}),
 
-		&((efx_fv1_base_t){ .name = "ECHO FLANG", .comments = "PLT-PLY1",
-								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_4, .eep = FV1_EEP_B})}),
+		&((efx_fv1_base_t){ .name = "ECHO + FLANG", .comments = "PLT-PLY1",
+			.vol_nums = 2, .volA_name = "REAPEAT", .volB_name = "TIME", .volC_name = NULL,
+			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_4, .eep = FV1_EEP_B})}),
 
 		&((efx_fv1_base_t){ .name = "VOICE FLANG", .comments = "PLT-PLY2",
-								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_5, .eep = FV1_EEP_B})}),
+			.vol_nums = 2, .volA_name = "REAPEAT", .volB_name = "TIME", .volC_name = NULL,
+			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_5, .eep = FV1_EEP_B})}),
 
 		&((efx_fv1_base_t){ .name = "VOICE PLATE", .comments = "POLY1",
-								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_6, .eep = FV1_EEP_B})}),
+			.vol_nums = 2, .volA_name = "REAPEAT", .volB_name = "TIME", .volC_name = NULL,
+			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_6, .eep = FV1_EEP_B})}),
 
 		&((efx_fv1_base_t){ .name = "VOICE CHUOROS", .comments = "POLY2",
-								.fv1 = &((fv1_type_t){ .pin = FV1_CODE_7, .eep = FV1_EEP_B})}),
-
+			.vol_nums = 2, .volA_name = "REAPEAT", .volB_name = "TIME", .volC_name = NULL,
+			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_7, .eep = FV1_EEP_B})}),
 };
 
 #else

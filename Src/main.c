@@ -81,50 +81,58 @@ void SystemClock_Config(void);
  * */
 #define time_btn	10
 #define time_enc	5
-#define time_vol	1
+#define time_vol	2
 //#define time_out_short	500
 //#define time_out_long	5000
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 
-		//++ticks;
 #if TIM2_CHECK
 	if(htim == &htim2){
 #endif
+		/*add 1 to the ticks*/
+		app_data.ticks = app_data.ticks + 1;
 
-		//++((app_data.ticks));
-		uint32_t ticks = app_data.ticks = app_data.ticks + 1;
-
-		if(0 == (app_data.ticks%(app_data.timeout_short_time)))
+		if((app_data.ticks%(app_data.timeout_short_time)) == 0){
 			/*
 			 * elapsed short time and set the timeout flag on the app_data to short
 			 * */
 			app_data.timeout = TO_SHORT;
+			  //HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
+
+		}
+#if 1
 		else if(app_data.ticks > app_data.timeout_long_time){
 			/*
 			 * elapsed long time and set the app_data.timeout flag
 			 * */
 			app_data.timeout = TO_LONG;
 			app_data.ticks = 0;
+
+
 		}else
 			/*
 			 * run on the other times */
 			app_data.timeout = TO_NOT;
-
+#endif
 		/*
 		 * check whether or not run the desire event routine
 		 * if reach the specific time, trigger the appropriate functions.
 		 *
 		 * */
-		if(!((ticks)%time_btn)){
+		if(0 == ((app_data.ticks)%time_btn)){
 			app_data.run_btn_process = 1;
+
 		}
-		if(!((ticks)%time_vol)){
+		if(0 == ((app_data.ticks)%time_vol)){
+
 			app_data.run_vol_process = 1;
 		}
-		if(!((ticks)%time_enc)){
+		if(0 == ((app_data.ticks)%time_enc)){
 			app_data.run_enc_process = 1;
+
 		}
+
 
 #if TIM2_CHECK
 	}
@@ -169,55 +177,36 @@ int main(void)
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
 
-  glcd_init();
-  app_test_init();
+  app_init();
 
-  enc_init();
-  vol_init();
-  btn_init();
 
   HAL_TIM_Base_Start_IT(&htim2);
+  app_data.timeout = TO_NOT;
 
 
 
 
   /* USER CODE END 2 */
-
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-
   while (1)
   {
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
 
-	  //unit_test_events();
-
-	  //unit_test_eep_save();
-	  //unit_test_eep_read();
-
-	  //glcd_tests();
-	  //glcd_test_scrolling_graph_rand();
-	  //glcd_test_counter_and_graph();
-	  //glcd_test_volume_box();
-	  //glcd_tests();
-
-	  //unit_test_sizes();
-	  //Do_S_IDLE();
 	  App_Exec();
+#if 0
 
-
-	 /* if(event_handle() == E_TIMEOUT_LONG){
-		  //app_data.timeout = TO_NOT;
+	  if(app_data.timeout == TO_SHORT){
+		  app_data.timeout = TO_NOT;
 		  HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
-	  }*/
-
-
+	  }
+#endif
   }
   /* USER CODE END 3 */
-
 }
+
 
 /**
   * @brief System Clock Configuration
@@ -275,7 +264,6 @@ void SystemClock_Config(void)
   /* SysTick_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
 }
-
 /* USER CODE BEGIN 4 */
 
 
@@ -285,8 +273,10 @@ void SystemClock_Config(void)
 
 
 
-/* USER CODE END 4 */
 
+
+
+/* USER CODE END 4 */
 /**
   * @brief  This function is executed in case of error occurrence.
   * @param  file: The file name as string.
@@ -295,27 +285,20 @@ void SystemClock_Config(void)
   */
 void _Error_Handler(char *file, int line)
 {
-  /* USER CODE BEGIN Error_Handler_Debug */
-  /* User can add his own implementation to report the HAL error return state */
-	/*
+	/* USER CODE BEGIN Error_Handler_Debug
+	 * User can add his own implementation to report the HAL error return state
 	 * print the file and line in lcd
 	 */
 	char str[50];
 	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
 	glcd_clear_buffer();
-
 	glcd_draw_string(5,5, "ERROR");
-
 	sprintf(str, "file: %s", (file));
 	glcd_draw_string(0,25, str);
-
 	sprintf(str, "line: %d", (line));
 	glcd_draw_string(0,45, str);
-
 	glcd_write();
-  while(1)
-  {
-  }
+	while(1);
   /* USER CODE END Error_Handler_Debug */
 }
 

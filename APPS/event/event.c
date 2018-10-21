@@ -75,9 +75,9 @@ event_node_t event_pop_node(void){
 	if (np != NULL){
 		n = *np;
 		event_free_event_node(np);
+		free(np);
 	}
 	//return (event_node_t*)(NULL);
-	free(np);
 	return (n);
 }
 
