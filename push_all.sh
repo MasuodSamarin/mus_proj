@@ -8,4 +8,4 @@ git push origin simple_edition
 git push origin state-machine
 git push origin unit-test
 git push origin unit-test-check-point
-git push origin unit-fsme
+git push origin unit-test-fsme
