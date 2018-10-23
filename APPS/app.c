@@ -67,7 +67,7 @@ void app_init(void){
 }
 
 void app_reset_timeout_timer(void){
-	app_data.ticks = 1;
+	app_data.ticks = 0;
 
 }
 
@@ -114,7 +114,7 @@ EVENTS_typedef event_handle(void){
 			app_reset_timeout_timer();
 			app_data.vol_last_name = event->vol->name;
 			app_data.vol_last_val = event->vol->val_adc;
-			//app_data.cur_efx.volume[app_data.event.vol->name] = app_data.event.vol->val_adc;
+			app_data.cur_efx.volume[event->vol->name] = event->vol->val_adc;
 			return E_VOL;
 			break;
 	}
@@ -143,7 +143,7 @@ void State_Machine(EVENTS_typedef event){
 
 	STATES_typedef cur_state = app_data.cur_state;
 	STATES_typedef next_state = cur_state;//app_data.cur_state;
-	app_data.next_event = event;
+	app_data.cur_event = event;
 /*
 	if(event==E_TIMEOUT_SHORT){
 
@@ -314,12 +314,14 @@ void App_Exec(void){
 		}
 		/*
 		 * run volume handler
-		 * */
-		if(app_data.run_vol_process == 1){
+		 * TODO:
+		 * 	temperatury run in the tim2 interrupt handler*/
+		/*if(app_data.run_vol_process == 1){
 			app_data.run_vol_process = 0;
 			vol_process();
 
-		}
+		}*/
+
 
 		State_Machine(event_handle());
 

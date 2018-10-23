@@ -69,7 +69,7 @@ typedef struct {
 	STATES_typedef 	cur_state;
 	STATES_typedef 	pre_state;
 
-	EVENTS_typedef 	next_event;
+	EVENTS_typedef 	cur_event;
 
 	__IO uint16_t			timeout_long_time;
 	__IO uint16_t			timeout_short_time;
@@ -91,11 +91,13 @@ typedef struct {
 	__IO uint8_t			run_enc_process;
 
 	__IO uint8_t			blink;
+	__IO uint8_t			select;
+
 
 }APP_typedef;
 
 #define TIMEOUT_LONG_TIME	1000
-#define TIMEOUT_SHORT_TIME	100
+#define TIMEOUT_SHORT_TIME	200
 
 void app_reset_timeout_timer(void);
 void app_set_timeout_short(uint16_t interval);

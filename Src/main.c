@@ -81,18 +81,19 @@ void SystemClock_Config(void);
  * */
 #define time_btn	10
 #define time_enc	5
-#define time_vol	2
+#define time_vol	5
 //#define time_out_short	500
 //#define time_out_long	5000
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 
+	static uint32_t ticks = 0;
 #if TIM2_CHECK
 	if(htim == &htim2){
 #endif
 		/*add 1 to the ticks*/
-		app_data.ticks = app_data.ticks + 1;
-
+		app_data.ticks += 1;
+		ticks += 1;
 		if((app_data.ticks%(app_data.timeout_short_time)) == 0){
 			/*
 			 * elapsed short time and set the timeout flag on the app_data to short
@@ -101,7 +102,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 			  //HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
 
 		}
-#if 1
+#if 0
 		else if(app_data.ticks > app_data.timeout_long_time){
 			/*
 			 * elapsed long time and set the app_data.timeout flag
@@ -120,19 +121,15 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 		 * if reach the specific time, trigger the appropriate functions.
 		 *
 		 * */
-		if(0 == ((app_data.ticks)%time_btn)){
+		if(0 == ((ticks)%time_btn))
 			app_data.run_btn_process = 1;
 
-		}
-		if(0 == ((app_data.ticks)%time_vol)){
+		if(0 == ((ticks)%time_vol))
+			//app_data.run_vol_process = 1;
+			vol_process();
 
-			app_data.run_vol_process = 1;
-		}
-		if(0 == ((app_data.ticks)%time_enc)){
+		if(0 == ((ticks)%time_enc))
 			app_data.run_enc_process = 1;
-
-		}
-
 
 #if TIM2_CHECK
 	}

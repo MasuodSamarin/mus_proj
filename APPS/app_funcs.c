@@ -16,6 +16,13 @@ char str[20];
  * 	so:	X = ADC * 0.024414062
  * 	*/
 #define ADC_TO_PERSENT(ADC)	(ADC * 0.024414062 + 1)
+/*
+ * adc to graph calculator:
+ * 	4096	255
+ * 	ADC		 X = (ADC * 255) / 4096
+ * 	so:	X = ADC * 0.062255859
+ * 	*/
+#define ADC_TO_GRAPH(ADC)	(ADC * 0.062255859 + 1)
 
 void app_print_on_screen(char* msg){
 	glcd_clear_buffer();
@@ -74,20 +81,143 @@ static void app_set_preset_efx(APP_typedef *data){
 	(data->cur_efx) = *(data->node_tmp);
 
 }
+
+/*used in the idle state*/
+static void app_print_efx_vols(APP_typedef *data){
+	uint16_t vol[VOL_MAX];
+	/*
+	 * TODO:
+	 * 	this if else is bullshit
+	 * 	we need if we lunch preset efx -> load volus from adc
+	 * 	and if we set the user efx -> load volus from eep*/
+#if 0
+	if(data->cur_efx.mode == EFX_MODE_PRESET){
+		/*load volume from adcs*/
+		vol[VOL_A] = ADC_TO_PERSENT(data->cur_efx.volume[VOL_A]);
+		vol[VOL_B] = ADC_TO_PERSENT(data->cur_efx.volume[VOL_B]);
+		vol[VOL_C] = ADC_TO_PERSENT(data->cur_efx.volume[VOL_C]);
+
+	}else{
+		/*load volumes from memory*/
+		vol[VOL_A] = data->cur_efx.volume[VOL_A];
+		vol[VOL_B] = data->cur_efx.volume[VOL_B];
+		vol[VOL_C] = data->cur_efx.volume[VOL_C];
+	}
+#endif
+
+	vol[VOL_A] = ADC_TO_PERSENT(data->cur_efx.volume[VOL_A]);
+	vol[VOL_B] = ADC_TO_PERSENT(data->cur_efx.volume[VOL_B]);
+	vol[VOL_C] = ADC_TO_PERSENT(data->cur_efx.volume[VOL_C]);
+
+
+	//print the volumes in number
+	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
+	glcd_draw_string(8,30, "REPEAT");
+	sprintf(str, "%.2d", vol[VOL_A]);
+	glcd_draw_string(55, 30, str);
+
+	glcd_draw_string(8,40, "TIME");
+	sprintf(str, "%.2d", vol[VOL_B]);
+	glcd_draw_string(55, 40, str);
+
+	glcd_draw_string(8,50, "REVERB");
+	sprintf(str, "%.2d", vol[VOL_C]);
+	glcd_draw_string(55, 50, str);
+
+
+}
+
+static void app_print_efx_name_number_small(APP_typedef *data){
+	//char *name = (char*)data->cur_efx.fv1->name;
+	int number = data->cur_efx.number;
+
+	//print the name of efx
+	//glcd_set_font_c(FC_Tahoma11x13_AlphaNumber);
+	//glcd_draw_string(18, 9, name);
+
+	//print the number of efx and inert it
+	glcd_set_font_c(FC_Liberation_Sans11x14_Numbers);
+	sprintf(str, "%.2d", number);
+	glcd_draw_string(57, 6, str);
+	glcd_invert_area(54, 6, 27, 18);
+
+}
+
+static void app_print_vol_graph(APP_typedef *data){
+
+	/*uint16_t vol[VOL_MAX];
+	if(data->cur_efx.mode == EFX_MODE_PRESET){
+		load volume from adcs/
+		vol[VOL_A] = ADC_TO_PERSENT(data->cur_efx.volume[VOL_A]);
+		vol[VOL_B] = ADC_TO_PERSENT(data->cur_efx.volume[VOL_B]);
+		vol[VOL_C] = ADC_TO_PERSENT(data->cur_efx.volume[VOL_C]);
+
+	}else{
+		//load volumes from memory/
+		vol[VOL_A] = data->cur_efx.volume[VOL_A];
+		vol[VOL_B] = data->cur_efx.volume[VOL_B];
+		vol[VOL_C] = data->cur_efx.volume[VOL_C];
+	}*/
+	//app_print_efx_vols(data);
+
+	app_draw_empty_frame();
+	app_print_efx_name_number_small(data);
+
+	//Change font
+	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
+
+	glcd_draw_string(10,30, (char*)data->cur_efx.fv1->volA_name);
+	if(data->vol_last_name == VOL_A ){
+		//app_data.vol_last_name = VOL_MAX;
+		//data->cur_efx.volume[VOL_A] = ADC_TO_PERSENT(data->vol_last_val);
+		glcd_bar_graph_horizontal(40, 30, 70, 5, ADC_TO_GRAPH(data->cur_efx.volume[VOL_A]));
+	}else{
+		sprintf(str, "%d", (uint16_t)ADC_TO_PERSENT(data->cur_efx.volume[VOL_A]));//*vol_factor_persent);
+		glcd_draw_string(40, 30, str);
+	}
+
+	glcd_draw_string(10,40, (char*)data->cur_efx.fv1->volB_name);
+	if(data->vol_last_name == VOL_B){
+		//app_data.vol_last_name = VOL_MAX;
+		//data->cur_efx.volume[VOL_B] = ADC_TO_PERSENT(data->vol_last_val);
+		glcd_bar_graph_horizontal(40, 40, 70, 5, ADC_TO_GRAPH(data->cur_efx.volume[VOL_B]));
+	}else{
+		sprintf(str, "%d", (uint16_t)ADC_TO_PERSENT(data->cur_efx.volume[VOL_B]));//*vol_factor_persent);
+		glcd_draw_string(40, 40, str);
+	}
+
+	glcd_draw_string(10,50, (char*)data->cur_efx.fv1->volC_name);
+	if(data->vol_last_name == VOL_C){
+		//app_data.vol_last_name = VOL_MAX;
+		//data->cur_efx.volume[VOL_C] = ADC_TO_PERSENT(data->vol_last_val);
+		glcd_bar_graph_horizontal(40, 50, 70, 5, ADC_TO_GRAPH(data->cur_efx.volume[VOL_C]));
+	}else{
+		sprintf(str, "%d", (uint16_t)ADC_TO_PERSENT(data->cur_efx.volume[VOL_C]));//*vol_factor_persent);
+		glcd_draw_string(40, 50, str);
+	}
+
+
+	glcd_write();
+}
+
 static void app_print_efx_number_blink(efx_node_t *efx){
 	char *name = (char*)efx->fv1->name;
 	int number = efx->number;
 	sprintf(str, "%.2d", number);
-	glcd_set_font_c(FC_Bebas_Neue18x36_Numbers);
 
 	if((app_data.blink)<5){
 		app_data.blink += 1;
+		glcd_set_font_c(FC_Bebas_Neue18x36_Numbers);
 		glcd_draw_string(80, 23, str);
+		glcd_set_font_c(FC_Tahoma11x13_AlphaNumber);
+		glcd_draw_string(7, 7, name);
+
 		//glcd_draw_circle_fill(120, 10, 3, 1);
 
 	}else if(app_data.blink<10){
 		app_data.blink += 1;
 		glcd_draw_rect_fill(79, 22, 10, 10, 0);
+		glcd_draw_rect_fill(6, 6, 100, 10, 0);
 	}else{
 		app_data.blink = 0;
 
@@ -118,22 +248,12 @@ static void app_print_efx_name_number_big(efx_node_t *efx){
 
 }
 
-static void app_print_efx_name_number_small(APP_typedef *data){
-	char *name = (char*)data->cur_efx.fv1->name;
-	int number = data->cur_efx.number;
+static void app_print_update_msg(APP_typedef *data){
 
-	//print the name of efx
-	//glcd_set_font_c(FC_Tahoma11x13_AlphaNumber);
-	//glcd_draw_string(18, 9, name);
-
-	//print the number of efx and inert it
-	glcd_set_font_c(FC_Liberation_Sans11x14_Numbers);
-	sprintf(str, "%.2d", number);
-	glcd_draw_string(57, 6, str);
-	glcd_invert_area(54, 6, 27, 18);
-
+	glcd_set_font_c(FC_Tekton_Pro_Ext27x28_AlphaNumber);
+	glcd_draw_string(25, 20, "SET");
+	glcd_invert_area(23, 17, 87, 26);
 }
-
 static void app_print_save_msg(APP_typedef *data){
 
 	glcd_set_font_c(FC_Tekton_Pro_Ext27x28_AlphaNumber);
@@ -141,7 +261,22 @@ static void app_print_save_msg(APP_typedef *data){
 	glcd_invert_area(23, 17, 87, 26);
 }
 
-static void app_print_efx_vols(APP_typedef *data){
+
+static void app_print_idle(APP_typedef *data){
+
+
+	//clear and draw border
+	app_draw_empty_frame();
+
+	//print efx names and number on the screen
+	app_print_efx_name_number_big(&data->cur_efx);
+
+	app_print_efx_vols(data);
+
+	glcd_write();
+
+}
+static void app_print_vol_numbers(APP_typedef *data){
 	uint16_t vol[VOL_MAX];
 	if(data->cur_efx.mode == EFX_MODE_PRESET){
 		/*load volume from adcs*/
@@ -158,32 +293,36 @@ static void app_print_efx_vols(APP_typedef *data){
 
 	//print the volumes in number
 	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
-	glcd_draw_string(8,30, "REPEAT");
-	sprintf(str, "%.2d", vol[VOL_A]);
-	glcd_draw_string(55, 30, str);
 
-	glcd_draw_string(8,40, "TIME");
-	sprintf(str, "%.2d", vol[VOL_B]);
-	glcd_draw_string(55, 40, str);
+	//we have 2 volumes
+	if(data->cur_efx.fv1->vol_nums == 2){
 
-	glcd_draw_string(8,50, "REVERB");
-	sprintf(str, "%.2d", vol[VOL_C]);
-	glcd_draw_string(55, 50, str);
+		glcd_draw_string(8,30, (char*)data->cur_efx.fv1->volA_name);
+		sprintf(str, "%.2d", vol[VOL_A]);
+		glcd_draw_string(55, 30, str);
+
+		glcd_draw_string(8,50, (char*)data->cur_efx.fv1->volB_name);
+		sprintf(str, "%.2d", vol[VOL_B]);
+		glcd_draw_string(55, 50, str);
+
+	//we have 3 volumes
+	}else if(data->cur_efx.fv1->vol_nums == 3){
+		glcd_draw_string(8,30, (char*)data->cur_efx.fv1->volA_name);
+		sprintf(str, "%.2d", vol[VOL_A]);
+		glcd_draw_string(55, 30, str);
+
+		glcd_draw_string(8,40, (char*)data->cur_efx.fv1->volB_name);
+		sprintf(str, "%.2d", vol[VOL_B]);
+		glcd_draw_string(55, 40, str);
+
+		glcd_draw_string(8,50, (char*)data->cur_efx.fv1->volC_name);
+		sprintf(str, "%.2d", vol[VOL_C]);
+		glcd_draw_string(55, 50, str);
+	}
 
 
-}
-static void app_print_idle(APP_typedef *data){
 
 
-	//clear and draw border
-	app_draw_empty_frame();
-
-	//print efx names and number on the screen
-	app_print_efx_name_number_big(&data->cur_efx);
-
-	app_print_efx_vols(data);
-
-	glcd_write();
 
 }
 
@@ -293,45 +432,71 @@ void Do_S_SET(void){
 	 * 		age idle bashe save mikhad kone
 	 * 		taggrat ro bayad eslah konim
 	 * 		*/
-	switch (app_data.next_event) {
+
+	switch (app_data.cur_event) {
 		case E_BTN_ENTER:
 			switch (app_data.pre_state) {
 				case S_VOL:
 					app_update_preset_efx(&app_data);
+					app_data.select = 1;
 					break;
 				case S_ENC:
 					app_set_preset_efx(&app_data);
+					app_data.select = 2;
+
 					break;
 				case S_IDLE:
 					/*change the */
 					if(app_data.cur_efx.mode == EFX_MODE_PRESET){
 						/* make a new efx and save it and set it. EFX_MODE_PRESET*/
 						app_add_new_efx_to_ring(&app_data);
+						app_data.select = 3;
+
 
 					}else{
 						/* update the efx and set it. EFX_MODE_USER*/
 						app_update_preset_efx(&app_data);
+						app_data.select = 1;
+
 					}
 					break;
+				default:
+					break;
 			}
+			//app_draw_empty_frame();
+			//app_print_save_msg(&app_data);
+			//glcd_write();
 			break;
 		case E_NOT:
 			//if(app_data.pre_state != app_data.cur_state){
 			//clear and draw border
-			app_draw_empty_frame();
-			app_print_save_msg(&app_data);
-			glcd_write();
-			//}
-			//clear and draw border
+			switch (app_data.select) {
+				case 0:
+
+					break;
+				case 1:
+					app_draw_empty_frame();
+					app_print_update_msg(&app_data);
+					glcd_write();
+					break;
+				case 2:
+					app_draw_empty_frame();
+					app_print_update_msg(&app_data);
+					glcd_write();
+					break;
+				case 3:
+					app_draw_empty_frame();
+					app_print_save_msg(&app_data);
+					glcd_write();
+					break;
 
 
+			}
 			break;
-
 		default:
 			break;
-
 	}
-
+}
 #if 0
 		switch (app_data.pre_state) {
 			case S_ENC:
@@ -359,7 +524,6 @@ void Do_S_SET(void){
 		}
 #endif
 
-}
 
 void Do_S_IDLE(void){
 	app_print_idle(&app_data);
@@ -401,7 +565,7 @@ void Do_S_ENC(void){
 }
 //#define vol_factor_persent	((float)((float)100/(float)4096))
 void Do_S_VOL(void){
-	app_print_vol(&app_data);
+	app_print_vol_graph(&app_data);
 }
 
 void Do_S_SLEEP(void){
