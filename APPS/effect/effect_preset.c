@@ -37,19 +37,19 @@ efx_fv1_base_t *efx_preset_box[EFX_FV1_PRST_MAX] = {
 			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_3, .eep = FV1_EEP_A})}),
 
 		&((efx_fv1_base_t){ .name = "MULTI PONG", .comments = NULL,
-			.vol_nums = 2, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = NULL,
+			.vol_nums = 3, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = "REVERB",
 			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_4, .eep = FV1_EEP_A})}),
 
 		&((efx_fv1_base_t){ .name = "PING PONG", .comments = NULL,
-			.vol_nums = 2, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = NULL,
+			.vol_nums = 3, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = "REVERB",
 			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_5, .eep = FV1_EEP_A})}),
 
 		&((efx_fv1_base_t){ .name = "ECHO + DELAY", .comments = NULL,
-			.vol_nums = 2, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = NULL,
+			.vol_nums = 3, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = "REVERB",
 			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_6, .eep = FV1_EEP_A})}),
 
 		&((efx_fv1_base_t){ .name = "ECHO + REVERB", .comments = NULL,
-			.vol_nums = 2, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = NULL,
+			.vol_nums = 3, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = "REVERB",
 			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_7, .eep = FV1_EEP_A})}),
 
 		&((efx_fv1_base_t){ .name = "VOICE DELAY", .comments = NULL,
@@ -57,7 +57,7 @@ efx_fv1_base_t *efx_preset_box[EFX_FV1_PRST_MAX] = {
 			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_0, .eep = FV1_EEP_B})}),
 
 		&((efx_fv1_base_t){ .name = "VOICE REVERB", .comments = NULL,
-			.vol_nums = 2, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = NULL,
+			.vol_nums = 3, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = "REVERB",
 			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_1, .eep = FV1_EEP_B})}),
 
 		&((efx_fv1_base_t){ .name = "HALL REVERB", .comments = NULL,
@@ -65,7 +65,7 @@ efx_fv1_base_t *efx_preset_box[EFX_FV1_PRST_MAX] = {
 			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_2, .eep = FV1_EEP_B})}),
 
 		&((efx_fv1_base_t){ .name = "REVERB + FLNG", .comments = NULL,
-			.vol_nums = 2, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = NULL,
+			.vol_nums = 3, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = "REVERB",
 			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_3, .eep = FV1_EEP_B})}),
 
 		&((efx_fv1_base_t){ .name = "ECHO + FLANG", .comments = NULL,

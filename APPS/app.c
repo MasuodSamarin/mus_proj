@@ -281,7 +281,7 @@ void State_Machine(EVENTS_typedef event){
     }
 #endif
 
-    if(event != E_MAX){
+    if(event < E_MAX){
     	app_data.pre_state = cur_state;
         app_data.cur_state = next_state;
 
@@ -296,7 +296,7 @@ void State_Machine(EVENTS_typedef event){
  * */
 void App_Exec(void){
 
-	if ( app_data.cur_state != S_MAX ){
+	if ( app_data.cur_state < S_MAX ){
 		  //HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
 
 		/*
