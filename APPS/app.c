@@ -211,6 +211,7 @@ void State_Machine(EVENTS_typedef event){
 					break;
 
 				case E_TIMEOUT_SHORT:
+					efx_set_cur_node(&(app_data.cur_efx));
 					next_state = S_IDLE;
 					break;
 			}
@@ -301,17 +302,17 @@ void App_Exec(void){
 
 		/*
 		 * run button handler*/
-		if(app_data.run_btn_process == 1){
+		/*if(app_data.run_btn_process == 1){
 			app_data.run_btn_process = 0;
 			btn_process();
-		}
+		}*/
 		/*
 		 * run encoder handler
 		 * */
-		if(app_data.run_enc_process == 1){
+		/*if(app_data.run_enc_process == 1){
 			app_data.run_enc_process = 0;
 			enc_process();
-		}
+		}*/
 		/*
 		 * run volume handler
 		 * TODO:

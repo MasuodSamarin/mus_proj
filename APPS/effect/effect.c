@@ -58,6 +58,27 @@ uint16_t* efx_get_vols(efx_node_t *efx){
 	return efx->volume;
 
 }
+
+
+int efx_find_node_in_list(size_t index, node_t* node, void* data){
+
+	if(node->element == data)
+		return 1;
+	else
+		return 0;
+}
+
+
+void efx_set_cur_node(efx_node_t *efx){
+	//node_t *node =list_find_node(efx_list, (void*)efx);
+	node_t *find = list_find_node_if(efx_list, efx_find_node_in_list, (void*)efx);
+
+	if(find)
+		efx_list_iter.current = (void*)find;
+	else
+		list_iterator_set_current(&efx_list_iter);
+}
+
 void efx_set_vols(efx_node_t *efx, uint16_t vol[VOL_MAX]){
 	 efx->volume[0] = vol[0];
 	 efx->volume[1] = vol[1];

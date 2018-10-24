@@ -32,15 +32,31 @@ void app_print_on_screen(char* msg){
 	HAL_Delay(2000);
 }
 
+void app_update_vols_from_raw(APP_typedef *data){
+
+	data->cur_efx.volume[VOL_A] = vol_get_raw(VOL_A);
+	data->cur_efx.volume[VOL_B] = vol_get_raw(VOL_B);
+	data->cur_efx.volume[VOL_C] = vol_get_raw(VOL_C);
+}
+
+void app_update_node_tmp_vols_from_raw(APP_typedef *data){
+
+	data->node_tmp->volume[VOL_A] = vol_get_raw(VOL_A);
+	data->node_tmp->volume[VOL_B] = vol_get_raw(VOL_B);
+	data->node_tmp->volume[VOL_C] = vol_get_raw(VOL_C);
+}
+
 
 static void app_draw_empty_frame(void){
 	int x = 0;
 	int y = 0;
+	int tx = 2;
+	int ty = 2;
 	int w = 128;
 	int h = 64;
 
 	glcd_clear_buffer();
-	glcd_draw_rect(x, y, w, h,BLACK);
+	glcd_draw_rect_thick(x, y, w, h, tx, ty, BLACK);
 }
 
 static void app_update_efx(APP_typedef *data, efx_node_t *efx){
@@ -81,20 +97,31 @@ static void app_set_preset_efx(APP_typedef *data){
 	(data->cur_efx) = *(data->node_tmp);
 
 }
-static void app_print_2_vols(efx_node_t *efx){
+#define HORIZ_SIZE_A	60
+static void app_print_2_vols_enc(efx_node_t *efx){
+#if 0
+
 
 	glcd_draw_string(10,30, (char*)efx->fv1->volA_name);
 	sprintf(str, "%d", (uint16_t)ADC_TO_PERSENT(efx->volume[VOL_A]));//*vol_factor_persent);
 	glcd_draw_string(47, 30, str);
 
-	glcd_draw_string(10,50, (char*)efx->fv1->volB_name);
+	glcd_draw_string(10,40, (char*)efx->fv1->volB_name);
 	sprintf(str, "%d", (uint16_t)ADC_TO_PERSENT(efx->volume[VOL_B]));//*vol_factor_persent);
 	glcd_draw_string(47, 50, str);
+
+#else
+	glcd_bar_graph_horizontal(10, 30, HORIZ_SIZE_A, 5, ADC_TO_GRAPH(efx->volume[VOL_A]));
+	glcd_bar_graph_horizontal(10, 40, HORIZ_SIZE_A, 5, ADC_TO_GRAPH(efx->volume[VOL_B]));
+
+
+#endif
 
 
 }
 
-static void app_print_3_vols(efx_node_t *efx){
+static void app_print_3_vols_enc(efx_node_t *efx){
+#if 0
 
 	glcd_draw_string(10,30, (char*)efx->fv1->volA_name);
 	sprintf(str, "%d", (uint16_t)ADC_TO_PERSENT(efx->volume[VOL_A]));//*vol_factor_persent);
@@ -109,8 +136,61 @@ static void app_print_3_vols(efx_node_t *efx){
 	glcd_draw_string(10,50, (char*)efx->fv1->volC_name);
 	sprintf(str, "%d", (uint16_t)ADC_TO_PERSENT(efx->volume[VOL_C]));//*vol_factor_persent);
 	glcd_draw_string(47, 50, str);
+#else
+	glcd_bar_graph_horizontal(10, 30, HORIZ_SIZE_A, 5, ADC_TO_GRAPH(efx->volume[VOL_A]));
+	glcd_bar_graph_horizontal(10, 40, HORIZ_SIZE_A, 5, ADC_TO_GRAPH(efx->volume[VOL_B]));
+	glcd_bar_graph_horizontal(10, 50, HORIZ_SIZE_A, 5, ADC_TO_GRAPH(efx->volume[VOL_C]));
+
+
+#endif
 }
 
+static void app_print_2_vols_idle(efx_node_t *efx){
+#if 1
+
+
+	glcd_draw_string(10,30, (char*)efx->fv1->volA_name);
+	sprintf(str, "%d", (uint16_t)ADC_TO_PERSENT(efx->volume[VOL_A]));//*vol_factor_persent);
+	glcd_draw_string(47, 30, str);
+
+	glcd_draw_string(10,40, (char*)efx->fv1->volB_name);
+	sprintf(str, "%d", (uint16_t)ADC_TO_PERSENT(efx->volume[VOL_B]));//*vol_factor_persent);
+	glcd_draw_string(47, 40, str);
+
+#else
+	glcd_bar_graph_horizontal(10, 30, 20, 5, ADC_TO_GRAPH(efx->volume[VOL_A]));
+	glcd_bar_graph_horizontal(10, 40, 20, 5, ADC_TO_GRAPH(efx->volume[VOL_B]));
+
+
+#endif
+
+
+}
+
+static void app_print_3_vols_idle(efx_node_t *efx){
+#if 1
+
+	glcd_draw_string(10,30, (char*)efx->fv1->volA_name);
+	sprintf(str, "%d", (uint16_t)ADC_TO_PERSENT(efx->volume[VOL_A]));//*vol_factor_persent);
+	glcd_draw_string(47, 30, str);
+
+
+	glcd_draw_string(10,40, (char*)efx->fv1->volB_name);
+	sprintf(str, "%d", (uint16_t)ADC_TO_PERSENT(efx->volume[VOL_B]));//*vol_factor_persent);
+	glcd_draw_string(47, 40, str);
+
+
+	glcd_draw_string(10,50, (char*)efx->fv1->volC_name);
+	sprintf(str, "%d", (uint16_t)ADC_TO_PERSENT(efx->volume[VOL_C]));//*vol_factor_persent);
+	glcd_draw_string(47, 50, str);
+#else
+	glcd_bar_graph_horizontal(10, 30, 20, 5, ADC_TO_GRAPH(efx->volume[VOL_A]));
+	glcd_bar_graph_horizontal(10, 40, 20, 5, ADC_TO_GRAPH(efx->volume[VOL_B]));
+	glcd_bar_graph_horizontal(10, 50, 20, 5, ADC_TO_GRAPH(efx->volume[VOL_C]));
+
+
+#endif
+}
 
 
 static void app_print_2_vols_graph(APP_typedef *data){
@@ -125,14 +205,14 @@ static void app_print_2_vols_graph(APP_typedef *data){
 		glcd_draw_string(47, 30, str);
 	}
 
-	glcd_draw_string(10,50, (char*)data->cur_efx.fv1->volB_name);
+	glcd_draw_string(10,40, (char*)data->cur_efx.fv1->volB_name);
 	if(data->vol_last_name == VOL_B){
 		//app_data.vol_last_name = VOL_MAX;
 		//data->cur_efx.volume[VOL_B] = ADC_TO_PERSENT(data->vol_last_val);
-		glcd_bar_graph_horizontal(47, 50, 70, 5, ADC_TO_GRAPH(data->cur_efx.volume[VOL_B]));
+		glcd_bar_graph_horizontal(47, 40, 70, 5, ADC_TO_GRAPH(data->cur_efx.volume[VOL_B]));
 	}else{
 		sprintf(str, "%d", (uint16_t)ADC_TO_PERSENT(data->cur_efx.volume[VOL_B]));//*vol_factor_persent);
-		glcd_draw_string(47, 50, str);
+		glcd_draw_string(47, 40, str);
 	}
 
 }
@@ -177,10 +257,14 @@ static void app_print_clear_vols_box(void){
 static void app_print_efx_vols_enc(APP_typedef *data){
 	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
 	app_print_clear_vols_box();
+
+	if(data->node_tmp->mode == EFX_MODE_PRESET)
+		app_update_node_tmp_vols_from_raw(data);
+
 	if(data->node_tmp->fv1->vol_nums == 2){
-		app_print_2_vols(data->node_tmp);
+		app_print_2_vols_enc(data->node_tmp);
 	}else if(data->node_tmp->fv1->vol_nums == 3){
-		app_print_3_vols(data->node_tmp);
+		app_print_3_vols_enc(data->node_tmp);
 
 	}
 }
@@ -214,12 +298,13 @@ static void app_print_efx_vols_idle(APP_typedef *data){
 	vol[VOL_C] = ADC_TO_PERSENT(data->cur_efx.volume[VOL_C]);
 #endif
 
+
 	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
 
 	if(data->cur_efx.fv1->vol_nums == 2){
-		app_print_2_vols(&data->cur_efx);
+		app_print_2_vols_idle(&data->cur_efx);
 	}else if(data->cur_efx.fv1->vol_nums == 3){
-		app_print_3_vols(&data->cur_efx);
+		app_print_3_vols_idle(&data->cur_efx);
 
 	}
 #if 0
@@ -382,6 +467,7 @@ static void app_print_idle(APP_typedef *data){
 	//print efx names and number on the screen
 	app_print_efx_name_number_big(&data->cur_efx);
 
+	app_update_vols_from_raw(data);
 	app_print_efx_vols_idle(data);
 	//glcd_draw_string(10,40, "hey you");
 
@@ -540,8 +626,8 @@ void Do_S_SET(void){
 	/*
 	 * TODO:
 	 * 	vaqti dakhel state set mishim chand massale hast:
-	 * 		age state qabli enc ya vol bashe mikhad update kone
-	 * 		age idle bashe save mikhad kone
+	 * 		age state qabli enc ya vol bashe va enter ro zade bashe mikhad update kone
+	 * 		age idle bashe va enter ro save mikhad kone
 	 * 		taggrat ro bayad eslah konim
 	 * 		*/
 
@@ -605,42 +691,23 @@ void Do_S_SET(void){
 
 			}
 			break;
+
+
 		default:
 			break;
 	}
 }
-#if 0
-		switch (app_data.pre_state) {
-			case S_ENC:
-				break;
-			case S_IDLE:
-			case S_VOL:
-				/*change the */
-				if(app_data.cur_efx.mode == EFX_MODE_PRESET){
-					/* make a new efx and save it and set it. EFX_MODE_PRESET*/
-					app_add_new_efx_to_ring(&app_data);
-
-				}else{
-					/* update the efx and set it. EFX_MODE_USER*/
-					app_update_preset_efx(&app_data);
-				}
-				break;
-
-#if STATE_SLEEP_ENABLE
-			case S_SLEEP:
-				/* recover from sleep or screen saver, do not change fv1 state*/
-				break;
-#endif
-			default:
-				break;
-		}
-#endif
 
 
 void Do_S_IDLE(void){
+
+
 	app_print_idle(&app_data);
 
 }
+
+
+
 
 void Do_S_ENC(void){
 	if(app_data.state_changed == 1){

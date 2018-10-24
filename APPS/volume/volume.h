@@ -67,6 +67,7 @@ void vol_process(void);
 vol_node_t* vol_create_node(vol_name_t name, uint32_t val);
 void vol_delete_node(vol_node_t *node);
 
+uint32_t vol_get_raw(vol_name_t name);
 
 #ifdef __cplusplus
 }

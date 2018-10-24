@@ -146,4 +146,6 @@ uint16_t* efx_get_vols(efx_node_t *efx);
 void efx_set_vols(efx_node_t *efx, uint16_t vol[VOL_MAX]);
 size_t efx_get_list_size(void);
 
+void efx_set_cur_node(efx_node_t *efx);
+
 #endif /* EFFECT_H_ */

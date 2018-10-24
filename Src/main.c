@@ -122,14 +122,16 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 		 *
 		 * */
 		if(0 == ((ticks)%time_btn))
-			app_data.run_btn_process = 1;
+			btn_process();
+			//app_data.run_btn_process = 1;
 
 		if(0 == ((ticks)%time_vol))
 			//app_data.run_vol_process = 1;
 			vol_process();
 
 		if(0 == ((ticks)%time_enc))
-			app_data.run_enc_process = 1;
+			enc_process();
+			//app_data.run_enc_process = 1;
 
 #if TIM2_CHECK
 	}
