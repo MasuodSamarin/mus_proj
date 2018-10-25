@@ -79,9 +79,9 @@ void SystemClock_Config(void);
 /*
  * multiply magic numbers by 100ms to set interval time to run snippet code
  * */
-#define time_btn	10
-#define time_enc	5
-#define time_vol	5
+#define time_btn	8
+#define time_enc	4
+#define time_vol	2
 //#define time_out_short	500
 //#define time_out_long	5000
 

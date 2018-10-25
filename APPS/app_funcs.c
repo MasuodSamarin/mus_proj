@@ -98,64 +98,92 @@ static void app_set_preset_efx(APP_typedef *data){
 
 }
 #define HORIZ_SIZE_A	60
+
+#define POSITION_X_VOLA_B_C_NAME	10
+#define POSITION_X_VOLA_B_C_VAL		55
+
+#define POSITION_Y_VOLA_NAME	25
+#define POSITION_Y_VOLB_NAME	38
+#define POSITION_Y_VOLC_NAME	51
+
+
+
 static void app_print_2_vols_enc(efx_node_t *efx){
-#if 0
+#if 1
 
 
-	glcd_draw_string(10,30, (char*)efx->fv1->volA_name);
+	glcd_draw_string(POSITION_X_VOLA_B_C_NAME, POSITION_Y_VOLA_NAME, (char*)efx->fv1->volA_name);
 	sprintf(str, "%d", (uint16_t)ADC_TO_PERSENT(efx->volume[VOL_A]));//*vol_factor_persent);
-	glcd_draw_string(47, 30, str);
+	glcd_draw_string(POSITION_X_VOLA_B_C_VAL, POSITION_Y_VOLA_NAME, str);
 
-	glcd_draw_string(10,40, (char*)efx->fv1->volB_name);
+	glcd_draw_string(POSITION_X_VOLA_B_C_NAME, POSITION_Y_VOLB_NAME, (char*)efx->fv1->volB_name);
 	sprintf(str, "%d", (uint16_t)ADC_TO_PERSENT(efx->volume[VOL_B]));//*vol_factor_persent);
-	glcd_draw_string(47, 50, str);
+	glcd_draw_string(POSITION_X_VOLA_B_C_VAL, POSITION_Y_VOLB_NAME, str);
+#endif
 
-#else
+#if 0
 	glcd_bar_graph_horizontal(10, 30, HORIZ_SIZE_A, 5, ADC_TO_GRAPH(efx->volume[VOL_A]));
 	glcd_bar_graph_horizontal(10, 40, HORIZ_SIZE_A, 5, ADC_TO_GRAPH(efx->volume[VOL_B]));
 
 
 #endif
 
+#if 0
+
+	glcd_bar_graph_horizontal_no_border(10, 30, HORIZ_SIZE_A, 5, ADC_TO_GRAPH(efx->volume[VOL_A]));
+	glcd_bar_graph_horizontal_no_border(10, 40, HORIZ_SIZE_A, 5, ADC_TO_GRAPH(efx->volume[VOL_B]));
+
+
+#endif
 
 }
 
 static void app_print_3_vols_enc(efx_node_t *efx){
-#if 0
+#if 1
 
-	glcd_draw_string(10,30, (char*)efx->fv1->volA_name);
+	glcd_draw_string(POSITION_X_VOLA_B_C_NAME, POSITION_Y_VOLA_NAME, (char*)efx->fv1->volA_name);
 	sprintf(str, "%d", (uint16_t)ADC_TO_PERSENT(efx->volume[VOL_A]));//*vol_factor_persent);
-	glcd_draw_string(47, 30, str);
+	glcd_draw_string(POSITION_X_VOLA_B_C_VAL, POSITION_Y_VOLA_NAME, str);
 
 
-	glcd_draw_string(10,40, (char*)efx->fv1->volB_name);
+	glcd_draw_string(POSITION_X_VOLA_B_C_NAME, POSITION_Y_VOLB_NAME, (char*)efx->fv1->volB_name);
 	sprintf(str, "%d", (uint16_t)ADC_TO_PERSENT(efx->volume[VOL_B]));//*vol_factor_persent);
-	glcd_draw_string(47, 40, str);
+	glcd_draw_string(POSITION_X_VOLA_B_C_VAL, POSITION_Y_VOLB_NAME, str);
 
 
-	glcd_draw_string(10,50, (char*)efx->fv1->volC_name);
+	glcd_draw_string(POSITION_X_VOLA_B_C_NAME, POSITION_Y_VOLC_NAME, (char*)efx->fv1->volC_name);
 	sprintf(str, "%d", (uint16_t)ADC_TO_PERSENT(efx->volume[VOL_C]));//*vol_factor_persent);
-	glcd_draw_string(47, 50, str);
-#else
+	glcd_draw_string(POSITION_X_VOLA_B_C_VAL, POSITION_Y_VOLC_NAME, str);
+#endif
+
+#if 0
 	glcd_bar_graph_horizontal(10, 30, HORIZ_SIZE_A, 5, ADC_TO_GRAPH(efx->volume[VOL_A]));
 	glcd_bar_graph_horizontal(10, 40, HORIZ_SIZE_A, 5, ADC_TO_GRAPH(efx->volume[VOL_B]));
 	glcd_bar_graph_horizontal(10, 50, HORIZ_SIZE_A, 5, ADC_TO_GRAPH(efx->volume[VOL_C]));
 
 
 #endif
-}
 
+#if 0
+
+	glcd_bar_graph_horizontal_no_border(10, 30, HORIZ_SIZE_A, 5, ADC_TO_GRAPH(efx->volume[VOL_A]));
+	glcd_bar_graph_horizontal_no_border(10, 40, HORIZ_SIZE_A, 5, ADC_TO_GRAPH(efx->volume[VOL_B]));
+	glcd_bar_graph_horizontal_no_border(10, 50, HORIZ_SIZE_A, 5, ADC_TO_GRAPH(efx->volume[VOL_C]));
+
+#endif
+}
+#define SPRINTF_FORMAT_NUMBERS	"%.2d"
 static void app_print_2_vols_idle(efx_node_t *efx){
 #if 1
 
 
-	glcd_draw_string(10,30, (char*)efx->fv1->volA_name);
-	sprintf(str, "%d", (uint16_t)ADC_TO_PERSENT(efx->volume[VOL_A]));//*vol_factor_persent);
-	glcd_draw_string(47, 30, str);
+	glcd_draw_string(POSITION_X_VOLA_B_C_NAME, POSITION_Y_VOLA_NAME, (char*)efx->fv1->volA_name);
+	sprintf(str, SPRINTF_FORMAT_NUMBERS, (uint16_t)ADC_TO_PERSENT(efx->volume[VOL_A]));//*vol_factor_persent);
+	glcd_draw_string(POSITION_X_VOLA_B_C_VAL, POSITION_Y_VOLA_NAME, str);
 
-	glcd_draw_string(10,40, (char*)efx->fv1->volB_name);
-	sprintf(str, "%d", (uint16_t)ADC_TO_PERSENT(efx->volume[VOL_B]));//*vol_factor_persent);
-	glcd_draw_string(47, 40, str);
+	glcd_draw_string(POSITION_X_VOLA_B_C_NAME, POSITION_Y_VOLB_NAME, (char*)efx->fv1->volB_name);
+	sprintf(str, SPRINTF_FORMAT_NUMBERS, (uint16_t)ADC_TO_PERSENT(efx->volume[VOL_B]));//*vol_factor_persent);
+	glcd_draw_string(POSITION_X_VOLA_B_C_VAL, POSITION_Y_VOLB_NAME, str);
 
 #else
 	glcd_bar_graph_horizontal(10, 30, 20, 5, ADC_TO_GRAPH(efx->volume[VOL_A]));
@@ -169,20 +197,19 @@ static void app_print_2_vols_idle(efx_node_t *efx){
 
 static void app_print_3_vols_idle(efx_node_t *efx){
 #if 1
-
-	glcd_draw_string(10,30, (char*)efx->fv1->volA_name);
+	glcd_draw_string(POSITION_X_VOLA_B_C_NAME, POSITION_Y_VOLA_NAME, (char*)efx->fv1->volA_name);
 	sprintf(str, "%d", (uint16_t)ADC_TO_PERSENT(efx->volume[VOL_A]));//*vol_factor_persent);
-	glcd_draw_string(47, 30, str);
+	glcd_draw_string(POSITION_X_VOLA_B_C_VAL, POSITION_Y_VOLA_NAME, str);
 
 
-	glcd_draw_string(10,40, (char*)efx->fv1->volB_name);
+	glcd_draw_string(POSITION_X_VOLA_B_C_NAME, POSITION_Y_VOLB_NAME, (char*)efx->fv1->volB_name);
 	sprintf(str, "%d", (uint16_t)ADC_TO_PERSENT(efx->volume[VOL_B]));//*vol_factor_persent);
-	glcd_draw_string(47, 40, str);
+	glcd_draw_string(POSITION_X_VOLA_B_C_VAL, POSITION_Y_VOLB_NAME, str);
 
 
-	glcd_draw_string(10,50, (char*)efx->fv1->volC_name);
+	glcd_draw_string(POSITION_X_VOLA_B_C_NAME, POSITION_Y_VOLC_NAME, (char*)efx->fv1->volC_name);
 	sprintf(str, "%d", (uint16_t)ADC_TO_PERSENT(efx->volume[VOL_C]));//*vol_factor_persent);
-	glcd_draw_string(47, 50, str);
+	glcd_draw_string(POSITION_X_VOLA_B_C_VAL, POSITION_Y_VOLC_NAME, str);
 #else
 	glcd_bar_graph_horizontal(10, 30, 20, 5, ADC_TO_GRAPH(efx->volume[VOL_A]));
 	glcd_bar_graph_horizontal(10, 40, 20, 5, ADC_TO_GRAPH(efx->volume[VOL_B]));
@@ -261,6 +288,7 @@ static void app_print_efx_vols_enc(APP_typedef *data){
 	if(data->node_tmp->mode == EFX_MODE_PRESET)
 		app_update_node_tmp_vols_from_raw(data);
 
+	//glcd_draw_rect(7, 28, 67, 30, 1);
 	if(data->node_tmp->fv1->vol_nums == 2){
 		app_print_2_vols_enc(data->node_tmp);
 	}else if(data->node_tmp->fv1->vol_nums == 3){
@@ -400,20 +428,20 @@ static void app_print_efx_number_blink(efx_node_t *efx){
 	char *name = (char*)efx->fv1->name;
 	int number = efx->number;
 	sprintf(str, "%.2d", number);
-
+	glcd_set_font_c(FC_Tahoma11x13_AlphaNumber);
+	glcd_draw_string(7, 7, name);
 	if((app_data.blink)<5){
 		app_data.blink += 1;
 		glcd_set_font_c(FC_Bebas_Neue18x36_Numbers);
 		glcd_draw_string(80, 23, str);
-		glcd_set_font_c(FC_Tahoma11x13_AlphaNumber);
-		glcd_draw_string(7, 7, name);
+
 
 		//glcd_draw_circle_fill(120, 10, 3, 1);
 
 	}else if(app_data.blink<10){
 		app_data.blink += 1;
 		glcd_draw_rect_fill(79, 22, 10, 10, 0);
-		glcd_draw_rect_fill(6, 6, 100, 10, 0);
+		//glcd_draw_rect_fill(6, 6, 100, 10, 0);
 	}else{
 		app_data.blink = 0;
 
@@ -701,8 +729,18 @@ void Do_S_SET(void){
 
 void Do_S_IDLE(void){
 
+	//clear and draw border
+		app_draw_empty_frame();
 
-	app_print_idle(&app_data);
+		//print efx names and number on the screen
+		app_print_efx_name_number_big(&(app_data.cur_efx));
+
+		app_update_vols_from_raw(&app_data);
+		app_print_efx_vols_idle(&app_data);
+		//glcd_draw_string(10,40, "hey you");
+
+		glcd_write();
+	//app_print_idle(&app_data);
 
 }
 
