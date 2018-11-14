@@ -664,25 +664,31 @@ void Do_S_SET(void){
 			switch (app_data.pre_state) {
 				case S_VOL:
 					app_update_preset_efx(&app_data);
-					app_data.select = 1;
+					app_data.select_ = 1;
 					break;
 				case S_ENC:
 					app_set_preset_efx(&app_data);
-					app_data.select = 2;
+					app_data.select_ = 2;
 
 					break;
 				case S_IDLE:
 					/*change the */
 					if(app_data.cur_efx.mode == EFX_MODE_PRESET){
 						/* make a new efx and save it and set it. EFX_MODE_PRESET*/
+
+						for (int var = 0; var < 3; ++var) {
+							//app_add_new_efx_to_ring(&app_data);
+
+
+						}
 						app_add_new_efx_to_ring(&app_data);
-						app_data.select = 3;
+						app_data.select_ = 3;
 
 
 					}else{
 						/* update the efx and set it. EFX_MODE_USER*/
 						app_update_preset_efx(&app_data);
-						app_data.select = 1;
+						app_data.select_ = 1;
 
 					}
 					break;
@@ -696,7 +702,7 @@ void Do_S_SET(void){
 		case E_NOT:
 			//if(app_data.pre_state != app_data.cur_state){
 			//clear and draw border
-			switch (app_data.select) {
+			switch (app_data.select_) {
 				case 0:
 
 					break;

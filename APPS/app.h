@@ -86,12 +86,12 @@ typedef struct {
 
 	__IO uint8_t			state_changed;
 
-	__IO uint8_t			run_btn_process;
+/*	__IO uint8_t			run_btn_process;
 	__IO uint8_t			run_vol_process;
 	__IO uint8_t			run_enc_process;
-
+*/
 	__IO uint8_t			blink;
-	__IO uint8_t			select;
+	__IO uint8_t			select_;
 
 
 }APP_typedef;
