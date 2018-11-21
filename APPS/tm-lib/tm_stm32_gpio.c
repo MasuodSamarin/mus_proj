@@ -65,7 +65,7 @@ void TM_GPIO_InitAlternate(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, TM_GPIO_OType
 		}
 		
 		/* Set alternate function */
-		GPIOx->AFR[pinpos >> 0x03] = (GPIOx->AFR[pinpos >> 0x03] & ~(0x0F << (4 * (pinpos & 0x07)))) | (Alternate << (4 * (pinpos & 0x07)));
+		////GPIOx->AFR[pinpos >> 0x03] = (GPIOx->AFR[pinpos >> 0x03] & ~(0x0F << (4 * (pinpos & 0x07)))) | (Alternate << (4 * (pinpos & 0x07)));
 	}
 	
 	/* Do initialization */
@@ -81,7 +81,7 @@ void TM_GPIO_DeInit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin) {
 		/* Pin is set */
 		if (GPIO_Pin & (1 << i)) {
 			/* Set 11 bits combination for analog mode */
-			GPIOx->MODER |= (0x03 << (2 * i));
+			////GPIOx->MODER |= (0x03 << (2 * i));
 			
 			/* Pin is not used */
 			GPIO_UsedPins[ptr] &= ~(1 << i);
@@ -96,7 +96,7 @@ void TM_GPIO_SetPinAsInput(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin) {
 		/* Pin is set */
 		if (GPIO_Pin & (1 << i)) {
 			/* Set 00 bits combination for input */
-			GPIOx->MODER &= ~(0x03 << (2 * i));
+			////GPIOx->MODER &= ~(0x03 << (2 * i));
 		}
 	}
 }
@@ -108,7 +108,7 @@ void TM_GPIO_SetPinAsOutput(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin) {
 		/* Pin is set */
 		if (GPIO_Pin & (1 << i)) {
 			/* Set 01 bits combination for output */
-			GPIOx->MODER = (GPIOx->MODER & ~(0x03 << (2 * i))) | (0x01 << (2 * i));
+			////GPIOx->MODER = (GPIOx->MODER & ~(0x03 << (2 * i))) | (0x01 << (2 * i));
 		}
 	}
 }
@@ -120,7 +120,7 @@ void TM_GPIO_SetPinAsAnalog(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin) {
 		/* Pin is set */
 		if (GPIO_Pin & (1 << i)) {
 			/* Set 11 bits combination for analog mode */
-			GPIOx->MODER |= (0x03 << (2 * i));
+			////GPIOx->MODER |= (0x03 << (2 * i));
 		}
 	}
 }
@@ -136,7 +136,7 @@ void TM_GPIO_SetPinAsAlternate(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin) {
 		}
 		
 		/* Set alternate mode */
-		GPIOx->MODER = (GPIOx->MODER & ~(0x03 << (2 * i))) | (0x02 << (2 * i));
+		////GPIOx->MODER = (GPIOx->MODER & ~(0x03 << (2 * i))) | (0x02 << (2 * i));
 	}
 }
 
@@ -151,7 +151,7 @@ void TM_GPIO_SetPullResistor(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, TM_GPIO_PuP
 		}
 
 		/* Set GPIO PUPD register */
-		GPIOx->PUPDR = (GPIOx->PUPDR & ~(0x03 << (2 * pinpos))) | ((uint32_t)(GPIO_PuPd << (2 * pinpos)));
+		////GPIOx->PUPDR = (GPIOx->PUPDR & ~(0x03 << (2 * pinpos))) | ((uint32_t)(GPIO_PuPd << (2 * pinpos)));
 	}
 }
 
@@ -234,18 +234,18 @@ void TM_GPIO_INT_Init(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, TM_GPIO_Mode_t GPI
 		GPIO_UsedPins[ptr] |= 1 << pinpos;
 		
 		/* Set GPIO PUPD register */
-		GPIOx->PUPDR = (GPIOx->PUPDR & ~(0x03 << (2 * pinpos))) | ((uint32_t)(GPIO_PuPd << (2 * pinpos)));
+		////GPIOx->PUPDR = (GPIOx->PUPDR & ~(0x03 << (2 * pinpos))) | ((uint32_t)(GPIO_PuPd << (2 * pinpos)));
 		
 		/* Set GPIO MODE register */
-		GPIOx->MODER = (GPIOx->MODER & ~((uint32_t)(0x03 << (2 * pinpos)))) | ((uint32_t)(GPIO_Mode << (2 * pinpos)));
+		////GPIOx->MODER = (GPIOx->MODER & ~((uint32_t)(0x03 << (2 * pinpos)))) | ((uint32_t)(GPIO_Mode << (2 * pinpos)));
 		
 		/* Set only if output or alternate functions */
 		if (GPIO_Mode == TM_GPIO_Mode_OUT || GPIO_Mode == TM_GPIO_Mode_AF) {		
 			/* Set GPIO OTYPE register */
-			GPIOx->OTYPER = (GPIOx->OTYPER & ~(uint16_t)(0x01 << pinpos)) | ((uint16_t)(GPIO_OType << pinpos));
+			////GPIOx->OTYPER = (GPIOx->OTYPER & ~(uint16_t)(0x01 << pinpos)) | ((uint16_t)(GPIO_OType << pinpos));
 			
 			/* Set GPIO OSPEED register */
-			GPIOx->OSPEEDR = (GPIOx->OSPEEDR & ~((uint32_t)(0x03 << (2 * pinpos)))) | ((uint32_t)(GPIO_Speed << (2 * pinpos)));
+			////GPIOx->OSPEEDR = (GPIOx->OSPEEDR & ~((uint32_t)(0x03 << (2 * pinpos)))) | ((uint32_t)(GPIO_Speed << (2 * pinpos)));
 		}
 	}
 }

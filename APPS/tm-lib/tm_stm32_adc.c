@@ -109,21 +109,21 @@ void TM_ADC_InitADC(ADC_TypeDef* ADCx) {
 	AdcHandle.Instance = ADCx;
 
 	/* Fill settings */
-	AdcHandle.Init.Resolution = ADC_RESOLUTION_12B;
+	////AdcHandle.Init.Resolution = ADC_RESOLUTION_12B;
 	AdcHandle.Init.DataAlign = ADC_DATAALIGN_RIGHT;
 	AdcHandle.Init.ScanConvMode = DISABLE;
 	AdcHandle.Init.ContinuousConvMode = DISABLE;
 	AdcHandle.Init.DiscontinuousConvMode = DISABLE;
-	AdcHandle.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
+	////AdcHandle.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
 	AdcHandle.Init.ExternalTrigConv = ADC_SOFTWARE_START;
-	AdcHandle.Init.DMAContinuousRequests = DISABLE;
+	////AdcHandle.Init.DMAContinuousRequests = DISABLE;
 	
 #if defined(STM32F0xx)
-	AdcHandle.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
-	AdcHandle.Init.Overrun = ADC_OVR_DATA_OVERWRITTEN;
-	AdcHandle.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
-	AdcHandle.Init.LowPowerAutoWait = DISABLE;
-	AdcHandle.Init.LowPowerAutoPowerOff  = DISABLE;
+	////AdcHandle.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
+	////AdcHandle.Init.Overrun = ADC_OVR_DATA_OVERWRITTEN;
+	////AdcHandle.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
+	////AdcHandle.Init.LowPowerAutoWait = DISABLE;
+	////AdcHandle.Init.LowPowerAutoPowerOff  = DISABLE;
 #else
 	AdcHandle.Init.NbrOfDiscConversion = 0;
 	AdcHandle.Init.NbrOfConversion = 1;

@@ -54,15 +54,15 @@ TM_RCC_Result_t TM_RCC_InitSystem(void) {
 		RCC_OscInitStruct.HSIState = RCC_HSI_OFF;
 		RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
 #if defined(STM32F0xx)
-		RCC_OscInitStruct.PLL.PREDIV = RCC_PREDIV_DIV1;
+		////RCC_OscInitStruct.PLL.PREDIV = RCC_PREDIV_DIV1;
 		RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL6;
 #endif
 	} else {
 		RCC_OscInitStruct.HSEState = RCC_HSE_OFF;
 		RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-		RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+		////RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
 #if defined(STM32F0xx)
-		RCC_OscInitStruct.PLL.PREDIV = RCC_PREDIV_DIV1;
+		////RCC_OscInitStruct.PLL.PREDIV = RCC_PREDIV_DIV1;
 		RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL6;
 #endif
 	}

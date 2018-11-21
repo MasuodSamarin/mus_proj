@@ -43,7 +43,7 @@
 #endif
 
 uint32_t	EEPROMPageBackup[_EEPROM_FLASH_PAGE_SIZE/4] = {0};
-efx_node_t	EEPROMPageBackupEfx[_EEPROM_FLASH_PAGE_SIZE/4] = {0};
+uint32_t	EEPROMPageBackupEfx[_EEPROM_FLASH_PAGE_SIZE/4] = {0};
 
 //##########################################################################################################
 //##########################################################################################################
@@ -163,54 +163,3 @@ bool 	EE_Writes(uint16_t start,uint16_t size,uint32_t* data)
 	return true;
 }
 //##########################################################################################################
-
-#include <stdio.h>
-#include <string.h>
-//#define size_of_node sizeof(efx_node_t)/sizeof(uint32_t)
-/*
- * TODO: d is fucking shit*/
-#define SIZE_NODE_BYTE 24
-#define SIZE_NODE_INT 3
-
-bool EE_Reads_Efx(uint16_t start, uint16_t size, efx_node_t* data[])
-{
-	if((start + (size * SIZE_NODE_BYTE)) >	(_EEPROM_FLASH_PAGE_SIZE))
-		return false;
-
-	for (int var = 0; var < size; ++var) {
-		uint32_t addr = _EEPROM_FLASH_PAGE_ADDRESS + start + (var*SIZE_NODE_BYTE);
-		__IO efx_node_t *efx =  (__IO efx_node_t*)(addr);
-		data[var] = (efx_node_t*)efx;
-
-	}
-	return true;
-}
-
-bool EE_Writes_Efx(uint16_t start, uint16_t size, efx_node_t* data[])
-{
-	if((start + (size * SIZE_NODE_BYTE)) >	(_EEPROM_FLASH_PAGE_SIZE))
-		return false;
-
-	uint64_t node[SIZE_NODE_INT*size];
-	for (int var = 0; var < size; ++var) {
-		memmove((void*)&node[SIZE_NODE_INT*var], (void*)(data[var]), SIZE_NODE_BYTE);
-
-	}
-
-	if(EE_Format()==false)
-		return false;
-
-	HAL_FLASH_Unlock();
-	for (int var = 0; var < SIZE_NODE_INT*size; ++var) {
-		uint32_t addr = _EEPROM_FLASH_PAGE_ADDRESS + start + (var*8);
-
-		if(HAL_FLASH_Program(FLASH_TYPEPROGRAM_DOUBLEWORD, addr, node[var]) != HAL_OK){
-			HAL_FLASH_Lock();
-			return false;
-		}
-	}
-	HAL_FLASH_Lock();
-	return true;
-}
-
-

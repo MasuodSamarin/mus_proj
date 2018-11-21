@@ -123,8 +123,8 @@ TM_GENERAL_ResetSource_t TM_GENERAL_GetResetSource(uint8_t reset_flags) {
 		source = TM_GENERAL_ResetSource_Software;
 	} else if (RCC->CSR & RCC_CSR_PORRSTF) {
 		source = TM_GENERAL_ResetSource_POR;
-	} else if (RCC->CSR & RCC_CSR_BORRSTF) {
-		source = TM_GENERAL_ResetSource_BOR;
+	////} else if (RCC->CSR & RCC_CSR_BORRSTF) {
+		////source = TM_GENERAL_ResetSource_BOR;
 #if defined(STM32F4xx)
 	} else if (RCC->CSR & RCC_CSR_PADRSTF) {
 #else

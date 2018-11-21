@@ -92,16 +92,16 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	if(htim == &htim2){
 #endif
 		/*add 1 to the ticks*/
-		app_data.ticks += 1;
+		//app_data.ticks += 1;
 		ticks += 1;
-		if((app_data.ticks%(app_data.timeout_short_time)) == 0){
+		//if((app_data.ticks%(app_data.timeout_short_time)) == 0){
 			/*
 			 * elapsed short time and set the timeout flag on the app_data to short
 			 * */
-			app_data.timeout = TO_SHORT;
+			//app_data.timeout = TO_SHORT;
 			  //HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
 
-		}
+		//}
 #if 0
 		else if(app_data.ticks > app_data.timeout_long_time){
 			/*
@@ -121,16 +121,16 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 		 * if reach the specific time, trigger the appropriate functions.
 		 *
 		 * */
-		if(0 == ((ticks)%time_btn))
-			btn_process();
+		if(0 == ((ticks)%time_btn));
+			//btn_process();
 			//app_data.run_btn_process = 1;
 
-		if(0 == ((ticks)%time_vol))
+		if(0 == ((ticks)%time_vol));
 			//app_data.run_vol_process = 1;
-			vol_process();
+			//vol_process();
 
-		if(0 == ((ticks)%time_enc))
-			enc_process();
+		if(0 == ((ticks)%time_enc));
+			//enc_process();
 			//app_data.run_enc_process = 1;
 
 #if TIM2_CHECK
@@ -176,14 +176,14 @@ int main(void)
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
 
-  app_init();
+ // app_init();
 
 
-  HAL_TIM_Base_Start_IT(&htim2);
-  app_data.timeout = TO_NOT;
+  //HAL_TIM_Base_Start_IT(&htim2);
+ // app_data.timeout = TO_NOT;
 
 
-
+  glcd_init();
 
   /* USER CODE END 2 */
   /* Infinite loop */
@@ -194,10 +194,9 @@ int main(void)
 
   /* USER CODE BEGIN 3 */
 
-	  App_Exec();
+	  //App_Exec();
 
-
-
+	  glcd_test_scrolling_graph_rand();
 
 #if 0
 
@@ -209,7 +208,6 @@ int main(void)
   }
   /* USER CODE END 3 */
 }
-
 
 /**
   * @brief System Clock Configuration
@@ -268,13 +266,6 @@ void SystemClock_Config(void)
   HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
 }
 /* USER CODE BEGIN 4 */
-
-
-
-
-
-
-
 
 
 

@@ -1,86 +1,116 @@
-/*
- * fv1.h
+/**
+ * @author  Tilen Majerle
+ * @email   tilen@majerle.eu
+ * @website http://stm32f4-discovery.net
+ * @link
+ * @version v1.0
+ * @ide     Keil uVision
+ * @license MIT
+ * @brief   Library template
  *
- *  Created on: Aug 9, 2018
- *      Author: sam
+\verbatim
+   ----------------------------------------------------------------------
+    Copyright (c) 2016 Tilen Majerle
+
+    Permission is hereby granted, free of charge, to any person
+    obtaining a copy of this software and associated documentation
+    files (the "Software"), to deal in the Software without restriction,
+    including without limitation the rights to use, copy, modify, merge,
+    publish, distribute, sublicense, and/or sell copies of the Software,
+    and to permit persons to whom the Software is furnished to do so,
+    subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be
+    included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+    OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+    AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+    HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+    WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+    OTHER DEALINGS IN THE SOFTWARE.
+   ----------------------------------------------------------------------
+\endverbatim
+ */
+#ifndef TM_LIBRARY_H
+#define TM_LIBRARY_H 100
+
+/* C++ detection */
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/**
+ * @addtogroup TM_STM32Fxxx_HAL_Libraries
+ * @{
  */
 
-#ifndef FV1_H_
-#define FV1_H_
+/**
+ * @defgroup TM_LIBNAME
+ * @brief    Library description here
+ * @{
+ *
+ * \par Changelog
+ *
+\verbatim
+ Version 1.0
+  - First release
+\endverbatim
+ *
+ * \par Dependencies
+ *
+\verbatim
+ - STM32Fxxx HAL
+ - defines.h
+\endverbatim
+ */
 
-#include "main.h"
-#include "stm32f1xx_hal.h"
-#include "gpio.h"
+#include "stm32fxxx_hal.h"
+#include "defines.h"
 
+/**
+ * @defgroup TM_LIB_Macros
+ * @brief    Library defines
+ * @{
+ */
+/* Macros here */
+/**
+ * @}
+ */
 
-//#include "event.h"
+/**
+ * @defgroup TM_LIB_Typedefs
+ * @brief    Library Typedefs
+ * @{
+ */
+/* Typedefs here */
+/**
+ * @}
+ */
 
-/*
-uint16_t fv1_eep_pins[FV1_EEP_MAX] = {
-		FV1_EEP1_Pin,
-		FV1_EEP2_Pin,
-};
+/**
+ * @defgroup TM_LIB_Functions
+ * @brief    Library Functions
+ * @{
+ */
+/* Functions here */
+/**
+ * @}
+ */
 
-#define FV1_CODE_PIN_MAX	4
-uint16_t fv1_code_pins[FV1_CODE_PIN_MAX] = {
-		FV1_CODE_A_Pin,
-		FV1_CODE_B_Pin,
-		FV1_CODE_C_Pin,
-		FV1_CODE_L_Pin
-};
-*/
+/**
+ * @}
+ */
 
+/**
+ * @}
+ */
 
-/*
- * in the each eep there's a 8 program, it start count from 0b000 to 0b111
- * like this:
- * 			0bLABC
- * 			0b1001
- * 	that means first effect of eep A
- * */
-typedef enum {
-	FV1_CODE_0 = 0b0000,
-	FV1_CODE_1 = 0b0001,
-	FV1_CODE_2 = 0b0010,
-	FV1_CODE_3 = 0b0011,
-	FV1_CODE_4 = 0b0100,
-	FV1_CODE_5 = 0b0101,
-	FV1_CODE_6 = 0b0110,
-	FV1_CODE_7 = 0b0111,
-}fv1_code_t;
+/* C++ detection */
+#ifdef __cplusplus
+}
+#endif
 
-#define FV1_PIN_A_BIT	0b0001
-#define FV1_PIN_B_BIT	0b0010
-#define FV1_PIN_C_BIT	0b0100
-#define FV1_PIN_L_BIT	0b1000
-
-/*
- * there is 2 eep, that just single of it must be on each time
- * */
-typedef enum {
-	FV1_EEP_RESET,
-	FV1_EEP_A,
-	FV1_EEP_B
-}fv1_eep_t;
-
-
-/*
- * fv1 struct consist all of needed that fv1 uses
- * */
-typedef struct {
-	fv1_code_t pin;
-	fv1_eep_t eep;
-	//vol_node_t vol[VOL_MAX];
-}fv1_type_t;
-
-
-
-void fv1_latch_reset(fv1_type_t *fv1);
-void fv1_latch_set(fv1_type_t *fv1);
-void fv1_code_set(fv1_type_t *fv1, fv1_code_t code);
-fv1_code_t fv1_code_get(fv1_type_t *fv1);
-void fv1_eep_off(fv1_type_t *fv1);
-void fv1_eep_on(fv1_type_t *fv1, fv1_eep_t eep);
-fv1_eep_t fv1_eep_get(fv1_type_t *fv1);
-
-#endif /* FV1_H_ */
+#endif

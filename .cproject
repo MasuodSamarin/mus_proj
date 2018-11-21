@@ -50,6 +50,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_cube/APPS/encoder}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_cube/APPS/eep}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_cube/APPS}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_cube/APPS/tm-lib}&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.2122180815" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="__weak=&quot;__attribute__((weak))&quot;"/>

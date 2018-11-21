@@ -61,26 +61,34 @@ TM_EXTI_Result_t TM_EXTI_Attach(GPIO_TypeDef* GPIOx, uint16_t GPIO_Line, TM_EXTI
 	/* Get IRQ channel */
 	switch (GPIO_Line) {
 		case GPIO_PIN_0:
+			irqchannel = EXTI0_IRQn;
+			break;
 		case GPIO_PIN_1:
-			irqchannel = EXTI0_1_IRQn;
+			irqchannel = EXTI1_IRQn;
 			break;
 		case GPIO_PIN_2:
+			irqchannel = EXTI2_IRQn;
+			break;
 		case GPIO_PIN_3:
-			irqchannel = EXTI2_3_IRQn;
+			irqchannel = EXTI3_IRQn;
 			break;
 		case GPIO_Pin_4:
+			irqchannel = EXTI4_IRQn;
+			break;
 		case GPIO_PIN_5:
 		case GPIO_PIN_6:
 		case GPIO_PIN_7:
 		case GPIO_PIN_8:
 		case GPIO_PIN_9:
+			irqchannel = EXTI9_5_IRQn;
+			break;
 		case GPIO_PIN_10:
 		case GPIO_PIN_11:
 		case GPIO_PIN_12:
 		case GPIO_PIN_13:
 		case GPIO_PIN_14:
 		case GPIO_PIN_15:
-			irqchannel = EXTI4_15_IRQn;
+			irqchannel = EXTI15_10_IRQn;
 			break;
 		default:
 			return TM_EXTI_Result_Error;
@@ -142,11 +150,11 @@ TM_EXTI_Result_t TM_EXTI_Attach(GPIO_TypeDef* GPIOx, uint16_t GPIO_Line, TM_EXTI
 	portsource = TM_GPIO_GetPortSource(GPIOx);
 	
 	/* Enable SYSCFG clock */
-	RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN;
+	//RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN;
 	
 	/* Connect proper GPIO to SYSCFG */
-	SYSCFG->EXTICR[pinsource >> 2] &= ~(0x0F << (0x04 * (pinsource & 0x03)));
-	SYSCFG->EXTICR[pinsource >> 2] |= (portsource << (0x04 * (pinsource & 0x03)));
+	//SYSCFG->EXTICR[pinsource >> 2] &= ~(0x0F << (0x04 * (pinsource & 0x03)));
+	//SYSCFG->EXTICR[pinsource >> 2] |= (portsource << (0x04 * (pinsource & 0x03)));
 	
 	/* Clear first */
 	EXTI->IMR &= ~GPIO_Line;

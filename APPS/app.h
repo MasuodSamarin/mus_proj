@@ -1,150 +1,116 @@
- /*
- * app.h
+/**
+ * @author  Tilen Majerle
+ * @email   tilen@majerle.eu
+ * @website http://stm32f4-discovery.net
+ * @link
+ * @version v1.0
+ * @ide     Keil uVision
+ * @license MIT
+ * @brief   Library template
  *
- *  Created on: Oct 13, 2018
- *      Author: sam
+\verbatim
+   ----------------------------------------------------------------------
+    Copyright (c) 2016 Tilen Majerle
+
+    Permission is hereby granted, free of charge, to any person
+    obtaining a copy of this software and associated documentation
+    files (the "Software"), to deal in the Software without restriction,
+    including without limitation the rights to use, copy, modify, merge,
+    publish, distribute, sublicense, and/or sell copies of the Software,
+    and to permit persons to whom the Software is furnished to do so,
+    subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be
+    included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+    OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+    AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+    HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+    WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+    OTHER DEALINGS IN THE SOFTWARE.
+   ----------------------------------------------------------------------
+\endverbatim
  */
+#ifndef TM_LIBRARY_H
+#define TM_LIBRARY_H 100
 
-#ifndef APP_H_
-#define APP_H_
-
-/* Includes ------------------------------------------------------------------*/
-#include "main.h"
-#include "stm32f1xx_hal.h"
-#include "adc.h"
-#include "dma.h"
-#include "tim.h"
-#include "gpio.h"
-
-/* USER CODE BEGIN Includes */
-#include "glcd.h"
-#include "unit_tests.h"
-#include "event.h"
-
-#include "eeprom.h"
-
-/* USER CODE BEGIN Includes */
-
-
-/* USER CODE END Includes */
-
-/* Private variables ---------------------------------------------------------*/
-
-/* USER CODE BEGIN PV */
-/* Private variables ---------------------------------------------------------*/
-
-extern __IO int g_timeout;
-
-
-typedef enum {
-	S_SET,
-	S_IDLE,
-	S_ENC,
-	S_VOL,
-	S_SLEEP,
-	S_BYPASS,
-	S_MAX
-}STATES_typedef;
-
-typedef enum {
-	E_NOT,
-	E_VOL,
-	E_ENC,
-	E_BTN_ENTER,
-	E_BTN_BYPASS,
-	E_TIMEOUT_SHORT,
-	E_TIMEOUT_LONG,
-	E_MAX
-}EVENTS_typedef;
-
-typedef enum{
-	TO_NOT,
-	TO_SHORT,
-	TO_LONG
-}TimeOut_typedef;
-
-
-typedef struct {
-
-	STATES_typedef 	cur_state;
-	STATES_typedef 	pre_state;
-
-	EVENTS_typedef 	cur_event;
-
-	__IO uint16_t			timeout_long_time;
-	__IO uint16_t			timeout_short_time;
-	__IO TimeOut_typedef 	timeout;
-	__IO uint32_t			ticks;
-
-	efx_node_t 		*node_tmp;
-	efx_node_t		cur_efx;
-
-	event_node_t	event;
-
-	__IO vol_name_t			vol_last_name;
-	__IO uint16_t			vol_last_val;
-
-	__IO uint8_t			state_changed;
-
-/*	__IO uint8_t			run_btn_process;
-	__IO uint8_t			run_vol_process;
-	__IO uint8_t			run_enc_process;
-*/
-	__IO uint8_t			blink;
-	__IO uint8_t			select_;
-
-
-}APP_typedef;
-
-#define TIMEOUT_LONG_TIME	1000
-#define TIMEOUT_SHORT_TIME	200
-
-void app_reset_timeout_timer(void);
-void app_set_timeout_short(uint16_t interval);
-void app_set_timeout_long(uint16_t interval);
-
-
-extern APP_typedef app_data;
-
-void app_init(void);
-
-EVENTS_typedef event_handle(void);
-void State_Machine(EVENTS_typedef event);
-void App_Exec(void);
-
-//void print_on_screen(char* msg);
-#if ON_ENTER_ENABLED
-void Enter_S_SET(void);
-void Enter_S_IDLE(void);
-void Enter_S_ENC(void);
-void Enter_S_VOL(void);
-void Enter_S_SLEEP(void);
-void Enter_S_BYPASS(void);
-void On_Enter(void);
+/* C++ detection */
+#ifdef __cplusplus
+extern "C" {
 #endif
 
-void Do_S_SET(void);
-void Do_S_IDLE(void);
-void Do_S_ENC(void);
-void Do_S_VOL(void);
-void Do_S_SLEEP(void);
-void Do_S_BYPASS(void);
-void Do(void);
+/**
+ * @addtogroup TM_STM32Fxxx_HAL_Libraries
+ * @{
+ */
 
+/**
+ * @defgroup TM_LIBNAME
+ * @brief    Library description here
+ * @{
+ *
+ * \par Changelog
+ *
+\verbatim
+ Version 1.0
+  - First release
+\endverbatim
+ *
+ * \par Dependencies
+ *
+\verbatim
+ - STM32Fxxx HAL
+ - defines.h
+\endverbatim
+ */
 
+#include "stm32fxxx_hal.h"
+#include "defines.h"
 
-/*just to test*/
-//void app_draw_frame(void);
+/**
+ * @defgroup TM_LIB_Macros
+ * @brief    Library defines
+ * @{
+ */
+/* Macros here */
+/**
+ * @}
+ */
 
+/**
+ * @defgroup TM_LIB_Typedefs
+ * @brief    Library Typedefs
+ * @{
+ */
+/* Typedefs here */
+/**
+ * @}
+ */
 
+/**
+ * @defgroup TM_LIB_Functions
+ * @brief    Library Functions
+ * @{
+ */
+/* Functions here */
+/**
+ * @}
+ */
 
+/**
+ * @}
+ */
 
-#endif /* APP_H_ */
+/**
+ * @}
+ */
 
+/* C++ detection */
+#ifdef __cplusplus
+}
+#endif
 
-
-
-
-
-
-
+#endif

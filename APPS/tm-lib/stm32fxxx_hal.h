@@ -164,8 +164,8 @@ extern "C" {
 #ifndef STM32F0XX
 #define STM32F0XX
 #endif
-#include "stm32f0xx.h"
-#include "stm32f0xx_hal.h"
+#include "stm32f1xx.h"
+#include "stm32f1xx_hal.h"
 #endif
 
 /* STM32F4xx */

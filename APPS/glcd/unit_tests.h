@@ -85,28 +85,5 @@ void glcd_test_volume_box(void);
 void glcd_tests(void);
 
 
-/////////////////////////////////////////////////////////////////////////////////////////
-#include "event.h"
-#include  "fv1.h"
-#include "effect.h"
-
-#include "link_list.h"
-#include "event.h"
-
-void unit_init(void);
-void unit_print_btn(btn_node_t *btn);
-void unit_print_enc(enc_node_t *enc);
-void unit_print_vol(vol_node_t *vol);
-void unit_test_events(void);
-
-
-////
-void unit_test_init(void);
-void unit_test_effect_print(efx_node_t *node);
-
-void unit_test_eep_save(void);
-void unit_test_eep_read(void);
-void unit_test_eep(void);
-void unit_test_sizes(void);
 
 #endif
