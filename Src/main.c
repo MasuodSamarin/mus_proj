@@ -51,6 +51,14 @@
 
 #include "eeprom.h"
 #include "app.h"
+
+
+#include "stm32fxxx_hal.h"
+#include "defines.h"
+#include "tm_stm32_rotary_encoder.h"
+
+
+
 /* USER CODE BEGIN Includes */
 
 
@@ -62,6 +70,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 __IO int g_timeout;
+TM_RE_t re;
 
 /* USER CODE END PV */
 
@@ -133,6 +142,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 			//enc_process();
 			//app_data.run_enc_process = 1;
 
+		TM_RE_Process(&re);
+
 #if TIM2_CHECK
 	}
 #endif
@@ -173,17 +184,26 @@ int main(void)
   MX_TIM2_Init();
   MX_ADC1_Init();
   MX_TIM1_Init();
-  MX_TIM4_Init();
+  //MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
 
- // app_init();
+  //app_init();
 
 
-  //HAL_TIM_Base_Start_IT(&htim2);
+  HAL_TIM_Base_Start_IT(&htim2);
  // app_data.timeout = TO_NOT;
 
 
-  glcd_init();
+	glcd_init();
+	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
+
+	glcd_clear();
+	glcd_write();
+
+
+	TM_RE_Init(&re, ENC_TIM4_CH1_GPIO_Port, ENC_TIM4_CH1_Pin, ENC_TIM4_CH2_GPIO_Port,ENC_TIM4_CH2_Pin);
+
+	char tmp_txt[25];
 
   /* USER CODE END 2 */
   /* Infinite loop */
@@ -193,10 +213,27 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
+	  glcd_clear();
+	  glcd_write();
 
-	  //App_Exec();
+	  if(re.Rotation == TM_RE_Rotate_Increment)
+		  glcd_draw_string(5, 5, "TM_RE_Rotate_Increment");
+	  else if(re.Rotation == TM_RE_Rotate_Decrement)
+		  glcd_draw_string(5, 5, "TM_RE_Rotate_Decrement");
+	  else if(re.Rotation == TM_RE_Rotate_Nothing)
+		  glcd_draw_string(5, 5, "TM_RE_Rotate_Nothing");
 
-	  glcd_test_scrolling_graph_rand();
+
+	  sprintf(tmp_txt, "%d", (int)re.Absolute);
+	  glcd_draw_string(5, 25, tmp_txt);
+
+
+
+	  glcd_write();
+
+	  HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
+
+	  HAL_Delay(500);
 
 #if 0
 

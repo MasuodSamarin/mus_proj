@@ -36,10 +36,20 @@ void TM_RE_Init(TM_RE_t* data, GPIO_TypeDef* GPIO_A_Port, uint16_t GPIO_A_Pin, G
 	data->GPIO_PIN_B = GPIO_B_Pin;
 	
 	/* Set pin A as exti interrupt */
-	TM_EXTI_Attach(data->GPIO_A, data->GPIO_PIN_A, TM_EXTI_Trigger_Rising_Falling);
+	//TM_EXTI_Attach(data->GPIO_A, data->GPIO_PIN_A, TM_EXTI_Trigger_Rising_Falling);
 	
 	/* Set pin B as input */
-	TM_GPIO_Init(data->GPIO_B, data->GPIO_PIN_B, TM_GPIO_Mode_IN, TM_GPIO_OType_PP, TM_GPIO_PuPd_UP, TM_GPIO_Speed_Low);
+	//TM_GPIO_Init(data->GPIO_B, data->GPIO_PIN_B, TM_GPIO_Mode_IN, TM_GPIO_OType_PP, TM_GPIO_PuPd_UP, TM_GPIO_Speed_Low);
+
+	GPIO_InitTypeDef GPIO_InitStruct;
+
+	GPIO_InitStruct.Pin = data->GPIO_PIN_A | data->GPIO_PIN_B;
+	GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+	GPIO_InitStruct.Pull = GPIO_PULLUP;
+	HAL_GPIO_Init(data->GPIO_B, &GPIO_InitStruct);
+
+
+
 	
 	/* Set default mode */
 	data->Mode = TM_RE_Mode_Zero;
@@ -76,8 +86,11 @@ void TM_RE_Process(TM_RE_t* data) {
 	uint8_t now_b;
 	
 	/* Read inputs */
-	now_a = TM_GPIO_GetInputPinValue(data->GPIO_A, data->GPIO_PIN_A);
-	now_b = TM_GPIO_GetInputPinValue(data->GPIO_B, data->GPIO_PIN_B);
+	//now_a = TM_GPIO_GetInputPinValue(data->GPIO_A, data->GPIO_PIN_A);
+	//now_b = TM_GPIO_GetInputPinValue(data->GPIO_B, data->GPIO_PIN_B);
+
+	now_a = HAL_GPIO_ReadPin(data->GPIO_A, data->GPIO_PIN_A);
+	now_b = HAL_GPIO_ReadPin(data->GPIO_B, data->GPIO_PIN_B);
 	
 	/* Check difference */
 	if (now_a != data->LastA) {
