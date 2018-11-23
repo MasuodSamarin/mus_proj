@@ -50,6 +50,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_cube/APPS/encoder}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_cube/APPS/eep}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_cube/APPS}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mus_cube/APPS/tm-pb}&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.2122180815" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="__weak=&quot;__attribute__((weak))&quot;"/>
@@ -111,8 +112,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="eep|effect|link-list|glcd|glcd/fonts|fv1|fsme|event|encoder|push-btn|link_list|volume" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Src"/>
-						<entry excluding="eep|effect|link-list|glcd|glcd/fonts|fv1|fsme|event|encoder|push-btn|link_list|volume" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS"/>
+						<entry excluding="tm-pb|eep|effect|link-list|glcd|glcd/fonts|fv1|fsme|event|encoder|push-btn|link_list|volume" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/eep"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/effect"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/encoder"/>
@@ -124,9 +124,11 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/link-list"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/link_list"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/push-btn"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/tm-pb"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/volume"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Inc"/>
+						<entry excluding="eep|effect|link-list|glcd|glcd/fonts|fv1|fsme|event|encoder|push-btn|link_list|volume" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Src"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="startup"/>
 					</sourceEntries>
 				</configuration>
@@ -234,8 +236,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="eep|effect|link-list|glcd|glcd/fonts|fv1|fsme|event|encoder|push-btn|link_list|volume" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Src"/>
-						<entry excluding="eep|effect|link-list|glcd|glcd/fonts|fv1|fsme|event|encoder|push-btn|link_list|volume" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS"/>
+						<entry excluding="tm-pb|eep|effect|link-list|glcd|glcd/fonts|fv1|fsme|event|encoder|push-btn|link_list|volume" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/eep"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/effect"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/encoder"/>
@@ -247,9 +248,11 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/link-list"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/link_list"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/push-btn"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/tm-pb"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="APPS/volume"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Inc"/>
+						<entry excluding="eep|effect|link-list|glcd|glcd/fonts|fv1|fsme|event|encoder|push-btn|link_list|volume" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Src"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="startup"/>
 					</sourceEntries>
 				</configuration>

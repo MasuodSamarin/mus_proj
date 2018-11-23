@@ -51,6 +51,10 @@
 
 #include "eeprom.h"
 #include "app.h"
+
+
+#include "tm_stm32_button.h"
+
 /* USER CODE BEGIN Includes */
 
 
@@ -62,7 +66,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 __IO int g_timeout;
-
+//TM_BUTTON_t btn1, btn2;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -70,6 +74,72 @@ void SystemClock_Config(void);
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
+
+
+void button_handler_1(TM_BUTTON_t* tm_btn, TM_BUTTON_PressType_t type){
+	int x = 0;
+	int y = 0;
+	int tx = 2;
+	int ty = 2;
+	int w = 128;
+	int h = 64;
+
+	glcd_clear_buffer();
+	glcd_draw_rect_thick(x, y, w, h, tx, ty, BLACK);
+
+
+
+	//int number = 10;
+	char tmp_char[100];
+	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
+
+	glcd_draw_string(20, 5, "BUTTON 1");
+	sprintf(tmp_char, "%.2d", tm_btn->GPIO_Pin);
+	glcd_draw_string(20, 15, tmp_char);
+	if(type == TM_BUTTON_PressType_OnPressed)
+			glcd_draw_string(20, 25, "OnPressed");
+	if(type == TM_BUTTON_PressType_Debounce)
+			glcd_draw_string(20, 25, "Debounce");
+	if(type == TM_BUTTON_PressType_Normal)
+			glcd_draw_string(20, 25, "Normal");
+	if(type == TM_BUTTON_PressType_Long)
+				glcd_draw_string(20, 25, "Long");
+	glcd_write();
+
+
+}
+void button_handler_2(TM_BUTTON_t* tm_btn, TM_BUTTON_PressType_t type){
+	int x = 0;
+		int y = 0;
+		int tx = 2;
+		int ty = 2;
+		int w = 128;
+		int h = 64;
+
+		glcd_clear_buffer();
+		glcd_draw_rect_thick(x, y, w, h, tx, ty, BLACK);
+
+
+
+		int number = 10;
+		char tmp_char[100];
+		glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
+		glcd_draw_string(20, 5, "BUTTON 2");
+			sprintf(tmp_char, "%.2d", tm_btn->GPIO_Pin);
+			glcd_draw_string(20, 15, tmp_char);
+			if(type == TM_BUTTON_PressType_OnPressed)
+					glcd_draw_string(20, 25, "OnPressed");
+			if(type == TM_BUTTON_PressType_Debounce)
+					glcd_draw_string(20, 25, "Debounce");
+			if(type == TM_BUTTON_PressType_Normal)
+					glcd_draw_string(20, 25, "Normal");
+			if(type == TM_BUTTON_PressType_Long)
+						glcd_draw_string(20, 25, "Long");
+
+		glcd_write();
+}
+void button_handler_3(TM_BUTTON_t* btn, TM_BUTTON_PressType_t type);
+
 
 /* USER CODE END PFP */
 
@@ -183,8 +253,8 @@ int main(void)
   app_data.timeout = TO_NOT;
 
 
-
-
+  TM_BUTTON_Init(PUSH_BTN_BYPASS_GPIO_Port, PUSH_BTN_BYPASS_Pin, 0, button_handler_1);
+  TM_BUTTON_Init(PUSH_BTN_ENTER_GPIO_Port, PUSH_BTN_ENTER_Pin, 0, button_handler_2);
   /* USER CODE END 2 */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -194,9 +264,8 @@ int main(void)
 
   /* USER CODE BEGIN 3 */
 
-	  App_Exec();
-
-
+	  //App_Exec();
+	  TM_BUTTON_Update();
 
 
 #if 0
