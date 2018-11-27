@@ -85,15 +85,15 @@ void app_set_timeout_long(uint16_t interval){
 EVENTS_typedef event_handle(void){
 	//static int timeout_cnt = 0;
 	app_data.event = event_pop_node();
-	event_node_t *event = &(app_data.event);
+	event_node_t event = app_data.event;
 
-	switch (event->type) {
+	switch (event.type) {
 		case EVENT_NOT:
 			break;
 
 		case EVENT_BTN:
 			app_reset_timeout_timer();
-			switch (event->btn->name) {
+			switch (event.btn.name) {
 				case BTN_ENTER:
 					return E_BTN_ENTER;
 					break;
@@ -112,9 +112,9 @@ EVENTS_typedef event_handle(void){
 
 		case EVENT_VOL:
 			app_reset_timeout_timer();
-			app_data.vol_last_name = event->vol->name;
-			app_data.vol_last_val = event->vol->val_adc;
-			app_data.cur_efx.volume[event->vol->name] = event->vol->val_adc;
+			app_data.vol_last_name = event.vol.name;
+			app_data.vol_last_val = event.vol.val_adc;
+			app_data.cur_efx.volume[event.vol.name] = event.vol.val_adc;
 			return E_VOL;
 			break;
 	}

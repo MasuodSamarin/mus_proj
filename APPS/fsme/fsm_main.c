@@ -224,36 +224,36 @@ void fsm1_action_enc_print(efx_node_t *node){
 
 static void fsm1_action_enc( void ){
 
-	enc_node_t *enc = fsm_handle.event->enc;
+	//enc_node_t *enc = fsm_handle.event->enc;
 	efx_node_t *node;
 
-	if (enc->dir == ENC_DIR_CCW)
-		node = efx_next_node();
+	//if (enc->dir == ENC_DIR_CCW)
+		//node = efx_next_node();
 
-	else if (enc->dir == ENC_DIR_CW)
-		node = efx_prev_node();
+	//else if (enc->dir == ENC_DIR_CW)
+		//node = efx_prev_node();
 
 	fsm1_action_enc_print(node);
 }
 
 static void fsm1_action_vol( void ){
-	vol_node_t *vol = fsm_handle.event->vol;
+	//vol_node_t *vol = fsm_handle.event->vol;
 	glcd_clear_buffer();
 	glcd_draw_string(5,5, "VOLUME");
-	glcd_draw_string(5,15, unit_vol_name[vol->name]);
-	glcd_draw_string(5,25, (char*)utoa(vol->val_adc, str, 10));
-	sprintf(str, "%p", vol);
+	//glcd_draw_string(5,15, unit_vol_name[vol->name]);
+	//glcd_draw_string(5,25, (char*)utoa(vol->val_adc, str, 10));
+	//sprintf(str, "%p", vol);
 	glcd_draw_string(5,35, str);
 	glcd_write();
 }
 
 static void fsm1_action_btn( void ){
-	btn_node_t *btn = fsm_handle.event->btn;
+	//btn_node_t btn = fsm_handle->event.btn;
 	glcd_clear_buffer();
 	glcd_draw_string(5,5, "BUTTON");
-	glcd_draw_string(5,15, unit_btn_name[btn->name]);
-	glcd_draw_string(5,25, unit_btn_hold[btn->hold]);
-	sprintf(str, "%p", btn);
+	//glcd_draw_string(5,15, unit_btn_name[btn.name]);
+	//glcd_draw_string(5,25, unit_btn_hold[btn.hold]);
+	//sprintf(str, "%p", btn);
 	glcd_draw_string(5,35, str);
 	glcd_write();
 

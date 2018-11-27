@@ -61,9 +61,9 @@ typedef enum {
 typedef struct {
 	event_types_t type;
 	union {
-		enc_node_t *enc;
-		btn_node_t *btn;
-		vol_node_t *vol;
+		enc_node_t enc;
+		btn_node_t btn;
+		vol_node_t vol;
 	};
 }event_node_t;
 
@@ -82,7 +82,7 @@ size_t event_get_size(void);
 
 void event_push_node(event_node_t *node);
 event_node_t* event_create_vol_node(vol_name_t name, uint32_t val);
-event_node_t* event_create_btn_node(btn_name_t name);//, btn_hold_t hold);
+event_node_t* event_create_btn_node(btn_name_t name, btn_hold_t hold);
 event_node_t* event_create_enc_node(enc_dir_t dir, uint32_t val);
 
 

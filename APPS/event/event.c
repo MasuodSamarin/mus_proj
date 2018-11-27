@@ -41,20 +41,22 @@ void event_push_node(event_node_t *node){
  * free the memory of recently deleted node
  * */
 void event_free_event_node(event_node_t *node){
+#if 0
 	switch (node->type) {
 		case EVENT_BTN:
-			free(node->btn);
+			//free(node->);
 			break;
 		case EVENT_ENC:
-			free(node->enc);
+			//free(node->enc);
 			break;
 		case EVENT_VOL:
-			free(node->vol);
+			//free(node->vol);
 			break;
 
 		default:
 			break;
 	}
+#endif
 	free(node);
 }
 
@@ -88,38 +90,36 @@ event_node_t event_pop_node(void){
 
 event_node_t* event_create_vol_node(vol_name_t name, uint32_t val){
 	event_node_t *node = malloc(sizeof(*node));
-	vol_node_t *vol = malloc(sizeof(*vol));
+	//vol_node_t vol;// = malloc(sizeof(*vol));
 /*TODO: check the malloc */
-	if(!node || !vol){
+	if(!node){
 		_Error_Handler(__FILE__, __LINE__);
 		return (event_node_t*)NULL;
 	}
-	vol->name = name;
-	vol->val_adc = val;
-	vol->val_pwm = val << VOL_ADC_PWM_FACTOR;
 
 	node->type = EVENT_VOL;
-	node->vol = vol;
-
+	node->vol.name = name;
+	node->vol.val_adc = val;
+	node->vol.val_pwm = val << VOL_ADC_PWM_FACTOR;
 	return node;
 }
 /*
  * create event node consist button event
  * */
-event_node_t* event_create_btn_node(btn_name_t name){//, btn_hold_t hold){
+event_node_t* event_create_btn_node(btn_name_t name, btn_hold_t hold){
 	event_node_t *node = malloc(sizeof(*node));
-	btn_node_t *btn = malloc(sizeof(*btn));
+	//btn_node_t btn;// = malloc(sizeof(*btn));
 /*TODO: check the malloc */
-	if(!node || !btn){
+	if(!node){
 		_Error_Handler(__FILE__, __LINE__);
 		return (event_node_t*)NULL;
 	}
-	btn->name = name;
+	//btn->name = name;
 	//btn->hold = hold;
 
 	node->type = EVENT_BTN;
-	node->btn = btn;
-
+	node->btn.name = name;
+	node->btn.hold = hold;
 	return node;
 }
 /*
@@ -127,17 +127,16 @@ event_node_t* event_create_btn_node(btn_name_t name){//, btn_hold_t hold){
  * */
 event_node_t* event_create_enc_node(enc_dir_t dir, uint32_t val){
 	event_node_t *node = malloc(sizeof(*node));
-	enc_node_t *enc = malloc(sizeof(*enc));
+	//enc_node_t enc;// = malloc(sizeof(*enc));
 /*TODO: check the malloc */
-	if(!node || !enc){
+	if(!node){
 		_Error_Handler(__FILE__, __LINE__);
 		return (event_node_t*)NULL;
 	}
-	enc->dir = dir;
-	enc->val = val;
 
 	node->type = EVENT_ENC;
-	node->enc = enc;
+	node->enc.dir = dir;
+	node->enc.val = val;
 
 	return node;
 }

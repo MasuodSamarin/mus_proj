@@ -179,3 +179,10 @@ uint32_t vol_get_raw(vol_name_t name){
 	return (vol_handle.vol_raw_data[name]);
 }
 
+
+/*
+ * return the raw value of all the volume
+ * */
+uint32_t* vol_get_all_raw(void){
+	return (vol_handle.vol_raw_data);
+}

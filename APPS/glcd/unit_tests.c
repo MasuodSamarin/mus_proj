@@ -652,13 +652,13 @@ void unit_test_events(void){
 			break;
 
 		case EVENT_BTN:
-			unit_print_btn(event.btn);
+			unit_print_btn(&event.btn);
 			break;
 		case EVENT_ENC:
-			unit_print_enc(event.enc);
+			unit_print_enc(&event.enc);
 			break;
 		case EVENT_VOL:
-			unit_print_vol(event.vol);
+			unit_print_vol(&event.vol);
 			break;
 
 

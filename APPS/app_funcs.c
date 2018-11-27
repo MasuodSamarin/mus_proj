@@ -608,10 +608,10 @@ static void app_print_enc(APP_typedef *data){
 	 // HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
 
 	data->node_tmp = NULL;
-	if (data->event.enc->dir == ENC_DIR_CCW)
+	if (data->event.enc.dir == ENC_DIR_CCW)
 		data->node_tmp = efx_next_node();
 
-	else if (data->event.enc->dir == ENC_DIR_CW)
+	else if (data->event.enc.dir == ENC_DIR_CW)
 		data->node_tmp = efx_prev_node();
 
 	if (data->node_tmp == NULL)
@@ -752,10 +752,10 @@ void Do_S_ENC(void){
 		app_data.state_changed = 0;
 		//app_print_enc(&app_data);
 		app_data.node_tmp = NULL;
-			if (app_data.event.enc->dir == ENC_DIR_CCW)
+			if (app_data.event.enc.dir == ENC_DIR_CCW)
 				app_data.node_tmp = efx_next_node();
 
-			else if (app_data.event.enc->dir == ENC_DIR_CW)
+			else if (app_data.event.enc.dir == ENC_DIR_CW)
 				app_data.node_tmp = efx_prev_node();
 
 			if (app_data.node_tmp == NULL)

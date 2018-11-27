@@ -81,11 +81,11 @@ void btn_process(void){
 			break;
 			case BTN_ENTER:
 				btn_name = BTN_NOT;
-				event_push_node(event_create_btn_node(BTN_ENTER));//, BTN_HOLD_LONG));
+				event_push_node(event_create_btn_node(BTN_ENTER, BTN_HOLD_SHORT));//, BTN_HOLD_LONG));
 				break;
 			case BTN_BYPASS:
 				btn_name = BTN_NOT;
-				event_push_node(event_create_btn_node(BTN_BYPASS));//, BTN_HOLD_LONG));
+				event_push_node(event_create_btn_node(BTN_BYPASS, BTN_HOLD_SHORT));//, BTN_HOLD_LONG));
 				break;
 
 		}
