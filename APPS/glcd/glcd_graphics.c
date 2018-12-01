@@ -302,5 +302,5 @@ void glcd_draw_bitmap(const unsigned char *data)
 
 	memcpy(glcd_buffer_selected, data, (GLCD_LCD_WIDTH * GLCD_LCD_HEIGHT / 8));
 
-	glcd_bbox_refresh(); 
+	glcd_bbox_refresh();
 }
