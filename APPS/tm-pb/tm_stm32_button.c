@@ -140,10 +140,10 @@ static void TM_BUTTON_INT_CheckButton(TM_BUTTON_t* ButtonStruct) {
 				ButtonStruct->State = BUTTON_STATE_PRESSED;
 
 				/* Try to call user function */
-				if (ButtonStruct->ButtonHandler) {
+				//if (ButtonStruct->ButtonHandler) {
 					/* Call function callback */
-					ButtonStruct->ButtonHandler(ButtonStruct, TM_BUTTON_PressType_OnPressed);
-				}
+					//ButtonStruct->ButtonHandler(ButtonStruct, TM_BUTTON_PressType_OnPressed);
+				//}
 			}
 		} else if (status != ButtonStruct->GPIO_State) {
 			/* Not pressed */

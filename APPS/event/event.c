@@ -99,7 +99,7 @@ event_node_t* event_create_vol_node(vol_name_t name, uint32_t val){
 
 	node->type = EVENT_VOL;
 	node->vol.name = name;
-	node->vol.val_adc = val;
+	node->vol.val = val;
 	node->vol.val_pwm = val << VOL_ADC_PWM_FACTOR;
 	return node;
 }

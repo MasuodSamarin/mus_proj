@@ -51,7 +51,7 @@ typedef enum {
  * */
 typedef struct {
 	vol_name_t name;
-	uint32_t val_adc;
+	uint32_t val;
 	uint32_t val_pwm;
 }vol_node_t;
 

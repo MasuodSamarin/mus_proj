@@ -113,8 +113,8 @@ EVENTS_typedef event_handle(void){
 		case EVENT_VOL:
 			app_reset_timeout_timer();
 			app_data.vol_last_name = event.vol.name;
-			app_data.vol_last_val = event.vol.val_adc;
-			app_data.cur_efx.volume[event.vol.name] = event.vol.val_adc;
+			app_data.vol_last_val = event.vol.val;
+			app_data.cur_efx.volume[event.vol.name] = event.vol.val;
 			return E_VOL;
 			break;
 	}

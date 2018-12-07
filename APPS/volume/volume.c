@@ -163,7 +163,7 @@ vol_node_t* vol_create_node(vol_name_t name, uint32_t val){
 	}
 
 	node->name = name;
-	node->val_adc = val;
+	node->val = val;
 	node->val_pwm = val << VOL_ADC_PWM_FACTOR;
 
 	return (node);

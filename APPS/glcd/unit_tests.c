@@ -762,12 +762,12 @@ void unit_print_vol(vol_node_t *vol){
 	glcd_clear_buffer();
 	glcd_draw_string(5,5, "VOLUME");
 	glcd_draw_string(5,15, unit_vol_name[vol->name]);
-	glcd_draw_string(5,25, (char*)utoa(vol->val_adc, str, 10));
+	glcd_draw_string(5,25, (char*)utoa(vol->val, str, 10));
 	sprintf(str, "%p", vol);
 	glcd_draw_string(5,35, str);
-	glcd_bar_graph_horizontal(5, 45, 70, 10, (vol->val_adc >> 4));
+	glcd_bar_graph_horizontal(5, 45, 70, 10, (vol->val >> 4));
 
-	uint8_t sad = (uint8_t)((float)(vol->val_adc) / (float)4010 * (float)100);
+	uint8_t sad = (uint8_t)((float)(vol->val) / (float)4010 * (float)100);
 	sprintf(str, "%d%%", sad);
 	glcd_draw_string(80,45, str);
 

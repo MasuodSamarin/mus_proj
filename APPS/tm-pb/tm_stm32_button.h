@@ -131,8 +131,8 @@ extern "C" {
 typedef enum {
   TM_BUTTON_PressType_OnPressed = 0x00, /*!< Button pressed */
   TM_BUTTON_PressType_Debounce,         /*!< Button debounce */
-	TM_BUTTON_PressType_Normal,           /*!< Normal press type, released */
-	TM_BUTTON_PressType_Long              /*!< Long press type */
+  TM_BUTTON_PressType_Normal,           /*!< Normal press type, released */
+  TM_BUTTON_PressType_Long              /*!< Long press type */
 } TM_BUTTON_PressType_t;
 
 /** 
