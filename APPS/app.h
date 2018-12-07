@@ -37,11 +37,9 @@ extern __IO int g_timeout;
 
 
 typedef enum {
-	S_SET,
 	S_IDLE,
-	S_ENC,
 	S_VOL,
-	S_SLEEP,
+	S_ENC,
 	S_BYPASS,
 	S_MAX
 }STATES_typedef;
@@ -52,10 +50,69 @@ typedef enum {
 	E_ENC,
 	E_BTN_ENTER,
 	E_BTN_BYPASS,
-	E_TIMEOUT_SHORT,
-	E_TIMEOUT_LONG,
+	E_TIMEOUT,
 	E_MAX
 }EVENTS_typedef;
+
+typedef struct {
+	/*
+	 * the state machine handler
+	 * its hold the state machine properties and pass to all func
+	 * related to the SM*/
+	//current effect pointer
+	//temp effect pointer
+	//current state
+	//current event
+	//event actual node pointer
+	//state is changed?
+}SM_Handle_Typedef;
+
+/*func pointer for SM for every single state*/
+typedef void (*SM_FP)(SM_Handle_Typedef*);
+
+/*
+ * declare of SM-funcs*/
+
+/*
+ * state idle, and 6 of events*/
+void fp_idle_not(SM_Handle_Typedef*);
+void fp_idle_vol(SM_Handle_Typedef*);
+void fp_idle_enc(SM_Handle_Typedef*);
+void fp_idle_enter(SM_Handle_Typedef*);
+void fp_idle_bypass(SM_Handle_Typedef*);
+void fp_idle_timeout(SM_Handle_Typedef*);
+
+void fp_vol_not(SM_Handle_Typedef*);
+void fp_vol_vol(SM_Handle_Typedef*);
+void fp_vol_enc(SM_Handle_Typedef*);
+void fp_vol_enter(SM_Handle_Typedef*);
+void fp_vol_bypass(SM_Handle_Typedef*);
+void fp_vol_timeout(SM_Handle_Typedef*);
+
+void fp_enc_not(SM_Handle_Typedef*);
+void fp_enc_vol(SM_Handle_Typedef*);
+void fp_enc_enc(SM_Handle_Typedef*);
+void fp_enc_enter(SM_Handle_Typedef*);
+void fp_enc_bypass(SM_Handle_Typedef*);
+void fp_enc_timeout(SM_Handle_Typedef*);
+
+void fp_bypass_not(SM_Handle_Typedef*);
+void fp_bypass_vol(SM_Handle_Typedef*);
+void fp_bypass_enc(SM_Handle_Typedef*);
+void fp_bypass_enter(SM_Handle_Typedef*);
+void fp_bypass_bypass(SM_Handle_Typedef*);
+void fp_bypass_timeout(SM_Handle_Typedef*);
+
+/*a transition box */
+/*states   	idle			vol			enc			bypass*/
+/*events
+   not
+   vol
+   enc
+   enter
+   bypass
+   timeout*/
+
 
 typedef enum{
 	TO_NOT,

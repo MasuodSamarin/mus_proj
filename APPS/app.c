@@ -14,6 +14,16 @@ APP_typedef app_data;
 
 
 
+SM_FP SM_FP_BOX[E_MAX][S_MAX]={
+		fp_idle_not, fp_vol_not, fp_enc_not, fp_bypass_not,
+		fp_idle_vol, fp_vol_vol, fp_enc_vol, fp_bypass_vol,
+		fp_idle_enc, fp_vol_enc, fp_enc_enc, fp_bypass_enc,
+		fp_idle_enter, fp_vol_enter, fp_enc_enter, fp_bypass_enter,
+		fp_idle_bypass, fp_vol_bypass, fp_enc_bypass, fp_bypass_bypass,
+		fp_idle_timeout, fp_vol_timeout, fp_enc_timeout, fp_bypass_timeout
+};
+
+
 EVENTS_typedef event_handle(void);
 void State_Machine(EVENTS_typedef event);
 void App_Exec(void);
@@ -126,7 +136,7 @@ EVENTS_typedef event_handle(void){
 #endif
 	if(app_data.timeout == TO_SHORT){
 		app_data.timeout = TO_NOT;
-		return E_TIMEOUT_SHORT;
+		return E_TIMEOUT;
 	}
 
 	return E_NOT;
@@ -155,7 +165,7 @@ void State_Machine(EVENTS_typedef event){
 		/*state set and update
 		 * its run 10 times then goes stright to the IDLE state
 		 * */
-		case S_SET:
+		/*case S_SET:
 			if(s_set_cnt++ < 10){
 				//s_set_cnt++;
 				next_state = S_SET;
@@ -166,7 +176,7 @@ void State_Machine(EVENTS_typedef event){
 				next_state = S_IDLE;
 
 			}
-			break;
+			break;*/
 
 		/*state IDLE*/
 		case S_IDLE:
@@ -179,9 +189,9 @@ void State_Machine(EVENTS_typedef event){
 					next_state = S_ENC;
 					break;
 
-				case E_BTN_ENTER:
-					next_state = S_SET;
-					break;
+				//case E_BTN_ENTER:
+					//next_state = S_SET;
+					//break;
 
 				case E_BTN_BYPASS:
 					next_state = S_BYPASS;
@@ -203,14 +213,14 @@ void State_Machine(EVENTS_typedef event){
 
 				case E_BTN_ENTER:
 					//app_data.cur_efx = *(app_data.node_tmp);
-					next_state = S_SET;
+					//next_state = S_SET;
 					break;
 
 				case E_BTN_BYPASS:
 					next_state = S_BYPASS;
 					break;
 
-				case E_TIMEOUT_SHORT:
+				case E_TIMEOUT:
 					efx_set_cur_node(&(app_data.cur_efx));
 					next_state = S_IDLE;
 					break;
@@ -225,14 +235,14 @@ void State_Machine(EVENTS_typedef event){
 					break;
 
 				case E_BTN_ENTER:
-					next_state = S_SET;
+					//next_state = S_SET;
 					break;
 
 				case E_BTN_BYPASS:
 					next_state = S_BYPASS;
 					break;
 
-				case E_TIMEOUT_SHORT:
+				case E_TIMEOUT:
 					next_state = S_IDLE;
 					break;
 			}
@@ -264,7 +274,7 @@ void State_Machine(EVENTS_typedef event){
 		/*state Bypass, turn off FV1, spin-1001 */
 		case S_BYPASS:
 			if(event == E_BTN_BYPASS)
-				next_state = S_SET;
+				//next_state = S_SET;
 			break;
 	}
 
@@ -396,9 +406,9 @@ void Do(void){
 
 	switch (cur_state) {
 		/*state set and update*/
-		case S_SET:
-			Do_S_SET();
-			break;
+		//case S_SET:
+			//Do_S_SET();
+			//break;
 
 		/*state IDLE*/
 		case S_IDLE:
@@ -416,9 +426,9 @@ void Do(void){
 			break;
 
 		/*state sleep, show wav input*/
-		case S_SLEEP:
-			Do_S_SLEEP();
-			break;
+		//case S_SLEEP:
+			//Do_S_SLEEP();
+			//break;
 
 		/*state Bypass, turn off FV1, spin-1001 */
 		case S_BYPASS:
