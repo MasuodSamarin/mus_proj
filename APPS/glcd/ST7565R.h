@@ -42,6 +42,112 @@
 #define ST7565R_H_
 #include "stm32f1xx_hal.h"
 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * \addtogroup Controllers Controllers
+ * Controller specific functions.
+ *
+ * Currently only the following controllers are supported:
+ *  - PCD8544 (Nokia 5110 LCD) SPI interface
+ *  - ST7565R with SPI interface
+ *
+ * The C and header files defining these functions are stored in the subdirectory:
+ *
+ *     devices/
+ *
+ * \{
+ */
+
+/**
+ * Send command byte to LCD.
+ * \param c Command byte to be written to LCD
+ */
+void glcd_command(uint8_t c);
+
+/**
+ *  Send data byte to LCD.
+ *  \param c Data byte to be written to LCD
+ */
+void glcd_data(uint8_t c);
+
+/**
+ * Set contrast.
+ * \param val Value from 0 to 127.  This should be experimentally determined. Supported by PCD8544 only.
+ */
+void glcd_set_contrast(uint8_t val);
+
+/**
+ * Power down the device.
+ */
+void glcd_power_down(void);
+
+/**
+ * Power up the device.
+ */
+void glcd_power_up(void);
+
+/**
+ * Set Y address of RAM (select bank).
+ * - for PCD8544, device must be under basic instruction set mode before using this.
+ * \param y page address of RAM (0 <= Y < GLCD_LCD_HEIGHT/8)
+ * \see   GLCD_LCD_HEIGHT
+ * \see   GLCD_NUMBER_OF_BANKS
+ *
+ * \note Update: \p y is actually bank number, not pixel number!
+ */
+void glcd_set_y_address(uint8_t y);
+
+/**
+ * Set X address of RAM (column). Device must be under basic instruction set mode before using this.
+ * \param x X address of RAM (0 <= X <= GLCD_LCD_WIDTH-1)
+ * \see   GLCD_LCD_WIDTH
+ */
+void glcd_set_x_address(uint8_t x);
+
+/**
+ * Update the display within the specified bounding box. This physically writes data to the device's RAM.
+ */
+void glcd_write(void);
+
+/** @}*/
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+ * define some basic static func
+ * */
+#define GLCD_SELECT()     	HAL_GPIO_WritePin(LCD_CS_GPIO_Port, LCD_CS_Pin, GPIO_PIN_SET)
+#define GLCD_DESELECT()   	HAL_GPIO_WritePin(LCD_CS_GPIO_Port, LCD_CS_Pin, GPIO_PIN_RESET)
+//#define GLCD_DC_LOW()		HAL_GPIO_WritePin(LCD_A0_GPIO_Port, LCD_A0_Pin, GPIO_PIN_RESET)
+//#define GLCD_DC_HIGH()    	HAL_GPIO_WritePin(LCD_A0_GPIO_Port, LCD_A0_Pin, GPIO_PIN_SET)
+#define GLCD_A0_LOW()     	HAL_GPIO_WritePin(LCD_A0_GPIO_Port, LCD_A0_Pin, GPIO_PIN_RESET)
+#define GLCD_A0_HIGH()    	HAL_GPIO_WritePin(LCD_A0_GPIO_Port, LCD_A0_Pin, GPIO_PIN_SET)
+#define GLCD_RESET_LOW()	HAL_GPIO_WritePin(LCD_RESET_GPIO_Port, LCD_RESET_Pin, GPIO_PIN_RESET)
+#define GLCD_RESET_HIGH()	HAL_GPIO_WritePin(LCD_RESET_GPIO_Port, LCD_RESET_Pin, GPIO_PIN_SET)
+
+/**
+ * Initialize the LCD. This function is platform and controller specific.
+ */
+void glcd_init(void);
+
+/**
+ * Write a byte to the connected SPI slave.
+ * \param c Byte to be written
+ * \cause it uses gpio mode it's nothing to the return
+ * \return Returned value from SPI (often not used)
+ */
+void glcd_spi_write(uint8_t c);
+
+/**
+ *  Reset the LCD.
+ *  \note Not all LCD controllers support reset.
+ */
+void glcd_reset(void);
+
+/** @}*/
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /* Commands */
 
 #define BLACK 1

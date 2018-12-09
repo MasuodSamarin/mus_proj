@@ -55,7 +55,7 @@ typedef enum {
 #define FV1_PIN_L_BIT	0b1000
 
 /*
- * there is 2 eep, that just single of it must be on
+ * there is 2 eep, that just single of it must be on each time
  * */
 typedef enum {
 	FV1_EEP_RESET,

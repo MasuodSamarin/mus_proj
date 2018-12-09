@@ -151,19 +151,26 @@ void glcd_scroll(int8_t x, int8_t y)
 	}
 }
 
-void glcd_scroll_line(void)
+void glcd_scroll_line(uint8_t top)
 {
-	uint8_t y;
+	//uint8_t i = 2;
+	//uint8_t number_of_rows = 6;
+
 	uint8_t number_of_rows = GLCD_LCD_HEIGHT / 8;
-	for (y=0; y<number_of_rows; y++) {
-		if (y < (number_of_rows - 1)) {
+	if(top < 0)
+		top = 0;
+	else if(top > 8)
+		top = 8;
+	for (; top<number_of_rows-1; top++) {
+		//if (y < (number_of_rows - 1)) {
 			/* All lines except the last */
-			memcpy(glcd_buffer_selected + y*GLCD_LCD_WIDTH, glcd_buffer_selected + y*GLCD_LCD_WIDTH + GLCD_LCD_WIDTH, GLCD_LCD_WIDTH);
-		} else {
-			/* Last line, clear it */
-			memset(glcd_buffer_selected + (number_of_rows - 1)*GLCD_LCD_WIDTH, 0x00, GLCD_LCD_WIDTH);
-		}
+		memcpy(glcd_buffer_selected + top*GLCD_LCD_WIDTH, glcd_buffer_selected + top*GLCD_LCD_WIDTH + GLCD_LCD_WIDTH, GLCD_LCD_WIDTH);
+		//} else {
+		//}
 	}
+	/* Last line, clear it */
+	memset(glcd_buffer_selected + (number_of_rows - 1)*GLCD_LCD_WIDTH, 0x00, GLCD_LCD_WIDTH);
+
 	glcd_update_bbox(0,0,GLCD_LCD_WIDTH - 1,GLCD_LCD_HEIGHT - 1);
 }
 

@@ -38,17 +38,18 @@ extern glcd_FontConfig_t font_current;
 #include "fonts/Font5x8.h"
 #include "fonts/Tahoma11x13.h"
 #include "fonts/Tekton_Pro_Ext27x28.h"
+/*TODO: this font not working good*/
+extern const glcd_FontConfig_t FC_Liberation_Sans17x17_Numbers;
 
 extern const glcd_FontConfig_t FC_Bebas_Neue18x36_Numbers;
 extern const glcd_FontConfig_t FC_Bebas_Neue20x36_Bold_Numbers;
 extern const glcd_FontConfig_t FC_Liberation_Sans11x14_Numbers;
 extern const glcd_FontConfig_t FC_Liberation_Sans15x21_Numbers;
-extern const glcd_FontConfig_t FC_Liberation_Sans17x17_Alpha;
 extern const glcd_FontConfig_t FC_Liberation_Sans20x28_Numbers;
 extern const glcd_FontConfig_t FC_Liberation_Sans27x36_Numbers;
 
 extern const glcd_FontConfig_t FC_Default_Font_5x8_AlphaNumber;
-extern const glcd_FontConfig_t FC_Tahoma11x13;
-extern const glcd_FontConfig_t FC_Tekton_Pro_Ext27x28;
+extern const glcd_FontConfig_t FC_Tahoma11x13_AlphaNumber;
+extern const glcd_FontConfig_t FC_Tekton_Pro_Ext27x28_AlphaNumber;
 
 #endif //_FONTS_H_

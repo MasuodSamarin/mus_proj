@@ -43,7 +43,7 @@ extern volatile uint8_t unit_test_return;
 /*
  * my test func to testing some func
  * */
-void glcd_test_my_test(void);
+void glcd_test_roll_text(void);
 
 
 /** Make random "exploding circles" */
@@ -51,11 +51,6 @@ void glcd_test_circles(void);
 
 /* Shows a 8-bit counter incorementing, with a verticla and horizontal bar graph */
 void glcd_test_counter_and_graph(void);
-/* test encoder tim4*/
-void glcd_test_ENC(void);
-/* test adc convert*/
-void glcd_test_ADC(void);
-
 
 /* Shows a 16-bit counter incrementing, using glcdutils font format */
 void glcd_test_glcdutils(void);
@@ -78,6 +73,10 @@ void glcd_test_scrolling_graph(void);
 /** Demonstrate bitmap display */
 void glcd_test_bitmap_128x64(void);
 
+/*
+ * show all of the tests*/
+void glcd_tests(void);
+
 
 /////////////////////////////////////////////////////////////////////////////////////////
 #include "event.h"
@@ -97,5 +96,10 @@ void unit_test_events(void);
 ////
 void unit_test_init(void);
 void unit_test_effect_print(efx_node_t *node);
+
+void unit_test_eep_save(void);
+void unit_test_eep_read(void);
+void unit_test_eep(void);
+void unit_test_sizes(void);
 
 #endif

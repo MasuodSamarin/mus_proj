@@ -124,7 +124,10 @@ void efx_init_preset_box(void){
 			efx_fv1_base_t *base = malloc(sizeof(*base));
 			fv1_type_t *type = malloc(sizeof(*base));
 			/*TODO: check malloc*/
-
+			if(!base || !type){
+				_Error_Handler(__FILE__, __LINE__);
+				return;
+			}
 			type->eep = eep + 1;
 			type->pin = code;
 

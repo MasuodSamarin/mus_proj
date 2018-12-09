@@ -8,8 +8,15 @@
 //#include "volume.h"
 #include "event.h"
 
-#define VOL_MAX_TOLERANCE	120
-#define VOL_MIN_TOLERANCE	40
+#define VOL_MAX_TOLERANCE	10
+#define VOL_MIN_TOLERANCE	10
+#define VOL_TOLERANCE		5
+
+/*
+ * tiny timer value
+ * */
+#define VOL_STATE_TIME 100
+
 
 /*
  * when volume turn by user:
@@ -33,10 +40,6 @@ typedef enum {
 	VOL_STATE_B
 }vol_state;
 
-/*
- * tiny timer value
- * */
-#define VOL_STATE_TIME 50
 
 /*
  * raw data means a data that comes dma
@@ -65,10 +68,17 @@ static vol_handle_t vol_handle;
  * the heart of this module is the process the volumes
  * it's must run periodically in timer interupt
  * the raw data's comes from dma then process it and result
- * put on vol_data
+ * put on vol_data.
+ * there is 2 ways you can choose to do it by define
  * */
+//#define VOL_PROC_METHOD_1
 void vol_process(void){
 	__IO int32_t delta;
+
+/*
+ * its first way to do it
+ * */
+#ifdef VOL_PROC_METHOD_1
 
 	switch (vol_handle.state) {
 		case VOL_STATE_A:
@@ -92,7 +102,7 @@ void vol_process(void){
 			if (abs(delta) >= VOL_MIN_TOLERANCE){
 				//vol_handle.vol_state_timer = VOL_STATE_TIME;
 				vol_handle.vol_data[vol_handle.vol_name] = vol_handle.vol_raw_data[vol_handle.vol_name];
-				event_push_node(event_create_vol_node(vol_handle.vol_name, vol_handle.vol_raw_data[vol_handle.vol_name]));
+				event_push_node(event_create_vol_node(vol_handle.vol_name, vol_handle.vol_data[vol_handle.vol_name]));
 			}
 
 			if (vol_handle.vol_state_timer == 0)
@@ -102,8 +112,18 @@ void vol_process(void){
 
 			break;
 	}
+#else
+	/*
+	 * it's the second way to process the volumes
+	 * */
+	vol_handle.vol_name = (vol_handle.vol_name + 1) % VOL_MAX;
+	delta = vol_handle.vol_raw_data[vol_handle.vol_name] - vol_handle.vol_data[vol_handle.vol_name];
 
-
+	if (abs(delta) >= VOL_TOLERANCE){
+		vol_handle.vol_data[vol_handle.vol_name] = vol_handle.vol_raw_data[vol_handle.vol_name];
+		event_push_node(event_create_vol_node(vol_handle.vol_name, vol_handle.vol_data[vol_handle.vol_name]));
+	}
+#endif
 }
 
 /*
@@ -137,6 +157,11 @@ vol_node_t* vol_create_node(vol_name_t name, uint32_t val){
 	/*TODO: check the malloc
 	 * node->vals must be correct, it maybe needs VOL_ADC_PWM_FACTOR
 	 * */
+	if (!node){
+		_Error_Handler(__FILE__, __LINE__);
+		return (vol_node_t*)NULL;
+	}
+
 	node->name = name;
 	node->val_adc = val;
 	node->val_pwm = val << VOL_ADC_PWM_FACTOR;

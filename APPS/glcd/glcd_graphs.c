@@ -36,7 +36,11 @@
 
 static uint8_t glcd_map(uint8_t x1, uint8_t x2, uint8_t x)
 {
-	return x1+(x2-x1)*x/255;
+	return x1+(x2-x1)*x/250;
+	/*
+		TODO: because the horizontal box doesn't fill
+		return x1+(x2-x1)*x/255;
+	*/
 }
 
 void glcd_bar_graph_horizontal(uint8_t x, uint8_t y, uint8_t width, uint8_t height, uint8_t val)

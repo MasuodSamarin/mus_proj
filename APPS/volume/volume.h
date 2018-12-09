@@ -31,7 +31,8 @@ extern "C" {
 /*
  * conver adc to pwm factor
  * */
-#define VOL_ADC_PWM_FACTOR	(1<<4)
+#define VOL_ADC_PWM_FACTOR	(1 << 4)
+#define VOL_ADC_TO_PWM(x)	(x >> VOL_ADC_PWM_FACTOR)
 
 
 /*

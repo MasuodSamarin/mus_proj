@@ -69,7 +69,7 @@
 #include <stdint.h>
 #include "main.h"
 #include "stm32f1xx_hal.h"
-#include "_STM32F10x.h"
+//#include "_STM32F10x.h"
 
 
 
@@ -105,7 +105,7 @@ extern glcd_BoundingBox_t *glcd_bbox_selected;
 
 #include "ST7565R.h"
 
-#include "glcd_controllers.h"
+
 #include "glcd_graphics.h"
 #include "glcd_graphs.h"
 #include "glcd_text.h"
@@ -181,9 +181,10 @@ void glcd_scroll(int8_t x, int8_t y);
 /**
  * Scroll screen buffer up by 8 pixels.
  * This is designed to be used in conjunciton with tiny text functions which are 8 bits high.
+ * top is first line from top of lcd
  * \see Tiny Text
  */
-void glcd_scroll_line(void);
+void glcd_scroll_line(uint8_t top);
 
 /** @}*/
 
