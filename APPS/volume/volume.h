@@ -36,6 +36,15 @@ extern "C" {
 
 
 /*
+ * in efx we have 2 types of volume set
+ * we have 2volumes or we have 3 volumes
+ * */
+typedef enum {
+	vol_2,
+	vol_3
+}vol_set_t;
+
+/*
  * there's 3 of volumes
  * */
 typedef enum {
@@ -68,6 +77,8 @@ vol_node_t* vol_create_node(vol_name_t name, uint32_t val);
 void vol_delete_node(vol_node_t *node);
 
 uint32_t vol_get_raw(vol_name_t name);
+/*get all volumes in raw */
+uint32_t* vol_get_all_raw(void);
 
 #ifdef __cplusplus
 }

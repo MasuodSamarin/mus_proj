@@ -567,7 +567,7 @@ void glcd_test_scrolling_graph(void)
 		}
 	}	
 }
-
+#if 0
 #include <logo/throbber-01.h>
 #include <logo/out.h>
 
@@ -655,6 +655,7 @@ void glcd_test_bitmap_128x64(void)
 
 
 }
+#endif
 #endif
 
 

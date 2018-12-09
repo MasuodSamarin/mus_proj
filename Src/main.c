@@ -53,7 +53,7 @@
 #include "app.h"
 
 
-#include "tm_stm32_button.h"
+//#include "tm_stm32_button.h"
 
 /* USER CODE BEGIN Includes */
 
@@ -75,7 +75,7 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
 
-
+#if 0
 void button_handler_1(TM_BUTTON_t* tm_btn, TM_BUTTON_PressType_t type){
 	int x = 0;
 	int y = 0;
@@ -139,7 +139,7 @@ void button_handler_2(TM_BUTTON_t* tm_btn, TM_BUTTON_PressType_t type){
 		glcd_write();
 }
 void button_handler_3(TM_BUTTON_t* btn, TM_BUTTON_PressType_t type);
-
+#endif
 
 /* USER CODE END PFP */
 
@@ -162,16 +162,16 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	if(htim == &htim2){
 #endif
 		/*add 1 to the ticks*/
-		app_data.ticks += 1;
+		//app_data.ticks += 1;
 		ticks += 1;
-		if((app_data.ticks%(app_data.timeout_short_time)) == 0){
+		//if((app_data.ticks%(app_data.timeout_short_time)) == 0){
 			/*
 			 * elapsed short time and set the timeout flag on the app_data to short
 			 * */
-			app_data.timeout = TO_SHORT;
+			//app_data.timeout = TO_SHORT;
 			  //HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
 
-		}
+		//}
 #if 0
 		else if(app_data.ticks > app_data.timeout_long_time){
 			/*
@@ -246,15 +246,15 @@ int main(void)
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
 
-  app_init();
+  //app_init();
 
 
   HAL_TIM_Base_Start_IT(&htim2);
-  app_data.timeout = TO_NOT;
+  //app_data.timeout = TO_NOT;
 
 
-  TM_BUTTON_Init(PUSH_BTN_BYPASS_GPIO_Port, PUSH_BTN_BYPASS_Pin, 0, button_handler_1);
-  TM_BUTTON_Init(PUSH_BTN_ENTER_GPIO_Port, PUSH_BTN_ENTER_Pin, 0, button_handler_2);
+  //TM_BUTTON_Init(PUSH_BTN_BYPASS_GPIO_Port, PUSH_BTN_BYPASS_Pin, 0, button_handler_1);
+  //TM_BUTTON_Init(PUSH_BTN_ENTER_GPIO_Port, PUSH_BTN_ENTER_Pin, 0, button_handler_2);
   /* USER CODE END 2 */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -264,8 +264,8 @@ int main(void)
 
   /* USER CODE BEGIN 3 */
 
-	  App_Exec();
-	  TM_BUTTON_Update();
+	  //App_Exec();
+	  //TM_BUTTON_Update();
 
 	  //glcd_test_bitmap_128x64();
 

@@ -65,6 +65,16 @@ typedef struct {
 	//current event
 	//event actual node pointer
 	//state is changed?
+
+	efx_node_t_ *cur_efx;
+	efx_node_t_ *tmp_efx;
+
+	STATES_typedef 	cur_state;
+	//STATES_typedef 	pre_state;
+	EVENTS_typedef 	cur_event;
+
+	uint8_t state_chaned;
+
 }SM_Handle_Typedef;
 
 /*func pointer for SM for every single state*/
@@ -112,7 +122,7 @@ void fp_bypass_timeout(SM_Handle_Typedef*);
    enter
    bypass
    timeout*/
-
+#if 0
 
 typedef enum{
 	TO_NOT,
@@ -189,6 +199,7 @@ void Do_S_BYPASS(void);
 void Do(void);
 
 
+#endif
 
 /*just to test*/
 //void app_draw_frame(void);

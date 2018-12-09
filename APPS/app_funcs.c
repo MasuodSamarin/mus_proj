@@ -4,7 +4,7 @@
  *  Created on: Oct 13, 2018
  *      Author: sam
  */
-
+#if 0
 #include "string.h"
 #include "app.h"
 char str[20];
@@ -797,7 +797,7 @@ void Do_S_BYPASS(void){
 
 
 
-
+#endif
 
 
 

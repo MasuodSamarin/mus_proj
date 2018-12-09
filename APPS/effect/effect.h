@@ -114,6 +114,22 @@ typedef struct {
 
 
 
+
+typedef struct {
+	uint8_t		number;
+	efx_fv1_preset pst;
+	char 		*name;
+	efx_mode_t 	type;
+	fv1_code_t 	pin;
+	fv1_eep_t 	eep;
+
+	vol_set_t vol_set;
+	char *vol_names[VOL_MAX];
+	uint16_t vol_raws[VOL_MAX];
+
+}efx_node_t_;
+
+
 /*
  * public interface
  *

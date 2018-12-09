@@ -9,12 +9,12 @@
 #include "app.h"
 
 
-APP_typedef app_data;
+//APP_typedef app_data;
 #define STATE_SLEEP_ENABLE	0
 
 
 
-SM_FP SM_FP_BOX[E_MAX][S_MAX]={
+SM_FP SM_FP_POOL[E_MAX][S_MAX]={
 		fp_idle_not, fp_vol_not, fp_enc_not, fp_bypass_not,
 		fp_idle_vol, fp_vol_vol, fp_enc_vol, fp_bypass_vol,
 		fp_idle_enc, fp_vol_enc, fp_enc_enc, fp_bypass_enc,
@@ -23,7 +23,7 @@ SM_FP SM_FP_BOX[E_MAX][S_MAX]={
 		fp_idle_timeout, fp_vol_timeout, fp_enc_timeout, fp_bypass_timeout
 };
 
-
+#if 0
 EVENTS_typedef event_handle(void);
 void State_Machine(EVENTS_typedef event);
 void App_Exec(void);
@@ -438,4 +438,6 @@ void Do(void){
 	}
 
 }
+#endif
+
 #pragma GCC diagnostic pop
