@@ -192,8 +192,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 		 *
 		 * */
 		if(0 == ((ticks)%time_btn))
-			btn_process();
+			//btn_process();
 			//app_data.run_btn_process = 1;
+			TM_BUTTON_Update();
 
 		if(0 == ((ticks)%time_vol))
 			//app_data.run_vol_process = 1;
@@ -246,15 +247,11 @@ int main(void)
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
 
-  //app_init();
-
+  app_init();
 
   HAL_TIM_Base_Start_IT(&htim2);
-  //app_data.timeout = TO_NOT;
 
 
-  //TM_BUTTON_Init(PUSH_BTN_BYPASS_GPIO_Port, PUSH_BTN_BYPASS_Pin, 0, button_handler_1);
-  //TM_BUTTON_Init(PUSH_BTN_ENTER_GPIO_Port, PUSH_BTN_ENTER_Pin, 0, button_handler_2);
   /* USER CODE END 2 */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */

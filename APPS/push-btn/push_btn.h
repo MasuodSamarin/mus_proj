@@ -89,7 +89,7 @@ typedef enum {
 
 /* Number of maximal supported buttons */
 #ifndef BUTTON_MAX_BUTTONS
-#define BUTTON_MAX_BUTTONS        10
+#define BUTTON_MAX_BUTTONS        2
 #endif
 
 /* Time for debounce */
@@ -143,6 +143,7 @@ typedef enum {
 typedef struct _TM_BUTTON_t {
 	GPIO_TypeDef* GPIOx;                                                /*!< GPIOx PORT for button */
 	uint16_t GPIO_Pin;                                                  /*!< GPIO pin for button */
+	btn_name_t name;
 	uint8_t GPIO_State;                                                 /*!< GPIO state for pin when pressed */
 	//void (*ButtonHandler)(struct _TM_BUTTON_t*, TM_BUTTON_PressType_t); /*!< Button function handler */
 	uint32_t StartTime;                                                 /*!< Time when button was pressed */
@@ -176,7 +177,7 @@ typedef struct _TM_BUTTON_t {
  *            - 0: Button was not created
  *            - > 0: Button created and saved to library, button pointer is returned
  */
-TM_BUTTON_t* TM_BUTTON_Init(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, uint8_t ButtonState);//, void (*ButtonHandler)(TM_BUTTON_t*, TM_BUTTON_PressType_t));
+TM_BUTTON_t* TM_BUTTON_Init(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, uint8_t ButtonState, btn_name_t name);//, void (*ButtonHandler)(TM_BUTTON_t*, TM_BUTTON_PressType_t));
 
 /**
  * @brief  Sets press timing values

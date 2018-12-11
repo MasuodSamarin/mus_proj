@@ -115,9 +115,8 @@ void fp_bypass_enter(SM_Handle_Typedef*);
 void fp_bypass_bypass(SM_Handle_Typedef*);
 void fp_bypass_timeout(SM_Handle_Typedef*);
 
+void app_init(void);
 
-
-void SM_init(void);
 void SM_Exec(void);
 
 void State_Machine(SM_Handle_Typedef *handle);

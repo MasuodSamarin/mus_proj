@@ -9,9 +9,28 @@
 #include "string.h"
 #include "app.h"
 
+char tmp_str[20];
+
+static void app_draw_empty_frame(void){
+	int x = 0;
+	int y = 0;
+	int tx = 2;
+	int ty = 2;
+	int w = 128;
+	int h = 64;
+
+	glcd_clear_buffer();
+	glcd_draw_rect_thick(x, y, w, h, tx, ty, BLACK);
+}
+
 /*
  * state idle, and 6 of events*/
-void fp_idle_not(SM_Handle_Typedef *handle){};
+void fp_idle_not(SM_Handle_Typedef *handle){
+	app_draw_empty_frame();
+	glcd_write();
+
+};
+
 void fp_idle_vol(SM_Handle_Typedef *handle){};
 void fp_idle_enc(SM_Handle_Typedef *handle){};
 void fp_idle_enter(SM_Handle_Typedef *handle){};
@@ -85,17 +104,7 @@ void app_update_node_tmp_vols_from_raw(APP_typedef *data){
 }
 
 
-static void app_draw_empty_frame(void){
-	int x = 0;
-	int y = 0;
-	int tx = 2;
-	int ty = 2;
-	int w = 128;
-	int h = 64;
 
-	glcd_clear_buffer();
-	glcd_draw_rect_thick(x, y, w, h, tx, ty, BLACK);
-}
 
 static void app_update_efx(APP_typedef *data, efx_node_t *efx){
 	data->cur_efx = *efx;

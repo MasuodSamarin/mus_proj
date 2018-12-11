@@ -32,6 +32,27 @@ void SM_init(void){
 	g_sm_handle.tmp_efx = NULL;
 }
 
+void app_init(void){
+
+
+	//efx_init_list();
+
+
+
+	///come from main.c
+	event_init();
+	enc_init();
+	vol_init();
+	btn_init();
+	SM_init();
+
+	glcd_init();
+	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
+	glcd_clear_buffer();
+	glcd_write();
+
+}
+
 void event_handle(SM_Handle_Typedef *handle){
 	event_node_t *event;
 
@@ -39,7 +60,7 @@ void event_handle(SM_Handle_Typedef *handle){
 
 	if(handle->event_node != NULL){
 		free(handle->event_node);
-		handle->event_node = NULL;
+		//handle->event_node = NULL;
 	}
 	handle->event_node = event;
 
@@ -52,6 +73,8 @@ void event_handle(SM_Handle_Typedef *handle){
 			break;
 
 		case EVENT_BTN:
+			  HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
+
 			if(event->btn.name == BTN_ENTER)
 				handle->cur_event = E_BTN_ENTER;
 			else if(event->btn.name == BTN_BYPASS)
@@ -74,14 +97,16 @@ void State_Machine(SM_Handle_Typedef *handle){
 	SM_FP func;
 
 	func = SM_FP_POOL[handle->cur_event][handle->cur_state];
-	if(func)
+	if(func){
 		func(handle);
+
+	}
 }
 
 
 
 void SM_Exec(void){
-	event_handle(&g_sm_handle);
+	//event_handle(&g_sm_handle);
 	State_Machine(&g_sm_handle);
 
 }
@@ -118,27 +143,7 @@ void Do(void);
 
 
 
-void app_init(void){
 
-	glcd_init();
-	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
-	glcd_clear_buffer();
-	glcd_write();
-
-	efx_init_list();
-
-	app_data.cur_efx = *(efx_next_node());
-	app_set_timeout_long(TIMEOUT_LONG_TIME);
-	app_set_timeout_short(TIMEOUT_SHORT_TIME);
-
-	///come from main.c
-	event_init();
-	enc_init();
-	vol_init();
-	btn_init();
-
-
-}
 
 void app_reset_timeout_timer(void){
 	app_data.ticks = 0;

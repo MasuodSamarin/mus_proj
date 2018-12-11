@@ -62,11 +62,7 @@ btn_handle_t btn_buttons[2] = {
 };*/
 //static btn_handle_t btn_handle = {0};
 
-void btn_init(void){
 
-
-
-}
 /*
  * button process function
  * it must call in timer interrupt
@@ -154,12 +150,12 @@ static TM_BUTTON_INT_t Buttons;
 /* Internal functions */
 static void TM_BUTTON_INT_CheckButton(TM_BUTTON_t* ButtonStruct);
 
-TM_BUTTON_t* TM_BUTTON_Init(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, uint8_t ButtonState){//, void (*ButtonHandler)(TM_BUTTON_t*, TM_BUTTON_PressType_t)) {
+TM_BUTTON_t* TM_BUTTON_Init(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, uint8_t ButtonState, btn_name_t name){//, void (*ButtonHandler)(TM_BUTTON_t*, TM_BUTTON_PressType_t)) {
 	TM_BUTTON_t* ButtonStruct;
-	TM_GPIO_PuPd_t P;
+	//TM_GPIO_PuPd_t P;
 
 	/* Init delay function */
-	TM_DELAY_Init();
+	//TM_DELAY_Init();
 
 	/* Check if available */
 	if (Buttons.ButtonsCount >= BUTTON_MAX_BUTTONS) {
@@ -178,6 +174,7 @@ TM_BUTTON_t* TM_BUTTON_Init(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, uint8_t Butt
 	ButtonStruct->GPIOx = GPIOx;
 	ButtonStruct->GPIO_Pin = GPIO_Pin;
 	ButtonStruct->GPIO_State = ButtonState ? 1 : 0;
+	ButtonStruct->name = name;
 	//ButtonStruct->ButtonHandler = ButtonHandler;
 	ButtonStruct->State = BUTTON_STATE_START;
 
@@ -187,13 +184,13 @@ TM_BUTTON_t* TM_BUTTON_Init(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, uint8_t Butt
 	ButtonStruct->PressDebounceTime = BUTTON_DEBOUNCE_TIME;
 
 	/* Init pin with pull resistor */
-	if (ButtonStruct->GPIO_State) {
+	//if (ButtonStruct->GPIO_State) {
 		/* Pulldown */
-		P = TM_GPIO_PuPd_DOWN;
-	} else {
+		//P = TM_GPIO_PuPd_DOWN;
+	//} else {
 		/* Pullup */
-		P = TM_GPIO_PuPd_UP;
-	}
+		//P = TM_GPIO_PuPd_UP;
+	//}
 
 	/* Init GPIO pin as input with proper pull resistor */
 	//TM_GPIO_Init(GPIOx, GPIO_Pin, TM_GPIO_Mode_IN, TM_GPIO_OType_PP, P, TM_GPIO_Speed_Low);
@@ -276,6 +273,7 @@ static void TM_BUTTON_INT_CheckButton(TM_BUTTON_t* ButtonStruct) {
 					/* Call function callback */
 					//ButtonStruct->ButtonHandler(ButtonStruct, TM_BUTTON_PressType_Long);
 				//}
+				event_push_node(event_create_btn_node(ButtonStruct->name, BTN_HOLD_LONG));//, BTN_HOLD_LONG));
 
 				/* Go to stage BUTTON_STATE_WAITRELEASE */
 				ButtonStruct->State = BUTTON_STATE_WAITRELEASE;
@@ -288,6 +286,7 @@ static void TM_BUTTON_INT_CheckButton(TM_BUTTON_t* ButtonStruct) {
 					/* Call function callback */
 					//ButtonStruct->ButtonHandler(ButtonStruct, TM_BUTTON_PressType_Normal);
 				//}
+				event_push_node(event_create_btn_node(ButtonStruct->name, BTN_HOLD_SHORT));//, BTN_HOLD_LONG));
 
 				/* Go to stage BUTTON_STATE_WAITRELEASE */
 				ButtonStruct->State = BUTTON_STATE_WAITRELEASE;
@@ -314,4 +313,10 @@ static void TM_BUTTON_INT_CheckButton(TM_BUTTON_t* ButtonStruct) {
 }
 /************************************************************************************************************/
 
+void btn_init(void){
+
+	TM_BUTTON_Init(PUSH_BTN_BYPASS_GPIO_Port, PUSH_BTN_BYPASS_Pin, 0, BTN_BYPASS);
+	TM_BUTTON_Init(PUSH_BTN_ENTER_GPIO_Port, PUSH_BTN_ENTER_Pin, 0, BTN_ENTER);
+
+}
 
