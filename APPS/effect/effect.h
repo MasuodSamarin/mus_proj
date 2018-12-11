@@ -97,7 +97,7 @@ typedef struct {
 /*efx_isd_base_t*/
 // volumes and pwm's {input volume reading, output pwm's value}
 // effect status {enable, disable}
-
+#if 0
 typedef struct {
 	uint8_t number;
 	efx_mode_t mode;
@@ -111,7 +111,7 @@ typedef struct {
 	uint16_t volume[VOL_MAX];
 }efx_node_t;
 
-
+#endif
 
 
 
@@ -127,7 +127,7 @@ typedef struct {
 	char *vol_names[VOL_MAX];
 	uint16_t vol_raws[VOL_MAX];
 
-}efx_node_t_;
+}efx_node_t;
 
 
 /*

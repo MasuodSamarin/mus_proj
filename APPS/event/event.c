@@ -37,59 +37,27 @@ void event_push_node(event_node_t *node){
 }
 
 
-/*
- * free the memory of recently deleted node
- * */
-void event_free_event_node(event_node_t *node){
-#if 0
-	switch (node->type) {
-		case EVENT_BTN:
-			//free(node->);
-			break;
-		case EVENT_ENC:
-			//free(node->enc);
-			break;
-		case EVENT_VOL:
-			//free(node->vol);
-			break;
-
-		default:
-			break;
-	}
-#endif
-	free(node);
-}
 
 
 /*
  * get the first node from event list
  * */
-event_node_t event_pop_node(void){
-	event_node_t *np = NULL;
-	event_node_t n = {0};
-	size_t size;
-
-	size = event_get_size();
-	if(size == 0)
-		return (n);
-
-	np = (event_node_t*)list_pop_front(event_list);
-	if (np != NULL){
-		n = *np;
-		event_free_event_node(np);
-		free(np);
-	}
-	//return (event_node_t*)(NULL);
-	return (n);
+event_node_t* event_pop_node(void){
+	return ((event_node_t*)list_pop_front(event_list));
 }
 
+void event_free_nodes_element(event_node_t* element){
+	if(element)
+		free(element);
+
+}
 
 /*
  * create event node consist volume event
  * */
 
-event_node_t* event_create_vol_node(vol_name_t name, uint32_t val){
-	event_node_t *node = malloc(sizeof(*node));
+event_node_t* event_create_vol_node(vol_name_t name){//, uint32_t val){
+	event_node_t *node = malloc(sizeof(node));
 	//vol_node_t vol;// = malloc(sizeof(*vol));
 /*TODO: check the malloc */
 	if(!node){
@@ -99,15 +67,15 @@ event_node_t* event_create_vol_node(vol_name_t name, uint32_t val){
 
 	node->type = EVENT_VOL;
 	node->vol.name = name;
-	node->vol.val = val;
-	node->vol.val_pwm = val << VOL_ADC_PWM_FACTOR;
+	//node->vol.val = val;
+	//node->vol.val_pwm = val << VOL_ADC_PWM_FACTOR;
 	return node;
 }
 /*
  * create event node consist button event
  * */
 event_node_t* event_create_btn_node(btn_name_t name, btn_hold_t hold){
-	event_node_t *node = malloc(sizeof(*node));
+	event_node_t *node = malloc(sizeof(node));
 	//btn_node_t btn;// = malloc(sizeof(*btn));
 /*TODO: check the malloc */
 	if(!node){
@@ -126,7 +94,7 @@ event_node_t* event_create_btn_node(btn_name_t name, btn_hold_t hold){
  * create event node consist encoder event
  * */
 event_node_t* event_create_enc_node(enc_dir_t dir, uint32_t val){
-	event_node_t *node = malloc(sizeof(*node));
+	event_node_t *node = malloc(sizeof(node));
 	//enc_node_t enc;// = malloc(sizeof(*enc));
 /*TODO: check the malloc */
 	if(!node){

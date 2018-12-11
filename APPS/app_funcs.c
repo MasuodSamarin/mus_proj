@@ -1,9 +1,47 @@
 /*
  * app_funcs.c
+
  *
  *  Created on: Oct 13, 2018
  *      Author: sam
  */
+
+#include "string.h"
+#include "app.h"
+
+/*
+ * state idle, and 6 of events*/
+void fp_idle_not(SM_Handle_Typedef *handle){};
+void fp_idle_vol(SM_Handle_Typedef *handle){};
+void fp_idle_enc(SM_Handle_Typedef *handle){};
+void fp_idle_enter(SM_Handle_Typedef *handle){};
+void fp_idle_bypass(SM_Handle_Typedef *handle){};
+void fp_idle_timeout(SM_Handle_Typedef *handle){};
+
+void fp_vol_not(SM_Handle_Typedef *handle){};
+void fp_vol_vol(SM_Handle_Typedef *handle){};
+void fp_vol_enc(SM_Handle_Typedef *handle){};
+void fp_vol_enter(SM_Handle_Typedef *handle){};
+void fp_vol_bypass(SM_Handle_Typedef *handle){};
+void fp_vol_timeout(SM_Handle_Typedef *handle){};
+
+void fp_enc_not(SM_Handle_Typedef *handle){};
+void fp_enc_vol(SM_Handle_Typedef *handle){};
+void fp_enc_enc(SM_Handle_Typedef *handle){};
+void fp_enc_enter(SM_Handle_Typedef *handle){};
+void fp_enc_bypass(SM_Handle_Typedef *handle){};
+void fp_enc_timeout(SM_Handle_Typedef *handle){};
+
+void fp_bypass_not(SM_Handle_Typedef *handle){};
+void fp_bypass_vol(SM_Handle_Typedef *handle){};
+void fp_bypass_enc(SM_Handle_Typedef *handle){};
+void fp_bypass_enter(SM_Handle_Typedef *handle){};
+void fp_bypass_bypass(SM_Handle_Typedef *handle){};
+void fp_bypass_timeout(SM_Handle_Typedef *handle){};
+
+
+
+
 #if 0
 #include "string.h"
 #include "app.h"

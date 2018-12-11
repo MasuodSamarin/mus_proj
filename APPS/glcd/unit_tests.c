@@ -694,6 +694,9 @@ void glcd_tests(void){
 	}
 }
 
+
+#if 0
+
 	//
 	//();
 	//();
@@ -782,6 +785,7 @@ void unit_print_not(void){
 	glcd_draw_string(5,35, "VOLUMES");
 	glcd_write();
 }
+
 void unit_test_events(void){
 	event_node_t event;
 
@@ -807,7 +811,6 @@ void unit_test_events(void){
 
 	}
 }
-
 
 
 
@@ -974,3 +977,5 @@ void unit_test_eep_read(void){
 	}
 	cnt++;
 }
+
+#endif

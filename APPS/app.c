@@ -12,21 +12,85 @@
 //APP_typedef app_data;
 #define STATE_SLEEP_ENABLE	0
 
+SM_Handle_Typedef g_sm_handle;
 
-
-SM_FP SM_FP_POOL[E_MAX][S_MAX]={
-		fp_idle_not, fp_vol_not, fp_enc_not, fp_bypass_not,
-		fp_idle_vol, fp_vol_vol, fp_enc_vol, fp_bypass_vol,
-		fp_idle_enc, fp_vol_enc, fp_enc_enc, fp_bypass_enc,
-		fp_idle_enter, fp_vol_enter, fp_enc_enter, fp_bypass_enter,
-		fp_idle_bypass, fp_vol_bypass, fp_enc_bypass, fp_bypass_bypass,
-		fp_idle_timeout, fp_vol_timeout, fp_enc_timeout, fp_bypass_timeout
+SM_FP SM_FP_POOL[E_MAX][S_MAX] = {
+		{fp_idle_not, 		fp_vol_not, 		fp_enc_not, 		fp_bypass_not},
+		{fp_idle_vol, 		fp_vol_vol, 		fp_enc_vol, 		fp_bypass_vol},
+		{fp_idle_enc, 		fp_vol_enc, 		fp_enc_enc, 		fp_bypass_enc},
+		{fp_idle_enter, 	fp_vol_enter, 		fp_enc_enter, 		fp_bypass_enter},
+		{fp_idle_bypass, 	fp_vol_bypass, 		fp_enc_bypass, 		fp_bypass_bypass},
+		{fp_idle_timeout, 	fp_vol_timeout, 	fp_enc_timeout, 	fp_bypass_timeout}
 };
+
+void SM_init(void){
+	g_sm_handle.cur_efx = NULL;
+	g_sm_handle.cur_event = E_NOT;
+	g_sm_handle.cur_state = S_IDLE;
+	g_sm_handle.event_node = NULL;
+	g_sm_handle.state_chaned = 0;
+	g_sm_handle.tmp_efx = NULL;
+}
+
+void event_handle(SM_Handle_Typedef *handle){
+	event_node_t *event;
+
+	event = event_pop_node();
+
+	if(handle->event_node != NULL){
+		free(handle->event_node);
+		handle->event_node = NULL;
+	}
+	handle->event_node = event;
+
+	if(event == NULL)
+		return;
+
+	switch (event->type) {
+		case EVENT_NOT:
+			handle->cur_event = E_NOT;
+			break;
+
+		case EVENT_BTN:
+			if(event->btn.name == BTN_ENTER)
+				handle->cur_event = E_BTN_ENTER;
+			else if(event->btn.name == BTN_BYPASS)
+				handle->cur_event = E_BTN_BYPASS;
+			break;
+
+		case EVENT_ENC:
+			handle->cur_event = E_ENC;
+			break;
+
+		case EVENT_VOL:
+			handle->cur_event = E_VOL;
+			break;
+	}
+}
+
+
+
+void State_Machine(SM_Handle_Typedef *handle){
+	SM_FP func;
+
+	func = SM_FP_POOL[handle->cur_event][handle->cur_state];
+	if(func)
+		func(handle);
+}
+
+
+
+void SM_Exec(void){
+	event_handle(&g_sm_handle);
+	State_Machine(&g_sm_handle);
+
+}
+
 
 #if 0
 EVENTS_typedef event_handle(void);
 void State_Machine(EVENTS_typedef event);
-void App_Exec(void);
+void SM_Exec(void);
 
 //void print_on_screen(char* msg);
 
@@ -305,7 +369,7 @@ void State_Machine(EVENTS_typedef event){
  *
  *
  * */
-void App_Exec(void){
+void SM_Exec(void){
 
 	if ( app_data.cur_state < S_MAX ){
 		  //HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);

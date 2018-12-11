@@ -121,7 +121,7 @@ void vol_process(void){
 
 	if (abs(delta) >= VOL_TOLERANCE){
 		vol_handle.vol_data[vol_handle.vol_name] = vol_handle.vol_raw_data[vol_handle.vol_name];
-		event_push_node(event_create_vol_node(vol_handle.vol_name, vol_handle.vol_data[vol_handle.vol_name]));
+		event_push_node(event_create_vol_node(vol_handle.vol_name));//, vol_handle.vol_data[vol_handle.vol_name]));
 	}
 #endif
 }

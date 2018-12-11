@@ -22,7 +22,7 @@ static list_iterator_t efx_list_iter;
  * this is the init of the module, possible?
  * those efx_pushe_list func's must be call before list_make_iterator call
  * */
-
+#if 0
 void efx_init_list(void){
 	efx_list = list_create();
 	//TODO: add system node, unless the iterator doesnt work. and the lines in the for loop
@@ -147,3 +147,4 @@ efx_node_t* efx_prev_node(void){
 
 	return ((efx_node_t*)(node->element));
 }
+#endif

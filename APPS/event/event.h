@@ -77,11 +77,12 @@ typedef struct {
  *
  * */
 void event_init(void);
-event_node_t event_pop_node(void);
+event_node_t* event_pop_node(void);
 size_t event_get_size(void);
+void event_free_nodes_element(event_node_t* element);
 
 void event_push_node(event_node_t *node);
-event_node_t* event_create_vol_node(vol_name_t name, uint32_t val);
+event_node_t* event_create_vol_node(vol_name_t name);//, uint32_t val);
 event_node_t* event_create_btn_node(btn_name_t name, btn_hold_t hold);
 event_node_t* event_create_enc_node(enc_dir_t dir, uint32_t val);
 

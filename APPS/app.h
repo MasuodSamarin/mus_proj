@@ -33,7 +33,7 @@
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
 
-extern __IO int g_timeout;
+///extern __IO int g_timeout;
 
 
 typedef enum {
@@ -66,8 +66,10 @@ typedef struct {
 	//event actual node pointer
 	//state is changed?
 
-	efx_node_t_ *cur_efx;
-	efx_node_t_ *tmp_efx;
+	efx_node_t *cur_efx;
+	efx_node_t *tmp_efx;
+
+	event_node_t *event_node;
 
 	STATES_typedef 	cur_state;
 	//STATES_typedef 	pre_state;
@@ -112,6 +114,15 @@ void fp_bypass_enc(SM_Handle_Typedef*);
 void fp_bypass_enter(SM_Handle_Typedef*);
 void fp_bypass_bypass(SM_Handle_Typedef*);
 void fp_bypass_timeout(SM_Handle_Typedef*);
+
+
+
+void SM_init(void);
+void SM_Exec(void);
+
+void State_Machine(SM_Handle_Typedef *handle);
+void event_handle(SM_Handle_Typedef *handle);
+
 
 /*a transition box */
 /*states   	idle			vol			enc			bypass*/
@@ -177,7 +188,7 @@ void app_init(void);
 
 EVENTS_typedef event_handle(void);
 void State_Machine(EVENTS_typedef event);
-void App_Exec(void);
+void SM_Exec(void);
 
 //void print_on_screen(char* msg);
 #if ON_ENTER_ENABLED

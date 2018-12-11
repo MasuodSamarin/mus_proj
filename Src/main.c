@@ -264,7 +264,7 @@ int main(void)
 
   /* USER CODE BEGIN 3 */
 
-	  //App_Exec();
+	  SM_Exec();
 	  //TM_BUTTON_Update();
 
 	  //glcd_test_bitmap_128x64();
