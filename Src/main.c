@@ -141,6 +141,31 @@ void button_handler_2(TM_BUTTON_t* tm_btn, TM_BUTTON_PressType_t type){
 void button_handler_3(TM_BUTTON_t* btn, TM_BUTTON_PressType_t type);
 #endif
 
+
+
+void main_test_list(void){
+	efx_node_t *node;
+	char tmp_char[20];
+	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
+
+	for (int var = 0; var < 10; ++var) {
+		node = efx_get_on_index(var);
+		glcd_clear_buffer();
+		sprintf(tmp_char, "d", node->number);
+
+		glcd_draw_string(20, 15, node->fv1->name);
+		glcd_write();
+
+		HAL_Delay(500);
+
+
+	}
+
+}
+
+
+
+
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
@@ -249,7 +274,7 @@ int main(void)
 
   app_init();
 
-  HAL_TIM_Base_Start_IT(&htim2);
+  //HAL_TIM_Base_Start_IT(&htim2);
 
 
   /* USER CODE END 2 */
@@ -260,8 +285,8 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-
-	  SM_Exec();
+	  main_test_list();
+	  //SM_Exec();
 	  //TM_BUTTON_Update();
 
 	  //glcd_test_bitmap_128x64();

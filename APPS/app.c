@@ -40,16 +40,17 @@ void app_init(void){
 
 
 	///come from main.c
-	event_init();
-	enc_init();
-	vol_init();
-	btn_init();
-	SM_init();
+	//event_init();
+	//enc_init();
+	//vol_init();
+	//btn_init();
 
 	glcd_init();
 	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
 	glcd_clear_buffer();
 	glcd_write();
+	efx_init_list();
+		SM_init();
 
 }
 

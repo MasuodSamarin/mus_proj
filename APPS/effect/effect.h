@@ -74,17 +74,18 @@ typedef enum {
 
 typedef struct {
 	char 		*name;
+
 	fv1_code_t 	pin;
 	fv1_eep_t 	eep;
-	vol_set_t vol_set;
 
+	vol_set_t vol_set;
 	char *volA_name;
 	char *volB_name;
 	char *volC_name;
 
 } efx_fv1_base_t;
 
-
+#if 0
 typedef struct {
 	/*
 	 * its a isd17xx effect properties*/
@@ -98,7 +99,6 @@ typedef struct {
 /*efx_isd_base_t*/
 // volumes and pwm's {input volume reading, output pwm's value}
 // effect status {enable, disable}
-#if 0
 typedef struct {
 	uint8_t number;
 	efx_mode_t mode;
@@ -123,7 +123,7 @@ typedef struct {
 
 	efx_type_t 	type;
 
-	uint16_t vols[VOL_MAX];
+	uint16_t *vols;
 
 }efx_node_t;
 
@@ -140,14 +140,17 @@ typedef struct {
  * 		to make any effect just need the X3 volume's values
  *
  * */
-efx_node_t* efx_create_fv1_node(uint8_t number, efx_type_t type, efx_fv1_preset pst, uint16_t vols[VOL_MAX]);
+efx_node_t* efx_create_fv1_node(uint8_t number, efx_type_t type, efx_fv1_preset pst, uint16_t *vols);
 void efx_push_effect(efx_node_t *efx);
 void efx_init_list(void);
-efx_node_t* efx_next_node(void);
-efx_node_t* efx_prev_node(void);
+//efx_node_t* efx_next_node(void);
+//efx_node_t* efx_prev_node(void);
+
+efx_node_t* efx_get_on_index(uint8_t index);
+
 /////////////////////////////////////////////////////////
 
-efx_fv1_base_t* efx_get_fv1_effect(efx_fv1_preset pst);
+efx_fv1_base_t* efx_get_fv1_base(efx_fv1_preset pst);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 

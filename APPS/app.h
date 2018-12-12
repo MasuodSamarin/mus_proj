@@ -76,6 +76,7 @@ typedef struct {
 	EVENTS_typedef 	cur_event;
 
 	uint8_t state_chaned;
+	uint8_t efx_list_size;
 
 }SM_Handle_Typedef;
 

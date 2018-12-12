@@ -55,9 +55,10 @@ efx_fv1_base_t *efx_preset_box[EFX_FV1_PRST_MAX] = {
 
 };
 
-efx_fv1_base_t* efx_get_fv1_effect(efx_fv1_preset pst){
+efx_fv1_base_t* efx_get_fv1_base(efx_fv1_preset pst){
 	return (efx_preset_box[pst]);
 }
+
 
 #else
 
@@ -142,7 +143,7 @@ void efx_deinit_preset_box(void){
 	}
 }
 
-efx_fv1_base_t* efx_get_fv1_effect(efx_fv1_preset pst){
+efx_fv1_base_t* efx_get_fv1_base(efx_fv1_preset pst){
 	return (efx_preset_box[pst]);
 }
 #endif

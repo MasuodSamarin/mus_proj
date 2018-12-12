@@ -58,6 +58,42 @@ void	list_destroy(list_t* list)
 }
 
 /**
+ * @brief Allows to iterate over to find out the index node
+ */
+node_t* list_iter_from_head(const list_t* list, size_t index)
+{
+  node_t* node = list->head;
+  size_t i = 0;
+
+  if(index >= list->size)
+	  return NULL;
+
+  while(i<index){
+	  node = node->next;
+	  i++;
+  }
+  return node;
+
+}
+/**
+ * @brief Allows to iterate over to find out the index node
+ */
+node_t* list_iter_from_tail(const list_t* list, size_t index)
+{
+  node_t* node = list->tail;
+  size_t i = 0;
+
+  if(index > list->size)
+	  return NULL;
+
+  while(i < index)
+	  node = node->prev;
+
+  return node;
+
+}
+
+/**
  * @brief Allows to iterate over each node held by the list by pushing
  * each of them to the given `iterator`.
  */
