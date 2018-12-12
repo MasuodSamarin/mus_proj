@@ -20,70 +20,44 @@
 
 efx_fv1_base_t *efx_preset_box[EFX_FV1_PRST_MAX] = {
 
-		&((efx_fv1_base_t){ .name = "MONO ECHO 1", .comments = NULL,
-			.vol_nums = 2, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = NULL,
-			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_0, .eep = FV1_EEP_A})}),
+		&((efx_fv1_base_t){.name="MONO ECHO 1", 	.pin=FV1_CODE_0, .eep=FV1_EEP_A, .vol_set=vol_set_2, .volA_name="REPEAT", .volB_name="TIME", .volC_name=NULL}),
 
-		&((efx_fv1_base_t){ .name = "MONO ECHO 2", .comments = NULL,
-			.vol_nums = 2, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = NULL,
-			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_1, .eep = FV1_EEP_A})}),
+		&((efx_fv1_base_t){.name="MONO ECHO 2", 	.pin=FV1_CODE_1, .eep=FV1_EEP_A, .vol_set=vol_set_2, .volA_name="REPEAT", .volB_name="TIME", .volC_name=NULL}),
 
-		&((efx_fv1_base_t){ .name = "MONO ECHO 3", .comments = NULL,
-			.vol_nums = 2, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = NULL,
-			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_2, .eep = FV1_EEP_A})}),
+		&((efx_fv1_base_t){.name="MONO ECHO 3", 	.pin=FV1_CODE_2, .eep=FV1_EEP_A, .vol_set=vol_set_2, .volA_name="REPEAT", .volB_name="TIME", .volC_name=NULL}),
 
-		&((efx_fv1_base_t){ .name = "MONO ECHO 4", .comments = NULL,
-			.vol_nums = 2, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = NULL,
-			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_3, .eep = FV1_EEP_A})}),
+		&((efx_fv1_base_t){.name="MONO ECHO 4", 	.pin=FV1_CODE_3, .eep=FV1_EEP_A, .vol_set=vol_set_2, .volA_name="REPEAT", .volB_name="TIME", .volC_name=NULL}),
 
-		&((efx_fv1_base_t){ .name = "MULTI PONG", .comments = NULL,
-			.vol_nums = 3, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = "REVERB",
-			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_4, .eep = FV1_EEP_A})}),
+		&((efx_fv1_base_t){.name="MULTI PONG",  	.pin=FV1_CODE_4, .eep=FV1_EEP_A, .vol_set=vol_set_3, .volA_name="REPEAT", .volB_name="TIME", .volC_name="REVERB"}),
 
-		&((efx_fv1_base_t){ .name = "PING PONG", .comments = NULL,
-			.vol_nums = 3, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = "REVERB",
-			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_5, .eep = FV1_EEP_A})}),
+		&((efx_fv1_base_t){.name="PING PONG",   	.pin=FV1_CODE_5, .eep=FV1_EEP_A, .vol_set=vol_set_3, .volA_name="REPEAT", .volB_name="TIME", .volC_name="REVERB"}),
 
-		&((efx_fv1_base_t){ .name = "ECHO + DELAY", .comments = NULL,
-			.vol_nums = 3, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = "REVERB",
-			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_6, .eep = FV1_EEP_A})}),
+		&((efx_fv1_base_t){.name="ECHO + DELAY",	.pin=FV1_CODE_6, .eep=FV1_EEP_A, .vol_set=vol_set_3, .volA_name="REPEAT", .volB_name="TIME", .volC_name="REVERB"}),
 
-		&((efx_fv1_base_t){ .name = "ECHO + REVERB", .comments = NULL,
-			.vol_nums = 3, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = "REVERB",
-			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_7, .eep = FV1_EEP_A})}),
+		&((efx_fv1_base_t){.name="ECHO + REVERB",	.pin=FV1_CODE_7, .eep=FV1_EEP_A, .vol_set=vol_set_3, .volA_name="REPEAT", .volB_name="TIME", .volC_name="REVERB"}),
 
-		&((efx_fv1_base_t){ .name = "VOICE DELAY", .comments = NULL,
-			.vol_nums = 2, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = NULL,
-			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_0, .eep = FV1_EEP_B})}),
+		&((efx_fv1_base_t){.name="VOICE DELAY", 	.pin=FV1_CODE_0, .eep=FV1_EEP_B, .vol_set=vol_set_2, .volA_name="REPEAT", .volB_name="TIME", .volC_name=NULL}),
 
-		&((efx_fv1_base_t){ .name = "VOICE REVERB", .comments = NULL,
-			.vol_nums = 3, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = "REVERB",
-			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_1, .eep = FV1_EEP_B})}),
+		&((efx_fv1_base_t){.name="VOICE REVERB",	.pin=FV1_CODE_1, .eep=FV1_EEP_B, .vol_set=vol_set_3, .volA_name="REPEAT", .volB_name="TIME", .volC_name="REVERB"}),
 
-		&((efx_fv1_base_t){ .name = "HALL REVERB", .comments = NULL,
-			.vol_nums = 2, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = NULL,
-			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_2, .eep = FV1_EEP_B})}),
+		&((efx_fv1_base_t){.name="HALL REVERB", 	.pin=FV1_CODE_2, .eep=FV1_EEP_B, .vol_set=vol_set_2, .volA_name="REPEAT", .volB_name="TIME", .volC_name=NULL}),
 
-		&((efx_fv1_base_t){ .name = "REVERB + FLNG", .comments = NULL,
-			.vol_nums = 3, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = "REVERB",
-			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_3, .eep = FV1_EEP_B})}),
+		&((efx_fv1_base_t){.name="REVERB + FLNG",	.pin=FV1_CODE_3, .eep=FV1_EEP_B, .vol_set=vol_set_3, .volA_name="REPEAT", .volB_name="TIME", .volC_name="REVERB"}),
 
-		&((efx_fv1_base_t){ .name = "ECHO + FLANG", .comments = NULL,
-			.vol_nums = 2, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = NULL,
-			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_4, .eep = FV1_EEP_B})}),
+		&((efx_fv1_base_t){.name="ECHO + FLANG", 	.pin=FV1_CODE_4, .eep=FV1_EEP_B, .vol_set=vol_set_2, .volA_name="REPEAT", .volB_name="TIME", .volC_name=NULL}),
 
-		&((efx_fv1_base_t){ .name = "VOICE FLANG", .comments = NULL,
-			.vol_nums = 2, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = NULL,
-			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_5, .eep = FV1_EEP_B})}),
+		&((efx_fv1_base_t){.name="VOICE FLANG", 	.pin=FV1_CODE_5, .eep=FV1_EEP_B, .vol_set=vol_set_2, .volA_name="REPEAT", .volB_name="TIME", .volC_name=NULL}),
 
-		&((efx_fv1_base_t){ .name = "VOICE PLATE", .comments = NULL,
-			.vol_nums = 2, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = NULL,
-			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_6, .eep = FV1_EEP_B})}),
+		&((efx_fv1_base_t){.name="VOICE FLANG",		.pin=FV1_CODE_6, .eep=FV1_EEP_B, .vol_set=vol_set_2, .volA_name="REPEAT", .volB_name="TIME", .volC_name=NULL}),
 
-		&((efx_fv1_base_t){ .name = "VOICE CHUOROS", .comments = NULL,
-			.vol_nums = 2, .volA_name = "REPEAT", .volB_name = "TIME", .volC_name = NULL,
-			.fv1 = &((fv1_type_t){ .pin = FV1_CODE_7, .eep = FV1_EEP_B})}),
+		&((efx_fv1_base_t){.name="VOICE CHUOROS", 	.pin=FV1_CODE_7, .eep=FV1_EEP_B, .vol_set=vol_set_2, .volA_name="REPEAT", .volB_name="TIME", .volC_name=NULL}),
+
+
 };
+
+efx_fv1_base_t* efx_get_fv1_effect(efx_fv1_preset pst){
+	return (efx_preset_box[pst]);
+}
 
 #else
 
@@ -168,8 +142,9 @@ void efx_deinit_preset_box(void){
 	}
 }
 
-#endif
-
 efx_fv1_base_t* efx_get_fv1_effect(efx_fv1_preset pst){
 	return (efx_preset_box[pst]);
 }
+#endif
+
+

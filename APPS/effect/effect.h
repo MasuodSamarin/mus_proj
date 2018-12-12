@@ -60,12 +60,12 @@ typedef enum {
 typedef enum {
 	EFX_TYPE_FV1,
 	EFX_TYPE_ISD
-} efx_type_t;
+} efx_mode_t;
 
 typedef enum {
-	EFX_MODE_USER,
-	EFX_MODE_PRESET
-}efx_mode_t;
+	EFX_TYPE_USER,
+	EFX_TYPE_PRESET
+}efx_type_t;
 
 
 // effect names	{from a list of effects}
@@ -73,14 +73,15 @@ typedef enum {
 // spins and eep's {4 pin for spin, 2 pind for power of eep's}
 
 typedef struct {
-	 const char *name;
-	 const char *comments;
-	 uint8_t vol_nums;
-	 const char *volA_name;
-	 const char *volB_name;
-	 const char *volC_name;
+	char 		*name;
+	fv1_code_t 	pin;
+	fv1_eep_t 	eep;
+	vol_set_t vol_set;
 
-	 const fv1_type_t *fv1;
+	char *volA_name;
+	char *volB_name;
+	char *volC_name;
+
 } efx_fv1_base_t;
 
 
@@ -118,14 +119,11 @@ typedef struct {
 typedef struct {
 	uint8_t		number;
 	efx_fv1_preset pst;
-	char 		*name;
-	efx_mode_t 	type;
-	fv1_code_t 	pin;
-	fv1_eep_t 	eep;
+	efx_fv1_base_t *fv1;
 
-	vol_set_t vol_set;
-	char *vol_names[VOL_MAX];
-	uint16_t vol_raws[VOL_MAX];
+	efx_type_t 	type;
+
+	uint16_t vols[VOL_MAX];
 
 }efx_node_t;
 
@@ -142,7 +140,7 @@ typedef struct {
  * 		to make any effect just need the X3 volume's values
  *
  * */
-efx_node_t* efx_create_fv1_node(uint8_t number, efx_mode_t mode, efx_fv1_preset pst, uint16_t vol1, uint16_t vol2, uint16_t vol3);
+efx_node_t* efx_create_fv1_node(uint8_t number, efx_type_t type, efx_fv1_preset pst, uint16_t vols[VOL_MAX]);
 void efx_push_effect(efx_node_t *efx);
 void efx_init_list(void);
 efx_node_t* efx_next_node(void);

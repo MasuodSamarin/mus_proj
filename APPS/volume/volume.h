@@ -40,8 +40,8 @@ extern "C" {
  * we have 2volumes or we have 3 volumes
  * */
 typedef enum {
-	vol_2,
-	vol_3
+	vol_set_2,
+	vol_set_3
 }vol_set_t;
 
 /*
