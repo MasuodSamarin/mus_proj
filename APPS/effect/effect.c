@@ -14,6 +14,7 @@
 #include "link_list.h"
 #include "event.h"
 
+#include "glcd.h"
 
  list_t *efx_list;
  list_iterator_t efx_list_iter;
@@ -26,7 +27,7 @@
 
 efx_node_t* efx_create_fv1_node(uint8_t number, efx_type_t type, efx_fv1_preset pst, uint16_t *vols){
 
-	efx_node_t *efx = malloc(sizeof(efx));
+	efx_node_t *efx = malloc(sizeof(*efx));
 	//TODO: check malloc
 	if(!efx){
 		_Error_Handler(__FILE__, __LINE__);
@@ -56,6 +57,7 @@ void efx_init_list(void){
 	for (efx_fv1_preset pst = EFX_FV1_PRST_1; pst < EFX_FV1_PRST_MAX; ++pst) {
 		efx_node_t *efx = (efx_node_t *)efx_create_fv1_node((uint8_t)pst+1, EFX_TYPE_PRESET, pst, vols);
 		efx_push_effect(efx);
+
 	}
 
 	//efx_list_iter = list_make_iterator(efx_list, NULL);

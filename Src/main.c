@@ -151,7 +151,7 @@ void main_test_list(void){
 	for (int var = 0; var < 10; ++var) {
 		node = efx_get_on_index(var);
 		glcd_clear_buffer();
-		sprintf(tmp_char, "d", node->number);
+		sprintf(tmp_char, "%d", node->number);
 
 		glcd_draw_string(20, 15, node->fv1->name);
 		glcd_write();
@@ -285,8 +285,8 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-	  main_test_list();
-	  //SM_Exec();
+	  //main_test_list();
+	  SM_Exec();
 	  //TM_BUTTON_Update();
 
 	  //glcd_test_bitmap_128x64();

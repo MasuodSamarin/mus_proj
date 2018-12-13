@@ -24,7 +24,7 @@ SM_FP SM_FP_POOL[E_MAX][S_MAX] = {
 };
 
 void SM_init(void){
-	g_sm_handle.cur_efx = NULL;
+	g_sm_handle.cur_efx = efx_get_on_index(4);
 	g_sm_handle.cur_event = E_NOT;
 	g_sm_handle.cur_state = S_IDLE;
 	g_sm_handle.event_node = NULL;
@@ -40,17 +40,17 @@ void app_init(void){
 
 
 	///come from main.c
-	//event_init();
-	//enc_init();
-	//vol_init();
-	//btn_init();
+	event_init();
+	enc_init();
+	vol_init();
+	btn_init();
 
 	glcd_init();
-	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
-	glcd_clear_buffer();
-	glcd_write();
+	//glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
+	//glcd_clear_buffer();
+	//glcd_write();
 	efx_init_list();
-		SM_init();
+	SM_init();
 
 }
 

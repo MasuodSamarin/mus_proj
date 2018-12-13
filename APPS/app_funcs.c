@@ -23,11 +23,60 @@ static void app_draw_empty_frame(void){
 	glcd_draw_rect_thick(x, y, w, h, tx, ty, BLACK);
 }
 
+static void app_print_efx_name_number(efx_node_t *efx){
+	char *name = (char*)efx->fv1->name;
+	int number = efx->number;
+
+	//print the name of efx
+	glcd_set_font_c(FC_Tahoma11x13_AlphaNumber);
+	glcd_draw_string(7, 7, name);
+
+	//print the number of efx and inert it
+	glcd_set_font_c(FC_Bebas_Neue18x36_Numbers);
+	sprintf(tmp_str, "%.2d", number);
+	glcd_draw_string(80, 23, tmp_str);
+	//glcd_invert_area(75, 31, 40, 26);
+
+}
+
+static void app_print_2_vols_graph(SM_Handle_Typedef *handle){
+
+	glcd_draw_rect_thick(6, 27, 65, 27, 3, 1, BLACK);
+	uint32_t *vols = vol_get_all_raw();
+
+	glcd_bar_graph_horizontal_no_border(6, 30, 65, 3, (*(vols+0)) >> 4);
+	glcd_bar_graph_horizontal_no_border(6, 39, 65, 3, (*(vols+1)) >> 4);
+
+
+
+}
+
+static void app_print_3_vols_graph(SM_Handle_Typedef *handle){
+
+	glcd_draw_rect_thick(6, 27, 70, 27, 3, 1, BLACK);
+	uint32_t *vols = vol_get_all_raw();
+
+	glcd_bar_graph_horizontal_no_border(8, 30, 65, 3, (*(vols+0)) >> 4);
+	glcd_bar_graph_horizontal_no_border(8, 39, 65, 3, (*(vols+1)) >> 4);
+	glcd_bar_graph_horizontal_no_border(8, 48, 65, 3, (*(vols+2)) >> 4);
+
+
+}
+
+
 /*
  * state idle, and 6 of events*/
 void fp_idle_not(SM_Handle_Typedef *handle){
 	app_draw_empty_frame();
+
+	app_print_efx_name_number(handle->cur_efx);
+	if(handle->cur_efx->fv1->vol_set == vol_set_2)
+		app_print_2_vols_graph(handle);
+	if(handle->cur_efx->fv1->vol_set == vol_set_3)
+		app_print_3_vols_graph(handle);
+
 	glcd_write();
+	//HAL_Delay(500);
 
 };
 

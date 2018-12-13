@@ -34,7 +34,26 @@ APPS/effect/effect.o: ../APPS/effect/effect.c ../APPS/effect/effect.h \
  /home/sam/w/musavi/mus_proj/APPS/push-btn/push_btn.h \
  /home/sam/w/musavi/mus_proj/APPS/encoder/encoder.h \
  /home/sam/w/musavi/mus_proj/APPS/volume/volume.h \
- /home/sam/w/musavi/mus_proj/APPS/fv1/fv1.h
+ /home/sam/w/musavi/mus_proj/APPS/fv1/fv1.h \
+ /home/sam/w/musavi/mus_proj/APPS/glcd/glcd.h \
+ /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/fonts.h \
+ /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Bebas_Neue18x36_Numbers.h \
+ /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Bebas_Neue20x36_Bold_Numbers.h \
+ /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Liberation_Sans11x14_Numbers.h \
+ /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Liberation_Sans15x21_Numbers.h \
+ /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Liberation_Sans17x17_Alpha.h \
+ /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Liberation_Sans20x28_Numbers.h \
+ /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Liberation_Sans27x36_Numbers.h \
+ /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Font5x8.h \
+ /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Tahoma11x13.h \
+ /home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Tekton_Pro_Ext27x28.h \
+ /home/sam/w/musavi/mus_proj/APPS/glcd/ST7565R.h \
+ /home/sam/w/musavi/mus_proj/APPS/glcd/glcd_graphics.h \
+ /home/sam/w/musavi/mus_proj/APPS/glcd/glcd_graphs.h \
+ /home/sam/w/musavi/mus_proj/APPS/glcd/glcd_text.h \
+ /home/sam/w/musavi/mus_proj/APPS/glcd/glcd.h \
+ /home/sam/w/musavi/mus_proj/APPS/glcd/unit_tests.h \
+ /home/sam/w/musavi/mus_proj/APPS/effect/effect.h
 
 ../APPS/effect/effect.h:
 
@@ -109,3 +128,41 @@ APPS/effect/effect.o: ../APPS/effect/effect.c ../APPS/effect/effect.h \
 /home/sam/w/musavi/mus_proj/APPS/volume/volume.h:
 
 /home/sam/w/musavi/mus_proj/APPS/fv1/fv1.h:
+
+/home/sam/w/musavi/mus_proj/APPS/glcd/glcd.h:
+
+/home/sam/w/musavi/mus_proj/APPS/glcd/fonts/fonts.h:
+
+/home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Bebas_Neue18x36_Numbers.h:
+
+/home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Bebas_Neue20x36_Bold_Numbers.h:
+
+/home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Liberation_Sans11x14_Numbers.h:
+
+/home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Liberation_Sans15x21_Numbers.h:
+
+/home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Liberation_Sans17x17_Alpha.h:
+
+/home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Liberation_Sans20x28_Numbers.h:
+
+/home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Liberation_Sans27x36_Numbers.h:
+
+/home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Font5x8.h:
+
+/home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Tahoma11x13.h:
+
+/home/sam/w/musavi/mus_proj/APPS/glcd/fonts/Tekton_Pro_Ext27x28.h:
+
+/home/sam/w/musavi/mus_proj/APPS/glcd/ST7565R.h:
+
+/home/sam/w/musavi/mus_proj/APPS/glcd/glcd_graphics.h:
+
+/home/sam/w/musavi/mus_proj/APPS/glcd/glcd_graphs.h:
+
+/home/sam/w/musavi/mus_proj/APPS/glcd/glcd_text.h:
+
+/home/sam/w/musavi/mus_proj/APPS/glcd/glcd.h:
+
+/home/sam/w/musavi/mus_proj/APPS/glcd/unit_tests.h:
+
+/home/sam/w/musavi/mus_proj/APPS/effect/effect.h:
