@@ -78,6 +78,8 @@ typedef struct {
 	uint8_t state_chaned;
 	uint8_t efx_list_size;
 
+	uint32_t timer;
+
 }SM_Handle_Typedef;
 
 /*func pointer for SM for every single state*/

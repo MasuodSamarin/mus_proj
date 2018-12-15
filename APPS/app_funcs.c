@@ -108,9 +108,9 @@ static void app_print_vols_vol(SM_Handle_Typedef *handle){
 
 void app_print_on_lcd(const char *txt){
 	app_draw_empty_frame();
-		glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
-		glcd_draw_string(7, 7, (char*)txt);
-		glcd_write();
+	glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
+	glcd_draw_string(7, 7, (char*)txt);
+	glcd_write();
 }
 
 /*
@@ -122,15 +122,12 @@ void fp_idle_not(SM_Handle_Typedef *handle){
 	app_print_vols_not(handle);
 
 	glcd_write();
+
 };
 
 void fp_idle_vol(SM_Handle_Typedef *handle){
-	app_draw_empty_frame();
 
-	app_print_efx_name_number(handle);
-	app_print_vols_vol(handle);
-
-	glcd_write();
+	handle->cur_state = S_VOL;
 
 };
 
@@ -139,8 +136,30 @@ void fp_idle_enter(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
 void fp_idle_bypass(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
 void fp_idle_timeout(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
 
-void fp_vol_not(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
-void fp_vol_vol(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+void fp_vol_not(SM_Handle_Typedef *handle){
+	app_draw_empty_frame();
+
+	app_print_efx_name_number(handle);
+	app_print_vols_not(handle);
+
+	glcd_write();
+	if(HAL_GetTick() - handle->timer > 5000){
+		handle->cur_state = S_IDLE;
+		handle->timer = 0;
+	}
+
+};
+
+void fp_vol_vol(SM_Handle_Typedef *handle){
+	app_draw_empty_frame();
+
+	app_print_efx_name_number(handle);
+	app_print_vols_vol(handle);
+
+	glcd_write();
+	handle->timer = HAL_GetTick();
+};
+
 void fp_vol_enc(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
 void fp_vol_enter(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
 void fp_vol_bypass(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};

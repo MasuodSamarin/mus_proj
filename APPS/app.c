@@ -60,7 +60,7 @@ void event_handle(SM_Handle_Typedef *handle){
 	event = event_pop_node();
 
 	if(handle->event_node != NULL){
-		free(handle->event_node);
+		//free(handle->event_node);
 		handle->event_node = NULL;
 	}
 
