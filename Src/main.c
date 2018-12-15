@@ -274,7 +274,7 @@ int main(void)
 
   app_init();
 
-  //HAL_TIM_Base_Start_IT(&htim2);
+  HAL_TIM_Base_Start_IT(&htim2);
 
 
   /* USER CODE END 2 */

@@ -11,6 +11,7 @@
 
 char tmp_str[20];
 
+
 static void app_draw_empty_frame(void){
 	int x = 0;
 	int y = 0;
@@ -23,9 +24,9 @@ static void app_draw_empty_frame(void){
 	glcd_draw_rect_thick(x, y, w, h, tx, ty, BLACK);
 }
 
-static void app_print_efx_name_number(efx_node_t *efx){
-	char *name = (char*)efx->fv1->name;
-	int number = efx->number;
+static void app_print_efx_name_number(SM_Handle_Typedef *handle){
+	char *name = handle->cur_efx->fv1->name;
+	int number = handle->cur_efx->number;
 
 	//print the name of efx
 	glcd_set_font_c(FC_Tahoma11x13_AlphaNumber);
@@ -39,73 +40,125 @@ static void app_print_efx_name_number(efx_node_t *efx){
 
 }
 
-static void app_print_2_vols_graph(SM_Handle_Typedef *handle){
-
-	glcd_draw_rect_thick(6, 27, 65, 27, 3, 1, BLACK);
-	uint32_t *vols = vol_get_all_raw();
-
-	glcd_bar_graph_horizontal_no_border(6, 30, 65, 3, (*(vols+0)) >> 4);
-	glcd_bar_graph_horizontal_no_border(6, 39, 65, 3, (*(vols+1)) >> 4);
-
-
-
-}
-
-static void app_print_3_vols_graph(SM_Handle_Typedef *handle){
-
+static void app_print_2_vols_graph(SM_Handle_Typedef *handle, vol_name_t change){
 	glcd_draw_rect_thick(6, 27, 70, 27, 3, 1, BLACK);
 	uint32_t *vols = vol_get_all_raw();
 
-	glcd_bar_graph_horizontal_no_border(8, 30, 65, 3, (*(vols+0)) >> 4);
-	glcd_bar_graph_horizontal_no_border(8, 39, 65, 3, (*(vols+1)) >> 4);
-	glcd_bar_graph_horizontal_no_border(8, 48, 65, 3, (*(vols+2)) >> 4);
-
-
+	switch (change) {
+		case VOL_A:
+			glcd_bar_graph_horizontal_no_border(8, 31, 65, 3, (*(vols+VOL_C)) >> 4);
+			glcd_bar_graph_horizontal_no_border(8, 39, 65, 3, (*(vols+VOL_B)) >> 4);
+			break;
+		case VOL_B:
+			glcd_bar_graph_horizontal_no_border(8, 31, 65, 3, (*(vols+VOL_C)) >> 4);
+			glcd_bar_graph_horizontal_no_border(8, 39-1, 65, 3+2, (*(vols+VOL_B)) >> 4);
+			break;
+		case VOL_C:
+			glcd_bar_graph_horizontal_no_border(8, 31-1, 65, 3+2, (*(vols+VOL_C)) >> 4);
+			glcd_bar_graph_horizontal_no_border(8, 39, 65, 3, (*(vols+VOL_B)) >> 4);
+			break;
+		case VOL_MAX:
+			glcd_bar_graph_horizontal_no_border(8, 31, 65, 3, (*(vols+VOL_C)) >> 4);
+			glcd_bar_graph_horizontal_no_border(8, 39, 65, 3, (*(vols+VOL_B)) >> 4);
+			break;
+	}
 }
 
+static void app_print_3_vols_graph(SM_Handle_Typedef *handle, vol_name_t change){
+	glcd_draw_rect_thick(6, 27, 70, 27, 3, 1, BLACK);
+	uint32_t *vols = vol_get_all_raw();
+
+	switch (change) {
+		case VOL_A:
+			glcd_bar_graph_horizontal_no_border(8, 31, 65, 3, (*(vols+VOL_C)) >> 4);
+			glcd_bar_graph_horizontal_no_border(8, 39, 65, 3, (*(vols+VOL_B)) >> 4);
+			glcd_bar_graph_horizontal_no_border(8, 47-1, 65, 3+2, (*(vols+VOL_A)) >> 4);
+			break;
+		case VOL_B:
+			glcd_bar_graph_horizontal_no_border(8, 31, 65, 3, (*(vols+VOL_C)) >> 4);
+			glcd_bar_graph_horizontal_no_border(8, 39-1, 65, 3+2, (*(vols+VOL_B)) >> 4);
+			glcd_bar_graph_horizontal_no_border(8, 47, 65, 3, (*(vols+VOL_A)) >> 4);
+			break;
+		case VOL_C:
+			glcd_bar_graph_horizontal_no_border(8, 31-1, 65, 3+2, (*(vols+VOL_C)) >> 4);
+			glcd_bar_graph_horizontal_no_border(8, 39, 65, 3, (*(vols+VOL_B)) >> 4);
+			glcd_bar_graph_horizontal_no_border(8, 47, 65, 3, (*(vols+VOL_A)) >> 4);
+			break;
+		case VOL_MAX:
+			glcd_bar_graph_horizontal_no_border(8, 31, 65, 3, (*(vols+VOL_C)) >> 4);
+			glcd_bar_graph_horizontal_no_border(8, 39, 65, 3, (*(vols+VOL_B)) >> 4);
+			glcd_bar_graph_horizontal_no_border(8, 47, 65, 3, (*(vols+VOL_A)) >> 4);
+			break;
+	}
+}
+
+static void app_print_vols_not(SM_Handle_Typedef *handle){
+	if(handle->cur_efx->fv1->vol_set == vol_set_2)
+		app_print_2_vols_graph(handle, VOL_MAX);
+	if(handle->cur_efx->fv1->vol_set == vol_set_3)
+		app_print_3_vols_graph(handle, VOL_MAX);
+}
+static void app_print_vols_vol(SM_Handle_Typedef *handle){
+	if(handle->cur_efx->fv1->vol_set == vol_set_2){
+		app_print_2_vols_graph(handle, handle->event_node->vol.name);
+	}
+	if(handle->cur_efx->fv1->vol_set == vol_set_3)
+		app_print_3_vols_graph(handle, handle->event_node->vol.name);
+}
+
+void app_print_on_lcd(const char *txt){
+	app_draw_empty_frame();
+		glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
+		glcd_draw_string(7, 7, (char*)txt);
+		glcd_write();
+}
 
 /*
  * state idle, and 6 of events*/
 void fp_idle_not(SM_Handle_Typedef *handle){
 	app_draw_empty_frame();
 
-	app_print_efx_name_number(handle->cur_efx);
-	if(handle->cur_efx->fv1->vol_set == vol_set_2)
-		app_print_2_vols_graph(handle);
-	if(handle->cur_efx->fv1->vol_set == vol_set_3)
-		app_print_3_vols_graph(handle);
+	app_print_efx_name_number(handle);
+	app_print_vols_not(handle);
 
 	glcd_write();
-	//HAL_Delay(500);
+};
+
+void fp_idle_vol(SM_Handle_Typedef *handle){
+	app_draw_empty_frame();
+
+	app_print_efx_name_number(handle);
+	app_print_vols_vol(handle);
+
+	glcd_write();
 
 };
 
-void fp_idle_vol(SM_Handle_Typedef *handle){};
-void fp_idle_enc(SM_Handle_Typedef *handle){};
-void fp_idle_enter(SM_Handle_Typedef *handle){};
-void fp_idle_bypass(SM_Handle_Typedef *handle){};
-void fp_idle_timeout(SM_Handle_Typedef *handle){};
+void fp_idle_enc(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+void fp_idle_enter(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+void fp_idle_bypass(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+void fp_idle_timeout(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
 
-void fp_vol_not(SM_Handle_Typedef *handle){};
-void fp_vol_vol(SM_Handle_Typedef *handle){};
-void fp_vol_enc(SM_Handle_Typedef *handle){};
-void fp_vol_enter(SM_Handle_Typedef *handle){};
-void fp_vol_bypass(SM_Handle_Typedef *handle){};
-void fp_vol_timeout(SM_Handle_Typedef *handle){};
+void fp_vol_not(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+void fp_vol_vol(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+void fp_vol_enc(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+void fp_vol_enter(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+void fp_vol_bypass(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+void fp_vol_timeout(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
 
-void fp_enc_not(SM_Handle_Typedef *handle){};
-void fp_enc_vol(SM_Handle_Typedef *handle){};
-void fp_enc_enc(SM_Handle_Typedef *handle){};
-void fp_enc_enter(SM_Handle_Typedef *handle){};
-void fp_enc_bypass(SM_Handle_Typedef *handle){};
-void fp_enc_timeout(SM_Handle_Typedef *handle){};
+void fp_enc_not(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+void fp_enc_vol(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+void fp_enc_enc(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+void fp_enc_enter(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+void fp_enc_bypass(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+void fp_enc_timeout(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
 
-void fp_bypass_not(SM_Handle_Typedef *handle){};
-void fp_bypass_vol(SM_Handle_Typedef *handle){};
-void fp_bypass_enc(SM_Handle_Typedef *handle){};
-void fp_bypass_enter(SM_Handle_Typedef *handle){};
-void fp_bypass_bypass(SM_Handle_Typedef *handle){};
-void fp_bypass_timeout(SM_Handle_Typedef *handle){};
+void fp_bypass_not(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+void fp_bypass_vol(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+void fp_bypass_enc(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+void fp_bypass_enter(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+void fp_bypass_bypass(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+void fp_bypass_timeout(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
 
 
 

@@ -49,9 +49,9 @@ typedef enum {
  * */
 typedef enum {
 	//VOL_NOT,
-	VOL_C,
-	VOL_B,
 	VOL_A,
+	VOL_B,
+	VOL_C,
 	VOL_MAX
 }vol_name_t;
 

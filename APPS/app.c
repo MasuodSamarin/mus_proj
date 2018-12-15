@@ -61,12 +61,15 @@ void event_handle(SM_Handle_Typedef *handle){
 
 	if(handle->event_node != NULL){
 		free(handle->event_node);
-		//handle->event_node = NULL;
+		handle->event_node = NULL;
+	}
+
+	if(event == NULL){
+		handle->cur_event = E_NOT;
+
+		return;
 	}
 	handle->event_node = event;
-
-	if(event == NULL)
-		return;
 
 	switch (event->type) {
 		case EVENT_NOT:
@@ -107,7 +110,7 @@ void State_Machine(SM_Handle_Typedef *handle){
 
 
 void SM_Exec(void){
-	//event_handle(&g_sm_handle);
+	event_handle(&g_sm_handle);
 	State_Machine(&g_sm_handle);
 
 }
