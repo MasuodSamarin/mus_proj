@@ -68,7 +68,8 @@ efx_node_t* efx_get_on_index(uint8_t index){
 
 
 	node_t *efx = list_iter_from_head(efx_list, index);
-
+	if(efx == NULL)
+		return NULL;
 	return (efx->element);
 }
 

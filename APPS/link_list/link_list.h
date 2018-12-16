@@ -219,7 +219,7 @@ extern "C" {
 
 
 
-  node_t* list_iter_from_head(const list_t* list, size_t index);
+  node_t* list_iter_from_head(const list_t* list, unsigned int index);
   node_t* list_iter_from_tail(const list_t* list, size_t index);
 
 #ifdef __cplusplus

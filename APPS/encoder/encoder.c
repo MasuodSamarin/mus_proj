@@ -19,7 +19,7 @@ static uint32_t enc_old_val = 0;
 void enc_init(void){
 	MX_TIM4_Init();
 	HAL_TIM_Encoder_Start(&htim4, TIM_CHANNEL_ALL);
-	enc_set_span(20);
+	enc_set_span(15);
 }
 
 void enc_set_span(uint32_t span){

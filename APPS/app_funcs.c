@@ -113,6 +113,7 @@ void app_print_on_lcd(const char *txt){
 	glcd_write();
 }
 
+/////////////////////////////////////////////////////////////////////////////////////
 /*
  * state idle, and 6 of events*/
 void fp_idle_not(SM_Handle_Typedef *handle){
@@ -131,10 +132,15 @@ void fp_idle_vol(SM_Handle_Typedef *handle){
 
 };
 
-void fp_idle_enc(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+void fp_idle_enc(SM_Handle_Typedef *handle){
+	handle->cur_state = S_ENC;
+};
+
 void fp_idle_enter(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
 void fp_idle_bypass(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
 void fp_idle_timeout(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+
+//////////////////////////
 
 void fp_vol_not(SM_Handle_Typedef *handle){
 	app_draw_empty_frame();
@@ -164,14 +170,65 @@ void fp_vol_enc(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
 void fp_vol_enter(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
 void fp_vol_bypass(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
 void fp_vol_timeout(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+//////////////////////////////////////////////////
+void fp_enc_not(SM_Handle_Typedef *handle){
+	app_draw_empty_frame();
+		int cnt = enc_get_val();
+#if 1
+		handle->tmp_efx = efx_get_on_index(enc_get_val());
+		if(handle->tmp_efx != NULL){
+		char *name = handle->tmp_efx->fv1->name;
+			int number = handle->tmp_efx->number;
 
-void fp_enc_not(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+			//print the name of efx
+			glcd_set_font_c(FC_Tahoma11x13_AlphaNumber);
+			glcd_draw_string(7, 7, name);
+
+			//print the number of efx and inert it
+			glcd_set_font_c(FC_Bebas_Neue18x36_Numbers);
+			sprintf(tmp_str, "%.2d", number);
+			glcd_draw_string(80, 23, tmp_str);
+			//glcd_invert_area(75, 31, 40, 26);
+		}
+#endif
+
+			glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
+			sprintf(tmp_str, "c:%d", cnt);//*vol_factor_persent);
+			glcd_draw_string(5, 25, tmp_str);
+			glcd_write();
+
+};
 void fp_enc_vol(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
-void fp_enc_enc(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+void fp_enc_enc(SM_Handle_Typedef *handle){
+	app_draw_empty_frame();
+	int cnt = enc_get_val();
+#if 1
+	handle->tmp_efx = efx_get_on_index(enc_get_val());
+	if(handle->tmp_efx != NULL){
+	char *name = handle->tmp_efx->fv1->name;
+		int number = handle->tmp_efx->number;
+
+		//print the name of efx
+		glcd_set_font_c(FC_Tahoma11x13_AlphaNumber);
+		glcd_draw_string(7, 7, name);
+
+		//print the number of efx and inert it
+		glcd_set_font_c(FC_Bebas_Neue18x36_Numbers);
+		sprintf(tmp_str, "%.2d", number);
+		glcd_draw_string(80, 23, tmp_str);
+		//glcd_invert_area(75, 31, 40, 26);
+	}
+#endif
+		glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
+		sprintf(tmp_str, "c:%d", cnt);//*vol_factor_persent);
+		glcd_draw_string(5, 25, tmp_str);
+		glcd_write();
+
+};
 void fp_enc_enter(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
 void fp_enc_bypass(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
 void fp_enc_timeout(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
-
+/////////////////////////////////////////////////
 void fp_bypass_not(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
 void fp_bypass_vol(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
 void fp_bypass_enc(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
