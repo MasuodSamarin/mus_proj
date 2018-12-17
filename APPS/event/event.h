@@ -37,7 +37,7 @@ extern "C" {
 /*
  * add the event to the end of the list
  * */
-#define EVENT_QEUE_SIZE 10
+#define EVENT_QEUE_SIZE 2
 
 
 /*

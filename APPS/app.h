@@ -81,6 +81,7 @@ typedef struct {
 	uint8_t efx_list_size;
 
 	uint32_t timer;
+	vol_name_t last_vol;
 
 }SM_Handle_Typedef;
 

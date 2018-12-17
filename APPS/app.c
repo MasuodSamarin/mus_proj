@@ -31,6 +31,7 @@ void SM_init(void){
 	g_sm_handle.state_chaned = 0;
 	g_sm_handle.tmp_efx = NULL;
 	g_sm_handle.has_event = 0;
+
 }
 
 void app_init(void){
@@ -68,6 +69,7 @@ void event_handle(SM_Handle_Typedef *handle){
 	event = event_pop_node();
 	if(event == NULL){
 		handle->cur_event = E_NOT;
+		handle->event_node = NULL;
 		return;
 	}
 
@@ -92,6 +94,7 @@ void event_handle(SM_Handle_Typedef *handle){
 
 		case EVENT_VOL:
 			handle->cur_event = E_VOL;
+			handle->last_vol = event->vol.name;
 			break;
 	}
 
