@@ -150,8 +150,8 @@ void fp_vol_not(SM_Handle_Typedef *handle){
 
 	glcd_write();
 	if(HAL_GetTick() - handle->timer > 5000){
+		handle->timer = HAL_GetTick();
 		handle->cur_state = S_IDLE;
-		handle->timer = 0;
 	}
 
 };
@@ -166,12 +166,19 @@ void fp_vol_vol(SM_Handle_Typedef *handle){
 	handle->timer = HAL_GetTick();
 };
 
-void fp_vol_enc(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+void fp_vol_enc(SM_Handle_Typedef *handle){
+	handle->cur_state = S_ENC;
+	handle->timer = HAL_GetTick();
+
+};
 void fp_vol_enter(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
 void fp_vol_bypass(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
 void fp_vol_timeout(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
 //////////////////////////////////////////////////
 void fp_enc_not(SM_Handle_Typedef *handle){
+
+
+
 	app_draw_empty_frame();
 		int cnt = enc_get_val();
 #if 1
@@ -197,9 +204,18 @@ void fp_enc_not(SM_Handle_Typedef *handle){
 			glcd_draw_string(5, 25, tmp_str);
 			glcd_write();
 
+
+	if(HAL_GetTick() - handle->timer > 5000){
+		//handle->timer = HAL_GetTick();
+		enc_set_val(handle->cur_efx->number - 1);
+		handle->cur_state = S_IDLE;
+	}
+
 };
 void fp_enc_vol(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
 void fp_enc_enc(SM_Handle_Typedef *handle){
+	handle->timer = HAL_GetTick();
+
 	app_draw_empty_frame();
 	int cnt = enc_get_val();
 #if 1

@@ -18,6 +18,8 @@ extern "C" {
 #include "main.h"
 #include "stm32f1xx_hal.h"
 #include "gpio.h"
+#include "event.h"
+//#include "app.h"
 /*
  * user includes
  * */
@@ -66,6 +68,7 @@ typedef struct {
  * */
 void btn_init(void);
 void btn_process(void);
+void btn_update(btn_node_t *event, btn_name_t name, btn_hold_t hold);
 
 
 

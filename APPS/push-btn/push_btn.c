@@ -320,3 +320,13 @@ void btn_init(void){
 
 }
 
+
+void btn_update(btn_node_t *btn, btn_name_t name, btn_hold_t hold){
+
+	//event->type = EVENT_BTN;
+	btn->name = name;
+	btn->hold = hold;
+
+
+}
+

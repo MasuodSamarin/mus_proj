@@ -216,10 +216,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 		 * if reach the specific time, trigger the appropriate functions.
 		 *
 		 * */
-		if(0 == ((ticks)%time_btn))
-			//btn_process();
-			//app_data.run_btn_process = 1;
+		if(0 == ((ticks)%time_btn)){
 			TM_BUTTON_Update();
+		}
 
 		if(0 == ((ticks)%time_vol))
 			//app_data.run_vol_process = 1;

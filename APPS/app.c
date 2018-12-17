@@ -30,6 +30,7 @@ void SM_init(void){
 	g_sm_handle.event_node = NULL;
 	g_sm_handle.state_chaned = 0;
 	g_sm_handle.tmp_efx = NULL;
+	g_sm_handle.has_event = 0;
 }
 
 void app_init(void){
@@ -54,26 +55,26 @@ void app_init(void){
 
 }
 
+
 void event_handle(SM_Handle_Typedef *handle){
 	event_node_t *event;
 
-	event = event_pop_node();
 
 	if(handle->event_node != NULL){
-		//free(handle->event_node);
+		free(handle->event_node);
 		handle->event_node = NULL;
 	}
 
+	event = event_pop_node();
 	if(event == NULL){
 		handle->cur_event = E_NOT;
-
 		return;
 	}
-	handle->event_node = event;
 
 	switch (event->type) {
 		case EVENT_NOT:
 			handle->cur_event = E_NOT;
+			handle->event_node = NULL;
 			break;
 
 		case EVENT_BTN:
@@ -93,6 +94,9 @@ void event_handle(SM_Handle_Typedef *handle){
 			handle->cur_event = E_VOL;
 			break;
 	}
+
+	handle->event_node = event;
+
 }
 
 

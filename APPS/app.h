@@ -69,11 +69,13 @@ typedef struct {
 	efx_node_t *cur_efx;
 	efx_node_t *tmp_efx;
 
-	event_node_t *event_node;
 
 	STATES_typedef 	cur_state;
 	//STATES_typedef 	pre_state;
+
+	event_node_t *event_node;
 	EVENTS_typedef 	cur_event;
+	unsigned char has_event;
 
 	uint8_t state_chaned;
 	uint8_t efx_list_size;

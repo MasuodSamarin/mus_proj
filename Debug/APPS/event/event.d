@@ -31,6 +31,7 @@ APPS/event/event.o: ../APPS/event/event.c ../APPS/event/event.h \
  /home/sam/w/musavi/mus_proj/Inc/tim.h \
  /home/sam/w/musavi/mus_proj/APPS/link_list/link_list.h \
  /home/sam/w/musavi/mus_proj/APPS/push-btn/push_btn.h \
+ /home/sam/w/musavi/mus_proj/APPS/event/event.h \
  /home/sam/w/musavi/mus_proj/APPS/encoder/encoder.h \
  /home/sam/w/musavi/mus_proj/APPS/volume/volume.h
 
@@ -99,6 +100,8 @@ APPS/event/event.o: ../APPS/event/event.c ../APPS/event/event.h \
 /home/sam/w/musavi/mus_proj/APPS/link_list/link_list.h:
 
 /home/sam/w/musavi/mus_proj/APPS/push-btn/push_btn.h:
+
+/home/sam/w/musavi/mus_proj/APPS/event/event.h:
 
 /home/sam/w/musavi/mus_proj/APPS/encoder/encoder.h:
 
