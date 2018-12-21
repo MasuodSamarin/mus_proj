@@ -222,7 +222,12 @@ void fp_enc_not(SM_Handle_Typedef *handle){
 
 
 };
-void fp_enc_vol(SM_Handle_Typedef *handle){app_print_on_lcd(__FUNCTION__);};
+
+void fp_enc_vol(SM_Handle_Typedef *handle){
+	handle->cur_state = S_VOL;
+	handle->timer = HAL_GetTick();
+};
+
 void fp_enc_enc(SM_Handle_Typedef *handle){
 	handle->timer = HAL_GetTick();
 

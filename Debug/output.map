@@ -6431,7 +6431,7 @@ LOAD /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.lin
                 0x0000000008000000                g_pfnVectors
                 0x000000000800010c                . = ALIGN (0x4)
 
-.text           0x000000000800010c     0x44e4
+.text           0x000000000800010c     0x44a8
                 0x000000000800010c                . = ALIGN (0x4)
  *(.text)
  .text          0x000000000800010c       0x40 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
@@ -6481,594 +6481,594 @@ LOAD /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.lin
                 0x000000000800074c       0x28 APPS/app_funcs.o
                 0x000000000800074c                fp_enc_not
  .text.fp_enc_vol
-                0x0000000008000774       0x4c APPS/app_funcs.o
+                0x0000000008000774       0x10 APPS/app_funcs.o
                 0x0000000008000774                fp_enc_vol
  .text.fp_enc_enc
-                0x00000000080007c0       0xb4 APPS/app_funcs.o
-                0x00000000080007c0                fp_enc_enc
+                0x0000000008000784       0xb4 APPS/app_funcs.o
+                0x0000000008000784                fp_enc_enc
  .text.fp_enc_enter
-                0x0000000008000874       0x4c APPS/app_funcs.o
-                0x0000000008000874                fp_enc_enter
+                0x0000000008000838       0x4c APPS/app_funcs.o
+                0x0000000008000838                fp_enc_enter
  .text.fp_enc_bypass
-                0x00000000080008c0       0x4c APPS/app_funcs.o
-                0x00000000080008c0                fp_enc_bypass
+                0x0000000008000884       0x4c APPS/app_funcs.o
+                0x0000000008000884                fp_enc_bypass
  .text.fp_enc_timeout
-                0x000000000800090c       0x4c APPS/app_funcs.o
-                0x000000000800090c                fp_enc_timeout
+                0x00000000080008d0       0x4c APPS/app_funcs.o
+                0x00000000080008d0                fp_enc_timeout
  .text.fp_bypass_not
-                0x0000000008000958       0x4c APPS/app_funcs.o
-                0x0000000008000958                fp_bypass_not
+                0x000000000800091c       0x4c APPS/app_funcs.o
+                0x000000000800091c                fp_bypass_not
  .text.fp_bypass_vol
-                0x00000000080009a4       0x4c APPS/app_funcs.o
-                0x00000000080009a4                fp_bypass_vol
+                0x0000000008000968       0x4c APPS/app_funcs.o
+                0x0000000008000968                fp_bypass_vol
  .text.fp_bypass_enc
-                0x00000000080009f0       0x4c APPS/app_funcs.o
-                0x00000000080009f0                fp_bypass_enc
+                0x00000000080009b4       0x4c APPS/app_funcs.o
+                0x00000000080009b4                fp_bypass_enc
  .text.fp_bypass_enter
-                0x0000000008000a3c       0x4c APPS/app_funcs.o
-                0x0000000008000a3c                fp_bypass_enter
+                0x0000000008000a00       0x4c APPS/app_funcs.o
+                0x0000000008000a00                fp_bypass_enter
  .text.fp_bypass_bypass
-                0x0000000008000a88       0x4c APPS/app_funcs.o
-                0x0000000008000a88                fp_bypass_bypass
+                0x0000000008000a4c       0x4c APPS/app_funcs.o
+                0x0000000008000a4c                fp_bypass_bypass
  .text.fp_bypass_timeout
-                0x0000000008000ad4       0x4c APPS/app_funcs.o
-                0x0000000008000ad4                fp_bypass_timeout
+                0x0000000008000a98       0x4c APPS/app_funcs.o
+                0x0000000008000a98                fp_bypass_timeout
  .text.efx_init_list
-                0x0000000008000b20       0x68 APPS/effect/effect.o
-                0x0000000008000b20                efx_init_list
+                0x0000000008000ae4       0x68 APPS/effect/effect.o
+                0x0000000008000ae4                efx_init_list
  .text.efx_get_on_index
-                0x0000000008000b88       0x18 APPS/effect/effect.o
-                0x0000000008000b88                efx_get_on_index
+                0x0000000008000b4c       0x18 APPS/effect/effect.o
+                0x0000000008000b4c                efx_get_on_index
  .text.efx_get_fv1_base
-                0x0000000008000ba0        0xc APPS/effect/effect_preset.o
-                0x0000000008000ba0                efx_get_fv1_base
+                0x0000000008000b64        0xc APPS/effect/effect_preset.o
+                0x0000000008000b64                efx_get_fv1_base
  .text.enc_init
-                0x0000000008000bac       0x20 APPS/encoder/encoder.o
-                0x0000000008000bac                enc_init
+                0x0000000008000b70       0x20 APPS/encoder/encoder.o
+                0x0000000008000b70                enc_init
  .text.enc_set_val
-                0x0000000008000bcc        0xc APPS/encoder/encoder.o
-                0x0000000008000bcc                enc_set_val
+                0x0000000008000b90        0xc APPS/encoder/encoder.o
+                0x0000000008000b90                enc_set_val
  .text.enc_get_val
-                0x0000000008000bd8        0xc APPS/encoder/encoder.o
-                0x0000000008000bd8                enc_get_val
+                0x0000000008000b9c        0xc APPS/encoder/encoder.o
+                0x0000000008000b9c                enc_get_val
  .text.enc_process
-                0x0000000008000be4       0x50 APPS/encoder/encoder.o
-                0x0000000008000be4                enc_process
+                0x0000000008000ba8       0x50 APPS/encoder/encoder.o
+                0x0000000008000ba8                enc_process
  .text.event_init
-                0x0000000008000c34       0x10 APPS/event/event.o
-                0x0000000008000c34                event_init
+                0x0000000008000bf8       0x10 APPS/event/event.o
+                0x0000000008000bf8                event_init
  .text.event_push_node
-                0x0000000008000c44       0x24 APPS/event/event.o
-                0x0000000008000c44                event_push_node
+                0x0000000008000c08       0x24 APPS/event/event.o
+                0x0000000008000c08                event_push_node
  .text.event_pop_node
-                0x0000000008000c68        0xc APPS/event/event.o
-                0x0000000008000c68                event_pop_node
+                0x0000000008000c2c        0xc APPS/event/event.o
+                0x0000000008000c2c                event_pop_node
  .text.event_create_vol_node
-                0x0000000008000c74       0x28 APPS/event/event.o
-                0x0000000008000c74                event_create_vol_node
+                0x0000000008000c38       0x28 APPS/event/event.o
+                0x0000000008000c38                event_create_vol_node
  .text.event_create_btn_node
-                0x0000000008000c9c       0x2c APPS/event/event.o
-                0x0000000008000c9c                event_create_btn_node
+                0x0000000008000c60       0x2c APPS/event/event.o
+                0x0000000008000c60                event_create_btn_node
  .text.event_create_enc_node
-                0x0000000008000cc8       0x2c APPS/event/event.o
-                0x0000000008000cc8                event_create_enc_node
+                0x0000000008000c8c       0x2c APPS/event/event.o
+                0x0000000008000c8c                event_create_enc_node
  .text.glcd_write
-                0x0000000008000cf4      0x19c APPS/glcd/ST7565R.o
-                0x0000000008000cf4                glcd_write
+                0x0000000008000cb8      0x19c APPS/glcd/ST7565R.o
+                0x0000000008000cb8                glcd_write
  .text.glcd_ST7565R_init
-                0x0000000008000e90      0x26c APPS/glcd/ST7565R.o
-                0x0000000008000e90                glcd_ST7565R_init
+                0x0000000008000e54      0x26c APPS/glcd/ST7565R.o
+                0x0000000008000e54                glcd_ST7565R_init
  .text.glcd_init
-                0x00000000080010fc      0x240 APPS/glcd/ST7565R.o
-                0x00000000080010fc                glcd_init
+                0x00000000080010c0      0x240 APPS/glcd/ST7565R.o
+                0x00000000080010c0                glcd_init
  .text.glcd_update_bbox
-                0x000000000800133c       0x48 APPS/glcd/glcd.o
-                0x000000000800133c                glcd_update_bbox
+                0x0000000008001300       0x48 APPS/glcd/glcd.o
+                0x0000000008001300                glcd_update_bbox
  .text.glcd_reset_bbox
-                0x0000000008001384       0x10 APPS/glcd/glcd.o
-                0x0000000008001384                glcd_reset_bbox
+                0x0000000008001348       0x10 APPS/glcd/glcd.o
+                0x0000000008001348                glcd_reset_bbox
  .text.glcd_clear
-                0x0000000008001394       0x48 APPS/glcd/glcd.o
-                0x0000000008001394                glcd_clear
+                0x0000000008001358       0x48 APPS/glcd/glcd.o
+                0x0000000008001358                glcd_clear
  .text.glcd_clear_buffer
-                0x00000000080013dc       0x40 APPS/glcd/glcd.o
-                0x00000000080013dc                glcd_clear_buffer
+                0x00000000080013a0       0x40 APPS/glcd/glcd.o
+                0x00000000080013a0                glcd_clear_buffer
  .text.glcd_select_buffer
-                0x000000000800141c        0xc APPS/glcd/glcd.o
-                0x000000000800141c                glcd_select_buffer
+                0x00000000080013e0        0xc APPS/glcd/glcd.o
+                0x00000000080013e0                glcd_select_buffer
  .text.glcd_set_pixel
-                0x0000000008001428       0x44 APPS/glcd/glcd_graphics.o
-                0x0000000008001428                glcd_set_pixel
+                0x00000000080013ec       0x44 APPS/glcd/glcd_graphics.o
+                0x00000000080013ec                glcd_set_pixel
  .text.glcd_draw_rect_fill
-                0x000000000800146c       0xf0 APPS/glcd/glcd_graphics.o
-                0x000000000800146c                glcd_draw_rect_fill
+                0x0000000008001430       0xf0 APPS/glcd/glcd_graphics.o
+                0x0000000008001430                glcd_draw_rect_fill
  .text.glcd_draw_rect_thick
-                0x000000000800155c      0x294 APPS/glcd/glcd_graphics.o
-                0x000000000800155c                glcd_draw_rect_thick
+                0x0000000008001520      0x294 APPS/glcd/glcd_graphics.o
+                0x0000000008001520                glcd_draw_rect_thick
  .text.glcd_bar_graph_horizontal_no_border
-                0x00000000080017f0       0x2c APPS/glcd/glcd_graphs.o
-                0x00000000080017f0                glcd_bar_graph_horizontal_no_border
+                0x00000000080017b4       0x2c APPS/glcd/glcd_graphs.o
+                0x00000000080017b4                glcd_bar_graph_horizontal_no_border
  .text.glcd_set_font_c
-                0x000000000800181c       0x1c APPS/glcd/glcd_text.o
-                0x000000000800181c                glcd_set_font_c
+                0x00000000080017e0       0x1c APPS/glcd/glcd_text.o
+                0x00000000080017e0                glcd_set_font_c
  .text.glcd_draw_char_xy
-                0x0000000008001838       0xe4 APPS/glcd/glcd_text.o
-                0x0000000008001838                glcd_draw_char_xy
+                0x00000000080017fc       0xe4 APPS/glcd/glcd_text.o
+                0x00000000080017fc                glcd_draw_char_xy
  .text.glcd_draw_string
-                0x000000000800191c       0x38 APPS/glcd/glcd_text.o
-                0x000000000800191c                glcd_draw_string
+                0x00000000080018e0       0x38 APPS/glcd/glcd_text.o
+                0x00000000080018e0                glcd_draw_string
  .text.list_create
-                0x0000000008001954       0x14 APPS/link_list/link_list.o
-                0x0000000008001954                list_create
+                0x0000000008001918       0x14 APPS/link_list/link_list.o
+                0x0000000008001918                list_create
  .text.list_iter_from_head
-                0x0000000008001968       0x1c APPS/link_list/link_list.o
-                0x0000000008001968                list_iter_from_head
+                0x000000000800192c       0x1c APPS/link_list/link_list.o
+                0x000000000800192c                list_iter_from_head
  .text.list_get_size
-                0x0000000008001984        0x4 APPS/link_list/link_list.o
-                0x0000000008001984                list_get_size
+                0x0000000008001948        0x4 APPS/link_list/link_list.o
+                0x0000000008001948                list_get_size
  .text.list_push_back
-                0x0000000008001988       0x38 APPS/link_list/link_list.o
-                0x0000000008001988                list_push_back
+                0x000000000800194c       0x38 APPS/link_list/link_list.o
+                0x000000000800194c                list_push_back
  .text.list_pop_front
-                0x00000000080019c0       0x48 APPS/link_list/link_list.o
-                0x00000000080019c0                list_pop_front
+                0x0000000008001984       0x48 APPS/link_list/link_list.o
+                0x0000000008001984                list_pop_front
  .text.HAL_GPIO_EXTI_Callback
-                0x0000000008001a08       0x28 APPS/push-btn/push_btn.o
-                0x0000000008001a08                HAL_GPIO_EXTI_Callback
+                0x00000000080019cc       0x28 APPS/push-btn/push_btn.o
+                0x00000000080019cc                HAL_GPIO_EXTI_Callback
  .text.TM_BUTTON_Update
-                0x0000000008001a30       0xc8 APPS/push-btn/push_btn.o
-                0x0000000008001a30                TM_BUTTON_Update
+                0x00000000080019f4       0xc8 APPS/push-btn/push_btn.o
+                0x00000000080019f4                TM_BUTTON_Update
  .text.btn_init
-                0x0000000008001af8       0x88 APPS/push-btn/push_btn.o
-                0x0000000008001af8                btn_init
+                0x0000000008001abc       0x88 APPS/push-btn/push_btn.o
+                0x0000000008001abc                btn_init
  .text.vol_process
-                0x0000000008001b80       0x58 APPS/volume/volume.o
-                0x0000000008001b80                vol_process
+                0x0000000008001b44       0x58 APPS/volume/volume.o
+                0x0000000008001b44                vol_process
  .text.vol_init
-                0x0000000008001bd8       0x2c APPS/volume/volume.o
-                0x0000000008001bd8                vol_init
+                0x0000000008001b9c       0x2c APPS/volume/volume.o
+                0x0000000008001b9c                vol_init
  .text.vol_get_all_raw
-                0x0000000008001c04        0x8 APPS/volume/volume.o
-                0x0000000008001c04                vol_get_all_raw
+                0x0000000008001bc8        0x8 APPS/volume/volume.o
+                0x0000000008001bc8                vol_get_all_raw
  .text.HAL_InitTick
-                0x0000000008001c0c       0x44 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
-                0x0000000008001c0c                HAL_InitTick
+                0x0000000008001bd0       0x44 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+                0x0000000008001bd0                HAL_InitTick
  .text.HAL_Init
-                0x0000000008001c50       0x24 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
-                0x0000000008001c50                HAL_Init
+                0x0000000008001c14       0x24 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+                0x0000000008001c14                HAL_Init
  .text.HAL_IncTick
-                0x0000000008001c74       0x18 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
-                0x0000000008001c74                HAL_IncTick
+                0x0000000008001c38       0x18 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+                0x0000000008001c38                HAL_IncTick
  .text.HAL_GetTick
-                0x0000000008001c8c        0xc Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
-                0x0000000008001c8c                HAL_GetTick
+                0x0000000008001c50        0xc Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+                0x0000000008001c50                HAL_GetTick
  .text.HAL_Delay
-                0x0000000008001c98       0x24 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
-                0x0000000008001c98                HAL_Delay
+                0x0000000008001c5c       0x24 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+                0x0000000008001c5c                HAL_Delay
  .text.HAL_ADC_Init
-                0x0000000008001cbc      0x180 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
-                0x0000000008001cbc                HAL_ADC_Init
+                0x0000000008001c80      0x180 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+                0x0000000008001c80                HAL_ADC_Init
  .text.HAL_ADC_Start_DMA
-                0x0000000008001e3c      0x178 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
-                0x0000000008001e3c                HAL_ADC_Start_DMA
+                0x0000000008001e00      0x178 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+                0x0000000008001e00                HAL_ADC_Start_DMA
  .text.HAL_ADC_ConvCpltCallback
-                0x0000000008001fb4        0x4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
-                0x0000000008001fb4                HAL_ADC_ConvCpltCallback
+                0x0000000008001f78        0x4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+                0x0000000008001f78                HAL_ADC_ConvCpltCallback
  .text.ADC_DMAConvCplt
-                0x0000000008001fb8       0x50 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
-                0x0000000008001fb8                ADC_DMAConvCplt
+                0x0000000008001f7c       0x50 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+                0x0000000008001f7c                ADC_DMAConvCplt
  .text.HAL_ADC_ConvHalfCpltCallback
-                0x0000000008002008        0x4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
-                0x0000000008002008                HAL_ADC_ConvHalfCpltCallback
+                0x0000000008001fcc        0x4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+                0x0000000008001fcc                HAL_ADC_ConvHalfCpltCallback
  .text.ADC_DMAHalfConvCplt
-                0x000000000800200c        0xc Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
-                0x000000000800200c                ADC_DMAHalfConvCplt
+                0x0000000008001fd0        0xc Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+                0x0000000008001fd0                ADC_DMAHalfConvCplt
  .text.HAL_ADC_ErrorCallback
-                0x0000000008002018        0x4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
-                0x0000000008002018                HAL_ADC_ErrorCallback
+                0x0000000008001fdc        0x4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+                0x0000000008001fdc                HAL_ADC_ErrorCallback
  .text.ADC_DMAError
-                0x000000000800201c       0x1c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
-                0x000000000800201c                ADC_DMAError
+                0x0000000008001fe0       0x1c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+                0x0000000008001fe0                ADC_DMAError
  .text.HAL_ADC_ConfigChannel
-                0x0000000008002038      0x120 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
-                0x0000000008002038                HAL_ADC_ConfigChannel
+                0x0000000008001ffc      0x120 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+                0x0000000008001ffc                HAL_ADC_ConfigChannel
  .text.HAL_NVIC_SetPriorityGrouping
-                0x0000000008002158       0x24 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
-                0x0000000008002158                HAL_NVIC_SetPriorityGrouping
+                0x000000000800211c       0x24 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+                0x000000000800211c                HAL_NVIC_SetPriorityGrouping
  .text.HAL_NVIC_SetPriority
-                0x000000000800217c       0x6c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
-                0x000000000800217c                HAL_NVIC_SetPriority
+                0x0000000008002140       0x6c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+                0x0000000008002140                HAL_NVIC_SetPriority
  .text.HAL_NVIC_EnableIRQ
-                0x00000000080021e8       0x18 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
-                0x00000000080021e8                HAL_NVIC_EnableIRQ
+                0x00000000080021ac       0x18 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+                0x00000000080021ac                HAL_NVIC_EnableIRQ
  .text.HAL_SYSTICK_Config
-                0x0000000008002200       0x30 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
-                0x0000000008002200                HAL_SYSTICK_Config
+                0x00000000080021c4       0x30 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+                0x00000000080021c4                HAL_SYSTICK_Config
  .text.HAL_SYSTICK_CLKSourceConfig
-                0x0000000008002230       0x18 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
-                0x0000000008002230                HAL_SYSTICK_CLKSourceConfig
+                0x00000000080021f4       0x18 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+                0x00000000080021f4                HAL_SYSTICK_CLKSourceConfig
  .text.HAL_SYSTICK_Callback
-                0x0000000008002248        0x4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
-                0x0000000008002248                HAL_SYSTICK_Callback
+                0x000000000800220c        0x4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+                0x000000000800220c                HAL_SYSTICK_Callback
  .text.HAL_SYSTICK_IRQHandler
-                0x000000000800224c        0x8 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
-                0x000000000800224c                HAL_SYSTICK_IRQHandler
+                0x0000000008002210        0x8 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+                0x0000000008002210                HAL_SYSTICK_IRQHandler
  .text.HAL_DMA_Init
-                0x0000000008002254       0x70 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
-                0x0000000008002254                HAL_DMA_Init
+                0x0000000008002218       0x70 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+                0x0000000008002218                HAL_DMA_Init
  .text.HAL_DMA_Start_IT
-                0x00000000080022c4       0x88 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
-                0x00000000080022c4                HAL_DMA_Start_IT
+                0x0000000008002288       0x88 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+                0x0000000008002288                HAL_DMA_Start_IT
  .text.HAL_DMA_IRQHandler
-                0x000000000800234c      0x12c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
-                0x000000000800234c                HAL_DMA_IRQHandler
+                0x0000000008002310      0x12c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+                0x0000000008002310                HAL_DMA_IRQHandler
  .text.HAL_GPIO_Init
-                0x0000000008002478      0x1e0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
-                0x0000000008002478                HAL_GPIO_Init
+                0x000000000800243c      0x1e0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+                0x000000000800243c                HAL_GPIO_Init
  .text.HAL_GPIO_ReadPin
-                0x0000000008002658        0xc Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
-                0x0000000008002658                HAL_GPIO_ReadPin
+                0x000000000800261c        0xc Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+                0x000000000800261c                HAL_GPIO_ReadPin
  .text.HAL_GPIO_WritePin
-                0x0000000008002664        0x8 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
-                0x0000000008002664                HAL_GPIO_WritePin
+                0x0000000008002628        0x8 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+                0x0000000008002628                HAL_GPIO_WritePin
  .text.HAL_GPIO_TogglePin
-                0x000000000800266c        0x8 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
-                0x000000000800266c                HAL_GPIO_TogglePin
+                0x0000000008002630        0x8 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+                0x0000000008002630                HAL_GPIO_TogglePin
  .text.HAL_GPIO_EXTI_IRQHandler
-                0x0000000008002674       0x18 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
-                0x0000000008002674                HAL_GPIO_EXTI_IRQHandler
+                0x0000000008002638       0x18 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+                0x0000000008002638                HAL_GPIO_EXTI_IRQHandler
  .text.HAL_RCC_OscConfig
-                0x000000000800268c      0x3d0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
-                0x000000000800268c                HAL_RCC_OscConfig
+                0x0000000008002650      0x3d0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+                0x0000000008002650                HAL_RCC_OscConfig
  .text.HAL_RCC_ClockConfig
-                0x0000000008002a5c      0x1ac Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
-                0x0000000008002a5c                HAL_RCC_ClockConfig
+                0x0000000008002a20      0x1ac Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+                0x0000000008002a20                HAL_RCC_ClockConfig
  .text.HAL_RCC_GetHCLKFreq
-                0x0000000008002c08        0xc Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
-                0x0000000008002c08                HAL_RCC_GetHCLKFreq
+                0x0000000008002bcc        0xc Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+                0x0000000008002bcc                HAL_RCC_GetHCLKFreq
  .text.HAL_RCCEx_PeriphCLKConfig
-                0x0000000008002c14      0x104 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
-                0x0000000008002c14                HAL_RCCEx_PeriphCLKConfig
+                0x0000000008002bd8      0x104 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
+                0x0000000008002bd8                HAL_RCCEx_PeriphCLKConfig
  .text.HAL_TIM_Base_Init
-                0x0000000008002d18       0x9c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
-                0x0000000008002d18                HAL_TIM_Base_Init
+                0x0000000008002cdc       0x9c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+                0x0000000008002cdc                HAL_TIM_Base_Init
  .text.HAL_TIM_Base_Start_IT
-                0x0000000008002db4       0x18 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
-                0x0000000008002db4                HAL_TIM_Base_Start_IT
+                0x0000000008002d78       0x18 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+                0x0000000008002d78                HAL_TIM_Base_Start_IT
  .text.HAL_TIM_PWM_Init
-                0x0000000008002dcc       0x9c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
-                0x0000000008002dcc                HAL_TIM_PWM_Init
+                0x0000000008002d90       0x9c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+                0x0000000008002d90                HAL_TIM_PWM_Init
  .text.HAL_TIM_Encoder_Init
-                0x0000000008002e68      0x104 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
-                0x0000000008002e68                HAL_TIM_Encoder_Init
+                0x0000000008002e2c      0x104 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+                0x0000000008002e2c                HAL_TIM_Encoder_Init
  .text.HAL_TIM_Encoder_Start
-                0x0000000008002f6c       0x48 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
-                0x0000000008002f6c                HAL_TIM_Encoder_Start
+                0x0000000008002f30       0x48 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+                0x0000000008002f30                HAL_TIM_Encoder_Start
  .text.HAL_TIM_PWM_ConfigChannel
-                0x0000000008002fb4      0x1f4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
-                0x0000000008002fb4                HAL_TIM_PWM_ConfigChannel
+                0x0000000008002f78      0x1f4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+                0x0000000008002f78                HAL_TIM_PWM_ConfigChannel
  .text.HAL_TIM_ConfigClockSource
-                0x00000000080031a8      0x184 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
-                0x00000000080031a8                HAL_TIM_ConfigClockSource
+                0x000000000800316c      0x184 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+                0x000000000800316c                HAL_TIM_ConfigClockSource
  .text.HAL_TIM_OC_DelayElapsedCallback
-                0x000000000800332c        0x4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
-                0x000000000800332c                HAL_TIM_OC_DelayElapsedCallback
+                0x00000000080032f0        0x4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+                0x00000000080032f0                HAL_TIM_OC_DelayElapsedCallback
  .text.HAL_TIM_IC_CaptureCallback
-                0x0000000008003330        0x4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
-                0x0000000008003330                HAL_TIM_IC_CaptureCallback
+                0x00000000080032f4        0x4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+                0x00000000080032f4                HAL_TIM_IC_CaptureCallback
  .text.HAL_TIM_PWM_PulseFinishedCallback
-                0x0000000008003334        0x4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
-                0x0000000008003334                HAL_TIM_PWM_PulseFinishedCallback
+                0x00000000080032f8        0x4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+                0x00000000080032f8                HAL_TIM_PWM_PulseFinishedCallback
  .text.HAL_TIM_TriggerCallback
-                0x0000000008003338        0x4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
-                0x0000000008003338                HAL_TIM_TriggerCallback
+                0x00000000080032fc        0x4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+                0x00000000080032fc                HAL_TIM_TriggerCallback
  .text.HAL_TIM_IRQHandler
-                0x000000000800333c      0x154 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
-                0x000000000800333c                HAL_TIM_IRQHandler
+                0x0000000008003300      0x154 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+                0x0000000008003300                HAL_TIM_IRQHandler
  .text.HAL_TIMEx_ConfigBreakDeadTime
-                0x0000000008003490       0x54 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
-                0x0000000008003490                HAL_TIMEx_ConfigBreakDeadTime
+                0x0000000008003454       0x54 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+                0x0000000008003454                HAL_TIMEx_ConfigBreakDeadTime
  .text.HAL_TIMEx_MasterConfigSynchronization
-                0x00000000080034e4       0x4c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
-                0x00000000080034e4                HAL_TIMEx_MasterConfigSynchronization
+                0x00000000080034a8       0x4c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+                0x00000000080034a8                HAL_TIMEx_MasterConfigSynchronization
  .text.HAL_TIMEx_CommutationCallback
-                0x0000000008003530        0x4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
-                0x0000000008003530                HAL_TIMEx_CommutationCallback
+                0x00000000080034f4        0x4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+                0x00000000080034f4                HAL_TIMEx_CommutationCallback
  .text.HAL_TIMEx_BreakCallback
-                0x0000000008003534        0x4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
-                0x0000000008003534                HAL_TIMEx_BreakCallback
+                0x00000000080034f8        0x4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+                0x00000000080034f8                HAL_TIMEx_BreakCallback
  .text.MX_ADC1_Init
-                0x0000000008003538       0x9c Src/adc.o
-                0x0000000008003538                MX_ADC1_Init
+                0x00000000080034fc       0x9c Src/adc.o
+                0x00000000080034fc                MX_ADC1_Init
  .text.HAL_ADC_MspInit
-                0x00000000080035d4       0x8c Src/adc.o
-                0x00000000080035d4                HAL_ADC_MspInit
+                0x0000000008003598       0x8c Src/adc.o
+                0x0000000008003598                HAL_ADC_MspInit
  .text.MX_DMA_Init
-                0x0000000008003660       0x34 Src/dma.o
-                0x0000000008003660                MX_DMA_Init
+                0x0000000008003624       0x34 Src/dma.o
+                0x0000000008003624                MX_DMA_Init
  .text.MX_GPIO_Init
-                0x0000000008003694       0xd4 Src/gpio.o
-                0x0000000008003694                MX_GPIO_Init
+                0x0000000008003658       0xd4 Src/gpio.o
+                0x0000000008003658                MX_GPIO_Init
  .text.HAL_TIM_PeriodElapsedCallback
-                0x0000000008003768       0x34 Src/main.o
-                0x0000000008003768                HAL_TIM_PeriodElapsedCallback
+                0x000000000800372c       0x34 Src/main.o
+                0x000000000800372c                HAL_TIM_PeriodElapsedCallback
  .text._Error_Handler
-                0x000000000800379c       0x60 Src/main.o
-                0x000000000800379c                _Error_Handler
+                0x0000000008003760       0x60 Src/main.o
+                0x0000000008003760                _Error_Handler
  .text.SystemClock_Config
-                0x00000000080037fc       0xa0 Src/main.o
-                0x00000000080037fc                SystemClock_Config
+                0x00000000080037c0       0xa0 Src/main.o
+                0x00000000080037c0                SystemClock_Config
  .text.startup.main
-                0x000000000800389c       0x64 Src/main.o
-                0x000000000800389c                main
+                0x0000000008003860       0x64 Src/main.o
+                0x0000000008003860                main
  .text.HAL_MspInit
-                0x0000000008003900       0xa0 Src/stm32f1xx_hal_msp.o
-                0x0000000008003900                HAL_MspInit
+                0x00000000080038c4       0xa0 Src/stm32f1xx_hal_msp.o
+                0x00000000080038c4                HAL_MspInit
  .text.NMI_Handler
-                0x00000000080039a0        0x4 Src/stm32f1xx_it.o
-                0x00000000080039a0                NMI_Handler
+                0x0000000008003964        0x4 Src/stm32f1xx_it.o
+                0x0000000008003964                NMI_Handler
  .text.HardFault_Handler
-                0x00000000080039a4        0x4 Src/stm32f1xx_it.o
-                0x00000000080039a4                HardFault_Handler
+                0x0000000008003968        0x4 Src/stm32f1xx_it.o
+                0x0000000008003968                HardFault_Handler
  .text.MemManage_Handler
-                0x00000000080039a8        0x4 Src/stm32f1xx_it.o
-                0x00000000080039a8                MemManage_Handler
+                0x000000000800396c        0x4 Src/stm32f1xx_it.o
+                0x000000000800396c                MemManage_Handler
  .text.BusFault_Handler
-                0x00000000080039ac        0x4 Src/stm32f1xx_it.o
-                0x00000000080039ac                BusFault_Handler
+                0x0000000008003970        0x4 Src/stm32f1xx_it.o
+                0x0000000008003970                BusFault_Handler
  .text.UsageFault_Handler
-                0x00000000080039b0        0x4 Src/stm32f1xx_it.o
-                0x00000000080039b0                UsageFault_Handler
+                0x0000000008003974        0x4 Src/stm32f1xx_it.o
+                0x0000000008003974                UsageFault_Handler
  .text.SVC_Handler
-                0x00000000080039b4        0x4 Src/stm32f1xx_it.o
-                0x00000000080039b4                SVC_Handler
+                0x0000000008003978        0x4 Src/stm32f1xx_it.o
+                0x0000000008003978                SVC_Handler
  .text.DebugMon_Handler
-                0x00000000080039b8        0x4 Src/stm32f1xx_it.o
-                0x00000000080039b8                DebugMon_Handler
+                0x000000000800397c        0x4 Src/stm32f1xx_it.o
+                0x000000000800397c                DebugMon_Handler
  .text.PendSV_Handler
-                0x00000000080039bc        0x4 Src/stm32f1xx_it.o
-                0x00000000080039bc                PendSV_Handler
+                0x0000000008003980        0x4 Src/stm32f1xx_it.o
+                0x0000000008003980                PendSV_Handler
  .text.SysTick_Handler
-                0x00000000080039c0       0x10 Src/stm32f1xx_it.o
-                0x00000000080039c0                SysTick_Handler
+                0x0000000008003984       0x10 Src/stm32f1xx_it.o
+                0x0000000008003984                SysTick_Handler
  .text.DMA1_Channel1_IRQHandler
-                0x00000000080039d0        0xc Src/stm32f1xx_it.o
-                0x00000000080039d0                DMA1_Channel1_IRQHandler
+                0x0000000008003994        0xc Src/stm32f1xx_it.o
+                0x0000000008003994                DMA1_Channel1_IRQHandler
  .text.EXTI9_5_IRQHandler
-                0x00000000080039dc        0x8 Src/stm32f1xx_it.o
-                0x00000000080039dc                EXTI9_5_IRQHandler
+                0x00000000080039a0        0x8 Src/stm32f1xx_it.o
+                0x00000000080039a0                EXTI9_5_IRQHandler
  .text.TIM2_IRQHandler
-                0x00000000080039e4        0xc Src/stm32f1xx_it.o
-                0x00000000080039e4                TIM2_IRQHandler
+                0x00000000080039a8        0xc Src/stm32f1xx_it.o
+                0x00000000080039a8                TIM2_IRQHandler
  .text.EXTI15_10_IRQHandler
-                0x00000000080039f0        0x8 Src/stm32f1xx_it.o
-                0x00000000080039f0                EXTI15_10_IRQHandler
+                0x00000000080039b4        0x8 Src/stm32f1xx_it.o
+                0x00000000080039b4                EXTI15_10_IRQHandler
  .text.SystemInit
-                0x00000000080039f8       0x50 Src/system_stm32f1xx.o
-                0x00000000080039f8                SystemInit
+                0x00000000080039bc       0x50 Src/system_stm32f1xx.o
+                0x00000000080039bc                SystemInit
  .text.MX_TIM1_Init
-                0x0000000008003a48      0x104 Src/tim.o
-                0x0000000008003a48                MX_TIM1_Init
+                0x0000000008003a0c      0x104 Src/tim.o
+                0x0000000008003a0c                MX_TIM1_Init
  .text.MX_TIM2_Init
-                0x0000000008003b4c       0x74 Src/tim.o
-                0x0000000008003b4c                MX_TIM2_Init
+                0x0000000008003b10       0x74 Src/tim.o
+                0x0000000008003b10                MX_TIM2_Init
  .text.MX_TIM4_Init
-                0x0000000008003bc0       0x6c Src/tim.o
-                0x0000000008003bc0                MX_TIM4_Init
+                0x0000000008003b84       0x6c Src/tim.o
+                0x0000000008003b84                MX_TIM4_Init
  .text.HAL_TIM_PWM_MspInit
-                0x0000000008003c2c       0x2c Src/tim.o
-                0x0000000008003c2c                HAL_TIM_PWM_MspInit
+                0x0000000008003bf0       0x2c Src/tim.o
+                0x0000000008003bf0                HAL_TIM_PWM_MspInit
  .text.HAL_TIM_Base_MspInit
-                0x0000000008003c58       0x38 Src/tim.o
-                0x0000000008003c58                HAL_TIM_Base_MspInit
+                0x0000000008003c1c       0x38 Src/tim.o
+                0x0000000008003c1c                HAL_TIM_Base_MspInit
  .text.HAL_TIM_Encoder_MspInit
-                0x0000000008003c90       0x44 Src/tim.o
-                0x0000000008003c90                HAL_TIM_Encoder_MspInit
+                0x0000000008003c54       0x44 Src/tim.o
+                0x0000000008003c54                HAL_TIM_Encoder_MspInit
  .text.Reset_Handler
-                0x0000000008003cd4       0x48 startup/startup_stm32f103xb.o
-                0x0000000008003cd4                Reset_Handler
+                0x0000000008003c98       0x48 startup/startup_stm32f103xb.o
+                0x0000000008003c98                Reset_Handler
  .text.Default_Handler
-                0x0000000008003d1c        0x2 startup/startup_stm32f103xb.o
-                0x0000000008003d1c                RTC_Alarm_IRQHandler
-                0x0000000008003d1c                EXTI2_IRQHandler
-                0x0000000008003d1c                TIM1_CC_IRQHandler
-                0x0000000008003d1c                PVD_IRQHandler
-                0x0000000008003d1c                EXTI3_IRQHandler
-                0x0000000008003d1c                EXTI0_IRQHandler
-                0x0000000008003d1c                I2C2_EV_IRQHandler
-                0x0000000008003d1c                ADC1_2_IRQHandler
-                0x0000000008003d1c                SPI1_IRQHandler
-                0x0000000008003d1c                TAMPER_IRQHandler
-                0x0000000008003d1c                DMA1_Channel4_IRQHandler
-                0x0000000008003d1c                USART3_IRQHandler
-                0x0000000008003d1c                RTC_IRQHandler
-                0x0000000008003d1c                DMA1_Channel7_IRQHandler
-                0x0000000008003d1c                CAN1_RX1_IRQHandler
-                0x0000000008003d1c                TIM4_IRQHandler
-                0x0000000008003d1c                I2C1_EV_IRQHandler
-                0x0000000008003d1c                DMA1_Channel6_IRQHandler
-                0x0000000008003d1c                TIM3_IRQHandler
-                0x0000000008003d1c                RCC_IRQHandler
-                0x0000000008003d1c                TIM1_TRG_COM_IRQHandler
-                0x0000000008003d1c                Default_Handler
-                0x0000000008003d1c                SPI2_IRQHandler
-                0x0000000008003d1c                DMA1_Channel5_IRQHandler
-                0x0000000008003d1c                EXTI4_IRQHandler
-                0x0000000008003d1c                USB_LP_CAN1_RX0_IRQHandler
-                0x0000000008003d1c                USB_HP_CAN1_TX_IRQHandler
-                0x0000000008003d1c                DMA1_Channel3_IRQHandler
-                0x0000000008003d1c                TIM1_UP_IRQHandler
-                0x0000000008003d1c                WWDG_IRQHandler
-                0x0000000008003d1c                TIM1_BRK_IRQHandler
-                0x0000000008003d1c                EXTI1_IRQHandler
-                0x0000000008003d1c                USART2_IRQHandler
-                0x0000000008003d1c                I2C2_ER_IRQHandler
-                0x0000000008003d1c                DMA1_Channel2_IRQHandler
-                0x0000000008003d1c                CAN1_SCE_IRQHandler
-                0x0000000008003d1c                FLASH_IRQHandler
-                0x0000000008003d1c                USART1_IRQHandler
-                0x0000000008003d1c                I2C1_ER_IRQHandler
-                0x0000000008003d1c                USBWakeUp_IRQHandler
- *fill*         0x0000000008003d1e        0x2 
+                0x0000000008003ce0        0x2 startup/startup_stm32f103xb.o
+                0x0000000008003ce0                RTC_Alarm_IRQHandler
+                0x0000000008003ce0                EXTI2_IRQHandler
+                0x0000000008003ce0                TIM1_CC_IRQHandler
+                0x0000000008003ce0                PVD_IRQHandler
+                0x0000000008003ce0                EXTI3_IRQHandler
+                0x0000000008003ce0                EXTI0_IRQHandler
+                0x0000000008003ce0                I2C2_EV_IRQHandler
+                0x0000000008003ce0                ADC1_2_IRQHandler
+                0x0000000008003ce0                SPI1_IRQHandler
+                0x0000000008003ce0                TAMPER_IRQHandler
+                0x0000000008003ce0                DMA1_Channel4_IRQHandler
+                0x0000000008003ce0                USART3_IRQHandler
+                0x0000000008003ce0                RTC_IRQHandler
+                0x0000000008003ce0                DMA1_Channel7_IRQHandler
+                0x0000000008003ce0                CAN1_RX1_IRQHandler
+                0x0000000008003ce0                TIM4_IRQHandler
+                0x0000000008003ce0                I2C1_EV_IRQHandler
+                0x0000000008003ce0                DMA1_Channel6_IRQHandler
+                0x0000000008003ce0                TIM3_IRQHandler
+                0x0000000008003ce0                RCC_IRQHandler
+                0x0000000008003ce0                TIM1_TRG_COM_IRQHandler
+                0x0000000008003ce0                Default_Handler
+                0x0000000008003ce0                SPI2_IRQHandler
+                0x0000000008003ce0                DMA1_Channel5_IRQHandler
+                0x0000000008003ce0                EXTI4_IRQHandler
+                0x0000000008003ce0                USB_LP_CAN1_RX0_IRQHandler
+                0x0000000008003ce0                USB_HP_CAN1_TX_IRQHandler
+                0x0000000008003ce0                DMA1_Channel3_IRQHandler
+                0x0000000008003ce0                TIM1_UP_IRQHandler
+                0x0000000008003ce0                WWDG_IRQHandler
+                0x0000000008003ce0                TIM1_BRK_IRQHandler
+                0x0000000008003ce0                EXTI1_IRQHandler
+                0x0000000008003ce0                USART2_IRQHandler
+                0x0000000008003ce0                I2C2_ER_IRQHandler
+                0x0000000008003ce0                DMA1_Channel2_IRQHandler
+                0x0000000008003ce0                CAN1_SCE_IRQHandler
+                0x0000000008003ce0                FLASH_IRQHandler
+                0x0000000008003ce0                USART1_IRQHandler
+                0x0000000008003ce0                I2C1_ER_IRQHandler
+                0x0000000008003ce0                USBWakeUp_IRQHandler
+ *fill*         0x0000000008003ce2        0x2 
  .text.__libc_init_array
-                0x0000000008003d20       0x48 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-init.o)
-                0x0000000008003d20                __libc_init_array
- .text.malloc   0x0000000008003d68       0x10 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-malloc.o)
-                0x0000000008003d68                malloc
- .text.free     0x0000000008003d78       0x10 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-malloc.o)
-                0x0000000008003d78                free
- .text.memcpy   0x0000000008003d88       0x16 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memcpy-stub.o)
-                0x0000000008003d88                memcpy
- .text.memset   0x0000000008003d9e       0x10 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memset.o)
-                0x0000000008003d9e                memset
- *fill*         0x0000000008003dae        0x2 
- .text._free_r  0x0000000008003db0       0x98 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-freer.o)
-                0x0000000008003db0                _free_r
+                0x0000000008003ce4       0x48 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-init.o)
+                0x0000000008003ce4                __libc_init_array
+ .text.malloc   0x0000000008003d2c       0x10 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-malloc.o)
+                0x0000000008003d2c                malloc
+ .text.free     0x0000000008003d3c       0x10 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-malloc.o)
+                0x0000000008003d3c                free
+ .text.memcpy   0x0000000008003d4c       0x16 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memcpy-stub.o)
+                0x0000000008003d4c                memcpy
+ .text.memset   0x0000000008003d62       0x10 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memset.o)
+                0x0000000008003d62                memset
+ *fill*         0x0000000008003d72        0x2 
+ .text._free_r  0x0000000008003d74       0x98 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-freer.o)
+                0x0000000008003d74                _free_r
  .text._malloc_r
-                0x0000000008003e48       0xb4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-mallocr.o)
-                0x0000000008003e48                _malloc_r
- .text._sbrk_r  0x0000000008003efc       0x20 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sbrkr.o)
-                0x0000000008003efc                _sbrk_r
- .text.sprintf  0x0000000008003f1c       0x40 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sprintf.o)
-                0x0000000008003f1c                sprintf
-                0x0000000008003f1c                siprintf
+                0x0000000008003e0c       0xb4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000008003e0c                _malloc_r
+ .text._sbrk_r  0x0000000008003ec0       0x20 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sbrkr.o)
+                0x0000000008003ec0                _sbrk_r
+ .text.sprintf  0x0000000008003ee0       0x40 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sprintf.o)
+                0x0000000008003ee0                sprintf
+                0x0000000008003ee0                siprintf
  .text.__malloc_lock
-                0x0000000008003f5c        0x2 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-mlock.o)
-                0x0000000008003f5c                __malloc_lock
+                0x0000000008003f20        0x2 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-mlock.o)
+                0x0000000008003f20                __malloc_lock
  .text.__malloc_unlock
-                0x0000000008003f5e        0x2 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-mlock.o)
-                0x0000000008003f5e                __malloc_unlock
+                0x0000000008003f22        0x2 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-mlock.o)
+                0x0000000008003f22                __malloc_unlock
  .text.__ssputs_r
-                0x0000000008003f60       0xb4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
-                0x0000000008003f60                __ssputs_r
+                0x0000000008003f24       0xb4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x0000000008003f24                __ssputs_r
  .text._svfprintf_r
-                0x0000000008004014      0x1ec /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
-                0x0000000008004014                _svfprintf_r
-                0x0000000008004014                _svfiprintf_r
+                0x0000000008003fd8      0x1ec /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x0000000008003fd8                _svfprintf_r
+                0x0000000008003fd8                _svfiprintf_r
  .text._printf_common
-                0x0000000008004200       0xec /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x0000000008004200                _printf_common
+                0x00000000080041c4       0xec /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00000000080041c4                _printf_common
  .text._printf_i
-                0x00000000080042ec      0x224 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x00000000080042ec                _printf_i
- .text.memchr   0x0000000008004510       0x1c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memchr-stub.o)
-                0x0000000008004510                memchr
- .text.memmove  0x000000000800452c       0x32 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memmove.o)
-                0x000000000800452c                memmove
+                0x00000000080042b0      0x224 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00000000080042b0                _printf_i
+ .text.memchr   0x00000000080044d4       0x1c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memchr-stub.o)
+                0x00000000080044d4                memchr
+ .text.memmove  0x00000000080044f0       0x32 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memmove.o)
+                0x00000000080044f0                memmove
  .text._realloc_r
-                0x000000000800455e       0x4c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-reallocr.o)
-                0x000000000800455e                _realloc_r
+                0x0000000008004522       0x4c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-reallocr.o)
+                0x0000000008004522                _realloc_r
  .text._malloc_usable_size_r
-                0x00000000080045aa       0x10 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-msizer.o)
-                0x00000000080045aa                _malloc_usable_size_r
- *fill*         0x00000000080045ba        0x2 
- .text._sbrk    0x00000000080045bc       0x1c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(sbrk.o)
-                0x00000000080045bc                _sbrk
+                0x000000000800456e       0x10 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-msizer.o)
+                0x000000000800456e                _malloc_usable_size_r
+ *fill*         0x000000000800457e        0x2 
+ .text._sbrk    0x0000000008004580       0x1c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(sbrk.o)
+                0x0000000008004580                _sbrk
  *(.glue_7)
- .glue_7        0x00000000080045d8        0x0 linker stubs
+ .glue_7        0x000000000800459c        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x00000000080045d8        0x0 linker stubs
+ .glue_7t       0x000000000800459c        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x00000000080045d8        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+ .eh_frame      0x000000000800459c        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
  *(.init)
- .init          0x00000000080045d8        0x4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
-                0x00000000080045d8                _init
- .init          0x00000000080045dc        0x8 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
+ .init          0x000000000800459c        0x4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
+                0x000000000800459c                _init
+ .init          0x00000000080045a0        0x8 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
  *(.fini)
- .fini          0x00000000080045e4        0x4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
-                0x00000000080045e4                _fini
- .fini          0x00000000080045e8        0x8 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
-                0x00000000080045f0                . = ALIGN (0x4)
-                0x00000000080045f0                _etext = .
+ .fini          0x00000000080045a8        0x4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
+                0x00000000080045a8                _fini
+ .fini          0x00000000080045ac        0x8 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
+                0x00000000080045b4                . = ALIGN (0x4)
+                0x00000000080045b4                _etext = .
 
-.vfp11_veneer   0x00000000080045f0        0x0
- .vfp11_veneer  0x00000000080045f0        0x0 linker stubs
+.vfp11_veneer   0x00000000080045b4        0x0
+ .vfp11_veneer  0x00000000080045b4        0x0 linker stubs
 
-.v4_bx          0x00000000080045f0        0x0
- .v4_bx         0x00000000080045f0        0x0 linker stubs
+.v4_bx          0x00000000080045b4        0x0
+ .v4_bx         0x00000000080045b4        0x0 linker stubs
 
-.iplt           0x00000000080045f0        0x0
- .iplt          0x00000000080045f0        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+.iplt           0x00000000080045b4        0x0
+ .iplt          0x00000000080045b4        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
 
-.rodata         0x00000000080045f0     0x5298
-                0x00000000080045f0                . = ALIGN (0x4)
+.rodata         0x00000000080045b4     0x528c
+                0x00000000080045b4                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x00000000080045f0      0x102 APPS/app_funcs.o
- *fill*         0x00000000080046f2        0x2 
- .rodata        0x00000000080046f4     0x4fc0 APPS/glcd/fonts/fonts.o
-                0x00000000080046f4                FC_Default_Font_5x8_AlphaNumber
-                0x00000000080046fc                FC_Tekton_Pro_Ext27x28_AlphaNumber
-                0x0000000008004704                FC_Tahoma11x13_AlphaNumber
-                0x000000000800470c                FC_Liberation_Sans17x17_Alpha
-                0x0000000008004714                FC_Liberation_Sans27x36_Numbers
-                0x000000000800471c                FC_Liberation_Sans20x28_Numbers
-                0x0000000008004724                FC_Liberation_Sans15x21_Numbers
-                0x000000000800472c                FC_Liberation_Sans11x14_Numbers
-                0x0000000008004734                FC_Bebas_Neue20x36_Bold_Numbers
-                0x000000000800473c                FC_Bebas_Neue18x36_Numbers
- .rodata        0x00000000080096b4       0x10 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .rodata        0x00000000080096c4       0x18 Src/system_stm32f1xx.o
-                0x00000000080096c4                AHBPrescTable
-                0x00000000080096d4                APBPrescTable
+ .rodata        0x00000000080045b4       0xf6 APPS/app_funcs.o
+ *fill*         0x00000000080046aa        0x2 
+ .rodata        0x00000000080046ac     0x4fc0 APPS/glcd/fonts/fonts.o
+                0x00000000080046ac                FC_Default_Font_5x8_AlphaNumber
+                0x00000000080046b4                FC_Tekton_Pro_Ext27x28_AlphaNumber
+                0x00000000080046bc                FC_Tahoma11x13_AlphaNumber
+                0x00000000080046c4                FC_Liberation_Sans17x17_Alpha
+                0x00000000080046cc                FC_Liberation_Sans27x36_Numbers
+                0x00000000080046d4                FC_Liberation_Sans20x28_Numbers
+                0x00000000080046dc                FC_Liberation_Sans15x21_Numbers
+                0x00000000080046e4                FC_Liberation_Sans11x14_Numbers
+                0x00000000080046ec                FC_Bebas_Neue20x36_Bold_Numbers
+                0x00000000080046f4                FC_Bebas_Neue18x36_Numbers
+ .rodata        0x000000000800966c       0x10 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .rodata        0x000000000800967c       0x18 Src/system_stm32f1xx.o
+                0x000000000800967c                AHBPrescTable
+                0x000000000800968c                APBPrescTable
  *(.rodata*)
  .rodata.str1.4
-                0x00000000080096dc        0xd APPS/app_funcs.o
- *fill*         0x00000000080096e9        0x3 
+                0x0000000008009694        0xd APPS/app_funcs.o
+ *fill*         0x00000000080096a1        0x3 
  .rodata.str1.4
-                0x00000000080096ec       0x18 APPS/effect/effect.o
+                0x00000000080096a4       0x18 APPS/effect/effect.o
  .rodata.str1.4
-                0x0000000008009704       0xe4 APPS/effect/effect_preset.o
+                0x00000000080096bc       0xe4 APPS/effect/effect_preset.o
  .rodata.str1.4
-                0x00000000080097e8       0x16 APPS/event/event.o
- *fill*         0x00000000080097fe        0x2 
+                0x00000000080097a0       0x16 APPS/event/event.o
+ *fill*         0x00000000080097b6        0x2 
  .rodata.str1.4
-                0x0000000008009800        0xd Src/adc.o
- *fill*         0x000000000800980d        0x3 
+                0x00000000080097b8        0xd Src/adc.o
+ *fill*         0x00000000080097c5        0x3 
  .rodata.str1.4
-                0x0000000008009810       0x32 Src/main.o
- *fill*         0x0000000008009842        0x2 
+                0x00000000080097c8       0x32 Src/main.o
+ *fill*         0x00000000080097fa        0x2 
  .rodata.str1.4
-                0x0000000008009844       0x10 Src/tim.o
+                0x00000000080097fc       0x10 Src/tim.o
                                           0xd (size before relaxing)
  .rodata._svfprintf_r.str1.1
-                0x0000000008009854       0x11 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x000000000800980c       0x11 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
  .rodata._printf_i.str1.1
-                0x0000000008009865       0x22 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x0000000008009888                . = ALIGN (0x4)
- *fill*         0x0000000008009887        0x1 
+                0x000000000800981d       0x22 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000008009840                . = ALIGN (0x4)
+ *fill*         0x000000000800983f        0x1 
 
-.rel.dyn        0x0000000008009888        0x0
- .rel.iplt      0x0000000008009888        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+.rel.dyn        0x0000000008009840        0x0
+ .rel.iplt      0x0000000008009840        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x0000000008009888        0x0
-                0x0000000008009888                __exidx_start = .
+.ARM            0x0000000008009840        0x0
+                0x0000000008009840                __exidx_start = .
  *(.ARM.exidx*)
-                0x0000000008009888                __exidx_end = .
+                0x0000000008009840                __exidx_end = .
 
-.preinit_array  0x0000000008009888        0x0
-                0x0000000008009888                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x0000000008009840        0x0
+                0x0000000008009840                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x0000000008009888                PROVIDE (__preinit_array_end, .)
+                0x0000000008009840                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x0000000008009888        0x4
-                0x0000000008009888                PROVIDE (__init_array_start, .)
+.init_array     0x0000000008009840        0x4
+                0x0000000008009840                PROVIDE (__init_array_start, .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0000000008009888        0x4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
-                0x000000000800988c                PROVIDE (__init_array_end, .)
+ .init_array    0x0000000008009840        0x4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+                0x0000000008009844                PROVIDE (__init_array_end, .)
 
-.fini_array     0x000000000800988c        0x4
+.fini_array     0x0000000008009844        0x4
                 [!provide]                        PROVIDE (__fini_array_start, .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x000000000800988c        0x4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+ .fini_array    0x0000000008009844        0x4 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end, .)
-                0x0000000008009890                _sidata = LOADADDR (.data)
+                0x0000000008009848                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000      0x250 load address 0x0000000008009890
+.data           0x0000000020000000      0x250 load address 0x0000000008009848
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -7090,11 +7090,11 @@ LOAD /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.lin
                 0x0000000020000250                . = ALIGN (0x4)
                 0x0000000020000250                _edata = .
 
-.igot.plt       0x0000000020000250        0x0 load address 0x0000000008009ae0
+.igot.plt       0x0000000020000250        0x0 load address 0x0000000008009a98
  .igot.plt      0x0000000020000250        0x0 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
                 0x0000000020000250                . = ALIGN (0x4)
 
-.bss            0x0000000020000250      0x5ec load address 0x0000000008009ae0
+.bss            0x0000000020000250      0x5ec load address 0x0000000008009a98
                 0x0000000020000250                _sbss = .
                 0x0000000020000250                __bss_start__ = _sbss
  *(.bss)
@@ -7143,7 +7143,7 @@ LOAD /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.lin
                 0x000000002000083c                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x000000002000083c      0x604 load address 0x0000000008009ae0
+                0x000000002000083c      0x604 load address 0x0000000008009a98
                 0x0000000020000840                . = ALIGN (0x8)
  *fill*         0x000000002000083c        0x4 
                 0x0000000020000840                PROVIDE (end, .)
@@ -7272,40 +7272,40 @@ LOAD /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.lin
                 0x00000000000009f5       0x1d /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
 OUTPUT(mus_cube.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000    0x5d43c
+.debug_info     0x0000000000000000    0x5d334
  .debug_info    0x0000000000000000     0x69fe APPS/app.o
- .debug_info    0x00000000000069fe     0x8597 APPS/app_funcs.o
- .debug_info    0x000000000000ef95     0x692f APPS/effect/effect.o
- .debug_info    0x00000000000158c4     0x11b1 APPS/effect/effect_preset.o
- .debug_info    0x0000000000016a75     0x1193 APPS/encoder/encoder.o
- .debug_info    0x0000000000017c08     0x149c APPS/event/event.o
- .debug_info    0x00000000000190a4     0x9104 APPS/glcd/ST7565R.o
- .debug_info    0x00000000000221a8     0x64f5 APPS/glcd/glcd.o
- .debug_info    0x000000000002869d     0x7d95 APPS/glcd/glcd_graphics.o
- .debug_info    0x0000000000030432     0x6760 APPS/glcd/glcd_graphs.o
- .debug_info    0x0000000000036b92     0x66ff APPS/glcd/glcd_text.o
- .debug_info    0x000000000003d291     0x133f APPS/glcd/fonts/fonts.o
- .debug_info    0x000000000003e5d0     0x1667 APPS/link_list/link_list.o
- .debug_info    0x000000000003fc37     0x1501 APPS/push-btn/push_btn.o
- .debug_info    0x0000000000041138     0x12f1 APPS/volume/volume.o
- .debug_info    0x0000000000042429      0xfce Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_info    0x00000000000433f7     0x195e Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
- .debug_info    0x0000000000044d55     0x1473 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_info    0x00000000000461c8     0x1017 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
- .debug_info    0x00000000000471df      0xe8c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_info    0x000000000004806b     0x127f Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .debug_info    0x00000000000492ea      0xc63 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
- .debug_info    0x0000000000049f4d     0x4334 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
- .debug_info    0x000000000004e281     0x1b39 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
- .debug_info    0x000000000004fdba     0x1151 Src/adc.o
- .debug_info    0x0000000000050f0b      0xb90 Src/dma.o
- .debug_info    0x0000000000051a9b      0xc00 Src/gpio.o
- .debug_info    0x000000000005269b     0x6c79 Src/main.o
- .debug_info    0x0000000000059314      0xce8 Src/stm32f1xx_hal_msp.o
- .debug_info    0x0000000000059ffc      0xf46 Src/stm32f1xx_it.o
- .debug_info    0x000000000005af42      0xc15 Src/system_stm32f1xx.o
- .debug_info    0x000000000005bb57     0x18c3 Src/tim.o
- .debug_info    0x000000000005d41a       0x22 startup/startup_stm32f103xb.o
+ .debug_info    0x00000000000069fe     0x848f APPS/app_funcs.o
+ .debug_info    0x000000000000ee8d     0x692f APPS/effect/effect.o
+ .debug_info    0x00000000000157bc     0x11b1 APPS/effect/effect_preset.o
+ .debug_info    0x000000000001696d     0x1193 APPS/encoder/encoder.o
+ .debug_info    0x0000000000017b00     0x149c APPS/event/event.o
+ .debug_info    0x0000000000018f9c     0x9104 APPS/glcd/ST7565R.o
+ .debug_info    0x00000000000220a0     0x64f5 APPS/glcd/glcd.o
+ .debug_info    0x0000000000028595     0x7d95 APPS/glcd/glcd_graphics.o
+ .debug_info    0x000000000003032a     0x6760 APPS/glcd/glcd_graphs.o
+ .debug_info    0x0000000000036a8a     0x66ff APPS/glcd/glcd_text.o
+ .debug_info    0x000000000003d189     0x133f APPS/glcd/fonts/fonts.o
+ .debug_info    0x000000000003e4c8     0x1667 APPS/link_list/link_list.o
+ .debug_info    0x000000000003fb2f     0x1501 APPS/push-btn/push_btn.o
+ .debug_info    0x0000000000041030     0x12f1 APPS/volume/volume.o
+ .debug_info    0x0000000000042321      0xfce Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_info    0x00000000000432ef     0x195e Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+ .debug_info    0x0000000000044c4d     0x1473 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_info    0x00000000000460c0     0x1017 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+ .debug_info    0x00000000000470d7      0xe8c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_info    0x0000000000047f63     0x127f Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_info    0x00000000000491e2      0xc63 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
+ .debug_info    0x0000000000049e45     0x4334 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+ .debug_info    0x000000000004e179     0x1b39 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+ .debug_info    0x000000000004fcb2     0x1151 Src/adc.o
+ .debug_info    0x0000000000050e03      0xb90 Src/dma.o
+ .debug_info    0x0000000000051993      0xc00 Src/gpio.o
+ .debug_info    0x0000000000052593     0x6c79 Src/main.o
+ .debug_info    0x000000000005920c      0xce8 Src/stm32f1xx_hal_msp.o
+ .debug_info    0x0000000000059ef4      0xf46 Src/stm32f1xx_it.o
+ .debug_info    0x000000000005ae3a      0xc15 Src/system_stm32f1xx.o
+ .debug_info    0x000000000005ba4f     0x18c3 Src/tim.o
+ .debug_info    0x000000000005d312       0x22 startup/startup_stm32f103xb.o
 
 .debug_abbrev   0x0000000000000000     0x6373
  .debug_abbrev  0x0000000000000000      0x30c APPS/app.o
@@ -7342,136 +7342,136 @@ OUTPUT(mus_cube.elf elf32-littlearm)
  .debug_abbrev  0x000000000000600f      0x352 Src/tim.o
  .debug_abbrev  0x0000000000006361       0x12 startup/startup_stm32f103xb.o
 
-.debug_loc      0x0000000000000000     0xeaf3
+.debug_loc      0x0000000000000000     0xead2
  .debug_loc     0x0000000000000000      0x107 APPS/app.o
- .debug_loc     0x0000000000000107      0x5d7 APPS/app_funcs.o
- .debug_loc     0x00000000000006de      0x2a5 APPS/effect/effect.o
- .debug_loc     0x0000000000000983       0x21 APPS/effect/effect_preset.o
- .debug_loc     0x00000000000009a4       0x8c APPS/encoder/encoder.o
- .debug_loc     0x0000000000000a30      0x1a1 APPS/event/event.o
- .debug_loc     0x0000000000000bd1      0x923 APPS/glcd/ST7565R.o
- .debug_loc     0x00000000000014f4      0x145 APPS/glcd/glcd.o
- .debug_loc     0x0000000000001639     0x2b25 APPS/glcd/glcd_graphics.o
- .debug_loc     0x000000000000415e      0x6c8 APPS/glcd/glcd_graphs.o
- .debug_loc     0x0000000000004826      0x607 APPS/glcd/glcd_text.o
- .debug_loc     0x0000000000004e2d      0xde5 APPS/link_list/link_list.o
- .debug_loc     0x0000000000005c12      0x287 APPS/push-btn/push_btn.o
- .debug_loc     0x0000000000005e99       0xe1 APPS/volume/volume.o
- .debug_loc     0x0000000000005f7a      0x10d Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_loc     0x0000000000006087      0xef4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
- .debug_loc     0x0000000000006f7b      0x56c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_loc     0x00000000000074e7      0x993 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
- .debug_loc     0x0000000000007e7a      0x41e Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_loc     0x0000000000008298      0x5e2 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .debug_loc     0x000000000000887a      0x2f2 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
- .debug_loc     0x0000000000008b6c     0x4e74 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
- .debug_loc     0x000000000000d9e0      0xe2b Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
- .debug_loc     0x000000000000e80b       0x4a Src/adc.o
- .debug_loc     0x000000000000e855       0xcb Src/main.o
- .debug_loc     0x000000000000e920       0xcd Src/system_stm32f1xx.o
- .debug_loc     0x000000000000e9ed      0x106 Src/tim.o
+ .debug_loc     0x0000000000000107      0x5b6 APPS/app_funcs.o
+ .debug_loc     0x00000000000006bd      0x2a5 APPS/effect/effect.o
+ .debug_loc     0x0000000000000962       0x21 APPS/effect/effect_preset.o
+ .debug_loc     0x0000000000000983       0x8c APPS/encoder/encoder.o
+ .debug_loc     0x0000000000000a0f      0x1a1 APPS/event/event.o
+ .debug_loc     0x0000000000000bb0      0x923 APPS/glcd/ST7565R.o
+ .debug_loc     0x00000000000014d3      0x145 APPS/glcd/glcd.o
+ .debug_loc     0x0000000000001618     0x2b25 APPS/glcd/glcd_graphics.o
+ .debug_loc     0x000000000000413d      0x6c8 APPS/glcd/glcd_graphs.o
+ .debug_loc     0x0000000000004805      0x607 APPS/glcd/glcd_text.o
+ .debug_loc     0x0000000000004e0c      0xde5 APPS/link_list/link_list.o
+ .debug_loc     0x0000000000005bf1      0x287 APPS/push-btn/push_btn.o
+ .debug_loc     0x0000000000005e78       0xe1 APPS/volume/volume.o
+ .debug_loc     0x0000000000005f59      0x10d Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_loc     0x0000000000006066      0xef4 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+ .debug_loc     0x0000000000006f5a      0x56c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_loc     0x00000000000074c6      0x993 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+ .debug_loc     0x0000000000007e59      0x41e Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_loc     0x0000000000008277      0x5e2 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_loc     0x0000000000008859      0x2f2 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
+ .debug_loc     0x0000000000008b4b     0x4e74 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+ .debug_loc     0x000000000000d9bf      0xe2b Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+ .debug_loc     0x000000000000e7ea       0x4a Src/adc.o
+ .debug_loc     0x000000000000e834       0xcb Src/main.o
+ .debug_loc     0x000000000000e8ff       0xcd Src/system_stm32f1xx.o
+ .debug_loc     0x000000000000e9cc      0x106 Src/tim.o
 
-.debug_aranges  0x0000000000000000      0xea0
+.debug_aranges  0x0000000000000000      0xe98
  .debug_aranges
                 0x0000000000000000       0x40 APPS/app.o
  .debug_aranges
-                0x0000000000000040       0xd8 APPS/app_funcs.o
+                0x0000000000000040       0xd0 APPS/app_funcs.o
  .debug_aranges
-                0x0000000000000118       0x68 APPS/effect/effect.o
+                0x0000000000000110       0x68 APPS/effect/effect.o
  .debug_aranges
-                0x0000000000000180       0x20 APPS/effect/effect_preset.o
+                0x0000000000000178       0x20 APPS/effect/effect_preset.o
  .debug_aranges
-                0x00000000000001a0       0x48 APPS/encoder/encoder.o
+                0x0000000000000198       0x48 APPS/encoder/encoder.o
  .debug_aranges
-                0x00000000000001e8       0x58 APPS/event/event.o
+                0x00000000000001e0       0x58 APPS/event/event.o
  .debug_aranges
-                0x0000000000000240       0xb0 APPS/glcd/ST7565R.o
+                0x0000000000000238       0xb0 APPS/glcd/ST7565R.o
  .debug_aranges
-                0x00000000000002f0       0x58 APPS/glcd/glcd.o
+                0x00000000000002e8       0x58 APPS/glcd/glcd.o
  .debug_aranges
-                0x0000000000000348       0x78 APPS/glcd/glcd_graphics.o
+                0x0000000000000340       0x78 APPS/glcd/glcd_graphics.o
  .debug_aranges
-                0x00000000000003c0       0x48 APPS/glcd/glcd_graphs.o
+                0x00000000000003b8       0x48 APPS/glcd/glcd_graphs.o
  .debug_aranges
-                0x0000000000000408       0x50 APPS/glcd/glcd_text.o
+                0x0000000000000400       0x50 APPS/glcd/glcd_text.o
  .debug_aranges
-                0x0000000000000458       0x18 APPS/glcd/fonts/fonts.o
+                0x0000000000000450       0x18 APPS/glcd/fonts/fonts.o
  .debug_aranges
-                0x0000000000000470       0xe8 APPS/link_list/link_list.o
+                0x0000000000000468       0xe8 APPS/link_list/link_list.o
  .debug_aranges
-                0x0000000000000558       0x50 APPS/push-btn/push_btn.o
+                0x0000000000000550       0x50 APPS/push-btn/push_btn.o
  .debug_aranges
-                0x00000000000005a8       0x50 APPS/volume/volume.o
+                0x00000000000005a0       0x50 APPS/volume/volume.o
  .debug_aranges
-                0x00000000000005f8       0xc8 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+                0x00000000000005f0       0xc8 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
  .debug_aranges
-                0x00000000000006c0       0xc8 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+                0x00000000000006b8       0xc8 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
  .debug_aranges
-                0x0000000000000788       0x90 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+                0x0000000000000780       0x90 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
  .debug_aranges
-                0x0000000000000818       0x78 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+                0x0000000000000810       0x78 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
  .debug_aranges
-                0x0000000000000890       0x58 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+                0x0000000000000888       0x58 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
  .debug_aranges
-                0x00000000000008e8       0x88 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+                0x00000000000008e0       0x88 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
  .debug_aranges
-                0x0000000000000970       0x30 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
+                0x0000000000000968       0x30 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
  .debug_aranges
-                0x00000000000009a0      0x230 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+                0x0000000000000998      0x230 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
  .debug_aranges
-                0x0000000000000bd0       0xe0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+                0x0000000000000bc8       0xe0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
  .debug_aranges
-                0x0000000000000cb0       0x30 Src/adc.o
+                0x0000000000000ca8       0x30 Src/adc.o
  .debug_aranges
-                0x0000000000000ce0       0x20 Src/dma.o
+                0x0000000000000cd8       0x20 Src/dma.o
  .debug_aranges
-                0x0000000000000d00       0x20 Src/gpio.o
+                0x0000000000000cf8       0x20 Src/gpio.o
  .debug_aranges
-                0x0000000000000d20       0x40 Src/main.o
+                0x0000000000000d18       0x40 Src/main.o
  .debug_aranges
-                0x0000000000000d60       0x20 Src/stm32f1xx_hal_msp.o
+                0x0000000000000d58       0x20 Src/stm32f1xx_hal_msp.o
  .debug_aranges
-                0x0000000000000d80       0x68 Src/stm32f1xx_it.o
+                0x0000000000000d78       0x68 Src/stm32f1xx_it.o
  .debug_aranges
-                0x0000000000000de8       0x28 Src/system_stm32f1xx.o
+                0x0000000000000de0       0x28 Src/system_stm32f1xx.o
  .debug_aranges
-                0x0000000000000e10       0x68 Src/tim.o
+                0x0000000000000e08       0x68 Src/tim.o
  .debug_aranges
-                0x0000000000000e78       0x28 startup/startup_stm32f103xb.o
+                0x0000000000000e70       0x28 startup/startup_stm32f103xb.o
 
-.debug_ranges   0x0000000000000000     0x2ab0
+.debug_ranges   0x0000000000000000     0x2a90
  .debug_ranges  0x0000000000000000       0x68 APPS/app.o
- .debug_ranges  0x0000000000000068      0x2b8 APPS/app_funcs.o
- .debug_ranges  0x0000000000000320       0xd8 APPS/effect/effect.o
- .debug_ranges  0x00000000000003f8       0x10 APPS/effect/effect_preset.o
- .debug_ranges  0x0000000000000408       0x58 APPS/encoder/encoder.o
- .debug_ranges  0x0000000000000460       0x60 APPS/event/event.o
- .debug_ranges  0x00000000000004c0      0x248 APPS/glcd/ST7565R.o
- .debug_ranges  0x0000000000000708       0x48 APPS/glcd/glcd.o
- .debug_ranges  0x0000000000000750      0xa28 APPS/glcd/glcd_graphics.o
- .debug_ranges  0x0000000000001178       0x98 APPS/glcd/glcd_graphs.o
- .debug_ranges  0x0000000000001210       0xa0 APPS/glcd/glcd_text.o
- .debug_ranges  0x00000000000012b0      0x3f0 APPS/link_list/link_list.o
- .debug_ranges  0x00000000000016a0       0x98 APPS/push-btn/push_btn.o
- .debug_ranges  0x0000000000001738       0x60 APPS/volume/volume.o
- .debug_ranges  0x0000000000001798       0xb8 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_ranges  0x0000000000001850      0x208 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
- .debug_ranges  0x0000000000001a58      0x148 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_ranges  0x0000000000001ba0       0xc0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
- .debug_ranges  0x0000000000001c60       0x60 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_ranges  0x0000000000001cc0      0x110 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .debug_ranges  0x0000000000001dd0       0x58 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
- .debug_ranges  0x0000000000001e28      0x790 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
- .debug_ranges  0x00000000000025b8      0x1d8 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
- .debug_ranges  0x0000000000002790       0x50 Src/adc.o
- .debug_ranges  0x00000000000027e0       0x40 Src/dma.o
- .debug_ranges  0x0000000000002820       0x90 Src/gpio.o
- .debug_ranges  0x00000000000028b0       0x48 Src/main.o
- .debug_ranges  0x00000000000028f8       0x38 Src/stm32f1xx_hal_msp.o
- .debug_ranges  0x0000000000002930       0x58 Src/stm32f1xx_it.o
- .debug_ranges  0x0000000000002988       0x18 Src/system_stm32f1xx.o
- .debug_ranges  0x00000000000029a0       0xf0 Src/tim.o
- .debug_ranges  0x0000000000002a90       0x20 startup/startup_stm32f103xb.o
+ .debug_ranges  0x0000000000000068      0x298 APPS/app_funcs.o
+ .debug_ranges  0x0000000000000300       0xd8 APPS/effect/effect.o
+ .debug_ranges  0x00000000000003d8       0x10 APPS/effect/effect_preset.o
+ .debug_ranges  0x00000000000003e8       0x58 APPS/encoder/encoder.o
+ .debug_ranges  0x0000000000000440       0x60 APPS/event/event.o
+ .debug_ranges  0x00000000000004a0      0x248 APPS/glcd/ST7565R.o
+ .debug_ranges  0x00000000000006e8       0x48 APPS/glcd/glcd.o
+ .debug_ranges  0x0000000000000730      0xa28 APPS/glcd/glcd_graphics.o
+ .debug_ranges  0x0000000000001158       0x98 APPS/glcd/glcd_graphs.o
+ .debug_ranges  0x00000000000011f0       0xa0 APPS/glcd/glcd_text.o
+ .debug_ranges  0x0000000000001290      0x3f0 APPS/link_list/link_list.o
+ .debug_ranges  0x0000000000001680       0x98 APPS/push-btn/push_btn.o
+ .debug_ranges  0x0000000000001718       0x60 APPS/volume/volume.o
+ .debug_ranges  0x0000000000001778       0xb8 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_ranges  0x0000000000001830      0x208 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+ .debug_ranges  0x0000000000001a38      0x148 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_ranges  0x0000000000001b80       0xc0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+ .debug_ranges  0x0000000000001c40       0x60 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_ranges  0x0000000000001ca0      0x110 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_ranges  0x0000000000001db0       0x58 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
+ .debug_ranges  0x0000000000001e08      0x790 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+ .debug_ranges  0x0000000000002598      0x1d8 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+ .debug_ranges  0x0000000000002770       0x50 Src/adc.o
+ .debug_ranges  0x00000000000027c0       0x40 Src/dma.o
+ .debug_ranges  0x0000000000002800       0x90 Src/gpio.o
+ .debug_ranges  0x0000000000002890       0x48 Src/main.o
+ .debug_ranges  0x00000000000028d8       0x38 Src/stm32f1xx_hal_msp.o
+ .debug_ranges  0x0000000000002910       0x58 Src/stm32f1xx_it.o
+ .debug_ranges  0x0000000000002968       0x18 Src/system_stm32f1xx.o
+ .debug_ranges  0x0000000000002980       0xf0 Src/tim.o
+ .debug_ranges  0x0000000000002a70       0x20 startup/startup_stm32f103xb.o
 
 .debug_macro    0x0000000000000000    0x1ae73
  .debug_macro   0x0000000000000000      0x482 APPS/app.o
@@ -7589,40 +7589,40 @@ OUTPUT(mus_cube.elf elf32-littlearm)
  .debug_macro   0x000000000001a85f      0x303 Src/system_stm32f1xx.o
  .debug_macro   0x000000000001ab62      0x311 Src/tim.o
 
-.debug_line     0x0000000000000000    0x15c52
+.debug_line     0x0000000000000000    0x15c2f
  .debug_line    0x0000000000000000      0xb97 APPS/app.o
- .debug_line    0x0000000000000b97      0xe7d APPS/app_funcs.o
- .debug_line    0x0000000000001a14      0xb84 APPS/effect/effect.o
- .debug_line    0x0000000000002598      0x8a2 APPS/effect/effect_preset.o
- .debug_line    0x0000000000002e3a      0x8da APPS/encoder/encoder.o
- .debug_line    0x0000000000003714      0x909 APPS/event/event.o
- .debug_line    0x000000000000401d      0xf26 APPS/glcd/ST7565R.o
- .debug_line    0x0000000000004f43      0xb89 APPS/glcd/glcd.o
- .debug_line    0x0000000000005acc     0x1109 APPS/glcd/glcd_graphics.o
- .debug_line    0x0000000000006bd5      0xb7f APPS/glcd/glcd_graphs.o
- .debug_line    0x0000000000007754      0xb60 APPS/glcd/glcd_text.o
- .debug_line    0x00000000000082b4      0xa8a APPS/glcd/fonts/fonts.o
- .debug_line    0x0000000000008d3e      0x79f APPS/link_list/link_list.o
- .debug_line    0x00000000000094dd      0x9d5 APPS/push-btn/push_btn.o
- .debug_line    0x0000000000009eb2      0x906 APPS/volume/volume.o
- .debug_line    0x000000000000a7b8      0x8dd Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_line    0x000000000000b095      0xecf Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
- .debug_line    0x000000000000bf64      0x938 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_line    0x000000000000c89c      0xc36 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
- .debug_line    0x000000000000d4d2      0x918 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_line    0x000000000000ddea      0xb04 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .debug_line    0x000000000000e8ee      0x821 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
- .debug_line    0x000000000000f10f     0x1d86 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
- .debug_line    0x0000000000010e95      0xca6 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
- .debug_line    0x0000000000011b3b      0x7b0 Src/adc.o
- .debug_line    0x00000000000122eb      0x714 Src/dma.o
- .debug_line    0x00000000000129ff      0x74d Src/gpio.o
- .debug_line    0x000000000001314c      0xbd0 Src/main.o
- .debug_line    0x0000000000013d1c      0x71d Src/stm32f1xx_hal_msp.o
- .debug_line    0x0000000000014439      0x7b1 Src/stm32f1xx_it.o
- .debug_line    0x0000000000014bea      0x755 Src/system_stm32f1xx.o
- .debug_line    0x000000000001533f      0x896 Src/tim.o
- .debug_line    0x0000000000015bd5       0x7d startup/startup_stm32f103xb.o
+ .debug_line    0x0000000000000b97      0xe5a APPS/app_funcs.o
+ .debug_line    0x00000000000019f1      0xb84 APPS/effect/effect.o
+ .debug_line    0x0000000000002575      0x8a2 APPS/effect/effect_preset.o
+ .debug_line    0x0000000000002e17      0x8da APPS/encoder/encoder.o
+ .debug_line    0x00000000000036f1      0x909 APPS/event/event.o
+ .debug_line    0x0000000000003ffa      0xf26 APPS/glcd/ST7565R.o
+ .debug_line    0x0000000000004f20      0xb89 APPS/glcd/glcd.o
+ .debug_line    0x0000000000005aa9     0x1109 APPS/glcd/glcd_graphics.o
+ .debug_line    0x0000000000006bb2      0xb7f APPS/glcd/glcd_graphs.o
+ .debug_line    0x0000000000007731      0xb60 APPS/glcd/glcd_text.o
+ .debug_line    0x0000000000008291      0xa8a APPS/glcd/fonts/fonts.o
+ .debug_line    0x0000000000008d1b      0x79f APPS/link_list/link_list.o
+ .debug_line    0x00000000000094ba      0x9d5 APPS/push-btn/push_btn.o
+ .debug_line    0x0000000000009e8f      0x906 APPS/volume/volume.o
+ .debug_line    0x000000000000a795      0x8dd Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_line    0x000000000000b072      0xecf Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+ .debug_line    0x000000000000bf41      0x938 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_line    0x000000000000c879      0xc36 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+ .debug_line    0x000000000000d4af      0x918 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_line    0x000000000000ddc7      0xb04 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_line    0x000000000000e8cb      0x821 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
+ .debug_line    0x000000000000f0ec     0x1d86 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+ .debug_line    0x0000000000010e72      0xca6 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+ .debug_line    0x0000000000011b18      0x7b0 Src/adc.o
+ .debug_line    0x00000000000122c8      0x714 Src/dma.o
+ .debug_line    0x00000000000129dc      0x74d Src/gpio.o
+ .debug_line    0x0000000000013129      0xbd0 Src/main.o
+ .debug_line    0x0000000000013cf9      0x71d Src/stm32f1xx_hal_msp.o
+ .debug_line    0x0000000000014416      0x7b1 Src/stm32f1xx_it.o
+ .debug_line    0x0000000000014bc7      0x755 Src/system_stm32f1xx.o
+ .debug_line    0x000000000001531c      0x896 Src/tim.o
+ .debug_line    0x0000000000015bb2       0x7d startup/startup_stm32f103xb.o
 
 .debug_str      0x0000000000000000    0x76eeb
  .debug_str     0x0000000000000000    0x73330 APPS/app.o
@@ -7727,52 +7727,52 @@ OUTPUT(mus_cube.elf elf32-littlearm)
  .comment       0x000000000000007e       0x7f Src/system_stm32f1xx.o
  .comment       0x000000000000007e       0x7f Src/tim.o
 
-.debug_frame    0x0000000000000000     0x31f0
+.debug_frame    0x0000000000000000     0x31e8
  .debug_frame   0x0000000000000000       0x94 APPS/app.o
- .debug_frame   0x0000000000000094      0x33c APPS/app_funcs.o
- .debug_frame   0x00000000000003d0       0xe4 APPS/effect/effect.o
- .debug_frame   0x00000000000004b4       0x20 APPS/effect/effect_preset.o
- .debug_frame   0x00000000000004d4       0x8c APPS/encoder/encoder.o
- .debug_frame   0x0000000000000560       0xd0 APPS/event/event.o
- .debug_frame   0x0000000000000630      0x264 APPS/glcd/ST7565R.o
- .debug_frame   0x0000000000000894       0xd0 APPS/glcd/glcd.o
- .debug_frame   0x0000000000000964      0x228 APPS/glcd/glcd_graphics.o
- .debug_frame   0x0000000000000b8c      0x138 APPS/glcd/glcd_graphs.o
- .debug_frame   0x0000000000000cc4      0x108 APPS/glcd/glcd_text.o
- .debug_frame   0x0000000000000dcc      0x290 APPS/link_list/link_list.o
- .debug_frame   0x000000000000105c       0xd0 APPS/push-btn/push_btn.o
- .debug_frame   0x000000000000112c       0xb8 APPS/volume/volume.o
- .debug_frame   0x00000000000011e4      0x1b0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_frame   0x0000000000001394      0x368 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
- .debug_frame   0x00000000000016fc      0x138 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_frame   0x0000000000001834      0x1a8 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
- .debug_frame   0x00000000000019dc       0xec Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_frame   0x0000000000001ac8      0x184 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .debug_frame   0x0000000000001c4c       0x78 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
- .debug_frame   0x0000000000001cc4      0x9bc Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
- .debug_frame   0x0000000000002680      0x384 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
- .debug_frame   0x0000000000002a04       0x78 Src/adc.o
- .debug_frame   0x0000000000002a7c       0x34 Src/dma.o
- .debug_frame   0x0000000000002ab0       0x38 Src/gpio.o
- .debug_frame   0x0000000000002ae8       0xa8 Src/main.o
- .debug_frame   0x0000000000002b90       0x2c Src/stm32f1xx_hal_msp.o
- .debug_frame   0x0000000000002bbc       0xec Src/stm32f1xx_it.o
- .debug_frame   0x0000000000002ca8       0x3c Src/system_stm32f1xx.o
- .debug_frame   0x0000000000002ce4      0x124 Src/tim.o
- .debug_frame   0x0000000000002e08       0x2c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-init.o)
- .debug_frame   0x0000000000002e34       0x30 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-malloc.o)
- .debug_frame   0x0000000000002e64       0x28 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x0000000000002e8c       0x20 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memset.o)
- .debug_frame   0x0000000000002eac       0x38 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-freer.o)
- .debug_frame   0x0000000000002ee4       0x2c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-mallocr.o)
- .debug_frame   0x0000000000002f10       0x2c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sbrkr.o)
- .debug_frame   0x0000000000002f3c       0x6c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sprintf.o)
- .debug_frame   0x0000000000002fa8       0x30 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-mlock.o)
- .debug_frame   0x0000000000002fd8       0x90 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
- .debug_frame   0x0000000000003068       0x60 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
- .debug_frame   0x00000000000030c8       0x5c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-reent.o)
- .debug_frame   0x0000000000003124       0x28 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memchr-stub.o)
- .debug_frame   0x000000000000314c       0x28 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memmove.o)
- .debug_frame   0x0000000000003174       0x3c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-reallocr.o)
- .debug_frame   0x00000000000031b0       0x20 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-msizer.o)
- .debug_frame   0x00000000000031d0       0x20 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(sbrk.o)
+ .debug_frame   0x0000000000000094      0x334 APPS/app_funcs.o
+ .debug_frame   0x00000000000003c8       0xe4 APPS/effect/effect.o
+ .debug_frame   0x00000000000004ac       0x20 APPS/effect/effect_preset.o
+ .debug_frame   0x00000000000004cc       0x8c APPS/encoder/encoder.o
+ .debug_frame   0x0000000000000558       0xd0 APPS/event/event.o
+ .debug_frame   0x0000000000000628      0x264 APPS/glcd/ST7565R.o
+ .debug_frame   0x000000000000088c       0xd0 APPS/glcd/glcd.o
+ .debug_frame   0x000000000000095c      0x228 APPS/glcd/glcd_graphics.o
+ .debug_frame   0x0000000000000b84      0x138 APPS/glcd/glcd_graphs.o
+ .debug_frame   0x0000000000000cbc      0x108 APPS/glcd/glcd_text.o
+ .debug_frame   0x0000000000000dc4      0x290 APPS/link_list/link_list.o
+ .debug_frame   0x0000000000001054       0xd0 APPS/push-btn/push_btn.o
+ .debug_frame   0x0000000000001124       0xb8 APPS/volume/volume.o
+ .debug_frame   0x00000000000011dc      0x1b0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_frame   0x000000000000138c      0x368 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+ .debug_frame   0x00000000000016f4      0x138 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_frame   0x000000000000182c      0x1a8 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+ .debug_frame   0x00000000000019d4       0xec Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_frame   0x0000000000001ac0      0x184 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_frame   0x0000000000001c44       0x78 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
+ .debug_frame   0x0000000000001cbc      0x9bc Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+ .debug_frame   0x0000000000002678      0x384 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+ .debug_frame   0x00000000000029fc       0x78 Src/adc.o
+ .debug_frame   0x0000000000002a74       0x34 Src/dma.o
+ .debug_frame   0x0000000000002aa8       0x38 Src/gpio.o
+ .debug_frame   0x0000000000002ae0       0xa8 Src/main.o
+ .debug_frame   0x0000000000002b88       0x2c Src/stm32f1xx_hal_msp.o
+ .debug_frame   0x0000000000002bb4       0xec Src/stm32f1xx_it.o
+ .debug_frame   0x0000000000002ca0       0x3c Src/system_stm32f1xx.o
+ .debug_frame   0x0000000000002cdc      0x124 Src/tim.o
+ .debug_frame   0x0000000000002e00       0x2c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-init.o)
+ .debug_frame   0x0000000000002e2c       0x30 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-malloc.o)
+ .debug_frame   0x0000000000002e5c       0x28 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x0000000000002e84       0x20 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x0000000000002ea4       0x38 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x0000000000002edc       0x2c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x0000000000002f08       0x2c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x0000000000002f34       0x6c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sprintf.o)
+ .debug_frame   0x0000000000002fa0       0x30 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-mlock.o)
+ .debug_frame   0x0000000000002fd0       0x90 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .debug_frame   0x0000000000003060       0x60 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x00000000000030c0       0x5c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-reent.o)
+ .debug_frame   0x000000000000311c       0x28 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memchr-stub.o)
+ .debug_frame   0x0000000000003144       0x28 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memmove.o)
+ .debug_frame   0x000000000000316c       0x3c /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x00000000000031a8       0x20 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-msizer.o)
+ .debug_frame   0x00000000000031c8       0x20 /home/sam/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(sbrk.o)
