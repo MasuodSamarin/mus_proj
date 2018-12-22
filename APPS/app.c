@@ -60,28 +60,23 @@ void app_init(void){
 void event_handle(SM_Handle_Typedef *handle){
 	event_node_t *event;
 
-
-	if(handle->event_node != NULL){
-		free(handle->event_node);
-		handle->event_node = NULL;
-	}
-
 	event = event_pop_node();
 	if(event == NULL){
 		handle->cur_event = E_NOT;
-		handle->event_node = NULL;
+		//handle->event_node = NULL;
 		return;
 	}
 
+	if(handle->event_node != NULL){
+			free(handle->event_node);
+			//handle->event_node = NULL;
+	}
+	handle->event_node = event;
+
 	switch (event->type) {
-		case EVENT_NOT:
-			handle->cur_event = E_NOT;
-			handle->event_node = NULL;
-			break;
 
 		case EVENT_BTN:
-			  HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
-
+			HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
 			if(event->btn.name == BTN_ENTER)
 				handle->cur_event = E_BTN_ENTER;
 			else if(event->btn.name == BTN_BYPASS)
@@ -96,9 +91,14 @@ void event_handle(SM_Handle_Typedef *handle){
 			handle->cur_event = E_VOL;
 			handle->last_vol = event->vol.name;
 			break;
+
+		case EVENT_NOT:
+			handle->cur_event = E_NOT;
+			//handle->event_node = NULL;
+			break;
+
 	}
 
-	handle->event_node = event;
 
 }
 
@@ -117,8 +117,9 @@ void State_Machine(SM_Handle_Typedef *handle){
 
 
 void SM_Exec(void){
-	event_handle(&g_sm_handle);
 	State_Machine(&g_sm_handle);
+	event_handle(&g_sm_handle);
+
 
 }
 

@@ -213,12 +213,55 @@ void fp_enc_not(SM_Handle_Typedef *handle){
 			glcd_write();
 
 #endif
+	static uint8_t blink=0;
+	app_draw_empty_frame();
 
-	if(HAL_GetTick() - handle->timer > 5000){
+
+
+	handle->tmp_efx = efx_get_on_index(enc_get_val());
+	if(handle->tmp_efx == NULL)
+		return;
+	char *name = handle->tmp_efx->fv1->name;
+	int number = handle->tmp_efx->number;
+
+	//print the name of efx
+	glcd_set_font_c(FC_Tahoma11x13_AlphaNumber);
+	glcd_draw_string(7, 7, name);
+
+	if((blink)<5){
+		//print the number of efx and inert it
+		glcd_set_font_c(FC_Bebas_Neue18x36_Numbers);
+		sprintf(tmp_str, "%.2d", number);
+		glcd_draw_string(80, 23, tmp_str);
+		//glcd_invert_area(75, 31, 40, 26);
+		//glcd_draw_circle_fill(120, 10, 3, 1);
+		blink += 1;
+
+	}else if(blink<10){
+		blink += 1;
+		glcd_draw_rect_fill(79, 22, 10, 10, 0);
+		//glcd_draw_rect_fill(6, 6, 100, 10, 0);
+	}else{
+		blink = 0;
+
+	}
+	glcd_write();
+
+	if(HAL_GetTick() - handle->timer > 7000){
 		//handle->timer = HAL_GetTick();
 		enc_set_val(handle->cur_efx->number - 1);
 		handle->cur_state = S_IDLE;
+		handle->cur_event = E_NOT;
+		  event_pop_node();
+		  event_pop_node();
+		  event_pop_node();
+		  event_pop_node();
+		  event_pop_node();
+		  event_pop_node();
+		  event_pop_node();
+
 	}
+
 
 
 };
@@ -232,12 +275,12 @@ void fp_enc_enc(SM_Handle_Typedef *handle){
 	handle->timer = HAL_GetTick();
 
 	app_draw_empty_frame();
-	int cnt = enc_get_val();
+
 #if 1
 	handle->tmp_efx = efx_get_on_index(enc_get_val());
 	if(handle->tmp_efx != NULL){
 	char *name = handle->tmp_efx->fv1->name;
-		int number = handle->tmp_efx->number;
+	int number = handle->tmp_efx->number;
 
 		//print the name of efx
 		glcd_set_font_c(FC_Tahoma11x13_AlphaNumber);
@@ -250,9 +293,7 @@ void fp_enc_enc(SM_Handle_Typedef *handle){
 		//glcd_invert_area(75, 31, 40, 26);
 	}
 #endif
-		glcd_set_font_c(FC_Default_Font_5x8_AlphaNumber);
-		sprintf(tmp_str, "c:%d", cnt);//*vol_factor_persent);
-		glcd_draw_string(5, 25, tmp_str);
+
 		glcd_write();
 
 };
